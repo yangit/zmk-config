@@ -1,0 +1,8 @@
+# Copyright (c) 2022 yangit
+# SPDX-License-Identifier: MIT
+
+config SHIELD_FLACTYL_LEFT
+	def_bool $(shields_list_contains,flactyl_left)
+
+config SHIELD_FLACTYL_RIGHT
+	def_bool $(shields_list_contains,flactyl_right)
