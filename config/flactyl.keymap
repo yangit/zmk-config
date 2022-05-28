@@ -17,7 +17,7 @@
                         key-positions = <2 3>;
                         bindings = <&kp SPACE>;
                 };
-                combo_spc {
+                combo_ret {
                         timeout-ms = <50>;
                         key-positions = <3 13>;
                         bindings = <&kp RET>;
