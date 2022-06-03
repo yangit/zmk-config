@@ -94,8 +94,8 @@
 		#6
 		arrows_layer {
 			bindings = <
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&kp SPACE		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&kp ESCAPE		&kp TAB		&kp BACKSPACE		&kp RETURN		&trans				&trans		&trans		&trans		&trans		&trans
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
 
 						&trans		&trans		&trans				&trans		&trans		&trans
@@ -105,9 +105,9 @@
 		#7
 		symbols_layer {
 			bindings = <
-&trans		&trans		&trans		&trans		&trans				&kp EXCLAMATION		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&kp DOLLAR		&trans		&trans		&trans		&kp AT_SIGN				&kp PERCENT		&kp HASH		&trans		&trans		&trans
+&kp SLASH		&kp LEFT_PARENTHESIS		&kp RIGHT_PARENTHESIS		&kp MINUS		&kp PLUS				&kp EXCLAMATION		&kp QUESTION		&kp COLON		&kp SEMICOLON		&kp BACKSLASH
+&kp LEFT_BRACKET		&kp RIGHT_BRACKET		&kp LEFT_BRACE		&kp RIGHT_BRACE		&kp ASTERISK				&kp TILDE		&kp PERIOD		&kp COMMA		&kp GRAVE		&kp SINGLE_QUOTE
+&kp DOLLAR		&kp LESS_THAN		&kp EQUAL		&kp GREATER_THAN		&kp AT_SIGN				&kp PERCENT		&kp HASH		&kp UNDERSCORE		&kp AMPERSAND		&kp DOUBLE_QUOTES
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
