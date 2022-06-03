@@ -25,7 +25,7 @@
 	};
 	keymap {
 		compatible = "zmk,keymap";
-		#0
+#0
 		default_layer {
 			bindings = <
 &kp Q	&kp W	&kp F	&kp P	&mo 11				&trans		&kp L	&kp U	&kp Y	&trans
@@ -36,7 +36,7 @@
 					&mo 1		&mo 1	&mo 1				&mo 1		&mo 1	&mo 1
 			>;
 		};
-		#1
+#1
 		russian_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
@@ -47,7 +47,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-		#2
+#2
 		qwerty_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
@@ -58,7 +58,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-		#3
+#3
 		ctrl_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
@@ -69,7 +69,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-		#4
+#4
 		app1_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
@@ -80,7 +80,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-		#5
+#5
 		app2_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
@@ -91,7 +91,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-		#6
+#6
 		arrows_layer {
 			bindings = <
 &trans		&kp SPACE		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
@@ -102,7 +102,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-		#7
+#7
 		symbols_layer {
 			bindings = <
 &kp SLASH			&kp LEFT_PARENTHESIS	&kp RIGHT_PARENTHESIS	&kp MINUS			&kp PLUS				&kp EXCLAMATION		&kp QUESTION	&kp COLON		&kp SEMICOLON	&kp BACKSLASH
@@ -113,7 +113,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-		#8
+#8
 		numbers_layer {
 			bindings = <
 &trans		&kp N7		&kp N8		&kp N9		&trans				&trans		&trans		&trans		&trans		&trans
@@ -124,7 +124,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-		#9
+#9
 		windows_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
@@ -135,7 +135,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-		#10
+#10
 		windows2_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
@@ -146,7 +146,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-		#11
+#11
 		config_layer {
 			bindings = <
 &trans		&trans		&trans		&trans			&trans						&trans		&trans		&trans		&trans		&trans
@@ -157,7 +157,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-		#12
+#12
 		trans_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
