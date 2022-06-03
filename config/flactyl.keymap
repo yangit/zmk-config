@@ -94,9 +94,9 @@
 #6
 		arrows_layer {
 			bindings = <
-&trans		&kp SPACE		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&kp ESCAPE		&kp TAB		&kp BACKSPACE		&kp RETURN		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&kp SPACE	&trans			&kp DELETE	&trans			&trans			&kp HOME			&kp UP_ARROW		&kp PAGE_UP		&trans
+&kp ESCAPE	&kp TAB		&kp BACKSPACE	&kp RETURN	&trans			&kp LEFT_ARROW	&kp DOWN_ARROW		&kp RIGHT_ARROW		&trans			&trans
+&trans		&trans		&trans			&trans		&trans			&trans			&kp END				&trans				&trans			&kp PAGE_DOWN
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
