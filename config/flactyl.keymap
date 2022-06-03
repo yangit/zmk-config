@@ -47,9 +47,9 @@
 		};		
 		numbers_layer {
 			bindings = <
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&kp N7		&kp N8		&kp N9		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&kp N1		&kp N2		&kp N3		&kp N0				&trans		&trans		&trans		&trans
+&trans		&kp N4		&kp N5		&kp N6		&trans				&trans		&trans		&trans		&trans		&trans
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
