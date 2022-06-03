@@ -35,6 +35,35 @@
 					&kp N4	&kp N5	&kp N6				&mo 1		&mo 1	&mo 1
 			>;
 		};
+		ble_layer {
+			bindings = <
+&trans		&trans		&trans		&trans			&trans						&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans			&trans						&trans		&trans		&trans		&trans		&trans
+&bt BT_PRV	&bt BT_NXT	&bt BT_CLR	&out OUT_USB	&out OUT_BLE				&trans		&trans		&trans		&trans		&trans
+
+						&trans		&trans		&trans				&trans		&trans		&trans
+						&trans		&trans		&trans				&trans		&trans		&trans
+			>;
+		};		numbers_layer {
+			bindings = <
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+
+						&trans		&trans		&trans				&trans		&trans		&trans
+						&trans		&trans		&trans				&trans		&trans		&trans
+			>;
+		};
+		symbols_layer {
+			bindings = <
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+
+						&trans		&trans		&trans				&trans		&trans		&trans
+						&trans		&trans		&trans				&trans		&trans		&trans
+			>;
+		}; 
 		trans_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
