@@ -22,34 +22,74 @@
 				key-positions = <3 13>;
 				bindings = <&kp RET>;
 		};
-    };
-    keymap {
+	};
+	keymap {
 		compatible = "zmk,keymap";
 		default_layer {
 			bindings = <
-&kp Q	&kp W	&kp F	&kp P	&mo 1				&trans		&kp L	&kp U	&kp Y	&trans
+&kp Q	&kp W	&kp F	&kp P	&mo 11				&trans		&kp L	&kp U	&kp Y	&trans
 &kp A	&kp R	&kp S	&kp T	&kp G				&kp M		&kp N	&kp E	&kp I	&kp O
 &kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
 
-					&kp N1	&kp N2	&kp N3				&kp SPACE	&mo 1	&kp LEFT_SHIFT
-					&kp N4	&kp N5	&kp N6				&mo 1		&mo 1	&mo 1
+					&mo 1		&mo 6	&mo 8				&kp SPACE	&mo 1	&kp LEFT_SHIFT
+					&mo 1		&mo 1	&mo 1				&mo 1		&mo 1	&mo 1
 			>;
 		};
-		ble_layer {
+		russian_layer {
 			bindings = <
-&trans		&trans		&trans		&trans			&trans						&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans			&trans						&trans		&trans		&trans		&trans		&trans
-&bt BT_PRV	&bt BT_NXT	&bt BT_CLR	&out OUT_USB	&out OUT_BLE				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
-		};		
-		numbers_layer {
+		};
+		qwerty_layer {
 			bindings = <
-&trans		&kp N7		&kp N8		&kp N9		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&kp N1		&kp N2		&kp N3		&kp N0				&trans		&trans		&trans		&trans
-&trans		&kp N4		&kp N5		&kp N6		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+
+						&trans		&trans		&trans				&trans		&trans		&trans
+						&trans		&trans		&trans				&trans		&trans		&trans
+			>;
+		};
+		ctrl_layer {
+			bindings = <
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+
+						&trans		&trans		&trans				&trans		&trans		&trans
+						&trans		&trans		&trans				&trans		&trans		&trans
+			>;
+		};
+		app1_layer {
+			bindings = <
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+
+						&trans		&trans		&trans				&trans		&trans		&trans
+						&trans		&trans		&trans				&trans		&trans		&trans
+			>;
+		};
+		app2_layer {
+			bindings = <
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+
+						&trans		&trans		&trans				&trans		&trans		&trans
+						&trans		&trans		&trans				&trans		&trans		&trans
+			>;
+		};
+		arrows_layer {
+			bindings = <
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
@@ -64,7 +104,47 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
-		}; 
+		};
+		numbers_layer {
+			bindings = <
+&trans		&kp N7		&kp N8		&kp N9		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&kp N1		&kp N2		&kp N3		&kp N0				&trans		&trans		&trans		&trans
+&trans		&kp N4		&kp N5		&kp N6		&trans				&trans		&trans		&trans		&trans		&trans
+
+						&trans		&trans		&trans				&trans		&trans		&trans
+						&trans		&trans		&trans				&trans		&trans		&trans
+			>;
+		};
+		windows_layer {
+			bindings = <
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+
+						&trans		&trans		&trans				&trans		&trans		&trans
+						&trans		&trans		&trans				&trans		&trans		&trans
+			>;
+		};
+		windows2_layer {
+			bindings = <
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+
+						&trans		&trans		&trans				&trans		&trans		&trans
+						&trans		&trans		&trans				&trans		&trans		&trans
+			>;
+		};
+		config_layer {
+			bindings = <
+&trans		&trans		&trans		&trans			&trans						&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans			&trans						&trans		&trans		&trans		&trans		&trans
+&bt BT_PRV	&bt BT_NXT	&bt BT_CLR	&out OUT_USB	&out OUT_BLE				&trans		&trans		&trans		&trans		&trans
+
+						&trans		&trans		&trans				&trans		&trans		&trans
+						&trans		&trans		&trans				&trans		&trans		&trans
+			>;
+		};
 		trans_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
@@ -74,6 +154,6 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
-		}; 
+		};
 	};
 };
