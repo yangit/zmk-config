@@ -105,9 +105,9 @@
 		#7
 		symbols_layer {
 			bindings = <
+&trans		&trans		&trans		&trans		&trans				&kp EXCLAMATION		&trans		&trans		&trans		&trans
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&kp DOLLAR		&trans		&trans		&trans		&kp AT_SIGN				&kp PERCENT		&kp HASH		&trans		&trans		&trans
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
