@@ -33,15 +33,15 @@
 &kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
 
 					&mo 1		&mo 6	&mo 8				&kp SPACE	&mo 1	&kp LEFT_SHIFT
-					&mo 1		&mo 1	&mo 1				&mo 1		&mo 1	&mo 1
+					&mo 1		&mo 2	&mo 1				&mo 1		&mo 1	&mo 1
 			>;
 		};
 /* 1 */
 		russian_layer {
 			bindings = <
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&kp Q	&kp W	&kp E	&kp R	&mo T				&kp Y	&kp U	&kp I		&kp O		&kp P
+&kp A	&kp S	&kp D	&kp F	&kp G				&kp H	&kp J	&kp K		&kp L		&kp SEMICOLON
+&kp Z	&kp X	&kp C	&kp V	&kp B				&kp N	&kp M	&kp COMMA	&kp PERIOD 	&kp SLASH
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
@@ -50,9 +50,9 @@
 /* 2 */
 		qwerty_layer {
 			bindings = <
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&kp Q	&kp W	&kp E	&kp R	&mo T				&kp Y	&kp U	&kp I		&kp O		&kp P
+&kp A	&kp S	&kp D	&kp F	&kp G				&kp H	&kp J	&kp K		&kp L		&kp SEMICOLON
+&kp Z	&kp X	&kp C	&kp V	&kp B				&kp N	&kp M	&kp COMMA	&kp PERIOD 	&kp SLASH
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
@@ -94,9 +94,9 @@
 /* 6 */
 		arrows_layer {
 			bindings = <
-&trans		&kp SPACE	&trans			&kp DELETE	&trans			&trans			&kp HOME			&kp UP_ARROW		&kp PAGE_UP		&trans
-&kp ESCAPE	&kp TAB		&kp BACKSPACE	&kp RETURN	&trans			&kp LEFT_ARROW	&kp DOWN_ARROW		&kp RIGHT_ARROW		&trans			&trans
-&trans		&trans		&trans			&trans		&trans			&trans			&kp END				&trans				&trans			&kp PAGE_DOWN
+&trans		&kp SPACE	&trans			&kp DELETE	&kp K_VOLUME_UP				&trans			&kp HOME			&kp UP_ARROW		&kp PAGE_UP		&trans
+&kp ESCAPE	&kp TAB		&kp BACKSPACE	&kp RETURN	&kp K_VOLUME_DOWN			&kp LEFT_ARROW	&kp DOWN_ARROW		&kp RIGHT_ARROW		&trans			&trans
+&trans		&trans		&trans			&trans		&trans						&trans			&kp END				&trans				&trans			&kp PAGE_DOWN
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
