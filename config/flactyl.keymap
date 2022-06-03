@@ -34,6 +34,16 @@
 					&kp N1	&kp N2	&kp N3				&kp SPACE	&mo 1	&kp LEFT_SHIFT
 					&kp N4	&kp N5	&kp N6				&mo 1		&mo 1	&mo 1
 			>;
+		};
+		trans_layer {
+			bindings = <
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+
+						&trans		&trans		&trans				&trans		&trans		&trans
+						&trans		&trans		&trans				&trans		&trans		&trans
+			>;
 		}; 
 	};
 };
