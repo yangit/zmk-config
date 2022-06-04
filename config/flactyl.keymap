@@ -81,7 +81,7 @@
 
 		default_layer {
 			bindings = <
-&hold_q	&kp W	&kp F	&kp P	&mo CONFIG		&trans		&kp L	&kp U	&kp Y	&trans
+&cmd_q	&kp W	&kp F	&kp P	&mo CONFIG		&trans		&kp L	&kp U	&kp Y	&trans
 &kp A	&kp R	&kp S	&kp T	&kp G				&kp M		&kp N	&kp E	&kp I	&kp O
 &kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
 
