@@ -46,7 +46,7 @@
 		hold_q: hold_q {
 			compatible = "zmk,behavior-hold-tap";
 			label = "hold_q";
-			#binding-cells = <0>;
+			#binding-cells = <2>;
 			flavor = "tap-preferred";
 			tapping-term-ms = <200>;
 			quick-tap-ms = <125>;
