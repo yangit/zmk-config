@@ -62,8 +62,8 @@
 &kp A	&kp R	&kp S	&kp T	&kp G				&kp M		&kp N	&kp E	&kp I	&kp O
 &kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
 
-					&trans		&mo ARROWS	&mo NUMBERS			&kp SPACE	&trans	&kp LEFT_SHIFT
-					&trans		&mo RUSSIAN	&ctrl_colemak		&trans		&trans	&trans
+					&mo WINDOWS		&mo ARROWS		&mo NUMBERS			&kp SPACE	&mo SYMBOLS		&trans
+					&mo WINDOWS2	&kp LEFT_SHIFT	&ctrl_colemak		&trans		&kp RIGHT_SHIFT	&trans
 			>;
 		};
 /* 1 */
