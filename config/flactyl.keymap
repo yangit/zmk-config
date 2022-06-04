@@ -22,6 +22,7 @@
 #define WINDOWS2 10
 #define CONFIG  11
 
+/* sticky keys timeout */
 &sk {
     release-after-ms = <3000>;
 };
@@ -41,6 +42,7 @@
 		};
 	};
 
+/*
 	macros {
 		ZMK_MACRO(ctrl_colemak,
 			wait-ms = <0>;			
@@ -50,7 +52,7 @@
 				, <&macro_release &mo COLEMAK &kp LSHFT>;
 		)              
     };	
-	
+	*/
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -61,7 +63,7 @@
 &kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
 
 					&trans		&mo ARROWS	&mo NUMBERS			&kp SPACE	&trans	&kp LEFT_SHIFT
-					&trans		&mo RUSSIAN	&ctrl_colemak		&trans		&trans	&trans
+					&trans		&mo RUSSIAN	&trans		&trans		&trans	&trans
 			>;
 		};
 /* 1 */
