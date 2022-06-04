@@ -45,7 +45,7 @@
 	behaviors {
 		gqth: global-quick-tap-hold {
 			compatible = "zmk,behavior-hold-tap";
-			label = "hold_q";
+			label = "global-quick-tap-hold";
 			#binding-cells = <2>;
 			flavor = "tap-preferred";
 			tapping-term-ms = <200>;
@@ -53,22 +53,17 @@
 			global-quick-tap;
 			bindings = <&kp>, <&kp>;
 		};
+		th: tap-hold {
+			compatible = "zmk,behavior-hold-tap";
+			label = "tap-hold";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <200>;
+			bindings = <&kp>, <&kp>;
+		};
 	};
 
 	macros {
-/*
-		cmd_q: cmd_q {
-            label = "cmd_q";
-            compatible = "zmk,behavior-macro";
-			wait-ms = <0>;
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LEFT_COMMAND>
-                , <&macro_tap &kp Q>
-                , <&macro_release &kp LEFT_COMMAND>
-                ;
-        };
-*/
 		ZMK_MACRO(ctrl_colemak,
 			wait-ms = <0>;			
 			bindings 
@@ -83,9 +78,9 @@
 
 		default_layer {
 			bindings = <
-&gqth Q LG(Q)	&kp W	&kp F	&kp P	&mo CONFIG		&trans		&kp L	&kp U	&kp Y	&trans
-&kp A	&kp R	&kp S	&kp T	&kp G				&kp M		&kp N	&kp E	&kp I	&kp O
-&kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
+&gqth Q LG(Q)	&kp W			&gqth F LG(F)	&kp P			&mo CONFIG			&trans		&kp L	&kp U	&kp Y	&trans
+&gqth A LG(A)	&gqth R LG(R)	&gqth S LG(S)	&kp T			&kp G				&kp M		&kp N	&kp E	&kp I	&kp O
+&gqth Z LG(Z)	&gqth X LG(X)	&gqth C LG(C)	&gqth D LG(V)	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
 
 					&mo WINDOWS		&mo ARROWS		&mo NUMBERS			&kp SPACE	&mo SYMBOLS		&trans
 					&mo WINDOWS2	&kp LEFT_SHIFT	&ctrl_colemak		&trans		&kp RIGHT_SHIFT	&trans
@@ -94,9 +89,9 @@
 /* 1 */
 		russian_layer {
 			bindings = <
-&kp Q	&kp W	&kp E	&kp R	&kp T				&kp Y	&kp U	&kp I		&kp O		&kp P
-&kp A	&kp S	&kp D	&kp F	&kp G				&kp H	&kp J	&kp K		&kp L		&kp SEMICOLON
-&kp Z	&kp X	&kp C	&kp V	&kp B				&kp N	&kp M	&kp COMMA	&kp PERIOD 	&kp SLASH
+&kp Q	&kp W	&kp E	&kp R	&th T SLASH			&kp Y	&kp U				&kp I		&kp O		&kp P
+&kp A	&kp S	&kp D	&kp F	&kp G				&kp H	&kp J				&kp K		&kp L		&kp SEMICOLON
+&kp Z	&kp X	&kp C	&kp V	&kp B				&kp N	&th M RIGHT_BRACKET &kp COMMA	&kp PERIOD 	&th SINGLE_QUOTE LEFT_BRACKET
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
