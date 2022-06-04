@@ -63,7 +63,7 @@
 &kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
 
 					&trans		&mo ARROWS	&mo NUMBERS			&kp SPACE	&trans	&kp LEFT_SHIFT
-					&trans		&mo RUSSIAN	&trans		&trans		&trans	&trans
+					&trans		&mo RUSSIAN	&ctrl_colemak		&trans		&trans	&trans
 			>;
 		};
 /* 1 */
