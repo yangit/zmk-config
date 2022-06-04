@@ -43,7 +43,7 @@
 	};
 
 	behaviors {
-		gqt: global-quick-tap {
+		gqtc: global-quick-tap-cmd {
 			compatible = "zmk,behavior-hold-tap";
 			label = "GLOBAL_QUICK_TAP";
 			#binding-cells = <2>;
@@ -51,17 +51,28 @@
 			tapping-term-ms = <200>;
 			quick-tap-ms = <125>;
 			global-quick-tap;
-			bindings = <&kp>, <&kp>;
+			bindings = <&kp>, <&kp_cmd>;
 };
 	};
 
 	macros {
+		kp_cmd: kp_cmd {
+            label = "kp_cmd";
+            compatible = "zmk,behavior-macro";
+			wait-ms = <40>;
+            #binding-cells = <1>;
+            bindings
+                = <&macro_press &kp LEFT_COMMAND>
+                , <&macro_tap &kp>
+                , <&macro_release &kp LEFT_COMMAND>
+                ;
+        };
 		ZMK_MACRO(ctrl_colemak,
 			wait-ms = <0>;			
 			bindings 
-				= <&macro_press &mo COLEMAK &kp LSHFT>
+				= <&macro_press &mo COLEMAK &kp LEFT_CONTROL>
 				, <&macro_pause_for_release>
-				, <&macro_release &mo COLEMAK &kp LSHFT>;
+				, <&macro_release &mo COLEMAK &kp LEFT_CONTROL>;
 		)              
     };	
 
@@ -70,7 +81,7 @@
 
 		default_layer {
 			bindings = <
-&gqt Q A	&kp W	&kp F	&kp P	&mo CONFIG			&trans		&kp L	&kp U	&kp Y	&trans
+&gqtc Q Q	&kp W	&kp F	&kp P	&mo CONFIG			&trans		&kp L	&kp U	&kp Y	&trans
 &kp A	&kp R	&kp S	&kp T	&kp G				&kp M		&kp N	&kp E	&kp I	&kp O
 &kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
 
