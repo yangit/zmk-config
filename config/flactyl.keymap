@@ -43,27 +43,27 @@
 	};
 
 	behaviors {
-		gqtc: global-quick-tap-cmd {
+		hold_q: hold_q {
 			compatible = "zmk,behavior-hold-tap";
-			label = "GLOBAL_QUICK_TAP";
-			#binding-cells = <2>;
+			label = "hold_q";
+			#binding-cells = <0>;
 			flavor = "tap-preferred";
 			tapping-term-ms = <200>;
 			quick-tap-ms = <125>;
 			global-quick-tap;
-			bindings = <&kp>, <&kp_cmd>;
+			bindings = <&kp Q>, <&cmd_q>;
 };
 	};
 
 	macros {
-		kp_cmd: kp_cmd {
-            label = "kp_cmd";
+		cmd_q: cmd_q {
+            label = "cmd_q";
             compatible = "zmk,behavior-macro";
-			wait-ms = <40>;
-            #binding-cells = <1>;
+			wait-ms = <0>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LEFT_COMMAND>
-                , <&macro_tap &kp>
+                , <&macro_tap &kp Q>
                 , <&macro_release &kp LEFT_COMMAND>
                 ;
         };
@@ -81,7 +81,7 @@
 
 		default_layer {
 			bindings = <
-&gqtc Q Q	&kp W	&kp F	&kp P	&mo CONFIG		&trans		&kp L	&kp U	&kp Y	&trans
+&hold_q	&kp W	&kp F	&kp P	&mo CONFIG		&trans		&kp L	&kp U	&kp Y	&trans
 &kp A	&kp R	&kp S	&kp T	&kp G				&kp M		&kp N	&kp E	&kp I	&kp O
 &kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
 
