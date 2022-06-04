@@ -15,7 +15,7 @@
 #define COLEMAK 3
 #define APP_ONE 4
 #define APP_TWO 5
-#define ARROW   6
+#define ARROWS   6
 #define SYMBOLS 7
 #define NUMBERS 8
 #define WINDOWS 9
@@ -42,7 +42,7 @@
 		};
 	};
 
-/*
+
 	macros {
 		ZMK_MACRO(ctrl_colemak,
 			wait-ms = <0>;			
@@ -52,7 +52,7 @@
 				, <&macro_release &mo COLEMAK &kp LSHFT>;
 		)              
     };	
-	*/
+
 	keymap {
 		compatible = "zmk,keymap";
 
