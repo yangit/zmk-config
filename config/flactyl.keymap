@@ -27,6 +27,20 @@
 				bindings = <&kp RET>;
 		};
 	};
+	macros {
+        ctrl_colemak: ctrl_colemak {
+            label = "ctrl_colemak";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+			wait-ms = <0>;
+			bindings
+				= <&macro_press &mo 3 &kp LSHFT>
+				, <&macro_pause_for_release>
+				, <&macro_release &mo 3 &kp LSHFT>;
+		};        
+    };
+	macros {
+	
 	
 	keymap {
 		compatible = "zmk,keymap";
@@ -38,7 +52,7 @@
 &kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
 
 					&mo 1		&mo 6	&mo 8				&kp SPACE	&mo 1	&kp LEFT_SHIFT
-					&mo 1		&mo 2	&mo 1				&mo 1		&mo 1	&mo 1
+					&mo 1		&mo 2	&ctrl_colemak		&mo 1		&mo 1	&mo 1
 			>;
 		};
 /* 1 */
