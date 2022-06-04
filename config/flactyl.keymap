@@ -9,6 +9,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+&sk {
+    release-after-ms = <3000>;
+};
+
 / {
 	combos {
 		compatible = "zmk,combos";
@@ -23,6 +27,7 @@
 				bindings = <&kp RET>;
 		};
 	};
+	
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -59,11 +64,11 @@
 			>;
 		};
 /* 3 */
-		ctrl_layer {
+		colemak_layer {
 			bindings = <
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&kp Q	&kp W	&kp F	&kp P	&trans				&trans		&kp L	&kp U	&kp Y	&trans
+&kp A	&kp R	&kp S	&kp T	&kp G				&kp M		&kp N	&kp E	&kp I	&kp O
+&kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
@@ -94,9 +99,9 @@
 /* 6 */
 		arrows_layer {
 			bindings = <
-&trans		&kp SPACE	&trans			&kp DELETE	&kp K_VOLUME_UP				&trans			&kp HOME			&kp UP_ARROW		&kp PAGE_UP		&trans
-&kp ESCAPE	&kp TAB		&kp BACKSPACE	&kp RETURN	&kp K_VOLUME_DOWN			&kp LEFT_ARROW	&kp DOWN_ARROW		&kp RIGHT_ARROW		&trans			&trans
-&trans		&trans		&trans			&trans		&trans						&trans			&kp END				&trans				&trans			&kp PAGE_DOWN
+&trans				&kp SPACE			&trans				&kp DELETE		&kp K_VOLUME_UP				&trans			&kp HOME			&kp UP_ARROW		&kp PAGE_UP		&trans
+&kp ESCAPE			&kp TAB				&kp BACKSPACE		&kp RETURN		&kp K_VOLUME_DOWN			&kp LEFT_ARROW	&kp DOWN_ARROW		&kp RIGHT_ARROW		&trans			&trans
+&sk LEFT_ALT 		&sk LEFT_CONTROL	&sk LEFT_SHIFT		&LEFT_COMMAND	&trans						&trans			&kp END				&trans				&trans			&kp PAGE_DOWN
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
