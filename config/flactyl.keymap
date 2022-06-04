@@ -64,6 +64,10 @@
 	};
 
 	macros {
+	    ZMK_MACRO(awesome,
+			wait-ms = <50>;			
+			bindings = <&macro_tap &kp Z &kp M &kp K &kp LS(I) &kp S &kp LS(A) &kp W &kp E &kp S &kp O &kp M &kp E &kp EXCLAMATION>;
+		)  
 		ZMK_MACRO(ctrl_colemak,
 			wait-ms = <0>;			
 			bindings 
@@ -190,7 +194,7 @@
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&awesome	&trans		&trans				&trans		&trans		&trans		&trans		&trans
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
