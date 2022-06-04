@@ -42,6 +42,18 @@
 		};
 	};
 
+	behaviors {
+		gqt: global-quick-tap {
+			compatible = "zmk,behavior-hold-tap";
+			label = "GLOBAL_QUICK_TAP";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <200>;
+			quick-tap-ms = <125>;
+			global-quick-tap;
+			bindings = <&kp>, <&kp>;
+};
+	};
 
 	macros {
 		ZMK_MACRO(ctrl_colemak,
@@ -58,7 +70,7 @@
 
 		default_layer {
 			bindings = <
-&kp Q	&kp W	&kp F	&kp P	&mo CONFIG			&trans		&kp L	&kp U	&kp Y	&trans
+&gqt Q LCMD(Q)	&kp W	&kp F	&kp P	&mo CONFIG			&trans		&kp L	&kp U	&kp Y	&trans
 &kp A	&kp R	&kp S	&kp T	&kp G				&kp M		&kp N	&kp E	&kp I	&kp O
 &kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
 
