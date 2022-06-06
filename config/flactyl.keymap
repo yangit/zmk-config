@@ -81,7 +81,6 @@
             tapping-term-ms = <200>;
             bindings = <&gqth Q W>, <&gqthq 0 P>;
         };
-		*/
 	};
 
 	macros {
