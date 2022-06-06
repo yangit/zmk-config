@@ -10,17 +10,20 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define RUSSIAN 1
-#define QWERTY  2
-#define COLEMAK 3
-#define APP_ONE 4
-#define APP_TWO 5
-#define ARROWS   6
-#define SYMBOLS 7
-#define NUMBERS 8
-#define WINDOWS 9
-#define WINDOWS2 10
-#define CONFIG  11
+#define HOME 1
+#define RUSSIAN 2
+#define QWERTY  3
+#define COLEMAK 4
+#define MIRROR 5
+#define APP_ONE 6
+#define APP_TWO 7
+#define ARROWS   8
+#define SYMBOLS 9
+#define NUMBERS 10
+#define WINDOWS 11
+#define WINDOWS2 12
+#define CONFIG  13
+#define TRANS  14
 
 /* sticky keys timeout */
 &sk {
@@ -79,8 +82,18 @@
 
 	keymap {
 		compatible = "zmk,keymap";
-
+/* 0 */
 		default_layer {
+			bindings = <
+&to 1	&to 1	&to 1	&to 1	&to 1		&to 1	&to 1	&to 1	&to 1	&to 1
+&to 1	&to 1	&to 1	&to 1	&to 1		&to 1	&to 1	&to 1	&to 1	&to 1
+&to 1	&to 1	&to 1	&to 1	&to 1		&to 1	&to 1	&to 1	&to 1	&to 1
+				&to 1	&to 1	&to 1		&to 1	&to 1	&to 1	
+				&to 1	&to 1	&to 1		&to 1	&to 1	&to 1	
+			>;
+		};
+/* 1 */
+		home_layer {
 			bindings = <
 &gqth Q LG(Q)	&kp W			&gqth F LG(F)	&kp P			&mo CONFIG			&trans		&kp L	&kp U	&kp Y	&trans
 &gqth A LG(A)	&gqth R LG(R)	&gqth S LG(S)	&kp T			&kp G				&kp M		&kp N	&kp E	&kp I	&kp O
@@ -90,7 +103,7 @@
 					&mo WINDOWS2	&kp LEFT_SHIFT	&ctrl_colemak		&trans		&kp RIGHT_SHIFT	&trans
 			>;
 		};
-/* 1 */
+/* 2 */	
 		russian_layer {
 			bindings = <
 &kp Q	&kp W	&kp E	&kp R	&th T SLASH			&kp Y	&kp U				&kp I		&kp O		&kp P
@@ -101,7 +114,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-/* 2 */
+/* 3 */
 		qwerty_layer {
 			bindings = <
 &kp Q	&kp W	&kp E	&kp R	&kp T				&kp Y	&kp U	&kp I		&kp O		&kp P
@@ -112,18 +125,29 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-/* 3 */
+/* 4 */
 		colemak_layer {
 			bindings = <
 &kp Q	&kp W	&kp F	&kp P	&trans				&trans		&kp L	&kp U	&kp Y	&trans
 &kp A	&kp R	&kp S	&kp T	&kp G				&kp M		&kp N	&kp E	&kp I	&kp O
 &kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
 
-						&trans		&trans		&trans				&trans		&trans		&trans
-						&trans		&trans		&trans				&trans		&trans		&trans
+		&trans		&trans		&trans				&trans		&trans		&trans
+		&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-/* 4 */
+/* 5 */
+		mirror_layer {
+			bindings = <
+&trans	&kp Y	&kp U	&kp L	&trans				&trans	&kp P	&kp F	&kp W	&kp Q
+&kp O	&kp I	&kp E	&kp N	&kp M				&kp G	&kp T	&kp S	&kp R	&kp A
+&trans	&kp K	&kp V	&kp H	&kp J				&kp B	&kp D	&kp C	&kp X	&kp Z
+
+		&trans		&trans		&trans				&trans		&trans		&trans
+		&trans		&trans		&trans				&trans		&trans		&trans
+			>;
+		};
+/* 6 */
 		app1_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
@@ -134,7 +158,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-/* 5 */
+/* 7 */
 		app2_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
@@ -145,7 +169,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-/* 6 */
+/* 8 */
 		arrows_layer {
 			bindings = <
 &trans				&kp SPACE			&trans				&kp DELETE		&kp K_VOLUME_UP				&trans			&kp HOME			&kp UP_ARROW		&kp PAGE_UP		&trans
@@ -156,7 +180,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-/* 7 */
+/* 9 */
 		symbols_layer {
 			bindings = <
 &kp SLASH			&kp LEFT_PARENTHESIS	&kp RIGHT_PARENTHESIS	&kp MINUS			&kp PLUS				&kp EXCLAMATION		&kp QUESTION	&kp COLON		&kp SEMICOLON	&kp BACKSLASH
@@ -167,7 +191,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-/* 8 */
+/* 10 */
 		numbers_layer {
 			bindings = <
 &kp KP_MULTIPLY	&kp N7		&kp N8		&kp N9		&trans				&trans		&trans		&trans		&trans		&trans
@@ -178,7 +202,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-/* 9 */
+/* 11 */
 		windows_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
@@ -189,7 +213,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-/* 10 */
+/* 12 */
 		windows2_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
@@ -200,7 +224,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-/* 11 */
+/* 13 */
 		config_layer {
 			bindings = <
 &trans		&trans		&trans		&trans			&reset						&reset		&trans		&trans		&trans		&trans
@@ -211,7 +235,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-/* 12 */
+/* 14 */
 		trans_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
