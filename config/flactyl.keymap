@@ -86,7 +86,7 @@
 	macros {
 		ZMK_MACRO(repeatqq,
 			wait-ms = <0>;			
-			bindings = <&macro_tap &kp Z &kp M &kp K &kp LS(I) &kp S &kp LS(A) &kp W &kp E &kp S &kp O &kp M &kp E &kp EXCLAMATION>;
+			bindings = <&macro_tap &kp L &kp L>;
 		) 
 	    ZMK_MACRO(awesome,
 			wait-ms = <50>;			
