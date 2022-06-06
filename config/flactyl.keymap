@@ -56,8 +56,7 @@
 			global-quick-tap;
 			bindings = <&kp>, <&kp>;
 		};
-		/*
-		gqth-q: global-quick-tap-hold-q {
+		gqthq: global-quick-tap-hold-q {
 			compatible = "zmk,behavior-hold-tap";
 			label = "global-quick-tap-hold-q";
 			#binding-cells = <2>;
@@ -65,9 +64,8 @@
 			tapping-term-ms = <200>;
 			quick-tap-ms = <125>;
 			global-quick-tap;
-			bindings = <&repeat-qq>, <&kp>;
+			bindings = <&repeatqq>, <&kp>;
 		};
-		*/
 		th: tap-hold {
 			compatible = "zmk,behavior-hold-tap";
 			label = "tap-hold";
@@ -76,19 +74,18 @@
 			tapping-term-ms = <200>;
 			bindings = <&kp>, <&kp>;
 		};
-		/*
-		 td-q: tap_dance_q {
+		 tdq: tap_dance_q {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_Q";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&gqth Q W>, <&gqth-q 0 P>;
+            bindings = <&gqth Q W>, <&gqthq 0 P>;
         };
 		*/
 	};
 
 	macros {
-		ZMK_MACRO(repeat-qq,
+		ZMK_MACRO(repeatqq,
 			wait-ms = <0>;			
 			bindings = <&macro_tap &kp Z &kp M &kp K &kp LS(I) &kp S &kp LS(A) &kp W &kp E &kp S &kp O &kp M &kp E &kp EXCLAMATION>;
 		) 
@@ -120,7 +117,7 @@
 /* 1 */
 		home_layer {
 			bindings = <
-&td-q			&kp W			&gqth F LG(F)	&kp P			&mo L_CONFIG			&trans		&kp L	&kp U	&kp Y	&trans
+&tdq			&kp W			&gqth F LG(F)	&kp P			&mo L_CONFIG			&trans		&kp L	&kp U	&kp Y	&trans
 &gqth A LG(A)	&gqth R LG(R)	&gqth S LG(S)	&kp T			&kp G				&kp M		&kp N	&kp E	&kp I	&kp O
 &gqth Z LG(Z)	&gqth X LG(X)	&gqth C LG(C)	&gqth D LG(V)	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
 
