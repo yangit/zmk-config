@@ -249,7 +249,7 @@
 		config_layer {
 			bindings = <
 &trans		&trans		&trans		&trans			&trans						&kp N0	&trans	&trans	&trans &kp N1
-&trans		&trans		&trans		&reset			&bootloader					&bootloader &reset &bootloader &bootloader &bootloader
+&trans		&trans		&trans		&reset			&bootloader					&bootloader &reset &trans &trans &trans
 &bt BT_PRV	&bt BT_NXT	&bt BT_CLR	&out OUT_USB	&out OUT_BLE				&trans	&trans	&trans	&trans &kp N2
 
 						&trans		&trans		&trans				&bootloader &bootloader &bootloader
