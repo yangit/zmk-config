@@ -291,8 +291,8 @@
 /* 14 */
 		tmp_layer {
 			bindings = <
-&none		&none		&none		&none		&none				&none		&none		&none		&none		&none
-&none		&none		&none		&none		&none				&none		&none		&none		&none		&none
+&kp RETURN		&none		&none		&none		&none				&none		&none		&none		&none		&none
+&kp RETURN		&none		&none		&none		&none				&none		&none		&none		&none		&none
 &kp RETURN		&none		&none		&none		&none				&none		&none		&none		&none		&none
 
 						&kp A		&kp R		&kp S				&none		&none		&none
