@@ -41,37 +41,37 @@
 			bindings = <&kp SPACE>;
 		};
 		combo_t1 {
-				timeout-ms = <50>;
+				timeout-ms = <100>;
 				key-positions = <30 36>;
 				bindings = <&kp N1>;
 		};
 		combo_t2 {
-				timeout-ms = <50>;
+				timeout-ms = <100>;
 				key-positions = <31 37>;
 				bindings = <&kp N2>;
 		};
 		combo_t3 {
-				timeout-ms = <50>;
+				timeout-ms = <100>;
 				key-positions = <32 38>;
 				bindings = <&kp N3>;
 		};
 		combo_t4 {
-				timeout-ms = <50>;
+				timeout-ms = <100>;
 				key-positions = <30 31>;
 				bindings = <&kp N4>;
 		};
 		combo_t5 {
-				timeout-ms = <50>;
+				timeout-ms = <100>;
 				key-positions = <31 32>;
 				bindings = <&kp N5>;
 		};
 		combo_t6 {
-				timeout-ms = <50>;
+				timeout-ms = <100>;
 				key-positions = <36 37>;
 				bindings = <&kp N6>;
 		};
 		combo_t7 {
-				timeout-ms = <50>;
+				timeout-ms = <100>;
 				key-positions = <37 38>;
 				bindings = <&kp N7>;
 		};
@@ -295,8 +295,8 @@
 &none		&none		&none		&none		&none				&none		&none		&none		&none		&none
 &none		&none		&none		&none		&none				&none		&none		&none		&none		&none
 
-						&kp N1		&kp N2		&kp N3				&none		&none		&none
-						&kp N4		&kp N5		&kp N6				&none		&none		&none
+						&kp N0		&kp N0		&kp N0				&none		&none		&none
+						&kp N0		&kp N0		&kp N0				&none		&none		&none
 			>;
 		};
 /* 15 */
