@@ -23,7 +23,9 @@
 #define L_WINDOWS 11
 #define L_WINDOWS2 12
 #define L_CONFIG  13
-#define L_TRANS  14
+#define L_TMP  14
+#define L_TRANS  15
+
 
 /* sticky keys timeout */
 &sk {
@@ -116,7 +118,7 @@
 /* 1 */
 		home_layer {
 			bindings = <
-&tdq			&kp W			&gqth LG(F) F	&kp P			&mo L_CONFIG			&mo L_ARROWS	&kp L	&kp U	&kp Y	&kp RETURN
+&tdq			&kp W			&gqth LG(F) F	&kp P			&mo L_CONFIG			&to L_TMP	&kp L	&kp U	&kp Y	&kp RETURN
 &gqth LG(A) A	&gqth LG(R) R	&gqth LG(S)	S	&kp T			&kp G					&kp M			&kp N	&kp E	&kp I	&kp O
 &gqth LG(Z) Z	&gqth LG(X)	X	&gqth LG(C)	C	&gqth LG(V) D	&kp B					&kp J			&kp H	&kp V	&kp K	&kp SPACE
 
@@ -257,6 +259,17 @@
 			>;
 		};
 /* 14 */
+		tmp_layer {
+			bindings = <
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+
+						&kp N1		&kp N2		&kp N3				&trans		&trans		&trans
+						&kp N4		&kp N5		&kp N6				&trans		&trans		&trans
+			>;
+		};
+/* 15 */
 		trans_layer {
 			bindings = <
 &trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
