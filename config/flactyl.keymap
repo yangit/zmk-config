@@ -293,7 +293,7 @@
 			bindings = <
 &none		&none		&none		&none		&none				&none		&none		&none		&none		&none
 &none		&none		&none		&none		&none				&none		&none		&none		&none		&none
-&none		&none		&none		&none		&none				&none		&none		&none		&none		&none
+&kp RETURN		&none		&none		&none		&none				&none		&none		&none		&none		&none
 
 						&kp A		&kp R		&kp S				&none		&none		&none
 						&kp Z		&kp X		&kp C				&none		&none		&none
