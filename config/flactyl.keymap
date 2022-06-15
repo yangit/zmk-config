@@ -261,12 +261,12 @@
 /* 14 */
 		tmp_layer {
 			bindings = <
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&none		&none		&none		&none		&none				&none		&none		&none		&none		&none
+&none		&none		&none		&none		&none				&none		&none		&none		&none		&none
+&none		&none		&none		&none		&none				&none		&none		&none		&none		&none
 
-						&kp N1		&kp N2		&kp N3				&trans		&trans		&trans
-						&kp N4		&kp N5		&kp N6				&trans		&trans		&trans
+						&kp N1		&kp N2		&kp N3				&none		&none		&none
+						&kp N4		&kp N5		&kp N6				&none		&none		&none
 			>;
 		};
 /* 15 */
