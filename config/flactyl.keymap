@@ -295,8 +295,8 @@
 &none		&none		&none		&none		&none				&none		&none		&none		&none		&none
 &none		&none		&none		&none		&none				&none		&none		&none		&none		&none
 
-						&kp N0		&kp N0		&kp N0				&none		&none		&none
-						&kp N0		&kp N0		&kp N0				&none		&none		&none
+						&kp A		&kp R		&kp S				&none		&none		&none
+						&kp Z		&kp X		&kp C				&none		&none		&none
 			>;
 		};
 /* 15 */
