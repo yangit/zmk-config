@@ -103,6 +103,16 @@
 /* 0 */
 		default_layer {
 			bindings = <
+&to 3	&to 3	&to 3	&to 3	&to 3		&to 3	&to 3	&to 3	&to 3	&to 3
+&to 3	&to 3	&to 3	&to 3	&to 3		&to 3	&to 3	&to 3	&to 3	&to 3
+&to 3	&to 3	&to 3	&to 3	&to 3		&to 3	&to 3	&to 3	&to 3	&to 3
+				&to 3	&to 3	&to 3		&to 3	&to 3	&to 3	
+				&to 3	&to 3	&to 3		&to 3	&to 3	&to 3	
+			>;
+		};
+/* 0 
+		default_layer {
+			bindings = <
 &to 1	&to 1	&to 1	&to 1	&to 1		&to 1	&to 1	&to 1	&to 1	&to 1
 &to 1	&to 1	&to 1	&to 1	&to 1		&to 1	&to 1	&to 1	&to 1	&to 1
 &to 1	&to 1	&to 1	&to 1	&to 1		&to 1	&to 1	&to 1	&to 1	&to 1
@@ -110,6 +120,7 @@
 				&to 1	&to 1	&to 1		&to 1	&to 1	&to 1	
 			>;
 		};
+*/
 /* 1 */
 		home_layer {
 			bindings = <
@@ -117,8 +128,8 @@
 &gqth LG(A) A	&gqth LG(R) R	&gqth LG(S)	S	&kp T			&kp G					&kp M		&kp N	&kp E	&kp I	&kp O
 &gqth LG(Z) Z	&gqth LG(X)	X	&gqth LG(C)	C	&gqth LG(V) D	&kp B					&kp J		&kp H	&kp V	&kp K	&kp SPACE
 
-					&kp Q	&kp W	&kp E		&kp SPACE	&mo L_SYMBOLS	&trans
-					&kp A	&kp S	&kp D		&trans		&kp RIGHT_SHIFT	&trans
+					&mo L_WINDOWS	&mo L_ARROWS	&mo L_NUMBERS		&kp SPACE	&mo L_SYMBOLS	&trans
+					&mo L_WINDOWS2	&mo L_MIRROR	&ctrl_colemak		&trans		&kp RIGHT_SHIFT	&trans
 			>;
 		};
 /* 2 */	
@@ -139,8 +150,8 @@
 &kp A	&kp S	&kp D	&kp F	&kp G				&kp H	&kp J	&kp K		&kp L		&kp SEMICOLON
 &kp Z	&kp X	&kp C	&kp V	&kp B				&kp N	&kp M	&kp COMMA	&kp PERIOD 	&kp SLASH
 
-						&trans		&trans		&trans				&trans		&trans		&trans
-						&trans		&trans		&trans				&trans		&trans		&trans
+						&kp Q	&kp W	&kp E				&kp Y	&kp U	&kp I
+						&kp A	&kp S	&kp D				&kp H	&kp J	&kp K
 			>;
 		};
 /* 4 */
