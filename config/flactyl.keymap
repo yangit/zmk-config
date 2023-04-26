@@ -1,4 +1,8 @@
-
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -26,77 +30,70 @@
 / {
 
     combos {
-
-compatible = "zmk,combos";
-combo_spc {
-    timeout-ms = <50>;
-    key-positions = <2 3>;
-    bindings = <&kp SPACE>;
-};
-
+        compatible = "zmk,combos";
+        combo_spc {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp SPACE>;
+        };
     };
     behaviors {
-
-gqth: global-quick-tap-hold {
-    compatible = "zmk,behavior-hold-tap";
-    label = "global-quick-tap-hold";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <125>;
-    global-quick-tap;
-    bindings = <&kp>, <&kp>;
-};
- 
-gqthq: global-quick-tap-hold-q {
-    compatible = "zmk,behavior-hold-tap";
-    label = "global-quick-tap-hold-q";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <125>;
-    global-quick-tap;
-    bindings = <&kp>, <&repeatqq>;
-};
- 
-th: tap-hold {
-    compatible = "zmk,behavior-hold-tap";
-    label = "tap-hold";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    bindings = <&kp>, <&kp>;
-};
- 
- tdq: tap_dance_q {
-    compatible = "zmk,behavior-tap-dance";
-    label = "TAP_DANCE_Q";
-    #binding-cells = <0>;
-    tapping-term-ms = <200>;
-    bindings = <&gqth W Q>, <&gqthq P 0>;
-};
-
+        gqth: global-quick-tap-hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "global-quick-tap-hold";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
+        gqthq: global-quick-tap-hold-q {
+            compatible = "zmk,behavior-hold-tap";
+            label = "global-quick-tap-hold-q";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&repeatqq>;
+        };
+        th: tap-hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "tap-hold";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+        tdq: tap_dance_q {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_Q";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&gqth W Q>, <&gqthq P 0>;
+        };
     };
     macros {
-ZMK_MACRO(repeatqq,
-    wait-ms = <0>;			
-    bindings = <&macro_tap &kp L &kp L>;
-)
-ZMK_MACRO(awesome,
-    wait-ms = <390>;			
-    bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
-)
-ZMK_MACRO(shellrepeat,
-    wait-ms = <100>;	
-    bindings = <&macro_tap &kp LG(KP_N1) &kp UP_ARROW &kp RETURN>;
-)
-ZMK_MACRO(ctrl_colemak,
-    wait-ms = <0>;			
-    bindings 
-        = <&macro_press &mo colemak &kp LEFT_CONTROL>
-        , <&macro_pause_for_release>
-        , <&macro_release &mo colemak &kp LEFT_CONTROL>;
-)
+        ZMK_MACRO(repeatqq,
+            wait-ms = <0>;			
+            bindings = <&macro_tap &kp L &kp L>;
+        )
+        ZMK_MACRO(awesome,
+            wait-ms = <390>;			
+            bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
+        )
+        ZMK_MACRO(shellrepeat,
+            wait-ms = <100>;	
+            bindings = <&macro_tap &kp LG(KP_N1) &kp UP_ARROW &kp RETURN>;
+        )
+        ZMK_MACRO(ctrl_colemak,
+            wait-ms = <0>;			
+            bindings 
+                = <&macro_press &mo L_COLEMAK &kp LEFT_CONTROL>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo L_COLEMAK &kp LEFT_CONTROL>;
+        )
     };
     keymap {
         compatible = "zmk,keymap";
@@ -114,8 +111,8 @@ ZMK_MACRO(ctrl_colemak,
 &gqth LG(J) J	&gqth LG(H) H	&gqth LG(V) V	&gqth LG(K) K	&none
 &kp SPACE	&mo L_SYMBOLS	&kp RIGHT_SHIFT
 &none	&none	&none
-            >
-        }    
+            >;
+        };
     
 
         /* mirror 1 */
@@ -131,8 +128,8 @@ ZMK_MACRO(ctrl_colemak,
 &gqth LG(B) B	&gqth LG(V) D	&gqth LG(C) C	&gqth LG(X) X	&gqth LG(Z) Z
 &none	&none	&none
 &none	&none	&none
-            >
-        }    
+            >;
+        };
     
 
         /* russian 2 */
@@ -148,8 +145,8 @@ ZMK_MACRO(ctrl_colemak,
 &kp N	&th M RIGHT_BRACKET	&kp COMMA	&kp PERIOD	&th SINGLE_QUOTE LEFT_BRACKET
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >
-        }    
+            >;
+        };
     
 
         /* qwerty 3 */
@@ -165,8 +162,8 @@ ZMK_MACRO(ctrl_colemak,
 &kp N	&kp M	&kp COMMA	&kp PERIOD	&kp SLASH
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >
-        }    
+            >;
+        };
     
 
         /* colemak 4 */
@@ -182,8 +179,8 @@ ZMK_MACRO(ctrl_colemak,
 &kp J	&kp H	&kp V	&kp K	&none
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >
-        }    
+            >;
+        };
     
 
         /* numbers 5 */
@@ -199,8 +196,8 @@ ZMK_MACRO(ctrl_colemak,
 &kp KP_EQUAL	&kp N6	&kp N5	&kp N4	&kp KP_DOT
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >
-        }    
+            >;
+        };
     
 
         /* arrows 6 */
@@ -216,8 +213,8 @@ ZMK_MACRO(ctrl_colemak,
 &none	&kp END	&none	&kp PAGE_DOWN	&none
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >
-        }    
+            >;
+        };
     
 
         /* symbols 7 */
@@ -233,8 +230,8 @@ ZMK_MACRO(ctrl_colemak,
 &kp PERCENT	&kp HASH	&kp UNDERSCORE	&kp AMPERSAND	&kp DOUBLE_QUOTES
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >
-        }    
+            >;
+        };
     
 
         /* windows 8 */
@@ -250,8 +247,8 @@ ZMK_MACRO(ctrl_colemak,
 &trans	&trans	&trans	&trans	&trans
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >
-        }    
+            >;
+        };
     
 
         /* windows2 9 */
@@ -267,8 +264,8 @@ ZMK_MACRO(ctrl_colemak,
 &trans	&trans	&trans	&trans	&trans
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >
-        }    
+            >;
+        };
     
 
         /* config 10 */
@@ -284,8 +281,8 @@ ZMK_MACRO(ctrl_colemak,
 &none	&none	&none	&none	&none
 &none	&none	&none
 &none	&none	&none
-            >
-        }    
+            >;
+        };
     
     };
 };

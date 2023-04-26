@@ -2,7 +2,12 @@
 const fs = require('fs');
 
 const config = {
-    header: `
+    header: `/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -92,9 +97,9 @@ ZMK_MACRO(shellrepeat,
 ZMK_MACRO(ctrl_colemak,
     wait-ms = <0>;			
     bindings 
-        = <&macro_press &mo colemak &kp LEFT_CONTROL>
+        = <&macro_press &mo L_COLEMAK &kp LEFT_CONTROL>
         , <&macro_pause_for_release>
-        , <&macro_release &mo colemak &kp LEFT_CONTROL>;
+        , <&macro_release &mo L_COLEMAK &kp LEFT_CONTROL>;
 )
 `
     ],
@@ -348,20 +353,19 @@ for (let layer in config.keymap) {
 }
 console.log(config.keymap);
 
+const tab = (str, pad) => str.split('\n').map(line => `${pad}${line}`).join('\n')
 
-
-const output = `
-${config.header}
+const output = `${config.header}
 ${defines}
 ${config.postHeader}
     combos {
-${config.combos.join(' ')}
+${tab(config.combos.map(macro=>macro.trim()).join('\n'),'        ')}
     };
     behaviors {
-${config.behaviors.join(' ')}
+${tab(config.behaviors.map(macro=>macro.trim()).join('\n'),'        ')}
     };
     macros {
-${config.macros.map(macro=>macro.trim()).join('\n')}
+${tab(config.macros.map(macro=>macro.trim()).join('\n'),'        ')}
     };
     keymap {
         compatible = "zmk,keymap";
@@ -370,8 +374,8 @@ ${config.macros.map(macro=>macro.trim()).join('\n')}
         ${layer}_layer {
             bindings = <
 ${config.keymap[layer].map(row => row.join('\t')).join('\n')}
-            >
-        }    
+            >;
+        };
     `).join('\n')}
     };
 };
