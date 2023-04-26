@@ -87,7 +87,11 @@
 		) 
 	    ZMK_MACRO(awesome,
 			wait-ms = <50>;			
-			bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S>;
+			bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
+		)
+		ZMK_MACRO(shellrepeat,
+			wait-ms = <100>;		
+			bindings = <&macro_tap &kp LG(KP_N1) &kp UP_ARROW &kp RETURN};
 		)  
 		ZMK_MACRO(ctrl_colemak,
 			wait-ms = <0>;			
@@ -235,8 +239,8 @@
 		windows2_layer {
 			bindings = <
 &kp LG(RIGHT_BRACKET)	&kp LC(TAB)			&kp LS(LG(GRAVE))		&kp LA(LG(LC(LS(G))))		&kp LC(LS(N0))				&trans		&trans		&trans		&trans		&trans
-&kp LA(LG(LC(LS(Z))))		&kp LA(LG(LC(LS(X))))		&kp LA(LG(LC(LS(C))))	&kp LA(LG(LC(LS(B))))	&kp LG(KP_N9)						&trans		&trans		&trans		&trans		&trans
-&kp LG(MINUS)		&none		&awesome	&none		&kp LG(LS(N4))				&trans		&trans		&trans		&trans		&trans
+&gqth LA(LG(LC(LS(V)))) LA(LG(LC(LS(Z))))		&gqth LA(LG(LC(LS(K)))) LA(LG(LC(LS(X))))		&gqth LA(LG(LC(LS(KP_N0)))) LA(LG(LC(LS(C))))	&gqth LA(LG(LC(LS(KP_N1)))) LA(LG(LC(LS(B))))	&gqth LS(LG(KP_N9)) LG(KP_N9)						&trans		&trans		&trans		&trans		&trans
+&kp LG(MINUS)		&shellrepeat		&awesome	&gqth LA(LG(LC(LS(L)))) LA(LG(LC(LS(M))))		&kp LG(LS(N4))				&trans		&trans		&trans		&trans		&trans
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
@@ -245,8 +249,8 @@
 /* 13 */
 		config_layer {
 			bindings = <
-&none	&none	&none	&none &none						&none	&none	&none	&none &none
-&none &none &none		&sys_reset		&bootloader				&bootloader &sys_reset &none &none &none
+&bootloader	&none	&none	&none &none						&none	&none	&none	&none &bootloader
+&none &none &none		&sys_reset		&none				&none  &sys_reset &none &none &none
 &bt BT_PRV	&bt BT_NXT	&bt BT_CLR	&out OUT_USB	&out OUT_BLE				&none	&none	&none	&none &none
 
 						&none &none &none				&none &none &none
