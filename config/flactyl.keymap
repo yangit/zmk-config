@@ -1,8 +1,4 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
+
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -10,21 +6,16 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define L_DEFAULT 0
-#define L_HOME 1
+#define L_MIRROR 1
 #define L_RUSSIAN 2
-#define L_QWERTY  3
+#define L_QWERTY 3
 #define L_COLEMAK 4
-#define L_MIRROR 5
-#define L_APP_ONE 6
-#define L_APP_TWO 7
-#define L_ARROWS   8
-#define L_SYMBOLS 9
-#define L_NUMBERS 10
-#define L_WINDOWS 11
-#define L_WINDOWS2 12
-#define L_CONFIG  13
-#define L_TMP  14
-#define L_TRANS  15
+#define L_NUMBERS 5
+#define L_ARROWS 6
+#define L_SYMBOLS 7
+#define L_WINDOWS 8
+#define L_WINDOWS2 9
+#define L_CONFIG 10
 
 
 /* sticky keys timeout */
@@ -33,251 +24,273 @@
 };
 
 / {
-	combos {
-		compatible = "zmk,combos";
-		combo_spc {
-			timeout-ms = <50>;
-			key-positions = <2 3>;
-			bindings = <&kp SPACE>;
-		};
-	};
 
-	behaviors {
-		gqth: global-quick-tap-hold {
-			compatible = "zmk,behavior-hold-tap";
-			label = "global-quick-tap-hold";
-			#binding-cells = <2>;
-			flavor = "tap-preferred";
-			tapping-term-ms = <200>;
-			quick-tap-ms = <125>;
-			global-quick-tap;
-			bindings = <&kp>, <&kp>;
-		};
-		gqthq: global-quick-tap-hold-q {
-			compatible = "zmk,behavior-hold-tap";
-			label = "global-quick-tap-hold-q";
-			#binding-cells = <2>;
-			flavor = "tap-preferred";
-			tapping-term-ms = <200>;
-			quick-tap-ms = <125>;
-			global-quick-tap;
-			bindings = <&kp>, <&repeatqq>;
-		};
-		th: tap-hold {
-			compatible = "zmk,behavior-hold-tap";
-			label = "tap-hold";
-			#binding-cells = <2>;
-			flavor = "tap-preferred";
-			tapping-term-ms = <200>;
-			bindings = <&kp>, <&kp>;
-		};
-		 tdq: tap_dance_q {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_Q";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&gqth W Q>, <&gqthq P 0>;
-        };
-	};
+    combos {
 
-	macros {
-		ZMK_MACRO(repeatqq,
-			wait-ms = <0>;			
-			bindings = <&macro_tap &kp L &kp L>;
-		) 
-	    ZMK_MACRO(awesome,
-			wait-ms = <390>;			
-			bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
-		)
-		ZMK_MACRO(shellrepeat,
-			wait-ms = <100>;	
-			bindings = <&macro_tap &kp LG(KP_N1) &kp UP_ARROW &kp RETURN>;
-		)  
-		ZMK_MACRO(ctrl_colemak,
-			wait-ms = <0>;			
-			bindings 
-				= <&macro_press &mo L_COLEMAK &kp LEFT_CONTROL>
-				, <&macro_pause_for_release>
-				, <&macro_release &mo L_COLEMAK &kp LEFT_CONTROL>;
-		)              
-    };	
+compatible = "zmk,combos";
+combo_spc {
+    timeout-ms = <50>;
+    key-positions = <2 3>;
+    bindings = <&kp SPACE>;
+};
 
-	keymap {
-		compatible = "zmk,keymap";
-/* 0 */
-		default_layer {
-			bindings = <
-&to 1	&to 1	&to 1	&to 1	&to 1		&to 1	&to 1	&to 1	&to 1	&to 1
-&to 1	&to 1	&to 1	&to 1	&to 1		&to 1	&to 1	&to 1	&to 1	&to 1
-&to 1	&to 1	&to 1	&to 1	&to 1		&to 1	&to 1	&to 1	&to 1	&to 1
-				&to 1	&to 1	&to 1		&to 1	&to 1	&to 1	
-				&to 1	&to 1	&to 1		&to 1	&to 1	&to 1	
-			>;
-		};
-/* 1 */
-		home_layer {
-			bindings = <
-&tdq			&gqth LG(W) W	&gqth LG(F) F	&gqth LG(P) P	&mo L_CONFIG			&mo L_CONFIG	&gqth LG(L) L	&gqth LG(U) U	&gqth LG(Y) Y	&none
-&gqth LG(A) A	&gqth LG(R) R	&gqth LG(S)	S	&gqth LG(T)	T	&gqth LG(G)	G			&gqth LG(M) M		&gqth LG(N) N	&gqth LG(E) E	&gqth LG(I) I	&gqth LG(O) O
-&gqth LG(Z) Z	&gqth LG(X)	X	&gqth LG(C)	C	&gqth LG(V) D	&gqth LG(B) B			&gqth LG(J) J	&gqth LG(H) H	&gqth LG(V) V	&gqth LG(K) K	&none
+    }
+    behaviors {
 
-					&mo L_WINDOWS	&mo L_ARROWS	&mo L_NUMBERS		&kp SPACE	&mo L_SYMBOLS	&kp RIGHT_SHIFT
-					&mo L_WINDOWS2	&mo L_MIRROR	&ctrl_colemak		&none		&none 			&none
-			>;
-		};
-/* 2 */	
-		russian_layer {
-			bindings = <
-&kp Q	&kp W	&kp E	&kp R	&th T SLASH			&kp Y	&kp U				&kp I		&kp O		&kp P
-&kp A	&kp S	&kp D	&kp F	&kp G				&kp H	&kp J				&kp K		&kp L		&kp SEMICOLON
-&kp Z	&kp X	&kp C	&kp V	&kp B				&kp N	&th M RIGHT_BRACKET &kp COMMA	&kp PERIOD 	&th SINGLE_QUOTE LEFT_BRACKET
+gqth: global-quick-tap-hold {
+    compatible = "zmk,behavior-hold-tap";
+    label = "global-quick-tap-hold";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <125>;
+    global-quick-tap;
+    bindings = <&kp>, <&kp>;
+};
+ 
+gqthq: global-quick-tap-hold-q {
+    compatible = "zmk,behavior-hold-tap";
+    label = "global-quick-tap-hold-q";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <125>;
+    global-quick-tap;
+    bindings = <&kp>, <&repeatqq>;
+};
+ 
+th: tap-hold {
+    compatible = "zmk,behavior-hold-tap";
+    label = "tap-hold";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    bindings = <&kp>, <&kp>;
+};
+ 
+ tdq: tap_dance_q {
+    compatible = "zmk,behavior-tap-dance";
+    label = "TAP_DANCE_Q";
+    #binding-cells = <0>;
+    tapping-term-ms = <200>;
+    bindings = <&gqth W Q>, <&gqthq P 0>;
+};
 
-						&trans		&trans		&trans				&trans		&trans		&trans
-						&trans		&trans		&trans				&trans		&trans		&trans
-			>;
-		};
-/* 3 */
-		qwerty_layer {
-			bindings = <
-		&kp Q	&kp W	&kp E	&kp R	&kp T				&kp Y	&kp U	&kp I		&kp O		&kp P
-		&kp A	&kp S	&kp D	&kp F	&kp G				&kp H	&kp J	&kp K		&kp L		&kp SEMICOLON
-		&kp Z	&kp X	&kp C	&kp V	&kp B				&kp N	&kp M	&kp COMMA	&kp PERIOD 	&kp SLASH
+    }
+    macros {
 
-				&trans		&trans		&trans				&trans		&trans		&trans
-				&trans		&trans		&trans				&trans		&trans		&trans
-			>;
-		};
-/* 4 */
-		colemak_layer {
-			bindings = <
-&kp Q	&kp W	&kp F	&kp P	&none				&none		&kp L	&kp U	&kp Y	&none
-&kp A	&kp R	&kp S	&kp T	&kp G				&kp M		&kp N	&kp E	&kp I	&kp O
-&kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&none
+ZMK_MACRO(repeatqq,
+    wait-ms = <0>;			
+    bindings = <&macro_tap &kp L &kp L>;
+)
+ 
+ZMK_MACRO(awesome,
+    wait-ms = <390>;			
+    bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
+)
+ 
+ZMK_MACRO(shellrepeat,
+    wait-ms = <100>;	
+    bindings = <&macro_tap &kp LG(KP_N1) &kp UP_ARROW &kp RETURN>;
+)
+ 
+ZMK_MACRO(ctrl_colemak,
+    wait-ms = <0>;			
+    bindings 
+        = <&macro_press &mo colemak &kp LEFT_CONTROL>
+        , <&macro_pause_for_release>
+        , <&macro_release &mo colemak &kp LEFT_CONTROL>;
+)
 
-		&trans		&trans		&trans				&trans		&trans		&trans
-		&trans		&trans		&trans				&trans		&trans		&trans
-			>;
-		};
-/* 5 */
-		mirror_layer {
-			bindings = <
-&trans	&kp Y	&kp U	&kp L	&trans				&trans	&kp P	&kp F	&kp W	&kp Q
-&kp O	&kp I	&kp E	&kp N	&kp M				&kp G	&kp T	&kp S	&kp R	&kp A
-&trans	&kp K	&kp V	&kp H	&kp J				&kp B	&kp D	&kp C	&kp X	&kp Z
+    }
+    keymap {
+        compatible = "zmk,keymap";
+        
+        /* default 0 */
+        default_layer {
+            bindings = <
+&gqth LG(SLASH) Q	&gqth LG(W) W	&gqth LG(F) F	&gqth LG(P) P	&mo L_CONFIG
+&gqth LG(A) A	&gqth LG(R) R	&gqth LG(S) S	&gqth LG(T) T	&gqth LG(G) G
+&gqth LG(Z) Z	&gqth LG(X) X	&gqth LG(C) C	&gqth LG(V) D	&gqth LG(B) B
+&mo L_WINDOWS	&mo L_ARROWS	&mo L_NUMBERS
+&mo L_WINDOWS2	&mo L_MIRROR	&ctrl_colemak
+&mo L_CONFIG	&gqth LG(L) L	&gqth LG(U) U	&gqth LG(Y) Y	&none
+&gqth LG(M) M	&gqth LG(N) N	&gqth LG(E) E	&gqth LG(I) I	&gqth LG(O) O
+&gqth LG(J) J	&gqth LG(H) H	&gqth LG(V) V	&gqth LG(K) K	&none
+&kp SPACE	&mo L_SYMBOLS	&kp RIGHT_SHIFT
+&none	&none	&none
+            >
+        }    
+    
 
-		&trans		&trans		&trans				&trans		&trans		&trans
-		&trans		&trans		&trans				&trans		&trans		&trans
-			>;
-		};
-/* 6 */
-		app1_layer {
-			bindings = <
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+        /* mirror 1 */
+        mirror_layer {
+            bindings = <
+&none	&gqth LG(Y) Y	&gqth LG(U) U	&gqth LG(L) L	&mo L_CONFIG
+&gqth LG(O) O	&gqth LG(I) I	&gqth LG(E) E	&gqth LG(N) N	&gqth LG(M) M
+&none	&gqth LG(K) K	&gqth LG(V) V	&gqth LG(H) H	&gqth LG(J) J
+&none	&none	&none
+&none	&none	&none
+&mo L_CONFIG	&gqth LG(P) P	&gqth LG(F) F	&gqth LG(W) W	&gqth LG(SLASH) Q
+&gqth LG(G) G	&gqth LG(T) T	&gqth LG(S) S	&gqth LG(R) R	&gqth LG(A) A
+&gqth LG(B) B	&gqth LG(V) D	&gqth LG(C) C	&gqth LG(X) X	&gqth LG(Z) Z
+&none	&none	&none
+&none	&none	&none
+            >
+        }    
+    
 
-						&trans		&trans		&trans				&trans		&trans		&trans
-						&trans		&trans		&trans				&trans		&trans		&trans
-			>;
-		};
-/* 7 */
-		app2_layer {
-			bindings = <
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+        /* russian 2 */
+        russian_layer {
+            bindings = <
+&kp Q	&kp W	&kp E	&kp R	&th T SLASH
+&kp A	&kp S	&kp D	&kp F	&kp G
+&kp Z	&kp X	&kp C	&kp V	&kp B
+&trans	&trans	&trans
+&trans	&trans	&trans
+&kp Y	&kp U	&kp I	&kp O	&kp P
+&kp H	&kp J	&kp K	&kp L	&kp SEMICOLON
+&kp N	&th M RIGHT_BRACKET	&kp COMMA	&kp PERIOD	&th SINGLE_QUOTE LEFT_BRACKET
+&trans	&trans	&trans
+&trans	&trans	&trans
+            >
+        }    
+    
 
-						&trans		&trans		&trans				&trans		&trans		&trans
-						&trans		&trans		&trans				&trans		&trans		&trans
-			>;
-		};
-/* 8 */
-		arrows_layer {
-			bindings = <
-&kp LC(EQUAL)				&kp SPACE			&kp DELETE			&kp LC(EQUAL)			&kp K_VOLUME_UP					&none	&kp HOME		&kp UP_ARROW		&kp PAGE_UP		&none
-&kp ESCAPE			&kp TAB				&kp BACKSPACE		&kp RETURN		&kp K_VOLUME_DOWN				&none	&kp LEFT_ARROW	&kp DOWN_ARROW		&kp RIGHT_ARROW	&none
-&sk LEFT_ALT 		&sk LEFT_CONTROL	&sk LEFT_SHIFT		&sk LEFT_COMMAND	&kp LG(SPACE)				&none	&kp END			&none				&kp PAGE_DOWN	&none			
+        /* qwerty 3 */
+        qwerty_layer {
+            bindings = <
+&kp Q	&kp W	&kp E	&kp R	&kp T
+&kp A	&kp S	&kp D	&kp F	&kp G
+&kp Z	&kp X	&kp C	&kp V	&kp B
+&trans	&trans	&trans
+&trans	&trans	&trans
+&kp Y	&kp U	&kp I	&kp O	&kp P
+&kp H	&kp J	&kp K	&kp L	&kp SEMICOLON
+&kp N	&kp M	&kp COMMA	&kp PERIOD	&kp SLASH
+&trans	&trans	&trans
+&trans	&trans	&trans
+            >
+        }    
+    
 
-						&trans		&trans		&trans				&trans		&trans		&trans
-						&trans		&trans		&trans				&trans		&trans		&trans
-			>;
-		};
-/* 9 */
-		symbols_layer {
-			bindings = <
-&kp SLASH			&kp LEFT_PARENTHESIS	&kp RIGHT_PARENTHESIS	&kp MINUS			&kp PLUS				&kp EXCLAMATION		&kp QUESTION	&kp COLON		&kp SEMICOLON	&kp BACKSLASH
-&kp LEFT_BRACKET	&kp RIGHT_BRACKET		&kp LEFT_BRACE			&kp RIGHT_BRACE		&kp ASTERISK			&kp TILDE			&kp PERIOD		&kp COMMA		&kp GRAVE		&kp SINGLE_QUOTE
-&kp DOLLAR			&kp LESS_THAN			&kp EQUAL				&kp GREATER_THAN	&kp AT_SIGN				&kp PERCENT			&kp HASH		&kp UNDERSCORE	&kp AMPERSAND	&kp DOUBLE_QUOTES
+        /* colemak 4 */
+        colemak_layer {
+            bindings = <
+&kp Q	&kp W	&kp F	&kp P	&none
+&kp A	&kp S	&kp D	&kp F	&kp G
+&kp Z	&kp X	&kp C	&kp V	&kp B
+&trans	&trans	&trans
+&trans	&trans	&trans
+&none	&kp L	&kp U	&kp Y	&none
+&kp M	&kp N	&kp E	&kp I	&kp O
+&kp J	&kp H	&kp V	&kp K	&none
+&trans	&trans	&trans
+&trans	&trans	&trans
+            >
+        }    
+    
 
-						&trans		&trans		&trans				&trans		&trans		&trans
-						&trans		&trans		&trans				&trans		&trans		&trans
-			>;
-		};
-/* 10 */
-		numbers_layer {
-			bindings = <
-&kp KP_MULTIPLY	&kp N7		&kp N8		&kp N9		&trans				&trans		&trans		&trans		&trans		&trans
-&kp KP_PLUS		&kp N1		&kp N2		&kp N3		&kp N0				&trans		&trans		&trans		&trans		&trans
-&kp KP_DOT		&kp N4		&kp N5		&kp N6		&kp KP_EQUAL		&trans		&trans		&trans		&trans		&trans
+        /* numbers 5 */
+        numbers_layer {
+            bindings = <
+&kp KP_MULTIPLY	&kp N7	&kp N8	&kp N9	&trans
+&kp KP_PLUS	&kp N1	&kp N2	&kp N3	&kp N0
+&kp KP_DOT	&kp N4	&kp N5	&kp N6	&kp KP_EQUAL
+&trans	&trans	&trans
+&trans	&trans	&trans
+&trans	&kp N9	&kp N8	&kp N7	&kp KP_MULTIPLY
+&kp N0	&kp N3	&kp N2	&kp N1	&kp KP_PLUS
+&kp KP_EQUAL	&kp N6	&kp N5	&kp N4	&kp KP_DOT
+&trans	&trans	&trans
+&trans	&trans	&trans
+            >
+        }    
+    
 
-						&trans		&trans		&trans				&trans		&trans		&trans
-						&trans		&trans		&trans				&trans		&trans		&trans
-			>;
-		};
-/* 11 */
-		windows_layer {
-			bindings = <
-&kp LG(LEFT_BRACKET)		&kp LS(LC(TAB))		&kp LG(GRAVE)			&kp LG(LC(LS(G)))			&none									&trans		&trans		&trans		&trans		&trans
-&kp LG(KP_N0)		&kp LG(KP_N1)					&kp LG(KP_N2)					&kp LG(KP_N3)					&kp LG(KP_N4)							&trans		&trans		&trans		&trans		&trans
-&kp	LG(EQUAL)	&gqth LG(LS(KP_N6)) LG(KP_N6)		&gqth LG(LS(KP_N7)) LG(KP_N7)		&gqth LG(LS(KP_N8)) LG(KP_N8)		&gqth LG(LS(KP_N9)) LG(KP_N9)				&trans		&trans		&trans		&trans		&trans
+        /* arrows 6 */
+        arrows_layer {
+            bindings = <
+&kp LC(EQUAL)	&kp SPACE	&kp DELETE	&kp LC(EQUAL)	&kp K_VOLUME_UP
+&kp ESCAPE	&kp TAB	&kp BACKSPACE	&kp RETURN	&kp K_VOLUME_DOWN
+&sk LEFT_ALT	&sk LEFT_CONTROL	&sk LEFT_SHIFT	&sk LEFT_COMMAND	&kp LG(SPACE)
+&trans	&trans	&trans
+&trans	&trans	&trans
+&none	&kp HOME	&kp UP_ARROW	&kp PAGE_UP	&none
+&none	&kp LEFT_ARROW	&kp DOWN_ARROW	&kp RIGHT_ARROW	&none
+&none	&kp END	&none	&kp PAGE_DOWN	&none
+&trans	&trans	&trans
+&trans	&trans	&trans
+            >
+        }    
+    
 
-						&trans		&trans		&trans				&trans		&trans		&trans
-						&trans		&trans		&trans				&trans		&trans		&trans
-			>;
-		};
-/* 12 */
-		windows2_layer {
-			bindings = <
-&kp LG(RIGHT_BRACKET)	&kp LC(TAB)			&kp LS(LG(GRAVE))		&kp LA(LG(LC(LS(G))))		&kp LC(LS(N0))				&trans		&trans		&trans		&trans		&trans
-&gqth LA(LG(LC(LS(V)))) LA(LG(LC(LS(Z))))		&gqth LA(LG(LC(LS(K)))) LA(LG(LC(LS(X))))		&gqth LA(LG(LC(LS(KP_N0)))) LA(LG(LC(LS(C))))	&gqth LA(LG(LC(LS(KP_N1)))) LA(LG(LC(LS(B))))	&gqth LS(LG(KP_N9)) LG(KP_N9)						&trans		&trans		&trans		&trans		&trans
-&kp LG(MINUS)		&shellrepeat		&awesome	&gqth LA(LG(LC(LS(L)))) LA(LG(LC(LS(M))))		&kp LG(LS(N4))				&trans		&trans		&trans		&trans		&trans
+        /* symbols 7 */
+        symbols_layer {
+            bindings = <
+&kp SLASH	&kp LEFT_PARENTHESIS	&kp RIGHT_PARENTHESIS	&kp MINUS	&kp PLUS
+&kp LEFT_BRACKET	&kp RIGHT_BRACKET	&kp LEFT_BRACE	&kp RIGHT_BRACE	&kp ASTERISK
+&kp DOLLAR	&kp LESS_THAN	&kp EQUAL	&kp GREATER_THAN	&kp AT_SIGN
+&trans	&trans	&trans
+&trans	&trans	&trans
+&kp EXCLAMATION	&kp QUESTION	&kp COLON	&kp SEMICOLON	&kp BACKSLASH
+&kp TILDE	&kp PERIOD	&kp COMMA	&kp GRAVE	&kp SINGLE_QUOTE
+&kp PERCENT	&kp HASH	&kp UNDERSCORE	&kp AMPERSAND	&kp DOUBLE_QUOTES
+&trans	&trans	&trans
+&trans	&trans	&trans
+            >
+        }    
+    
 
-						&trans		&trans		&trans				&trans		&trans		&trans
-						&trans		&trans		&trans				&trans		&trans		&trans
-			>;
-		};
-/* 13 */
-		config_layer {
-			bindings = <
-&bootloader	&none	&none	&none &none						&none	&none	&none	&none &bootloader
-&none &none &none		&sys_reset		&none				&none  &sys_reset &none &none &none
-&bt BT_PRV	&bt BT_NXT	&bt BT_CLR	&out OUT_USB	&out OUT_BLE				&none	&none	&none	&none &none
+        /* windows 8 */
+        windows_layer {
+            bindings = <
+&kp LG(LEFT_BRACKET)	&kp LS(LC(TAB))	&kp LG(GRAVE)	&kp LG(LC(LS(G)))	&none
+&kp LG(KP_N0)	&kp LG(KP_N1)	&kp LG(KP_N2)	&kp LG(KP_N3)	&kp LG(KP_N4)
+&kp LG(EQUAL)	&gqth LG(LS(KP_N6)) LG(KP_N6)	&gqth LG(LS(KP_N7)) LG(KP_N7)	&gqth LG(LS(KP_N8)) LG(KP_N8)	&gqth LG(LS(KP_N9)) LG(KP_N9)
+&trans	&trans	&trans
+&trans	&trans	&trans
+&trans	&trans	&trans	&trans	&trans
+&trans	&trans	&trans	&trans	&trans
+&trans	&trans	&trans	&trans	&trans
+&trans	&trans	&trans
+&trans	&trans	&trans
+            >
+        }    
+    
 
-						&none &none &none				&none &none &none
-						&none &none &none				&none &none &none
-			>;
-		};
-/* 14 */
-		tmp_layer {
-			bindings = <
-&kp RETURN		&none		&none		&none		&none				&none		&none		&none		&none		&none
-&kp RETURN		&none		&none		&none		&none				&none		&none		&none		&none		&none
-&kp RETURN		&none		&none		&none		&none				&none		&none		&none		&none		&none
+        /* windows2 9 */
+        windows2_layer {
+            bindings = <
+&kp LG(RIGHT_BRACKET)	&kp LC(TAB)	&kp LS(LG(GRAVE))	&kp LA(LG(LC(LS(G))))	&kp LC(LS(N0))
+&gqth LA(LG(LC(LS(V)))) LA(LG(LC(LS(Z))))	&gqth LA(LG(LC(LS(K)))) LA(LG(LC(LS(X))))	&gqth LA(LG(LC(LS(KP_N0)))) LA(LG(LC(LS(C))))	&gqth LA(LG(LC(LS(KP_N1)))) LA(LG(LC(LS(B))))	&gqth LS(LG(KP_N9)) LG(KP_N9)
+&kp LG(MINUS)	&shellrepeat	&awesome	&gqth LA(LG(LC(LS(L)))) LA(LG(LC(LS(M))))	&kp LG(LS(N4))
+&trans	&trans	&trans
+&trans	&trans	&trans
+&trans	&trans	&trans	&trans	&trans
+&trans	&trans	&trans	&trans	&trans
+&trans	&trans	&trans	&trans	&trans
+&trans	&trans	&trans
+&trans	&trans	&trans
+            >
+        }    
+    
 
-						&kp A		&kp R		&kp S				&none		&none		&none
-						&kp Z		&kp X		&kp C				&none		&none		&none
-			>;
-		};
-/* 15 */
-		trans_layer {
-			bindings = <
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-
-						&trans		&trans		&trans				&trans		&trans		&trans
-						&trans		&trans		&trans				&trans		&trans		&trans
-			>;
-		};
-	};
+        /* config 10 */
+        config_layer {
+            bindings = <
+&bootloader	&none	&none	&none	&none
+&sys_reset	&none	&none	&none	&none
+&bt BT_PRV	&bt BT_NXT	&bt BT_CLR	&out OUT_USB	&out OUT_BLE
+&none	&none	&none
+&none	&none	&none
+&none	&none	&none	&none	&bootloader
+&none	&none	&none	&none	&none
+&none	&none	&none	&none	&none
+&none	&none	&none
+&none	&none	&none
+            >
+        }    
+    
+    };
 };
