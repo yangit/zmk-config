@@ -190,7 +190,7 @@
 /* 8 */
 		arrows_layer {
 			bindings = <
-&none				&kp SPACE			&kp DELETE			&none			&kp K_VOLUME_UP					&none	&kp HOME		&kp UP_ARROW		&kp PAGE_UP		&none
+&kp LC(EQUAL)				&kp SPACE			&kp DELETE			&kp LC(EQUAL)			&kp K_VOLUME_UP					&none	&kp HOME		&kp UP_ARROW		&kp PAGE_UP		&none
 &kp ESCAPE			&kp TAB				&kp BACKSPACE		&kp RETURN		&kp K_VOLUME_DOWN				&none	&kp LEFT_ARROW	&kp DOWN_ARROW		&kp RIGHT_ARROW	&none
 &sk LEFT_ALT 		&sk LEFT_CONTROL	&sk LEFT_SHIFT		&sk LEFT_COMMAND	&kp LG(SPACE)				&none	&kp END			&none				&kp PAGE_DOWN	&none			
 
