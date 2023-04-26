@@ -113,9 +113,9 @@
 /* 1 */
 		home_layer {
 			bindings = <
-&tdq			&kp W			&gqth LG(F) F	&kp P			&mo L_CONFIG			&to L_TMP	&kp L	&kp U	&kp Y	&kp RETURN
+&tdq			&kp W			&gqth LG(F) F	&kp P			&mo L_CONFIG			&mo L_CONFIG	&kp L	&kp U	&kp Y	&none
 &gqth LG(A) A	&gqth LG(R) R	&gqth LG(S)	S	&kp T			&kp G					&kp M		&kp N	&kp E	&kp I	&kp O
-&gqth LG(Z) Z	&gqth LG(X)	X	&gqth LG(C)	C	&gqth LG(V) D	&kp B					&kp J		&kp H	&kp V	&kp K	&kp SPACE
+&gqth LG(Z) Z	&gqth LG(X)	X	&gqth LG(C)	C	&gqth LG(V) D	&kp B					&kp J		&kp H	&kp V	&kp K	&none
 
 					&mo L_WINDOWS	&mo L_ARROWS	&mo L_NUMBERS		&kp SPACE	&mo L_SYMBOLS	&trans
 					&mo L_WINDOWS2	&mo L_MIRROR	&ctrl_colemak		&trans		&kp RIGHT_SHIFT	&trans
@@ -245,12 +245,12 @@
 /* 13 */
 		config_layer {
 			bindings = <
-&trans		&trans		&trans		&trans			&trans						&kp N0	&trans	&trans	&trans &kp N1
-&trans		&trans		&trans		&sys_reset			&bootloader					&bootloader &sys_reset &trans &trans &trans
-&bt BT_PRV	&bt BT_NXT	&bt BT_CLR	&out OUT_USB	&out OUT_BLE				&trans	&trans	&trans	&trans &kp N2
+&none	&none	&none	&none &none						&none	&none	&none	&none &none
+&none &none &none		&sys_reset		&bootloader				&bootloader &sys_reset &none &none &none
+&bt BT_PRV	&bt BT_NXT	&bt BT_CLR	&out OUT_USB	&out OUT_BLE				&none	&none	&none	&none &none
 
-						&trans		&trans		&trans				&trans		&trans		&trans
-						&trans		&trans		&trans				&trans		&trans		&trans 
+						&none &none &none				&none &none &none
+						&none &none &none				&none &none &none
 			>;
 		};
 /* 14 */
