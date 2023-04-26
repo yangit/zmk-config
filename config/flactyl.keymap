@@ -117,9 +117,9 @@
 /* 1 */
 		home_layer {
 			bindings = <
-&tdq			&kp W			&gqth LG(F) F	&kp P			&mo L_CONFIG			&mo L_CONFIG	&kp L	&kp U	&kp Y	&none
-&gqth LG(A) A	&gqth LG(R) R	&gqth LG(S)	S	&kp T			&kp G					&kp M		&kp N	&kp E	&kp I	&kp O
-&gqth LG(Z) Z	&gqth LG(X)	X	&gqth LG(C)	C	&gqth LG(V) D	&kp B					&kp J		&kp H	&kp V	&kp K	&none
+&tdq			&gqth LG(W) W	&gqth LG(F) F	&gqth LG(P) P	&mo L_CONFIG			&mo L_CONFIG	&gqth LG(L) L	&gqth LG(U) U	&gqth LG(Y) Y	&none
+&gqth LG(A) A	&gqth LG(R) R	&gqth LG(S)	S	&gqth LG(T)	T	&gqth LG(G)	G			&gqth LG(M) M		&gqth LG(N) N	&gqth LG(E) E	&gqth LG(I) I	&gqth LG(O) O
+&gqth LG(Z) Z	&gqth LG(X)	X	&gqth LG(C)	C	&gqth LG(V) D	&gqth LG(B) B			&gqth LG(J) J	&gqth LG(H) H	&gqth LG(V) V	&gqth LG(K) K	&none
 
 					&mo L_WINDOWS	&mo L_ARROWS	&mo L_NUMBERS		&kp SPACE	&mo L_SYMBOLS	&kp RIGHT_SHIFT
 					&mo L_WINDOWS2	&mo L_MIRROR	&ctrl_colemak		&none		&none 			&none
