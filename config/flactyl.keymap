@@ -117,8 +117,8 @@
 &gqth LG(A) A	&gqth LG(R) R	&gqth LG(S)	S	&kp T			&kp G					&kp M		&kp N	&kp E	&kp I	&kp O
 &gqth LG(Z) Z	&gqth LG(X)	X	&gqth LG(C)	C	&gqth LG(V) D	&kp B					&kp J		&kp H	&kp V	&kp K	&none
 
-					&mo L_WINDOWS	&mo L_ARROWS	&mo L_NUMBERS		&kp SPACE	&mo L_SYMBOLS	&trans
-					&mo L_WINDOWS2	&mo L_MIRROR	&ctrl_colemak		&trans		&kp RIGHT_SHIFT	&trans
+					&mo L_WINDOWS	&mo L_ARROWS	&mo L_NUMBERS		&kp SPACE	&mo L_SYMBOLS	&kp RIGHT_SHIFT
+					&mo L_WINDOWS2	&mo L_MIRROR	&ctrl_colemak		&none		&none 			&none
 			>;
 		};
 /* 2 */	
@@ -132,7 +132,7 @@
 						&trans		&trans		&trans				&trans		&trans		&trans
 			>;
 		};
-/* 3 */qweasdyuihjkytwseawee
+/* 3 */
 		qwerty_layer {
 			bindings = <
 		&kp Q	&kp W	&kp E	&kp R	&kp T				&kp Y	&kp U	&kp I		&kp O		&kp P
@@ -146,9 +146,9 @@
 /* 4 */
 		colemak_layer {
 			bindings = <
-&kp Q	&kp W	&kp F	&kp P	&trans				&trans		&kp L	&kp U	&kp Y	&trans
+&kp Q	&kp W	&kp F	&kp P	&none				&none		&kp L	&kp U	&kp Y	&none
 &kp A	&kp R	&kp S	&kp T	&kp G				&kp M		&kp N	&kp E	&kp I	&kp O
-&kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&trans
+&kp Z	&kp X	&kp C	&kp D	&kp B				&kp J		&kp H	&kp V	&kp K	&none
 
 		&trans		&trans		&trans				&trans		&trans		&trans
 		&trans		&trans		&trans				&trans		&trans		&trans
@@ -190,9 +190,9 @@
 /* 8 */
 		arrows_layer {
 			bindings = <
-&trans				&kp SPACE			&kp DELETE			&trans			&kp K_VOLUME_UP					&none	&kp HOME		&kp UP_ARROW		&kp PAGE_UP		&none
+&none				&kp SPACE			&kp DELETE			&none			&kp K_VOLUME_UP					&none	&kp HOME		&kp UP_ARROW		&kp PAGE_UP		&none
 &kp ESCAPE			&kp TAB				&kp BACKSPACE		&kp RETURN		&kp K_VOLUME_DOWN				&none	&kp LEFT_ARROW	&kp DOWN_ARROW		&kp RIGHT_ARROW	&none
-&sk LEFT_ALT 		&sk LEFT_CONTROL	&sk LEFT_SHIFT		&sk LEFT_COMMAND	&kp LG(SPACE)						&none	&kp END			&trans				&kp PAGE_DOWN	&none			
+&sk LEFT_ALT 		&sk LEFT_CONTROL	&sk LEFT_SHIFT		&sk LEFT_COMMAND	&kp LG(SPACE)				&none	&kp END			&none				&kp PAGE_DOWN	&none			
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
