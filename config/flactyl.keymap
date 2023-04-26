@@ -86,7 +86,7 @@
 			bindings = <&macro_tap &kp L &kp L>;
 		) 
 	    ZMK_MACRO(awesome,
-			wait-ms = <50>;			
+			wait-ms = <390>;			
 			bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
 		)
 		ZMK_MACRO(shellrepeat,
@@ -217,7 +217,7 @@
 		numbers_layer {
 			bindings = <
 &kp KP_MULTIPLY	&kp N7		&kp N8		&kp N9		&trans				&trans		&trans		&trans		&trans		&trans
-&kp KP_PLUS		&kp N1		&kp N2		&kp N3		&kp N0				&trans		&trans		&trans		&trans
+&kp KP_PLUS		&kp N1		&kp N2		&kp N3		&kp N0				&trans		&trans		&trans		&trans		&trans
 &kp KP_DOT		&kp N4		&kp N5		&kp N6		&kp KP_EQUAL		&trans		&trans		&trans		&trans		&trans
 
 						&trans		&trans		&trans				&trans		&trans		&trans
