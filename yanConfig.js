@@ -356,13 +356,13 @@ ${defines}
 ${config.postHeader}
     combos {
 ${config.combos.join(' ')}
-    }
+    };
     behaviors {
 ${config.behaviors.join(' ')}
-    }
+    };
     macros {
 ${config.macros.join(' ')}
-    }
+    };
     keymap {
         compatible = "zmk,keymap";
         ${Object.keys(config.keymap).map((layer,index)=>`

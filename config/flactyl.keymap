@@ -34,7 +34,7 @@ combo_spc {
     bindings = <&kp SPACE>;
 };
 
-    }
+    };
     behaviors {
 
 gqth: global-quick-tap-hold {
@@ -76,7 +76,7 @@ th: tap-hold {
     bindings = <&gqth W Q>, <&gqthq P 0>;
 };
 
-    }
+    };
     macros {
 
 ZMK_MACRO(repeatqq,
@@ -102,7 +102,7 @@ ZMK_MACRO(ctrl_colemak,
         , <&macro_release &mo colemak &kp LEFT_CONTROL>;
 )
 
-    }
+    };
     keymap {
         compatible = "zmk,keymap";
         
