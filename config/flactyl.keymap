@@ -87,7 +87,7 @@
 		) 
 	    ZMK_MACRO(awesome,
 			wait-ms = <50>;			
-			bindings = <&macro_tap &kp Z &kp M &kp K &kp LS(I) &kp S &kp LS(A) &kp W &kp E &kp S &kp O &kp M &kp E &kp EXCLAMATION>;
+			bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S>;
 		)  
 		ZMK_MACRO(ctrl_colemak,
 			wait-ms = <0>;			
@@ -223,9 +223,9 @@
 /* 11 */
 		windows_layer {
 			bindings = <
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&kp LG(LEFT_BRACKET)		&kp LS(LC(TAB))		&kp LG(GRAVE)			&kp LG(LC(LS(G)))			&none									&trans		&trans		&trans		&trans		&trans
+&kp LG(KP_N0)		&kp LG(KP_N1)					&kp LG(KP_N2)					&kp LG(KP_N3)					&kp LG(KP_N4)							&trans		&trans		&trans		&trans		&trans
+&KP	LG(EQUAL)	&gqth LG(LS(KP_N6)) LG(KP_N6)		&gqth LG(LS(KP_N7)) LG(KP_N7)		&gqth LG(LS(KP_N8)) LG(KP_N8)		&gqth LG(LS(KP_N9)) LG(KP_N9)				&trans		&trans		&trans		&trans		&trans
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
@@ -234,9 +234,9 @@
 /* 12 */
 		windows2_layer {
 			bindings = <
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans				&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&awesome	&trans		&trans				&trans		&trans		&trans		&trans		&trans
+&kp LG(RIGHT_BRACKET)	&kp LC(TAB)			&kp LS(LG(GRAVE))		&kp LA(LG(LC(LS(G))))		&kp LC(LS(N0))				&trans		&trans		&trans		&trans		&trans
+&kp LA(LG(LC(LS(Z))))		&kp LA(LG(LC(LS(X))))		&kp LA(LG(LC(LS(C))))		&kp LG(KP_N9)						&trans		&trans		&trans		&trans		&trans
+&kp LG(MINUS)		&none		&awesome	&none		&kp LG(LS(N4))				&trans		&trans		&trans		&trans		&trans
 
 						&trans		&trans		&trans				&trans		&trans		&trans
 						&trans		&trans		&trans				&trans		&trans		&trans
