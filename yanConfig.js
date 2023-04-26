@@ -1,5 +1,5 @@
 // Description: Yan's config file for ZMK
-const fs  = require('fs');
+const fs = require('fs');
 
 const config = {
     header: `
@@ -361,15 +361,15 @@ ${config.combos.join(' ')}
 ${config.behaviors.join(' ')}
     };
     macros {
-${config.macros.join(' ')}
+${config.macros.map(macro=>macro.trim()).join('\n')}
     };
     keymap {
         compatible = "zmk,keymap";
-        ${Object.keys(config.keymap).map((layer,index)=>`
+        ${Object.keys(config.keymap).map((layer, index) => `
         /* ${layer} ${index} */
         ${layer}_layer {
             bindings = <
-${config.keymap[layer].map(row=>row.join('\t')).join('\n')}
+${config.keymap[layer].map(row => row.join('\t')).join('\n')}
             >
         }    
     `).join('\n')}
