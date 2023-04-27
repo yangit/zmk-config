@@ -634,8 +634,8 @@
 &mo L_CONFIG	&gqth LG(L) L	&gqth LG(U) U	&gqth LG(Y) Y	&none
 &gqth LG(M) M	&gqth LG(N) N	&gqth LG(E) E	&td_9	&gqth LG(O) O
 &gqth LG(J) J	&gqth LG(H) H	&gqth LG(V) V	&gqth LG(K) K	&none
-&kp SPACE	&mo L_SYMBOLS	&mo L_NUMBERS
-&none	&kp RIGHT_SHIFT	&none
+&kp SPACE	&mo L_SYMBOLS	&kp RIGHT_SHIFT
+&none	&mo L_NUMBERS	&none
             >;
         };
     
