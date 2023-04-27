@@ -1,5 +1,7 @@
 // Description: Yan's config file for ZMK
 const fs = require('fs');
+const tappingTerm = 200
+const quickTap = 125
 
 const config = {
     header: `/*
@@ -39,8 +41,8 @@ gqth: global-quick-tap-hold {
     label = "global-quick-tap-hold";
     #binding-cells = <2>;
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <125>;
+    tapping-term-ms = <${tappingTerm}>;
+    quick-tap-ms = <${quickTap}>;
     global-quick-tap;
     bindings = <&kp>, <&kp>;
 };
@@ -51,8 +53,8 @@ gqthq: global-quick-tap-hold-q {
     label = "global-quick-tap-hold-q";
     #binding-cells = <2>;
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <125>;
+    tapping-term-ms = <${tappingTerm}>;
+    quick-tap-ms = <${quickTap}>;
     global-quick-tap;
     bindings = <&kp>, <&repeatqq>;
 };
@@ -63,7 +65,7 @@ th: tap-hold {
     label = "tap-hold";
     #binding-cells = <2>;
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
+    tapping-term-ms = <${tappingTerm}>;
     bindings = <&kp>, <&kp>;
 };
 `,
@@ -72,7 +74,7 @@ th: tap-hold {
     compatible = "zmk,behavior-tap-dance";
     label = "TAP_DANCE_Q";
     #binding-cells = <0>;
-    tapping-term-ms = <200>;
+    tapping-term-ms = <${tappingTerm}>;
     bindings = <&gqth W Q>, <&gqthq P 0>;
 };
 `
@@ -334,7 +336,7 @@ td_${macroIndex}: td_${macroIndex} {
     compatible = "zmk,behavior-tap-dance";
     label = "td_${macroIndex}";
     #binding-cells = <0>;
-    tapping-term-ms = <200>;
+    tapping-term-ms = <${tappingTerm}>;
     bindings = <&gqth ${hold} ${tap}>, <&gqthq P 0>;
 };
 `)
@@ -344,8 +346,8 @@ tdd_${macroIndex}: tdd_${macroIndex} {
     label = "tdd_${macroIndex}";
     #binding-cells = <2>;
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <125>;
+    tapping-term-ms = <${tappingTerm}>;
+    quick-tap-ms = <${quickTap}>;
     global-quick-tap;
     bindings = <&kp>, <&tdr_${macroIndex}>;
 };
