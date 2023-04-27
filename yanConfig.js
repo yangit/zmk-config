@@ -173,7 +173,7 @@ ZMK_MACRO(ctrl_colemak,
         ],
         'arrows': [
             ['&kp LC(EQUAL)', '&kp SPACE', '&kp DELETE', '&kp LC(EQUAL)', '&kp K_VOLUME_UP'],
-            ['&kp ESCAPE', '&kp TAB', '&kp BACKSPACE', 'RETURN,LS(RETURN),LC(RETURN)', '&kp K_VOLUME_DOWN'],
+            ['&kp ESCAPE', '&kp TAB', '&kp BACKSPACE', 'RETURN,LS(RETURN),LG(RETURN)', '&kp K_VOLUME_DOWN'],
             ['&sk LEFT_ALT', '&sk LEFT_CONTROL', '&sk LEFT_SHIFT', '&sk LEFT_COMMAND', 'LG(SPACE),LC(LG(Q))'],
 
             ['&trans', '&trans', '&trans'],
