@@ -43,7 +43,7 @@
             label = "global-quick-tap-hold";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
@@ -53,14 +53,14 @@
             label = "tap-hold";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
         td_0: td_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_0";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(SLASH) Q>, <&tdd_0 LA(LG(Q)) 0>;
         };
         tdd_0: tdd_0 {
@@ -68,7 +68,7 @@
             label = "tdd_0";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_0>;
@@ -77,7 +77,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_1";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(W) W>, <&tdd_1 LG(Q) 0>;
         };
         tdd_1: tdd_1 {
@@ -85,7 +85,7 @@
             label = "tdd_1";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_1>;
@@ -94,7 +94,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_2";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(F) F>, <&tdd_2 LA(LG(F)) 0>;
         };
         tdd_2: tdd_2 {
@@ -102,7 +102,7 @@
             label = "tdd_2";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_2>;
@@ -111,7 +111,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_3";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(P) P>, <&tdd_3 LS(LG(P)) 0>;
         };
         tdd_3: tdd_3 {
@@ -119,7 +119,7 @@
             label = "tdd_3";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_3>;
@@ -128,7 +128,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_4";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(T) T>, <&tdd_4 LG(N) 0>;
         };
         tdd_4: tdd_4 {
@@ -136,7 +136,7 @@
             label = "tdd_4";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_4>;
@@ -145,7 +145,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_5";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(G) G>, <&tdd_5 LG(D) 0>;
         };
         tdd_5: tdd_5 {
@@ -153,7 +153,7 @@
             label = "tdd_5";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_5>;
@@ -162,7 +162,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_6";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(Z) Z>, <&tdd_6 LG(LS(Z)) 0>;
         };
         tdd_6: tdd_6 {
@@ -170,7 +170,7 @@
             label = "tdd_6";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_6>;
@@ -179,7 +179,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_7";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(V) D>, <&tdd_7 LG(LS(V)) 0>;
         };
         tdd_7: tdd_7 {
@@ -187,7 +187,7 @@
             label = "tdd_7";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_7>;
@@ -196,7 +196,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_8";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(B) B>, <&tdd_8 LG(LS(B)) 0>;
         };
         tdd_8: tdd_8 {
@@ -204,7 +204,7 @@
             label = "tdd_8";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_8>;
@@ -213,7 +213,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_9";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(I) I>, <&tdd_9 LG(LA(I)) 0>;
         };
         tdd_9: tdd_9 {
@@ -221,7 +221,7 @@
             label = "tdd_9";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_9>;
@@ -230,7 +230,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_10";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(I) I>, <&tdd_10 LG(LA(I)) 0>;
         };
         tdd_10: tdd_10 {
@@ -238,7 +238,7 @@
             label = "tdd_10";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_10>;
@@ -247,7 +247,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_11";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(P) P>, <&tdd_11 LS(LG(P)) 0>;
         };
         tdd_11: tdd_11 {
@@ -255,7 +255,7 @@
             label = "tdd_11";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_11>;
@@ -264,7 +264,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_12";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(F) F>, <&tdd_12 LA(LG(F)) 0>;
         };
         tdd_12: tdd_12 {
@@ -272,7 +272,7 @@
             label = "tdd_12";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_12>;
@@ -281,7 +281,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_13";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(W) W>, <&tdd_13 LG(Q) 0>;
         };
         tdd_13: tdd_13 {
@@ -289,7 +289,7 @@
             label = "tdd_13";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_13>;
@@ -298,7 +298,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_14";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(SLASH) Q>, <&tdd_14 LA(LG(Q)) 0>;
         };
         tdd_14: tdd_14 {
@@ -306,7 +306,7 @@
             label = "tdd_14";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_14>;
@@ -315,7 +315,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_15";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(G) G>, <&tdd_15 LG(D) 0>;
         };
         tdd_15: tdd_15 {
@@ -323,7 +323,7 @@
             label = "tdd_15";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_15>;
@@ -332,7 +332,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_16";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(T) T>, <&tdd_16 LG(N) 0>;
         };
         tdd_16: tdd_16 {
@@ -340,7 +340,7 @@
             label = "tdd_16";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_16>;
@@ -349,7 +349,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_17";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(B) B>, <&tdd_17 LG(LS(B)) 0>;
         };
         tdd_17: tdd_17 {
@@ -357,7 +357,7 @@
             label = "tdd_17";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_17>;
@@ -366,7 +366,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_18";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(V) D>, <&tdd_18 LG(LS(V)) 0>;
         };
         tdd_18: tdd_18 {
@@ -374,7 +374,7 @@
             label = "tdd_18";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_18>;
@@ -383,7 +383,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_19";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LG(Z) Z>, <&tdd_19 LG(LS(Z)) 0>;
         };
         tdd_19: tdd_19 {
@@ -391,7 +391,7 @@
             label = "tdd_19";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_19>;
@@ -400,7 +400,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_20";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth KP_DIVIDE KP_MULTIPLY>, <&tdd_20 COLON 0>;
         };
         tdd_20: tdd_20 {
@@ -408,7 +408,7 @@
             label = "tdd_20";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_20>;
@@ -417,7 +417,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_21";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth KP_DIVIDE KP_MULTIPLY>, <&tdd_21 COLON 0>;
         };
         tdd_21: tdd_21 {
@@ -425,7 +425,7 @@
             label = "tdd_21";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_21>;
@@ -434,7 +434,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_22";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LS(RETURN) RETURN>, <&tdd_22 LC(RETURN) 0>;
         };
         tdd_22: tdd_22 {
@@ -442,7 +442,7 @@
             label = "tdd_22";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_22>;
@@ -451,7 +451,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_23";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LA(LG(LC(LS(V)))) LA(LG(LC(LS(Z))))>, <&tdd_23 LA(LG(LC(LS(KP_N3)))) 0>;
         };
         tdd_23: tdd_23 {
@@ -459,7 +459,7 @@
             label = "tdd_23";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_23>;
@@ -468,7 +468,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_24";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LA(LG(LC(LS(KP_N1)))) LA(LG(LC(LS(B))))>, <&tdd_24 LA(LG(LC(LS(KP_N2)))) 0>;
         };
         tdd_24: tdd_24 {
@@ -476,7 +476,7 @@
             label = "tdd_24";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_24>;
@@ -485,7 +485,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_25";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&gqth LA(LG(LC(LS(L)))) LA(LG(LC(LS(M))))>, <&tdd_25 LA(LG(LC(LS(N)))) 0>;
         };
         tdd_25: tdd_25 {
@@ -493,7 +493,7 @@
             label = "tdd_25";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&tdr_25>;
@@ -634,8 +634,8 @@
 &mo L_CONFIG	&gqth LG(L) L	&gqth LG(U) U	&gqth LG(Y) Y	&none
 &gqth LG(M) M	&gqth LG(N) N	&gqth LG(E) E	&td_9	&gqth LG(O) O
 &gqth LG(J) J	&gqth LG(H) H	&gqth LG(V) V	&gqth LG(K) K	&none
-&kp SPACE	&mo L_SYMBOLS	&kp RIGHT_SHIFT
-&none	&none	&none
+&kp SPACE	&mo L_SYMBOLS	&mo L_NUMBERS
+&none	&kp RIGHT_SHIFT	&none
             >;
         };
     

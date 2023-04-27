@@ -1,6 +1,6 @@
 // Description: Yan's config file for ZMK
 const fs = require('fs');
-const tappingTerm = 200
+const tappingTerm = 150
 const quickTap = 125
 
 const config = {
@@ -92,8 +92,8 @@ ZMK_MACRO(ctrl_colemak,
             ['+M', '+N', '+E', 'I,LG(I),LG(LA(I))', '+O'],
             ['+J', '+H', '+V', '+K', '&none'],
 
-            ['&kp SPACE', '&mo symbols', '&kp RIGHT_SHIFT'],
-            ['&none', '&none', '&none'],
+            ['&kp SPACE', '&mo symbols', '&kp RIGHT_SHIFT' ],
+            ['&none', '&mo numbers' , '&none'],
         ],
         'mirror': [
             ['=', '=', '=', '=', '='],
