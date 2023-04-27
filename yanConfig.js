@@ -57,7 +57,7 @@ gqthq: global-quick-tap-hold-q {
     bindings = <&kp>, <&repeatqq>;
 };
 `,
-        `
+`
 th: tap-hold {
     compatible = "zmk,behavior-hold-tap";
     label = "tap-hold";
@@ -67,7 +67,7 @@ th: tap-hold {
     bindings = <&kp>, <&kp>;
 };
 `,
-        `
+`
  tdq: tap_dance_q {
     compatible = "zmk,behavior-tap-dance";
     label = "TAP_DANCE_Q";
@@ -80,22 +80,22 @@ th: tap-hold {
     macros: [
         `
 ZMK_MACRO(repeatqq,
-    wait-ms = <0>;			
+    wait-ms = <0>;
     bindings = <&macro_tap &kp L &kp L>;
 )
 `, `
 ZMK_MACRO(awesome,
-    wait-ms = <200>;			
+    wait-ms = <200>;
     bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
 )
 `, `
 ZMK_MACRO(shellrepeat,
-    wait-ms = <400>;	
+    wait-ms = <400>;
     bindings = <&macro_tap &kp LG(KP_N1) &kp UP_ARROW &kp RETURN>;
 )
 `, `
 ZMK_MACRO(ctrl_colemak,
-    wait-ms = <0>;			
+    wait-ms = <0>;
     bindings 
         = <&macro_press &mo L_COLEMAK &kp LEFT_CONTROL>
         , <&macro_pause_for_release>
@@ -319,10 +319,47 @@ config.keymap.mirror[7] = config.keymap.default[2].slice().reverse();
 // #define L_ARROWS   1
 // #define L_SYMBOLS 2
 const defines = Object.keys(config.keymap).map((layer, index) => `#define L_${layer.toUpperCase()} ${index}`).join('\n')
-
-const unwrapTapDance = (keyText) => {
-    const [tap, hold] = keyText.split(',');
-    return `&gqth ${hold} ${tap}`
+let macroCounter =0
+const unwrapTapDance = (keyText, location) => {
+    const [tap, hold, tapHold, doubleTap] = keyText.split(',');
+    if (!tapHold) {
+        return `&gqth ${hold} ${tap}`
+    } 
+    if (doubleTap) {
+        throw new Error(`double tap is not implemented yet at: ${JSON.stringify(location)}`);
+    }
+     const macroIndex = macroCounter++
+    config.behaviors.push(`
+td_${macroIndex}: td_${macroIndex} {
+    compatible = "zmk,behavior-tap-dance";
+    label = "td_${macroIndex}";
+    #binding-cells = <0>;
+    tapping-term-ms = <200>;
+    bindings = <&gqth ${hold} ${tap}>, <&gqthq P 0>;
+};
+`)
+     config.behaviors.push(`
+tdd_${macroIndex}: tdd_${macroIndex} {
+    compatible = "zmk,behavior-hold-tap";
+    label = "tdd_${macroIndex}";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <125>;
+    global-quick-tap;
+    bindings = <&kp>, <&tdr_${macroIndex}>;
+};
+`)
+    config.macros.push(
+`
+ZMK_MACRO(tdr_${macroIndex},
+    wait-ms = <0>;
+    bindings = <&macro_tap &kp ${tap} &kp ${tap}>;
+)
+`
+)
+    return `&td_${macroIndex}`
+    
 }
 
 const keyMapper = (keyText, location) => {
