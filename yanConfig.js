@@ -61,7 +61,7 @@ th: tap-hold {
     macros: [
 `
 ZMK_MACRO(awesome,
-    wait-ms = <100>;
+    wait-ms = <50>;
     bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
 )
 `, `
