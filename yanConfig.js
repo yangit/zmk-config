@@ -61,7 +61,7 @@ th: tap-hold {
     macros: [
 `
 ZMK_MACRO(awesome,
-    wait-ms = <200>;
+    wait-ms = <100>;
     bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
 )
 `, `
@@ -90,7 +90,7 @@ ZMK_MACRO(ctrl_colemak,
 
             ['&mo config', '+L', '+U', '+Y', '&none'],
             ['+M', '+N', '+E', 'I,LG(I),LG(LA(I))', '+O'],
-            ['+J', '+H', '+V', '+K', '&none'],
+            ['+J', '+H', '+V', 'K,LG(K)', '&none'],
 
             ['&kp SPACE', '&mo symbols', '&kp RIGHT_SHIFT' ],
             ['&none', '&mo numbers' , '&none'],
