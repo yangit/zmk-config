@@ -48,16 +48,6 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
-        gqthq: global-quick-tap-hold-q {
-            compatible = "zmk,behavior-hold-tap";
-            label = "global-quick-tap-hold-q";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            bindings = <&kp>, <&repeatqq>;
-        };
         th: tap-hold {
             compatible = "zmk,behavior-hold-tap";
             label = "tap-hold";
@@ -65,13 +55,6 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
-        };
-        tdq: tap_dance_q {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_Q";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&gqth W Q>, <&gqthq P 0>;
         };
         td_0: td_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -245,10 +228,6 @@
         };
     };
     macros {
-        ZMK_MACRO(repeatqq,
-            wait-ms = <0>;
-            bindings = <&macro_tap &kp L &kp L>;
-        )
         ZMK_MACRO(awesome,
             wait-ms = <200>;
             bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
@@ -345,14 +324,14 @@
         /* russian 2 */
         russian_layer {
             bindings = <
-&kp Q	&kp W	&kp E	&kp R	&th T SLASH
+&kp Q	&kp W	&kp E	&kp R	&gqth T SLASH
 &kp A	&kp S	&kp D	&kp F	&kp G
 &kp Z	&kp X	&kp C	&kp V	&kp B
 &trans	&trans	&trans
 &trans	&trans	&trans
 &kp Y	&kp U	&kp I	&kp O	&kp P
 &kp H	&kp J	&kp K	&kp L	&kp SEMICOLON
-&kp N	&th M RIGHT_BRACKET	&kp COMMA	&kp PERIOD	&th SINGLE_QUOTE LEFT_BRACKET
+&kp N	&gqth M RIGHT_BRACKET	&kp COMMA	&kp PERIOD	&gqth SINGLE_QUOTE LEFT_BRACKET
 &trans	&trans	&trans
 &trans	&trans	&trans
             >;

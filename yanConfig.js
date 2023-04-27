@@ -47,18 +47,6 @@ gqth: global-quick-tap-hold {
     bindings = <&kp>, <&kp>;
 };
 `,
-        `
-gqthq: global-quick-tap-hold-q {
-    compatible = "zmk,behavior-hold-tap";
-    label = "global-quick-tap-hold-q";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <${tappingTerm}>;
-    quick-tap-ms = <${quickTap}>;
-    global-quick-tap;
-    bindings = <&kp>, <&repeatqq>;
-};
-`,
 `
 th: tap-hold {
     compatible = "zmk,behavior-hold-tap";
@@ -68,24 +56,10 @@ th: tap-hold {
     tapping-term-ms = <${tappingTerm}>;
     bindings = <&kp>, <&kp>;
 };
-`,
 `
- tdq: tap_dance_q {
-    compatible = "zmk,behavior-tap-dance";
-    label = "TAP_DANCE_Q";
-    #binding-cells = <0>;
-    tapping-term-ms = <${tappingTerm}>;
-    bindings = <&gqth W Q>, <&gqthq P 0>;
-};
-`
-    ],
+],
     macros: [
-        `
-ZMK_MACRO(repeatqq,
-    wait-ms = <0>;
-    bindings = <&macro_tap &kp L &kp L>;
-)
-`, `
+`
 ZMK_MACRO(awesome,
     wait-ms = <200>;
     bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
@@ -107,7 +81,6 @@ ZMK_MACRO(ctrl_colemak,
     ],
     keymap: {
         'default': [
-            //['Q,LG(SLASH),LA(LG(Q))', 'W,LG(W),LG(Q)', 'F,LG(F),LA(LG(F))', 'P,LG(P),LS(LG(P))', '&mo config'],
             ['Q,LG(SLASH),LA(LG(Q))', 'W,LG(W),LG(Q)', 'F,LG(F),LA(LG(F))', 'P,LG(P),LS(LG(P))', '&mo config'],
             ['+A', '+R', '+S', '+T', '+G'],
             ['+Z', '+X', '+C', 'D,LG(V),LG(LS(V))', '+B'],
@@ -139,7 +112,7 @@ ZMK_MACRO(ctrl_colemak,
 
         ],
         'russian': [
-            ['&kp Q', '&kp W', '&kp E', '&kp R', '&th T SLASH'],
+            ['&kp Q', '&kp W', '&kp E', '&kp R', '&gqth T SLASH'],
             ['&kp A', '&kp S', '&kp D', '&kp F', '&kp G'],
             ['&kp Z', '&kp X', '&kp C', '&kp V', '&kp B'],
 
@@ -148,7 +121,7 @@ ZMK_MACRO(ctrl_colemak,
 
             ['&kp Y', '&kp U', '&kp I', '&kp O', '&kp P'],
             ['&kp H', '&kp J', '&kp K', '&kp L', '&kp SEMICOLON'],
-            ['&kp N', '&th M RIGHT_BRACKET', '&kp COMMA', '&kp PERIOD', '&th SINGLE_QUOTE LEFT_BRACKET'],
+            ['&kp N', '&gqth M RIGHT_BRACKET', '&kp COMMA', '&kp PERIOD', '&gqth SINGLE_QUOTE LEFT_BRACKET'],
 
             ['&trans', '&trans', '&trans'],
             ['&trans', '&trans', '&trans'],
