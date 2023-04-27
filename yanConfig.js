@@ -82,14 +82,14 @@ ZMK_MACRO(ctrl_colemak,
     keymap: {
         'default': [
             ['Q,LG(SLASH),LA(LG(Q))', 'W,LG(W),LG(Q)', 'F,LG(F),LA(LG(F))', 'P,LG(P),LS(LG(P))', '&mo config'],
-            ['+A', '+R', '+S', '+T', '+G'],
-            ['+Z', '+X', '+C', 'D,LG(V),LG(LS(V))', '+B'],
+            ['+A', '+R', '+S', 'T,LG(T),LG(N)', 'G,LG(G),LG(D)'],
+            ['Z,LG(Z),LG(LS(Z))', '+X', '+C', 'D,LG(V),LG(LS(V))', 'B,LG(B),LG(LS(B))'],
 
             ['&mo windows', '&mo arrows', '&mo numbers'],
             ['&mo windows2', '&mo mirror', '&ctrl_colemak'],
 
             ['&mo config', '+L', '+U', '+Y', '&none'],
-            ['+M', '+N', '+E', '+I', '+O'],
+            ['+M', '+N', '+E', 'I,LG(I),LG(LA(I))', '+O'],
             ['+J', '+H', '+V', '+K', '&none'],
 
             ['&kp SPACE', '&mo symbols', '&kp RIGHT_SHIFT'],
