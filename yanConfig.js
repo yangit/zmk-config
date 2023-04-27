@@ -85,12 +85,12 @@ ZMK_MACRO(repeatqq,
 )
 `, `
 ZMK_MACRO(awesome,
-    wait-ms = <390>;			
+    wait-ms = <200>;			
     bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
 )
 `, `
 ZMK_MACRO(shellrepeat,
-    wait-ms = <100>;	
+    wait-ms = <400>;	
     bindings = <&macro_tap &kp LG(KP_N1) &kp UP_ARROW &kp RETURN>;
 )
 `, `
