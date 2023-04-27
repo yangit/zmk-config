@@ -435,7 +435,7 @@
             label = "td_22";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&gqth LS(RETURN) RETURN>, <&tdd_22 LC(RETURN) 0>;
+            bindings = <&gqth LS(RETURN) RETURN>, <&tdd_22 LG(RETURN) 0>;
         };
         tdd_22: tdd_22 {
             compatible = "zmk,behavior-hold-tap";
