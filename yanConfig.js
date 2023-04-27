@@ -202,7 +202,7 @@ ZMK_MACRO(ctrl_colemak,
             ['&trans', '&trans', '&trans'],
         ],
         'windows': [
-            ['&kp LG(LEFT_BRACKET)', '&kp LS(LC(TAB))', '&kp LG(GRAVE)', '&kp LG(LC(LS(G)))', '&none'],
+            ['&kp LG(LEFT_BRACKET)', '&kp LS(LC(TAB))', '&kp LG(GRAVE)', 'LA(LC(LS(G))),LG(LA(LC(LS(G))))', '&none'],
             ['&kp LG(KP_N0)', '&kp LG(KP_N1)', '&kp LG(KP_N2)', '&kp LG(KP_N3)', '&kp LG(KP_N4)'],
             ['&kp LG(EQUAL)', 'LG(KP_N6),LG(LS(KP_N6))', 'LG(KP_N7),LG(LS(KP_N7))', 'LG(KP_N8),LG(LS(KP_N8))', 'LG(KP_N9),LG(LS(KP_N9))'],
 
