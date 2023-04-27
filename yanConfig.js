@@ -105,7 +105,8 @@ ZMK_MACRO(ctrl_colemak,
     ],
     keymap: {
         'default': [
-            ['Q,LG(SLASH),LA(LG(Q))', 'W,LG(W),LG(Q)', 'F,LG(F),LA(LG(F))', 'P,LG(P),LS(LG(P))', '&mo config'],
+            //['Q,LG(SLASH),LA(LG(Q))', 'W,LG(W),LG(Q)', 'F,LG(F),LA(LG(F))', 'P,LG(P),LS(LG(P))', '&mo config'],
+            ['&tdq', 'W,LG(W),LG(Q)', 'F,LG(F),LA(LG(F))', 'P,LG(P),LS(LG(P))', '&mo config'],
             ['+A', '+R', '+S', '+T', '+G'],
             ['+Z', '+X', '+C', 'D,LG(V),LG(LS(V))', '+B'],
 
