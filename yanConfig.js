@@ -157,9 +157,9 @@ ZMK_MACRO(ctrl_colemak,
             ['&trans', '&trans', '&trans'],
         ],
         'numbers': [
-            ['&kp KP_MULTIPLY', '&kp N7', '&kp N8', '&kp N9', '&trans'],
-            ['&kp KP_PLUS', '&kp N1', '&kp N2', '&kp N3', '&kp N0'],
-            ['&kp KP_DOT', '&kp N4', '&kp N5', '&kp N6', '&kp KP_EQUAL'],
+            ['KP_MULTIPLY,KP_DIVIDE,COLON', '&kp N7', '&kp N8', '&kp N9', '&trans'],
+            ['KP_PLUS,KP_MINUS', '&kp N1', '&kp N2', '&kp N3', '&kp N0'],
+            ['KP_DOT,COMMA', '&kp N4', '&kp N5', '&kp N6', '&kp KP_EQUAL'],
 
             ['&trans', '&trans', '&trans'],
             ['&trans', '&trans', '&trans'],
@@ -173,8 +173,8 @@ ZMK_MACRO(ctrl_colemak,
         ],
         'arrows': [
             ['&kp LC(EQUAL)', '&kp SPACE', '&kp DELETE', '&kp LC(EQUAL)', '&kp K_VOLUME_UP'],
-            ['&kp ESCAPE', '&kp TAB', '&kp BACKSPACE', '&kp RETURN', '&kp K_VOLUME_DOWN'],
-            ['&sk LEFT_ALT', '&sk LEFT_CONTROL', '&sk LEFT_SHIFT', '&sk LEFT_COMMAND', '&kp LG(SPACE)'],
+            ['&kp ESCAPE', '&kp TAB', '&kp BACKSPACE', 'RETURN,LS(RETURN),LC(RETURN)', '&kp K_VOLUME_DOWN'],
+            ['&sk LEFT_ALT', '&sk LEFT_CONTROL', '&sk LEFT_SHIFT', '&sk LEFT_COMMAND', 'LG(SPACE),LC(LG(Q))'],
 
             ['&trans', '&trans', '&trans'],
             ['&trans', '&trans', '&trans'],
@@ -194,9 +194,9 @@ ZMK_MACRO(ctrl_colemak,
             ['&trans', '&trans', '&trans'],
             ['&trans', '&trans', '&trans'],
 
-            ['&kp EXCLAMATION', '&kp QUESTION', '&kp COLON', '&kp SEMICOLON', '&kp BACKSLASH'],
+            ['&kp EXCLAMATION', '&kp QUESTION', '&kp COLON', '&kp SEMICOLON', 'BACKSLASH,PIPE'],
             ['&kp TILDE', '&kp PERIOD', '&kp COMMA', '&kp GRAVE', '&kp SINGLE_QUOTE'],
-            ['&kp PERCENT', '&kp HASH', '&kp UNDERSCORE', '&kp AMPERSAND', '&kp DOUBLE_QUOTES'],
+            ['PERCENT,CARET', '&kp HASH', '&kp UNDERSCORE', '&kp AMPERSAND', '&kp DOUBLE_QUOTES'],
 
             ['&trans', '&trans', '&trans'],
             ['&trans', '&trans', '&trans'],
@@ -218,8 +218,8 @@ ZMK_MACRO(ctrl_colemak,
         ],
         'windows2': [
             ['&kp LG(RIGHT_BRACKET)', '&kp LC(TAB)', '&kp LS(LG(GRAVE))', '&kp LA(LG(LC(LS(G))))', '&kp LC(LS(N0))'],
-            ['LA(LG(LC(LS(Z)))),LA(LG(LC(LS(V))))', 'LA(LG(LC(LS(X)))),LA(LG(LC(LS(K))))', 'LA(LG(LC(LS(C)))),LA(LG(LC(LS(KP_N0))))', 'LA(LG(LC(LS(B)))),LA(LG(LC(LS(KP_N1))))', 'LG(KP_N9),LS(LG(KP_N9))'],
-            ['&kp LG(MINUS)', '&shellrepeat', '&awesome', 'LA(LG(LC(LS(M)))),LA(LG(LC(LS(L))))', '&kp LG(LS(N4))'],
+            ['LA(LG(LC(LS(Z)))),LA(LG(LC(LS(V)))),LA(LG(LC(LS(KP_N3))))', 'LA(LG(LC(LS(X)))),LA(LG(LC(LS(K))))', 'LA(LG(LC(LS(C)))),LA(LG(LC(LS(KP_N0))))', 'LA(LG(LC(LS(B)))),LA(LG(LC(LS(KP_N1)))),LA(LG(LC(LS(KP_N2))))', 'LG(KP_N9),LS(LG(KP_N9))'],
+            ['&kp LG(MINUS)', '&shellrepeat', '&awesome', 'LA(LG(LC(LS(M)))),LA(LG(LC(LS(L)))),LA(LG(LC(LS(N))))', '&kp LG(LS(N4))'],
 
 
             ['&trans', '&trans', '&trans'],
