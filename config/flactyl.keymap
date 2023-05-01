@@ -38,12 +38,14 @@
         };
     };
     behaviors {
+        /*
 		yan_encoder: yan_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             label = "YAN_ENCODER";
             #sensor-binding-cells = <0>;
             bindings = <&kp Q>, <&kp W>;
         };
+        */
         gqth: global-quick-tap-hold {
             compatible = "zmk,behavior-hold-tap";
             label = "global-quick-tap-hold";
@@ -643,7 +645,7 @@
 &kp SPACE	&mo L_SYMBOLS	&kp RIGHT_SHIFT
 &none	&mo L_NUMBERS	&none
             >;
-            sensor-bindings = <&yan_encoder>;
+            /* sensor-bindings = <&yan_encoder>; */
         };
     
 
