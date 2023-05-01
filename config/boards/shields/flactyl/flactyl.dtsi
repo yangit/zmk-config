@@ -7,7 +7,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
-	/*
+	
 	left_encoder: encoder_left {
         compatible = "alps,ec11";
         label = "LEFT_ENCODER";
@@ -16,7 +16,7 @@
         resolution = <4>;
         status = "disabled";
     };
-	 
+	/* 
 	sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder>;
