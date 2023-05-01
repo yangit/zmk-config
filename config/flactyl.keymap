@@ -38,7 +38,7 @@
         };
     };
     behaviors {
-		left_encoder: yan_encoder {
+		yan_encoder: yan_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             label = "YAN_ENCODER";
             #sensor-binding-cells = <0>;
@@ -643,7 +643,7 @@
 &kp SPACE	&mo L_SYMBOLS	&kp RIGHT_SHIFT
 &none	&mo L_NUMBERS	&none
             >;
-            sensor-bindings = <&left_encoder>;
+            sensor-bindings = <&yan_encoder>;
         };
     
 
