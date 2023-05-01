@@ -1,0 +1,27 @@
+{
+  "name": "zmk-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "yanConfig.js",
+  "scripts": {
+    "precommit": "node yanConfig",
+    "test": "echo",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangit/zmk-config.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yangit/zmk-config/issues"
+  },
+  "homepage": "https://github.com/yangit/zmk-config#readme",
+  "dependencies": {
+    "husky": "^8.0.3"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0"
+  }
+}

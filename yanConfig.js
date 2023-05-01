@@ -393,6 +393,6 @@ ${config.keymap[layer].map(row => row.join('\t')).join('\n')}
 };
 `
 
-fs.writeFileSync('./config/flactyl.keymap', output)
+// fs.writeFileSync('./config/flactyl.keymap', output)
 console.log(output);
 
