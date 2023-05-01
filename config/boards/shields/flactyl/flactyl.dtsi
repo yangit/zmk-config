@@ -7,7 +7,17 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
+	chosen {
+		zephyr,display = &oled;
+		zmk,kscan = &kscan0;
+		zmk,matrix_transform = &default_transform;
+	};
 	
+	sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder>;
+    };
+
 	left_encoder: encoder_left {
         compatible = "alps,ec11";
         label = "LEFT_ENCODER";
@@ -16,18 +26,7 @@
         resolution = <4>;
         status = "disabled";
     };
-	/* 
-	sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder>;
-    };
-
-	*/
-	chosen {
-		zephyr,display = &oled;
-		zmk,kscan = &kscan0;
-		zmk,matrix_transform = &default_transform;
-	};
+	
 
 	default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
