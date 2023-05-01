@@ -6,6 +6,7 @@ url: https://github.com/yangit/flactyl/
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
+  - encoder
   - keys
   - display
   - underglow
