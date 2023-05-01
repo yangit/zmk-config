@@ -95,22 +95,6 @@ ZMK_MACRO(ctrl_colemak,
             ['&kp SPACE', '&mo symbols', '&kp RIGHT_SHIFT' ],
             ['&none', '&mo numbers' , '&none'],
         ],
-        'mirror': [
-            ['=', '=', '=', '=', '='],
-            ['=', '=', '=', '=', '='],
-            ['=', '=', '=', '=', '='],
-
-            ['&none', '&none', '&none'],
-            ['&none', '&none', '&none'],
-
-            ['=', '=', '=', '=', '='],
-            ['=', '=', '=', '=', '='],
-            ['=', '=', '=', '=', '='],
-
-            ['&none', '&none', '&none'],
-            ['&none', '&none', '&none'],
-
-        ],
         'russian': [
             ['&kp Q', '&kp W', '&kp E', '&kp R', '&gqth T SLASH'],
             ['&kp A', '&kp S', '&kp D', '&kp F', '&kp G'],
@@ -125,6 +109,21 @@ ZMK_MACRO(ctrl_colemak,
 
             ['&trans', '&trans', '&trans'],
             ['&trans', '&trans', '&trans'],
+        ],
+        'mirror': [
+            ['=', '=', '=', '=', '='],
+            ['=', '=', '=', '=', '='],
+            ['=', '=', '=', '=', '='],
+
+            ['&none', '&none', '&none'],
+            ['&none', '&none', '&none'],
+
+            ['=', '=', '=', '=', '='],
+            ['=', '=', '=', '=', '='],
+            ['=', '=', '=', '=', '='],
+
+            ['&none', '&none', '&none'],
+            ['&none', '&none', '&none'],
         ],
         'qwerty': [
             ['&kp Q', '&kp W', '&kp E', '&kp R', '&kp T'],

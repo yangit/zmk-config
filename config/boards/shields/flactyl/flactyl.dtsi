@@ -7,6 +7,14 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
+	left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        label = "LEFT_ENCODER";
+        a-gpios = <17 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        resolution = <4>;
+        status = "disabled";
+    };
 	chosen {
 		zephyr,display = &oled;
 		zmk,kscan = &kscan0;
@@ -47,7 +55,10 @@
 	RC(0,13) RC(1,13) RC(2,13) 	
 		>;
 	};
-
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+    };
 	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
 		label = "KSCAN";

@@ -10,8 +10,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define L_DEFAULT 0
-#define L_MIRROR 1
-#define L_RUSSIAN 2
+#define L_RUSSIAN 1
+#define L_MIRROR 2
 #define L_QWERTY 3
 #define L_COLEMAK 4
 #define L_NUMBERS 5
@@ -28,7 +28,6 @@
 };
 
 / {
-
     combos {
         compatible = "zmk,combos";
         combo_spc {
@@ -38,6 +37,12 @@
         };
     };
     behaviors {
+		yan_encoder: yan_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "YAN_ENCODER";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp Q>, <&kp W>;
+        };
         gqth: global-quick-tap-hold {
             compatible = "zmk,behavior-hold-tap";
             label = "global-quick-tap-hold";
@@ -637,27 +642,11 @@
 &kp SPACE	&mo L_SYMBOLS	&kp RIGHT_SHIFT
 &none	&mo L_NUMBERS	&none
             >;
+			sensor-bindings = <&yan_encoder>;
         };
     
 
-        /* mirror 1 */
-        mirror_layer {
-            bindings = <
-&none	&gqth LG(Y) Y	&gqth LG(U) U	&gqth LG(L) L	&mo L_CONFIG
-&gqth LG(O) O	&td_10	&gqth LG(E) E	&gqth LG(N) N	&gqth LG(M) M
-&none	&gqth LG(K) K	&gqth LG(V) V	&gqth LG(H) H	&gqth LG(J) J
-&none	&none	&none
-&none	&none	&none
-&mo L_CONFIG	&td_11	&td_12	&td_13	&td_14
-&td_15	&td_16	&gqth LG(S) S	&gqth LG(R) R	&gqth LG(A) A
-&td_17	&td_18	&gqth LG(C) C	&gqth LG(X) X	&td_19
-&none	&none	&none
-&none	&none	&none
-            >;
-        };
-    
-
-        /* russian 2 */
+        /* russian 1 */
         russian_layer {
             bindings = <
 &kp Q	&kp W	&kp E	&kp R	&gqth T SLASH
@@ -670,6 +659,23 @@
 &kp N	&gqth M RIGHT_BRACKET	&kp COMMA	&kp PERIOD	&gqth SINGLE_QUOTE LEFT_BRACKET
 &trans	&trans	&trans
 &trans	&trans	&trans
+            >;
+        };
+    
+
+        /* mirror 2 */
+        mirror_layer {
+            bindings = <
+&none	&gqth LG(Y) Y	&gqth LG(U) U	&gqth LG(L) L	&mo L_CONFIG
+&gqth LG(O) O	&td_10	&gqth LG(E) E	&gqth LG(N) N	&gqth LG(M) M
+&none	&gqth LG(K) K	&gqth LG(V) V	&gqth LG(H) H	&gqth LG(J) J
+&none	&none	&none
+&none	&none	&none
+&mo L_CONFIG	&td_11	&td_12	&td_13	&td_14
+&td_15	&td_16	&gqth LG(S) S	&gqth LG(R) R	&gqth LG(A) A
+&td_17	&td_18	&gqth LG(C) C	&gqth LG(X) X	&td_19
+&none	&none	&none
+&none	&none	&none
             >;
         };
     
