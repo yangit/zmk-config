@@ -1,7 +1,7 @@
 // Description: Yan's config file for ZMK
 const fs = require('fs');
-const tappingTerm = 350
-const tapDanceTerm = 200
+const tappingTerm = 250
+const tapDanceTerm = 300
 
 /*
 for
@@ -48,16 +48,16 @@ combo_spc {
 `
     ],
     behaviors: [
-        `
+`
 yan_encoder: yan_encoder {
     compatible = "zmk,behavior-sensor-rotate";
     label = "YAN_ENCODER";
     #sensor-binding-cells = <0>;
-    bindings = <&kp LG(LEFT_BRACKET)>, <&kp LG(RIGHT_BRACKET)>;
+    bindings = <&kp K_VOLUME_DOWN>, <&kp K_VOLUME_UP>;
 };
 `],
     macros: [
-        `
+`
 ZMK_MACRO(awesome,
     wait-ms = <50>;
     bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
