@@ -1,6 +1,6 @@
 // Description: Yan's config file for ZMK
 const fs = require('fs');
-const tappingTerm = 3000
+const tappingTerm = 350
 const tapDanceTerm = 200
 const quickTap = tappingTerm
 
