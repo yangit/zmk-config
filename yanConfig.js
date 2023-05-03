@@ -76,10 +76,6 @@ th: tap-hold {
     ],
     macros: [
         `
-ZMK_MACRO(letter_lco,
-    wait-ms = <50>;
-    bindings = <&macro_tap &kp LC(O)>;
-)
 ZMK_MACRO(awesome,
     wait-ms = <50>;
     bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
@@ -97,7 +93,7 @@ ZMK_MACRO(ctrl_colemak,
         , <&macro_pause_for_release>
         , <&macro_release &mo L_COLEMAK &kp LEFT_CONTROL>;
 )
-ZMK_MACRO(c,
+ZMK_MACRO(shift_colemak,
     wait-ms = <0>;
     bindings 
         = <&macro_press &mo L_COLEMAK &kp LEFT_SHIFT>
