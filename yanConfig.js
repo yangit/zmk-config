@@ -1,4 +1,5 @@
 // Description: Yan's config file for ZMK
+const { log } = require('console');
 const fs = require('fs');
 const tappingTerm = 250
 const tapDanceTerm = 200
@@ -17,6 +18,7 @@ const quickTap = tappingTerm
 
 
 // ~50 items
+let mehIndex = 0
 const mehArray = [
     'KP_N0', 'KP_N1', 'KP_N2', 'KP_N3', 'KP_N4', 'KP_N5', 'KP_N6', 'KP_N7', 'KP_N8', 'KP_N9',
     'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', 'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'F21', 'F22', 'F23', 'F24',
@@ -24,21 +26,11 @@ const mehArray = [
     'GRAVE', 'MINUS', 'EQUAL', 'LEFT_BRACKET', 'RIGHT_BRACKET', 'BACKSLASH', 'SEMI', 'SINGLE_QUOTE', 'COMMA', 'DOT', 'SLASH'
 ].map((item) => `LA(LG(LC(LS(${item}))))`);
 
-// const mehDescriptions = [ ]
-// let mehIndex = 0
-// function getMeh(description) {
-//     if (mehIndex >= mehArray.length) {
-//         throw new Error('mehArray is finished, define more keys');
-//     }
-//     mehDescriptions.push(description);
-//     return `LA(LG(LC(LS(${mehArray.pop()}))))`
-// }
-
-function getMeh() {
-    if (mehArray.length == 0) {
+const getMeh = () => {
+    if (mehIndex >= mehArray.length) {
         throw new Error('mehArray is finished, define more keys');
     }
-    return mehArray.pop()
+    return mehArray[mehIndex++]
 }
 
 const macAppsWitchBackward = getMeh();
@@ -451,6 +443,7 @@ const keyMapper = (keyText, location) => {
     if (keyText === '=') {
         throw new Error(`keyText ${keyText} is not allowed at ${JSON.stringify(location)}`)
     }
+
     if (mehArray.includes(keyText)) {
         return `&kp ${keyText}`;
     }
