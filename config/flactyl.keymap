@@ -65,9 +65,12 @@
 		letter_o: letter_o {
             compatible = "zmk,behavior-hold-tap";
             label = "letter_o";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
             tapping-term-ms = <150>;
-            bindings = <&letter_o_command>, <&kp O>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&letter_o_command>, <&kp>;
         };
         td_0: td_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -648,7 +651,7 @@
 &mo L_WINDOWS	&mo L_ARROWS	&mo L_NUMBERS
 &mo L_WINDOWS2	&mo L_MIRROR	&ctrl_colemak
 &mo L_CONFIG	&gqth LG(L) L	&gqth LG(U) U	&gqth LG(Y) Y	&none
-&gqth LG(M) M	&gqth LG(N) N	&gqth LG(E) E	&td_9	&letter_o
+&gqth LG(M) M	&gqth LG(N) N	&gqth LG(E) E	&td_9	&letter_o X O
 &gqth LG(J) J	&gqth LG(H) H	&gqth LG(V) V	&gqth LG(K) K	&none
 &kp SPACE	&mo L_SYMBOLS	&kp RIGHT_SHIFT
 &none	&mo L_NUMBERS	&none
