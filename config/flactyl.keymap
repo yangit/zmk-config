@@ -42,7 +42,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "YAN_ENCODER";
             #sensor-binding-cells = <0>;
-            bindings = <&kp Q>, <&kp W>;
+            bindings = <&kp LG(LEFT_BRACKET)>, <&kp LG(RIGHT_BRACKET)>;
         };
         gqth: global-quick-tap-hold {
             compatible = "zmk,behavior-hold-tap";
