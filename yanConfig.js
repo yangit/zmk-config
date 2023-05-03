@@ -20,8 +20,8 @@ const quickTap = tappingTerm
 const mehArray = [
     'KP_N0', 'KP_N1', 'KP_N2', 'KP_N3', 'KP_N4', 'KP_N5', 'KP_N6', 'KP_N7', 'KP_N8', 'KP_N9',
     'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', 'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'F21', 'F22', 'F23', 'F24',
-    // 'LANG1', 'LANG2', 'LANG3', 'LANG4', 'LANG5', 'LANG6', 'LANG7', 'LANG8', 'LANG9',
-    // 'GRAVE', 'MINUS', 'EQUAL', 'LEFT_BRACKET', 'RIGHT_BRACKET', 'BACKSLASH', 'SEMI', 'SINGLE_QUOTE', 'COMMA', 'DOT', 'SLASH'
+    'LANG1', 'LANG2', 'LANG3', 'LANG4', 'LANG5', 'LANG6', 'LANG7', 'LANG8', 'LANG9',
+    'GRAVE', 'MINUS', 'EQUAL', 'LEFT_BRACKET', 'RIGHT_BRACKET', 'BACKSLASH', 'SEMI', 'SINGLE_QUOTE', 'COMMA', 'DOT', 'SLASH'
 ]
 
 // const mehDescriptions = [ ]
@@ -38,7 +38,8 @@ function getMeh() {
     if (mehArray.length == 0) {
         throw new Error('mehArray is finished, define more keys');
     }
-    return `LA(LG(LC(LS(${mehArray.pop()}))))`
+    // return `LA(LG(LC(LS(${mehArray.pop()}))))`
+    return `X`
 }
 
 const macAppsWitchBackward = getMeh();
