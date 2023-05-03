@@ -38,7 +38,7 @@
         };
     };
     behaviors {
-		yan_encoder: yan_encoder {
+        yan_encoder: yan_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             label = "YAN_ENCODER";
             #sensor-binding-cells = <0>;
@@ -643,7 +643,7 @@
 &kp SPACE	&mo L_SYMBOLS	&kp RIGHT_SHIFT
 &none	&mo L_NUMBERS	&none
             >;
-            sensor-bindings = <&yan_encoder>;
+ sensor-bindings = <&yan_encoder>;            
         };
     
 
@@ -660,7 +660,7 @@
 &kp N	&gqth M RIGHT_BRACKET	&kp COMMA	&kp PERIOD	&gqth SINGLE_QUOTE LEFT_BRACKET
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >;
+            >;            
         };
     
 
@@ -677,7 +677,7 @@
 &td_17	&td_18	&gqth LG(C) C	&gqth LG(X) X	&td_19
 &none	&none	&none
 &none	&none	&none
-            >;
+            >;            
         };
     
 
@@ -694,7 +694,7 @@
 &kp N	&kp M	&kp COMMA	&kp PERIOD	&kp SLASH
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >;
+            >;            
         };
     
 
@@ -711,7 +711,7 @@
 &kp J	&kp H	&kp V	&kp K	&none
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >;
+            >;            
         };
     
 
@@ -728,7 +728,7 @@
 &kp KP_EQUAL	&kp N6	&kp N5	&kp N4	&gqth COMMA KP_DOT
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >;
+            >;            
         };
     
 
@@ -745,7 +745,7 @@
 &none	&kp END	&none	&kp PAGE_DOWN	&none
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >;
+            >;            
         };
     
 
@@ -762,7 +762,7 @@
 &gqth CARET PERCENT	&kp HASH	&kp UNDERSCORE	&kp AMPERSAND	&kp DOUBLE_QUOTES
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >;
+            >;            
         };
     
 
@@ -779,7 +779,7 @@
 &trans	&trans	&trans	&trans	&trans
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >;
+            >;            
         };
     
 
@@ -796,7 +796,7 @@
 &trans	&trans	&trans	&trans	&trans
 &trans	&trans	&trans
 &trans	&trans	&trans
-            >;
+            >;            
         };
     
 
@@ -813,7 +813,7 @@
 &none	&none	&none	&none	&none
 &none	&none	&none
 &none	&none	&none
-            >;
+            >;            
         };
     
     };
