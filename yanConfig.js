@@ -1,7 +1,7 @@
 // Description: Yan's config file for ZMK
 const fs = require('fs');
 const tappingTerm = 3000
-const doubleTapTerm = 200
+const tapDanceTerm = 200
 const quickTap = tappingTerm
 
 
@@ -342,7 +342,7 @@ td_${macroIndex}: td_${macroIndex} {
     compatible = "zmk,behavior-tap-dance";
     label = "td_${macroIndex}";
     #binding-cells = <0>;
-    tapping-term-ms = <${doubleTapTerm}>;
+    tapping-term-ms = <${tapDanceTerm}>;
     bindings = <&td_${macroIndex}_first 0 ${tap}>, <&td_${macroIndex}_second 0 0>;
 };
 td_${macroIndex}_first: td_${macroIndex}_first {
