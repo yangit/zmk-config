@@ -48,7 +48,7 @@ combo_spc {
 `
     ],
     behaviors: [
-`
+        `
 yan_encoder: yan_encoder {
     compatible = "zmk,behavior-sensor-rotate";
     label = "YAN_ENCODER";
@@ -57,7 +57,7 @@ yan_encoder: yan_encoder {
 };
 `],
     macros: [
-`
+        `
 ZMK_MACRO(awesome,
     wait-ms = <50>;
     bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
@@ -365,7 +365,7 @@ ZMK_MACRO(td_${macroIndex}_hold_first,
 )
 ZMK_MACRO(td_${macroIndex}_hold_second,
     wait-ms = <0>;
-    bindings = <&macro_tap &kp ${tapHold||'X'}>;
+    bindings = <&macro_tap &kp ${tapHold || 'X'}>;
 )
 ZMK_MACRO(td_${macroIndex}_repeat,
     wait-ms = <0>;
