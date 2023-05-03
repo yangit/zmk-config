@@ -94,7 +94,7 @@ ZMK_MACRO(shift_colemak,
         },
         'russian': {
             keys: [
-                ['&kp Q', '&kp W', '&kp E', '&kp R', '&gqth T SLASH'],
+                ['&kp Q', '&kp W', '&kp E', '&kp R', 'T,SLASH'],
                 ['&kp A', '&kp S', '&kp D', '&kp F', '&kp G'],
                 ['&kp Z', '&kp X', '&kp C', '&kp V', '&kp B'],
 
@@ -103,7 +103,7 @@ ZMK_MACRO(shift_colemak,
 
                 ['&kp Y', '&kp U', '&kp I', '&kp O', '&kp P'],
                 ['&kp H', '&kp J', '&kp K', '&kp L', '&kp SEMICOLON'],
-                ['&kp N', '&gqth M RIGHT_BRACKET', '&kp COMMA', '&kp PERIOD', '&gqth SINGLE_QUOTE LEFT_BRACKET'],
+                ['&kp N', 'M,RIGHT_BRACKET', '&kp COMMA', '&kp PERIOD', 'SINGLE_QUOTE,LEFT_BRACKET'],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
@@ -330,9 +330,6 @@ const defines = Object.keys(config.keymap).map((layer, index) => `#define L_${la
 let macroCounter = 0
 const unwrapTapDance = (keyText, location) => {
     const [tap, hold, tapHold, doubleTap] = keyText.split(',');
-    // if (!tapHold) {
-    //     return `&gqth ${hold} ${tap}`
-    // }
     if (doubleTap) {
         throw new Error(`double tap is not implemented yet at: ${JSON.stringify(location)}`);
     }
