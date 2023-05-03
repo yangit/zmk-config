@@ -1,7 +1,9 @@
 // Description: Yan's config file for ZMK
 const fs = require('fs');
 const tappingTerm = 3000
+const doubleTapTerm = 200
 const quickTap = tappingTerm
+
 
 const config = {
     header: `/*
@@ -42,38 +44,7 @@ yan_encoder: yan_encoder {
     #sensor-binding-cells = <0>;
     bindings = <&kp LG(LEFT_BRACKET)>, <&kp LG(RIGHT_BRACKET)>;
 };
-        `,
-        `
-gqth: global-quick-tap-hold {
-    compatible = "zmk,behavior-hold-tap";
-    label = "global-quick-tap-hold";
-    #binding-cells = <2>;
-/*
-The 'tap-preferred' flavor triggers the hold behavior ONLY when the tapping-term-ms has expired.
-*/
-    flavor = "tap-preferred";
-/*  Defines how long a key must be pressed to trigger Hold behavior. */
-    tapping-term-ms = <${tappingTerm}>;
-/*  
-Prevents hold behavior to be triggered if the key is pressed within quick-tap-ms after ANY other key
-Helps to disable HOLD behavior while typing fast
-*/    
-    quick-tap-ms = <${quickTap}>;
-    global-quick-tap;
-    bindings = <&kp>, <&kp>;
-};
-`,
-        `
-th: tap-hold {
-    compatible = "zmk,behavior-hold-tap";
-    label = "tap-hold";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <${tappingTerm}>;
-    bindings = <&kp>, <&kp>;
-};
-`
-    ],
+`],
     macros: [
         `
 ZMK_MACRO(awesome,
@@ -138,6 +109,23 @@ ZMK_MACRO(shift_colemak,
                 ['&trans', '&trans', '&trans'],
             ]
         },
+        // 'action': {
+        //     keys: [
+        //         ['=', '=', '=', '=', '='],
+        //         ['=', '=', '=', '=', '='],
+        //         ['=', '=', '=', '=', '='],
+
+        //         ['&none', '&none', '&none'],
+        //         ['&none', '&none', '&none'],
+
+        //         ['=', '=', '=', '=', '='],
+        //         ['=', '=', '=', '=', '='],
+        //         ['=', '=', '=', '=', '='],
+
+        //         ['&none', '&none', '&none'],
+        //         ['&none', '&none', '&none'],
+        //     ]
+        // },
         'mirror': {
             keys: [
                 ['=', '=', '=', '=', '='],
@@ -354,7 +342,7 @@ td_${macroIndex}: td_${macroIndex} {
     compatible = "zmk,behavior-tap-dance";
     label = "td_${macroIndex}";
     #binding-cells = <0>;
-    tapping-term-ms = <${tappingTerm}>;
+    tapping-term-ms = <${doubleTapTerm}>;
     bindings = <&td_${macroIndex}_first 0 ${tap}>, <&td_${macroIndex}_second 0 0>;
 };
 td_${macroIndex}_first: td_${macroIndex}_first {
