@@ -22,7 +22,7 @@ const mehArray = [
     'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', 'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'F21', 'F22', 'F23', 'F24',
     'LANG1', 'LANG2', 'LANG3', 'LANG4', 'LANG5', 'LANG6', 'LANG7', 'LANG8', 'LANG9',
     'GRAVE', 'MINUS', 'EQUAL', 'LEFT_BRACKET', 'RIGHT_BRACKET', 'BACKSLASH', 'SEMI', 'SINGLE_QUOTE', 'COMMA', 'DOT', 'SLASH'
-]
+].map((item) => `LA(LG(LC(LS(${item}))))`);
 
 // const mehDescriptions = [ ]
 // let mehIndex = 0
@@ -38,8 +38,7 @@ function getMeh() {
     if (mehArray.length == 0) {
         throw new Error('mehArray is finished, define more keys');
     }
-    // return `LA(LG(LC(LS(${mehArray.pop()}))))`
-    return `X`
+    return mehArray.pop()
 }
 
 const macAppsWitchBackward = getMeh();
@@ -383,6 +382,9 @@ config.keymap.mirror.keys[7] = config.keymap.default.keys[2].slice().reverse();
 const defines = Object.keys(config.keymap).map((layer, index) => `#define L_${layer.toUpperCase()} ${index}`).join('\n')
 let macroCounter = 0
 const unwrapTapDance = (keyText, location) => {
+    if (mehArray.includes(keyText)) {
+        return `&kp ${keyText}`;
+    }
     const [tap, hold, tapHold, doubleTap] = keyText.split(',');
     if (doubleTap) {
         throw new Error(`double tap is not implemented yet at: ${JSON.stringify(location)}`);
