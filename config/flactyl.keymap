@@ -62,6 +62,13 @@
             tapping-term-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
+		letter_o: letter_o {
+            compatible = "zmk,behavior-hold-tap";
+            label = "letter_o";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&letter_o_command>, <&kp O>;
+        };
         td_0: td_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_0";
@@ -506,7 +513,7 @@
         };
     };
     macros {
-		ZMK_MACRO(letter_lco,
+		ZMK_MACRO(letter_o_command,
     		bindings = <&macro_tap &kp LC(O)>;
 )
         ZMK_MACRO(awesome,
@@ -641,7 +648,7 @@
 &mo L_WINDOWS	&mo L_ARROWS	&mo L_NUMBERS
 &mo L_WINDOWS2	&mo L_MIRROR	&ctrl_colemak
 &mo L_CONFIG	&gqth LG(L) L	&gqth LG(U) U	&gqth LG(Y) Y	&none
-&gqth LG(M) M	&gqth LG(N) N	&gqth LG(E) E	&td_9	&gqth &letter_lco O
+&gqth LG(M) M	&gqth LG(N) N	&gqth LG(E) E	&td_9	&letter_o
 &gqth LG(J) J	&gqth LG(H) H	&gqth LG(V) V	&gqth LG(K) K	&none
 &kp SPACE	&mo L_SYMBOLS	&kp RIGHT_SHIFT
 &none	&mo L_NUMBERS	&none
