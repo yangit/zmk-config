@@ -2,6 +2,17 @@
 const fs = require('fs');
 const tappingTerm = 350
 const tapDanceTerm = 200
+
+/*
+for
+tappingTerm = 350
+tapDanceTerm = 200
+
+First tap < 350
+First hold  = 550
+Tap and hold = <200 and >350
+Double tap = ??
+*/
 const quickTap = tappingTerm
 
 
@@ -83,7 +94,7 @@ ZMK_MACRO(shift_colemak,
                 ['&mo windows', '&mo arrows', '&mo numbers'],
                 ['&mo windows2', '&mo mirror', '&ctrl_colemak'],
 
-                ['&mo config', '+L', '+U', '+Y', '&none'],
+                ['&mo config', '+L', '+U', '+Y', 'N_1,N_2,N_3'],
                 ['+M', '+N', '+E', 'I,LG(I),LG(LA(I))', '+O'],
                 ['+J', '+H', '+V', 'K,LG(K)', '&none'],
 
@@ -109,23 +120,6 @@ ZMK_MACRO(shift_colemak,
                 ['&trans', '&trans', '&trans'],
             ]
         },
-        // 'action': {
-        //     keys: [
-        //         ['=', '=', '=', '=', '='],
-        //         ['=', '=', '=', '=', '='],
-        //         ['=', '=', '=', '=', '='],
-
-        //         ['&none', '&none', '&none'],
-        //         ['&none', '&none', '&none'],
-
-        //         ['=', '=', '=', '=', '='],
-        //         ['=', '=', '=', '=', '='],
-        //         ['=', '=', '=', '=', '='],
-
-        //         ['&none', '&none', '&none'],
-        //         ['&none', '&none', '&none'],
-        //     ]
-        // },
         'mirror': {
             keys: [
                 ['=', '=', '=', '=', '='],
