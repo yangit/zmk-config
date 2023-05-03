@@ -1,6 +1,6 @@
 // Description: Yan's config file for ZMK
 const fs = require('fs');
-const tappingTerm = 350
+const tappingTerm = 3000
 const quickTap = tappingTerm
 
 const config = {
@@ -175,8 +175,8 @@ ZMK_MACRO(shift_colemak,
         'colemak': {
             keys: [
                 ['&kp Q', '&kp W', '&kp F', '&kp P', '&none'],
-                ['&kp A', '&kp S', '&kp D', '&kp F', '&kp G'],
-                ['&kp Z', '&kp X', '&kp C', '&kp V', '&kp B'],
+                ['&kp A', '&kp R', '&kp S', '&kp T', '&kp G'],
+                ['&kp Z', '&kp X', '&kp C', '&kp D', '&kp B'],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
@@ -285,7 +285,7 @@ ZMK_MACRO(shift_colemak,
                 ['&none', '&none', '&none'],
 
                 ['&none', '&none', '&none', '&none', '&bootloader'],
-                ['&none', '&none', '&none', '&none', '&none',],
+                ['&none', '&none', '&none', '&none', '&sys_reset',],
                 ['&none', '&none', '&none', '&none', '&none',],
 
                 ['&none', '&none', '&none'],
