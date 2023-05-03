@@ -1,6 +1,6 @@
 // Description: Yan's config file for ZMK
 const fs = require('fs');
-const tappingTerm = 500
+const tappingTerm = 350
 const quickTap = tappingTerm
 
 const config = {
@@ -97,6 +97,13 @@ ZMK_MACRO(ctrl_colemak,
         , <&macro_pause_for_release>
         , <&macro_release &mo L_COLEMAK &kp LEFT_CONTROL>;
 )
+ZMK_MACRO(c,
+    wait-ms = <0>;
+    bindings 
+        = <&macro_press &mo L_COLEMAK &kp LEFT_SHIFT>
+        , <&macro_pause_for_release>
+        , <&macro_release &mo L_COLEMAK &kp LEFT_SHIFT>;
+)
 `
     ],
     keymap: {
@@ -113,7 +120,7 @@ ZMK_MACRO(ctrl_colemak,
                 ['+M', '+N', '+E', 'I,LG(I),LG(LA(I))', '+O'],
                 ['+J', '+H', '+V', 'K,LG(K)', '&none'],
 
-                ['&kp SPACE', '&mo symbols', '&kp RIGHT_SHIFT'],
+                ['&kp SPACE', '&mo symbols', '&shift_colemak'],
                 ['&none', '&mo numbers', '&none']
             ],
             sensor: '&yan_encoder',
