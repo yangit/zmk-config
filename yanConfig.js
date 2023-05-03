@@ -44,6 +44,10 @@ function getMeh() {
 const macAppsWitchBackward = getMeh();
 const macAppsWitchForward = getMeh();
 
+const showApps = getMeh();
+const showDesktop = getMeh();
+const screenshot = getMeh();
+
 const appFinder = getMeh();
 const appTerminal = getMeh();
 const appVsCode = getMeh();
@@ -54,10 +58,6 @@ const appNotes = getMeh();
 const appSignal = getMeh();
 const appTelegram = getMeh();
 const appWhatsup = getMeh();
-
-const showApps = getMeh();
-const showDesktop = getMeh();
-const screenshot = getMeh();
 
 const winCenterSmall = getMeh();
 const winCenterMed = getMeh();

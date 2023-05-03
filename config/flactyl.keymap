@@ -1858,7 +1858,7 @@
             label = "td_67";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&td_67_first 0 LA(LG(LC(LS(GRAVE))))>, <&td_67_second 0 0>;
+            bindings = <&td_67_first 0 LA(LG(LC(LS(LANG7))))>, <&td_67_second 0 0>;
         };
         td_67_first: td_67_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1885,7 +1885,7 @@
             label = "td_68";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&td_68_first 0 LA(LG(LC(LS(LEFT_BRACKET))))>, <&td_68_second 0 0>;
+            bindings = <&td_68_first 0 LA(LG(LC(LS(GRAVE))))>, <&td_68_second 0 0>;
         };
         td_68_first: td_68_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1912,7 +1912,7 @@
             label = "td_69";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&td_69_first 0 LA(LG(LC(LS(LANG8))))>, <&td_69_second 0 0>;
+            bindings = <&td_69_first 0 LA(LG(LC(LS(COMMA))))>, <&td_69_second 0 0>;
         };
         td_69_first: td_69_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2899,7 +2899,7 @@
         )
         ZMK_MACRO(td_67_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(LANG9))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(LANG6))))>;
         )
         ZMK_MACRO(td_67_hold_second,
             wait-ms = <0>;
@@ -2907,11 +2907,11 @@
         )
         ZMK_MACRO(td_67_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(GRAVE)))) &kp LA(LG(LC(LS(GRAVE))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(LANG7)))) &kp LA(LG(LC(LS(LANG7))))>;
         )
         ZMK_MACRO(td_68_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(EQUAL))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(LANG9))))>;
         )
         ZMK_MACRO(td_68_hold_second,
             wait-ms = <0>;
@@ -2919,11 +2919,11 @@
         )
         ZMK_MACRO(td_68_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(LEFT_BRACKET)))) &kp LA(LG(LC(LS(LEFT_BRACKET))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(GRAVE)))) &kp LA(LG(LC(LS(GRAVE))))>;
         )
         ZMK_MACRO(td_69_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(LANG7))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(SINGLE_QUOTE))))>;
         )
         ZMK_MACRO(td_69_hold_second,
             wait-ms = <0>;
@@ -2931,7 +2931,7 @@
         )
         ZMK_MACRO(td_69_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(LANG8)))) &kp LA(LG(LC(LS(LANG8))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(COMMA)))) &kp LA(LG(LC(LS(COMMA))))>;
         )
         ZMK_MACRO(td_70_hold_first,
             wait-ms = <0>;
@@ -3138,8 +3138,8 @@
         windows_layer {
             bindings = <
 &kp LG(LEFT_BRACKET)	&kp LS(LC(TAB))	&kp LG(GRAVE)	LA(LG(LC(LS(SLASH))))	&none
-LA(LG(LC(LS(COMMA))))	LA(LG(LC(LS(SINGLE_QUOTE))))	LA(LG(LC(LS(SEMI))))	LA(LG(LC(LS(BACKSLASH))))	LA(LG(LC(LS(RIGHT_BRACKET))))
-&kp LG(EQUAL)	LA(LG(LC(LS(MINUS))))	&td_67_first 0 LA(LG(LC(LS(GRAVE))))	&td_68_first 0 LA(LG(LC(LS(LEFT_BRACKET))))	&td_69_first 0 LA(LG(LC(LS(LANG8))))
+LA(LG(LC(LS(BACKSLASH))))	LA(LG(LC(LS(RIGHT_BRACKET))))	LA(LG(LC(LS(LEFT_BRACKET))))	LA(LG(LC(LS(EQUAL))))	LA(LG(LC(LS(MINUS))))
+&kp LG(EQUAL)	LA(LG(LC(LS(LANG8))))	&td_67_first 0 LA(LG(LC(LS(LANG7))))	&td_68_first 0 LA(LG(LC(LS(GRAVE))))	&td_69_first 0 LA(LG(LC(LS(COMMA))))
 &trans	&trans	&trans
 &trans	&trans	&trans
 &trans	&trans	&trans	&trans	&trans
@@ -3156,7 +3156,7 @@ LA(LG(LC(LS(COMMA))))	LA(LG(LC(LS(SINGLE_QUOTE))))	LA(LG(LC(LS(SEMI))))	LA(LG(LC
             bindings = <
 &kp LG(RIGHT_BRACKET)	&kp LC(TAB)	&kp LS(LG(GRAVE))	LA(LG(LC(LS(DOT))))	&none
 &td_70	&td_71_first 0 LA(LG(LC(LS(F23))))	&td_72_first 0 LA(LG(LC(LS(F21))))	&td_73	&none
-&kp LG(MINUS)	&shellrepeat	&awesome	&td_74	LA(LG(LC(LS(LANG6))))
+&kp LG(MINUS)	&shellrepeat	&awesome	&td_74	LA(LG(LC(LS(SEMI))))
 &trans	&trans	&trans
 &trans	&trans	&trans
 &trans	&trans	&trans	&trans	&trans
