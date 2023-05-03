@@ -339,9 +339,9 @@ const defines = Object.keys(config.keymap).map((layer, index) => `#define L_${la
 let macroCounter = 0
 const unwrapTapDance = (keyText, location) => {
     const [tap, hold, tapHold, doubleTap] = keyText.split(',');
-    if (!tapHold) {
-        return `&gqth ${hold} ${tap}`
-    }
+    // if (!tapHold) {
+    //     return `&gqth ${hold} ${tap}`
+    // }
     if (doubleTap) {
         throw new Error(`double tap is not implemented yet at: ${JSON.stringify(location)}`);
     }
@@ -352,29 +352,47 @@ td_${macroIndex}: td_${macroIndex} {
     label = "td_${macroIndex}";
     #binding-cells = <0>;
     tapping-term-ms = <${tappingTerm}>;
-    bindings = <&gqth ${hold} ${tap}>, <&tdd_${macroIndex} ${tapHold} 0>;
+    bindings = <&td_${macroIndex}_first 0 ${tap}>, <&td_${macroIndex}_second 0 0>;
 };
-`)
-    config.behaviors.push(`
-tdd_${macroIndex}: tdd_${macroIndex} {
+td_${macroIndex}_first: td_${macroIndex}_first {
     compatible = "zmk,behavior-hold-tap";
-    label = "tdd_${macroIndex}";
+    label = "td_${macroIndex}_first";
     #binding-cells = <2>;
     flavor = "tap-preferred";
     tapping-term-ms = <${tappingTerm}>;
     quick-tap-ms = <${quickTap}>;
     global-quick-tap;
-    bindings = <&kp>, <&tdr_${macroIndex}>;
+    bindings = <&td_${macroIndex}_hold_first>, <&kp>;
+};
+td_${macroIndex}_second: td_${macroIndex}_second {
+    compatible = "zmk,behavior-hold-tap";
+    label = "td_${macroIndex}_second";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <${tappingTerm}>;
+    quick-tap-ms = <${quickTap}>;
+    global-quick-tap;
+    bindings = <&td_${macroIndex}_hold_second>, <&td_${macroIndex}_repeat>;
 };
 `)
-    config.macros.push(
-        `
-ZMK_MACRO(tdr_${macroIndex},
+
+    config.macros.push(`
+ZMK_MACRO(td_${macroIndex}_hold_first,
+    wait-ms = <0>;
+    bindings = <&macro_tap &kp ${hold}>;
+)
+ZMK_MACRO(td_${macroIndex}_hold_second,
+    wait-ms = <0>;
+    bindings = <&macro_tap &kp ${tapHold||'X'}>;
+)
+ZMK_MACRO(td_${macroIndex}_repeat,
     wait-ms = <0>;
     bindings = <&macro_tap &kp ${tap} &kp ${tap}>;
 )
-`
-    )
+`)
+    if (!tapHold) {
+        return `&td_${macroIndex}_first 0 ${tap}`
+    }
     return `&td_${macroIndex}`
 
 }
@@ -436,6 +454,6 @@ ${config.keymap[layer].keys.map(row => row.join('\t')).join('\n')}
 };
 `
 
-// fs.writeFileSync('./config/flactyl.keymap', output)
+fs.writeFileSync('./config/flactyl.keymap', output)
 console.log(output);
 
