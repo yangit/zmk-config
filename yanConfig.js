@@ -16,6 +16,64 @@ Double tap = ??
 const quickTap = tappingTerm
 
 
+// ~50 items
+const mehArray = [
+    'KP_N0', 'KP_N1', 'KP_N2', 'KP_N3', 'KP_N4', 'KP_N5', 'KP_N6', 'KP_N7', 'KP_N8', 'KP_N9',
+    'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', 'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'F21', 'F22', 'F23', 'F24',
+    'LANG1', 'LANG2', 'LANG3', 'LANG4', 'LANG5', 'LANG6', 'LANG7', 'LANG8', 'LANG9',
+    'GRAVE', 'MINUS', 'EQUAL', 'LEFT_BRACKET', 'RIGHT_BRACKET', 'BACKSLASH', 'SEMI', 'SINGLE_QUOTE', 'COMMA', 'DOT', 'SLASH'
+]
+
+// const mehDescriptions = [ ]
+// let mehIndex = 0
+// function getMeh(description) {
+//     if (mehIndex >= mehArray.length) {
+//         throw new Error('mehArray is finished, define more keys');
+//     }
+//     mehDescriptions.push(description);
+//     return `LA(LG(LC(LS(${mehArray.pop()}))))`
+// }
+
+function getMeh() {
+    if (mehArray.length == 0) {
+        throw new Error('mehArray is finished, define more keys');
+    }
+    return `LA(LG(LC(LS(${mehArray.pop()}))))`
+}
+
+const macAppsWitchBackward = getMeh();
+const macAppsWitchForward = getMeh();
+
+const appFinder = getMeh();
+const appTerminal = getMeh();
+const appVsCode = getMeh();
+const appBrowser = getMeh();
+const appSlack = getMeh();
+const appSublime = getMeh();
+const appNotes = getMeh();
+const appSignal = getMeh();
+const appTelegram = getMeh();
+const appWhatsup = getMeh();
+
+const showApps = getMeh();
+const showDesktop = getMeh();
+const screenshot = getMeh();
+
+const winCenterSmall = getMeh();
+const winCenterMed = getMeh();
+const winCenterBig = getMeh();
+const winLSmall = getMeh();
+const winLTop = getMeh();
+const winLBottom = getMeh();
+const winLMed = getMeh();
+const winLBig = getMeh();
+const winRMed = getMeh();
+const winRBig = getMeh();
+const winRSmall = getMeh();
+const winRTop = getMeh();
+const winRBottom = getMeh();
+
+
 const config = {
     header: `/*
  * Copyright (c) 2020 The ZMK Contributors
@@ -224,9 +282,10 @@ ZMK_MACRO(shift_colemak,
         },
         'windows': {
             keys: [
-                ['&kp LG(LEFT_BRACKET)', '&kp LS(LC(TAB))', '&kp LG(GRAVE)', 'LA(LC(LS(G))),LG(LA(LC(LS(G))))', '&none'],
-                ['&kp LG(KP_N0)', '&kp LG(KP_N1)', '&kp LG(KP_N2)', '&kp LG(KP_N3)', '&kp LG(KP_N4)'],
-                ['&kp LG(EQUAL)', 'LG(KP_N6),LG(LS(KP_N6))', 'LG(KP_N7),LG(LS(KP_N7))', 'LG(KP_N8),LG(LS(KP_N8))', 'LG(KP_N9),LG(LS(KP_N9))'],
+                ['&kp LG(LEFT_BRACKET)', '&kp LS(LC(TAB))', '&kp LG(GRAVE)', macAppsWitchBackward, '&none'],
+                [appFinder, appTerminal, appVsCode, appBrowser, appSlack],
+
+                ['&kp LG(EQUAL)', appSignal, `${appTelegram},${appWhatsup}`, `${appSublime},${appNotes}`, `${showApps},${showDesktop}`],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
@@ -241,9 +300,9 @@ ZMK_MACRO(shift_colemak,
         },
         'windows2': {
             keys: [
-                ['&kp LG(RIGHT_BRACKET)', '&kp LC(TAB)', '&kp LS(LG(GRAVE))', '&kp LA(LG(LC(LS(G))))', '&kp LC(LS(N0))'],
-                ['LA(LG(LC(LS(Z)))),LA(LG(LC(LS(V)))),LA(LG(LC(LS(KP_N3))))', 'LA(LG(LC(LS(X)))),LA(LG(LC(LS(K))))', 'LA(LG(LC(LS(C)))),LA(LG(LC(LS(KP_N0))))', 'LA(LG(LC(LS(B)))),LA(LG(LC(LS(KP_N1)))),LA(LG(LC(LS(KP_N2))))', 'LG(KP_N9),LS(LG(KP_N9))'],
-                ['&kp LG(MINUS)', '&shellrepeat', '&awesome', 'LA(LG(LC(LS(M)))),LA(LG(LC(LS(L)))),LA(LG(LC(LS(N))))', '&kp LG(LS(N4))'],
+                ['&kp LG(RIGHT_BRACKET)', '&kp LC(TAB)', '&kp LS(LG(GRAVE))', macAppsWitchForward, '&none'],
+                [`${winLSmall},${winLTop},${winLBottom}`, `${winLMed},${winLBig}`, `${winRMed},${winRBig}`, `${winRSmall},${winRTop},${winRBottom}`, '&none'],
+                ['&kp LG(MINUS)', '&shellrepeat', '&awesome', `${winCenterSmall},${winCenterMed},${winCenterBig}`, screenshot],
 
 
                 ['&trans', '&trans', '&trans'],
