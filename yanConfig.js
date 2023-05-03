@@ -382,9 +382,6 @@ config.keymap.mirror.keys[7] = config.keymap.default.keys[2].slice().reverse();
 const defines = Object.keys(config.keymap).map((layer, index) => `#define L_${layer.toUpperCase()} ${index}`).join('\n')
 let macroCounter = 0
 const unwrapTapDance = (keyText, location) => {
-    if (mehArray.includes(keyText)) {
-        return `&kp ${keyText}`;
-    }
     const [tap, hold, tapHold, doubleTap] = keyText.split(',');
     if (doubleTap) {
         throw new Error(`double tap is not implemented yet at: ${JSON.stringify(location)}`);
@@ -453,6 +450,9 @@ const keyMapper = (keyText, location) => {
     }
     if (keyText === '=') {
         throw new Error(`keyText ${keyText} is not allowed at ${JSON.stringify(location)}`)
+    }
+    if (mehArray.includes(keyText)) {
+        return `&kp ${keyText}`;
     }
     if (keyText.startsWith('+')) {
         const symbol = keyText.slice(1)
