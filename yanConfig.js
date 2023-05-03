@@ -94,7 +94,7 @@ ZMK_MACRO(shift_colemak,
                 ['&mo windows', '&mo arrows', '&mo numbers'],
                 ['&mo windows2', '&mo mirror', '&ctrl_colemak'],
 
-                ['&mo config', '+L', '+U', '+Y', 'N_1,N_2,N_3'],
+                ['&mo config', '+L', '+U', '+Y', 'N1,N2,N3'],
                 ['+M', '+N', '+E', 'I,LG(I),LG(LA(I))', '+O'],
                 ['+J', '+H', '+V', 'K,LG(K)', '&none'],
 
