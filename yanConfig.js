@@ -1,7 +1,7 @@
 // Description: Yan's config file for ZMK
 const fs = require('fs');
-const tappingTerm = 150
-const quickTap = 125
+const tappingTerm = 500
+const quickTap = tappingTerm
 
 const config = {
     header: `/*
@@ -48,8 +48,16 @@ gqth: global-quick-tap-hold {
     compatible = "zmk,behavior-hold-tap";
     label = "global-quick-tap-hold";
     #binding-cells = <2>;
+/*
+The 'tap-preferred' flavor triggers the hold behavior ONLY when the tapping-term-ms has expired.
+*/
     flavor = "tap-preferred";
+/*  Defines how long a key must be pressed to trigger Hold behavior. */
     tapping-term-ms = <${tappingTerm}>;
+/*  
+Prevents hold behavior to be triggered if the key is pressed within quick-tap-ms after ANY other key
+Helps to disable HOLD behavior while typing fast
+*/    
     quick-tap-ms = <${quickTap}>;
     global-quick-tap;
     bindings = <&kp>, <&kp>;
@@ -68,6 +76,10 @@ th: tap-hold {
     ],
     macros: [
         `
+ZMK_MACRO(letter_lco,
+    wait-ms = <50>;
+    bindings = <&macro_tap &kp LC(O)>;
+)
 ZMK_MACRO(awesome,
     wait-ms = <50>;
     bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
@@ -424,6 +436,6 @@ ${config.keymap[layer].keys.map(row => row.join('\t')).join('\n')}
 };
 `
 
-fs.writeFileSync('./config/flactyl.keymap', output)
+// fs.writeFileSync('./config/flactyl.keymap', output)
 console.log(output);
 

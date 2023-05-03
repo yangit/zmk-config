@@ -506,6 +506,9 @@
         };
     };
     macros {
+		ZMK_MACRO(letter_lco,
+    		bindings = <&macro_tap &kp LC(O)>;
+)
         ZMK_MACRO(awesome,
             wait-ms = <50>;
             bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
@@ -638,7 +641,7 @@
 &mo L_WINDOWS	&mo L_ARROWS	&mo L_NUMBERS
 &mo L_WINDOWS2	&mo L_MIRROR	&ctrl_colemak
 &mo L_CONFIG	&gqth LG(L) L	&gqth LG(U) U	&gqth LG(Y) Y	&none
-&gqth LG(M) M	&gqth LG(N) N	&gqth LG(E) E	&td_9	&gqth LG(O) O
+&gqth LG(M) M	&gqth LG(N) N	&gqth LG(E) E	&td_9	&gqth &letter_lco O
 &gqth LG(J) J	&gqth LG(H) H	&gqth LG(V) V	&gqth LG(K) K	&none
 &kp SPACE	&mo L_SYMBOLS	&kp RIGHT_SHIFT
 &none	&mo L_NUMBERS	&none
