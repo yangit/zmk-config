@@ -362,9 +362,9 @@ ZMK_MACRO(shift_colemak,
         },
         'config': {
             keys: [
-                ['&bootloader', '&none', '&none', '&none', '&none'],
-                ['&sys_reset', '&none', '&none', '&none', '&none'],
-                ['&bt BT_PRV', '&bt BT_NXT', '&bt BT_CLR', '&out OUT_USB', '&out OUT_BLE'],
+                ['&bootloader', '&sys_reset', '&bt BT_CLR', '&none', '&none'],
+                ['&none', '&none', '&none', '&none', '&none'],
+                ['&bt BT_PRV', '&bt BT_NXT', '&out OUT_BLE', '&out OUT_USB', '&none'],
 
                 ['&none', '&none', '&none'],
                 ['&none', '&none', '&none'],
