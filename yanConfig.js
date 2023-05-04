@@ -74,7 +74,7 @@ const m = {
 
 
     // windows
-    divvy: 'LA(LG(LC(LS(F21))))',
+    divvy: 'LA(LG(LC(LS(N1))))',
     winCenterSmall: 'LA(LG(LC(LS(N0))))',
     winCenterMed: 'LA(LG(LC(LS(F13))))',
     winCenterBig: 'LA(LG(LC(LS(F14))))',

@@ -3038,7 +3038,7 @@
         windows2_layer {
             bindings = <
 &kp LG(RIGHT_BRACKET)	&kp LC(TAB)	&kp LG(GRAVE)	&kp LA(LG(LC(LS(KP_N1))))	&kp LG(LS(MINUS))
-&kp LA(LG(LC(LS(F15))))	&td_69	&td_70	&kp LA(LG(LC(LS(N3))))	&kp LA(LG(LC(LS(F21))))
+&kp LA(LG(LC(LS(F15))))	&td_69	&td_70	&kp LA(LG(LC(LS(N3))))	&kp LA(LG(LC(LS(N1))))
 &kp LG(LS(Z))	&shellrepeat	&awesome	&td_71	&kp LG(LS(N4))
 &trans	&trans	&trans
 &trans	&trans	&trans
