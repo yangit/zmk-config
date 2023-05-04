@@ -31,13 +31,22 @@ const quickTap = tappingTerm
 
 const mehSeed = [
     'KP_N0', 'KP_N1', 'KP_N2', 'KP_N3', 'KP_N4', 'KP_N5', 'KP_N6', 'KP_N7', 'KP_N8', 'KP_N9',
-    'KP_MINUS', 'KP_ASTERISK', 'KP_EQUAL',
+    // below are first class citizens of numpad
+    'KP_PLUS', 'KP_MINUS', 'KP_MULTIPLY', 'KP_DIVIDE', 'KP_EQUAL', 'KP_DOT',
+
     // used by mac for brightness and volume
     // 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12',
-    'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'F21', 'F22', 'F23', 'F24',
+
+    'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20',
+
+    //the ones below do not work with Divy mybe work with Alfred
+    // 'F21', 'F22', 'F23', 'F24',
+
     // LANG does not work on alfred and divvy
     // 'LANG1', 'LANG2', 'LANG3', 'LANG4', 'LANG5', 'LANG6', 'LANG7', 'LANG8', 'LANG9',
     'N0', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N9',
+
+    //Below are first class symbols
     'GRAVE', 'MINUS', 'EQUAL', 'LEFT_BRACKET', 'RIGHT_BRACKET', 'BACKSLASH', 'SEMI', 'SINGLE_QUOTE', 'COMMA', 'DOT', 'SLASH',
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
     'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
@@ -83,7 +92,7 @@ const m = {
     appNotes: 'LA(LG(LC(LS(KP_MINUS))))',
     appSignal: 'LA(LG(LC(LS(KP_EQUAL))))',
     appTelegram: 'LA(LG(LC(LS(F17))))',
-    appWhatsup: 'LA(LG(LC(LS(KP_ASTERISK))))',
+    appWhatsup: 'LA(LG(LC(LS(KP_MULTIPLY))))',
 
 
     // windows
@@ -319,19 +328,19 @@ ZMK_MACRO(disable_rus,
         },
         'arrowsr': {
             keys: [
-                ['&disable_rus', '=', '=', '&none', '='],
-                ['=', '=', '=', '=', '='],
-                ['=', '=', '=', '=', '='],
+                ['&disable_rus', '&trans', '&trans', '&none', '&trans'],
+                ['&trans', '&trans', '&trans', '&trans', '&trans'],
+                ['&trans', '&trans', '&trans', '&trans', '&trans'],
 
-                ['=', '=', '='],
-                ['=', '=', '='],
+                ['&trans', '&trans', '&trans'],
+                ['&trans', '&trans', '&trans'],
 
-                ['=', '=', '=', '=', '='],
-                ['=', '=', '=', '=', '='],
-                ['=', '=', '=', '=', '='],
+                ['&trans', '&trans', '&trans', '&trans', '&trans'],
+                ['&trans', '&trans', '&trans', '&trans', '&trans'],
+                ['&trans', '&trans', '&trans', '&trans', '&trans'],
 
-                ['=', '=', '='],
-                ['=', '=', '='],
+                ['&trans', '&trans', '&trans'],
+                ['&trans', '&trans', '&trans'],
             ]
         },
         'symbols': {
@@ -431,11 +440,11 @@ config.macros.push(`
 ZMK_MACRO(arrowsr_rus,
     wait-ms = <0>;
     bindings
-        = <&macro_press &mo ${layerToLayer('arrowsr')}>
-        , <&macro_tap &kp ${odd.toggleLanguage}>
-        , <&macro_pause_for_release>
-        , <&macro_tap &kp ${odd.toggleLanguage}>
-        , <&macro_release &mo ${layerToLayer('arrowsr')}>;
+        = <&macro_tap &kp ${odd.toggleLanguage}>        
+        , <&macro_press &mo ${layerToLayer('arrows')} &mo ${layerToLayer('arrowsr')}>
+        , <&macro_pause_for_release>        
+        , <&macro_release &mo ${layerToLayer('arrows')} &mo ${layerToLayer('arrowsr')}>
+        , <&macro_tap &kp ${odd.toggleLanguage}>;
 )
  `)
 
@@ -478,19 +487,10 @@ config.keymap.mirror.keys[5] = config.keymap.default.keys[0].slice().reverse();
 config.keymap.mirror.keys[6] = config.keymap.default.keys[1].slice().reverse();
 config.keymap.mirror.keys[7] = config.keymap.default.keys[2].slice().reverse();
 
-//Setup arrowR layer
-config.keymap.arrowsr.keys = config.keymap.arrowsr.keys.map((line, lineIndex) => {
-    return line.map((key, keyIndex) => {
-        if (key === '=') {
-            return config.keymap.arrows.keys[lineIndex][keyIndex]
-        }
-        return key
-    })
-})
 
 const uwrapPlus = (string) => `${string.slice(1)},LG(${string.slice(1)})`
 
-// Setup hold/tapHold for russian layer from english layer
+// Copy hold/tapHold for russian layer from english layer
 config.keymap.russian.keys = config.keymap.russian.keys.map((line, lineIndex) => {
     return line.map((key, keyIndex) => {
         const [tap, hold, tapHold, doubleTap] = key.split(',');
