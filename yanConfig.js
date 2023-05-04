@@ -5,10 +5,10 @@ const { consumers } = require('stream');
 
 
 // perceived value
-const timeToHold = 5000
+const timeToHold = 350
 
 //calculated values
-const tapDanceTerm = 2500
+const tapDanceTerm = 200
 const tappingTerm = timeToHold - tapDanceTerm
 const tappingTerm2 = timeToHold
 if (tappingTerm < 0 || tappingTerm2 < 0 || tapDanceTerm < 0) {
