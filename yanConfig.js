@@ -21,7 +21,7 @@ const mehSeed = [
     'KP_MINUS', 'KP_ASTERISK', 'KP_EQUAL',
     // used by mac for brightness and volume
     // 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12',
-    'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'F23', 'F24',
+    'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'F21', 'F22', 'F23', 'F24',
     'LANG1', 'LANG2', 'LANG3', 'LANG4', 'LANG5', 'LANG6', 'LANG7', 'LANG8', 'LANG9',
     'N0', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N9',
     'GRAVE', 'MINUS', 'EQUAL', 'LEFT_BRACKET', 'RIGHT_BRACKET', 'BACKSLASH', 'SEMI', 'SINGLE_QUOTE', 'COMMA', 'DOT', 'SLASH',
@@ -70,7 +70,7 @@ const m = {
     appWhatsup: 'LA(LG(LC(LS(KP_ASTERISK))))',
 
     // windows
-    winCenterSmall: 'LA(LG(LC(LS(LANG3))))',
+    winCenterSmall: 'LA(LG(LC(LS(N0))))',
     winCenterMed: 'LA(LG(LC(LS(F13))))',
     winCenterBig: 'LA(LG(LC(LS(F14))))',
     winLSmall: 'LA(LG(LC(LS(F15))))',
@@ -79,8 +79,8 @@ const m = {
     winLMed: 'LA(LG(LC(LS(F18))))',
     winLBig: 'LA(LG(LC(LS(F19))))',
     winRMed: 'LA(LG(LC(LS(F20))))',
-    winRBig: 'LA(LG(LC(LS(LANG4))))',
-    winRSmall: 'LA(LG(LC(LS(LANG5))))',
+    winRBig: 'LA(LG(LC(LS(N2))))',
+    winRSmall: 'LA(LG(LC(LS(N3))))',
     // winRTop: 'LA(LG(LC(LS(F23))))',
     // winRBottom: 'LA(LG(LC(LS(F24))))',
 

@@ -1993,7 +1993,7 @@
             label = "td_72";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_72_first 0 LA(LG(LC(LS(LANG3))))>, <&td_72_second 0 0>;
+            bindings = <&td_72_first 0 LA(LG(LC(LS(N0))))>, <&td_72_second 0 0>;
         };
         td_72_first: td_72_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2893,7 +2893,7 @@
         )
         ZMK_MACRO(td_71_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(LANG4))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(N2))))>;
         )
         ZMK_MACRO(td_71_hold_second,
             wait-ms = <0>;
@@ -2913,7 +2913,7 @@
         )
         ZMK_MACRO(td_72_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(LANG3)))) &kp LA(LG(LC(LS(LANG3))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(N0)))) &kp LA(LG(LC(LS(N0))))>;
         )
     };
     keymap {
@@ -3077,7 +3077,7 @@
         windows2_layer {
             bindings = <
 &kp LG(RIGHT_BRACKET)	&kp LC(TAB)	&kp LG(GRAVE)	&kp LA(LG(LC(LS(KP_N1))))	&none
-&kp LA(LG(LC(LS(F15))))	&td_70_first 0 LA(LG(LC(LS(F18))))	&td_71_first 0 LA(LG(LC(LS(F20))))	&kp LA(LG(LC(LS(LANG5))))	&none
+&kp LA(LG(LC(LS(F15))))	&td_70_first 0 LA(LG(LC(LS(F18))))	&td_71_first 0 LA(LG(LC(LS(F20))))	&kp LA(LG(LC(LS(N3))))	&none
 &kp LG(LS(MINUS))	&shellrepeat	&awesome	&td_72	&kp LG(LS(N4))
 &trans	&trans	&trans
 &trans	&trans	&trans
