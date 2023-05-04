@@ -1,8 +1,8 @@
 // Description: Yan's config file for ZMK
 const { log } = require('console');
 const fs = require('fs');
-const tappingTerm = 250
-const tapDanceTerm = 200
+const tappingTerm = 5000
+const tapDanceTerm = 2500
 
 /*
 for
@@ -449,7 +449,9 @@ td_${macroIndex}_first: td_${macroIndex}_first {
     quick-tap-ms = <${quickTap}>;
     global-quick-tap;
     bindings = <&td_${macroIndex}_hold_first>, <&kp>;
-};
+};`)
+if (tapHold) {
+    config.behaviors.push(`
 td_${macroIndex}_second: td_${macroIndex}_second {
     compatible = "zmk,behavior-hold-tap";
     label = "td_${macroIndex}_second";
@@ -459,8 +461,20 @@ td_${macroIndex}_second: td_${macroIndex}_second {
     quick-tap-ms = <${quickTap}>;
     global-quick-tap;
     bindings = <&td_${macroIndex}_hold_second>, <&td_${macroIndex}_repeat>;
-};
-`)
+};`)
+} else{
+    config.behaviors.push(`
+td_${macroIndex}_second: td_${macroIndex}_second {
+    compatible = "zmk,behavior-hold-tap";
+    label = "td_${macroIndex}_second";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <${tappingTerm}>;
+    quick-tap-ms = <${quickTap}>;
+    global-quick-tap;
+    bindings = <&td_${macroIndex}_repeat>, <&td_${macroIndex}_repeat>;
+};`)
+}
 
     config.macros.push(`
 ZMK_MACRO(td_${macroIndex}_hold_first,
@@ -476,9 +490,6 @@ ZMK_MACRO(td_${macroIndex}_repeat,
     bindings = <&macro_tap &kp ${tap} &kp ${tap}>;
 )
 `)
-    if (!tapHold) {
-        return `&td_${macroIndex}_first 0 ${tap}`
-    }
     return `&td_${macroIndex}`
 
 }
