@@ -84,19 +84,6 @@ const m = {
     // winRTop: 'LA(LG(LC(LS(F23))))',
     // winRBottom: 'LA(LG(LC(LS(F24))))',
 
-
-    // winCenterMed: 'LA(LG(LC(LS(GRAVE))))',
-    // winCenterBig: 'LA(LG(LC(LS(MINUS))))',
-    // winLSmall: 'LA(LG(LC(LS(EQUAL))))',
-    // winLTop: 'LA(LG(LC(LS(LEFT_BRACKET))))',
-    // winLBottom: 'LA(LG(LC(LS(RIGHT_BRACKET))))',
-    // winLMed: 'LA(LG(LC(LS(BACKSLASH))))',
-    // winLBig: 'LA(LG(LC(LS(SEMI))))',
-    // winRMed: 'LA(LG(LC(LS(SINGLE_QUOTE))))',
-    // winRBig: 'LA(LG(LC(LS(COMMA))))',
-    // winRSmall: 'LA(LG(LC(LS(DOT))))',
-    // winRTop: 'LA(LG(LC(LS(SLASH))))',
-    // winRBottom: 'LA(LG(LC(LS(A))))',
 }
 
 const legalValues = mehArray.map((item) => item.value);
