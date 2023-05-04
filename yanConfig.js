@@ -364,7 +364,7 @@ ZMK_MACRO(shift_colemak,
             keys: [
                 ['&bootloader', '&sys_reset', '&bt BT_CLR', '&none', '&none'],
                 ['&none', '&none', '&none', '&none', '&none'],
-                ['&bt BT_PRV', '&bt BT_NXT', '&out OUT_BLE', '&out OUT_USB', '&none'],
+                ['&bt BT_PRV', '&bt BT_NXT', '&out OUT_BLE', '&none', '&out OUT_USB'],
 
                 ['&none', '&none', '&none'],
                 ['&none', '&none', '&none'],
