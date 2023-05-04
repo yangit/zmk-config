@@ -1,6 +1,7 @@
 // Description: Yan's config file for ZMK
 const { log } = require('console');
 const fs = require('fs');
+const { consumers } = require('stream');
 const tappingTerm = 150
 const tapDanceTerm = 250
 
@@ -208,7 +209,7 @@ ZMK_MACRO(disable_rus,
                 ['A', 'S', 'D', 'F', 'G'],
                 ['Z', 'X', 'C', 'V', 'B'],
 
-                ['&windows_rus', '&arrows_rus', '&numbers_rus'],
+                ['&windows_rus', '&arrowsr_rus', '&numbers_rus'],
                 ['&windows2_rus', '&trans', '&trans'],
 
                 ['Y', 'U', 'I', 'O', 'P'],
@@ -289,7 +290,7 @@ ZMK_MACRO(disable_rus,
         },
         'arrows': {
             keys: [
-                ['&disable_rus', 'SPACE', 'DELETE', '&enable_rus', 'K_VOLUME_UP'],
+                ['&none', 'SPACE', 'DELETE', '&enable_rus', 'K_VOLUME_UP'],
                 ['ESCAPE', 'TAB', 'BACKSPACE', 'RETURN,LS(RETURN),LG(RETURN)', 'K_VOLUME_DOWN'],
                 ['&sk LEFT_ALT', '&sk LEFT_CONTROL', '&sk LEFT_SHIFT', '&sk LEFT_COMMAND', `${odd.alfred},${odd.lockScreen}`],
 
@@ -302,6 +303,23 @@ ZMK_MACRO(disable_rus,
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
+            ]
+        },
+        'arrowsr': {
+            keys: [
+                ['&disable_rus', '=', '=', '&none', '=' ],
+                ['=', '=', '=', '=', '='],
+                ['=', '=', '=', '=', '='],
+                
+                ['=', '=', '='],
+                ['=', '=', '='],
+
+                ['=', '=', '=', '=', '='],
+                ['=', '=', '=', '=', '='],
+                ['=', '=', '=', '=', '='],
+
+                ['=', '=', '='],
+                ['=', '=', '='],
             ]
         },
         'symbols': {
@@ -379,7 +397,7 @@ ZMK_MACRO(disable_rus,
 };
 
 
-const rusLayers = ['symbols', 'windows', 'windows2', 'arrows', 'numbers'];
+const rusLayers = ['symbols', 'windows', 'windows2', 'numbers'];
 rusLayers.forEach((layer)=>{
     if (!config.keymap[layer]){
         throw new Error(`Layer for russification does not exists: ${layer}`);
@@ -395,9 +413,20 @@ ZMK_MACRO(${layer}_rus,
         , <&macro_release &mo ${layerToLayer(layer)}>;
 )
  `)
-
 })
-//layer #defines
+
+config.macros.push(`
+ZMK_MACRO(arrowsr_rus,
+    wait-ms = <0>;
+    bindings
+        = <&macro_press &mo ${layerToLayer('arrowsr')}>
+        , <&macro_tap &kp ${odd.toggleLanguage}>
+        , <&macro_pause_for_release>
+        , <&macro_tap &kp ${odd.toggleLanguage}>
+        , <&macro_release &mo ${layerToLayer('arrowsr')}>;
+)
+ `)
+
 
 
 //use generated hotkey combinations such that I do not have to invent them
@@ -433,7 +462,14 @@ config.keymap.mirror.keys[2] = config.keymap.default.keys[7].slice().reverse();
 config.keymap.mirror.keys[5] = config.keymap.default.keys[0].slice().reverse();
 config.keymap.mirror.keys[6] = config.keymap.default.keys[1].slice().reverse();
 config.keymap.mirror.keys[7] = config.keymap.default.keys[2].slice().reverse();
-
+config.keymap.arrowsr.keys = config.keymap.arrowsr.keys.map((line,lineIndex)=>{
+    return line.map((key,keyIndex)=>{
+        if (key==='=') {
+            return config.keymap.arrows.keys[lineIndex][keyIndex]
+        }
+        return key
+    })
+})
 
 // #define L_DEFAULT 0
 // #define L_ARROWS   1
