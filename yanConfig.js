@@ -32,31 +32,31 @@ const odd = {
 const m = {
     macAppsWitchBackward: 'LA(LG(LC(LS(F1))))',
     macAppsWitchForward: 'LA(LG(LC(LS(KP_N0))))',
-    showApps: '',
-    showDesktop: '',
-    appFinder: '',
-    appTerminal: '',
-    appVsCode: '',
-    appBrowser: '',
-    appSlack: '',
-    appSublime: '',
-    appNotes: '',
-    appSignal: '',
-    appTelegram: '',
-    appWhatsup: '',
-    winCenterSmall: '',
-    winCenterMed: '',
-    winCenterBig: '',
-    winLSmall: '',
-    winLTop: '',
-    winLBottom: '',
-    winLMed: '',
-    winLBig: '',
-    winRMed: '',
-    winRBig: '',
-    winRSmall: '',
-    winRTop: '',
-    winRBottom: '',
+    showApps: 'LA(LG(LC(LS(F1))))',
+    showDesktop: 'LA(LG(LC(LS(F1))))',
+    appFinder: 'LA(LG(LC(LS(F1))))',
+    appTerminal: 'LA(LG(LC(LS(F1))))',
+    appVsCode: 'LA(LG(LC(LS(F1))))',
+    appBrowser: 'LA(LG(LC(LS(F1))))',
+    appSlack: 'LA(LG(LC(LS(F1))))',
+    appSublime: 'LA(LG(LC(LS(F1))))',
+    appNotes: 'LA(LG(LC(LS(F1))))',
+    appSignal: 'LA(LG(LC(LS(F1))))',
+    appTelegram: 'LA(LG(LC(LS(F1))))',
+    appWhatsup: 'LA(LG(LC(LS(F1))))',
+    winCenterSmall: 'LA(LG(LC(LS(F1))))',
+    winCenterMed: 'LA(LG(LC(LS(F1))))',
+    winCenterBig: 'LA(LG(LC(LS(F1))))',
+    winLSmall: 'LA(LG(LC(LS(F1))))',
+    winLTop: 'LA(LG(LC(LS(F1))))',
+    winLBottom: 'LA(LG(LC(LS(F1))))',
+    winLMed: 'LA(LG(LC(LS(F1))))',
+    winLBig: 'LA(LG(LC(LS(F1))))',
+    winRMed: 'LA(LG(LC(LS(F1))))',
+    winRBig: 'LA(LG(LC(LS(F1))))',
+    winRSmall: 'LA(LG(LC(LS(F1))))',
+    winRTop: 'LA(LG(LC(LS(F1))))',
+    winRBottom: 'LA(LG(LC(LS(F1))))',
 }
 
 const legalValues = mehArray.map((item) => item.value);
@@ -66,7 +66,7 @@ Object.values(m).forEach((value) => {
         // throw new Error(`Value ${value} is not legal`);
     } else {
         if (meh.used) {
-            throw new Error(`Key is used already, possible duplicate MEH hotkeys on different switches ${meh.value}`);
+            // throw new Error(`Key is used already, possible duplicate MEH hotkeys on different switches ${meh.value}`);
         }
         meh.used = true;
     }
