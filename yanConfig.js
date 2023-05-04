@@ -72,7 +72,9 @@ const m = {
     appTelegram: 'LA(LG(LC(LS(F17))))',
     appWhatsup: 'LA(LG(LC(LS(KP_ASTERISK))))',
 
+
     // windows
+    divvy: 'LA(LG(LC(LS(F21))))',
     winCenterSmall: 'LA(LG(LC(LS(N0))))',
     winCenterMed: 'LA(LG(LC(LS(F13))))',
     winCenterBig: 'LA(LG(LC(LS(F14))))',
@@ -347,7 +349,7 @@ ZMK_MACRO(shift_colemak,
         'windows2': {
             keys: [
                 [odd.historyForward, odd.tabsForward, odd.appWindowForward, m.macAppsWitchForward, odd.fontSmaller],
-                [m.winLSmall, `${m.winLMed},${m.winLBig}`, `${m.winRMed},${m.winRBig}`, m.winRSmall, '&none'],
+                [m.winLSmall, `${m.winLMed},${m.winLBig}`, `${m.winRMed},${m.winRBig}`, m.winRSmall, m.divvy],
                 [odd.redo, '&shellrepeat', '&awesome', `${m.winCenterSmall},${m.winCenterMed},${m.winCenterBig}`, odd.screenshot],
 
 
