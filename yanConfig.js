@@ -35,6 +35,9 @@ mehSeed.forEach((key) => mehArray.push({ key, modifier: 'super', value: `LA(LG(L
 
 const odd = {
     screenshot: 'LG(LS(N4))',
+    fontBigger: 'LG(LS(EQUAL))',
+    fontSmaller: 'LG(LS(MINUS))',
+    toggleLanguage: 'LC(EQUAL)',
 }
 
 const m = {
@@ -43,6 +46,7 @@ const m = {
 
     showApps: 'LA(LG(LC(LS(KP_N2))))',
     showDesktop: 'LA(LG(LC(LS(KP_N3))))',
+
     // apps
     appFinder: 'LA(LG(LC(LS(KP_N4))))',
     appTerminal: 'LA(LG(LC(LS(KP_N5))))',
@@ -54,10 +58,9 @@ const m = {
     appSignal: 'LA(LG(LC(LS(KP_DOT))))',
     appTelegram: 'LA(LG(LC(LS(KP_SLASH))))',
     appWhatsup: 'LA(LG(LC(LS(KP_ASTERISK))))',
+
     // windows
     winCenterSmall: 'LA(LG(LC(LS(KP_PLUS))))',
-
-
     winCenterMed: 'LA(LG(LC(LS(F13))))',
     winCenterBig: 'LA(LG(LC(LS(F14))))',
     winLSmall: 'LA(LG(LC(LS(F15))))',
@@ -90,10 +93,10 @@ const legalValues = mehArray.map((item) => item.value);
 Object.values(m).forEach((value) => {
     const meh = mehArray.find((item) => item.value === value);
     if (!meh) {
-        // throw new Error(`Value ${value} is not legal`);
+        throw new Error(`Value ${value} is not legal`);
     } else {
         if (meh.used) {
-            // throw new Error(`Key is used already, possible duplicate MEH hotkeys on different switches ${meh.value}`);
+            throw new Error(`Key is used already, possible duplicate MEH hotkeys on different switches ${meh.value}`);
         }
         meh.used = true;
     }
@@ -183,7 +186,7 @@ ZMK_MACRO(shift_colemak,
                 ['+J', '+H', '+V', 'K,LG(K)', '&none'],
 
                 ['&kp SPACE', '&mo symbols', '&shift_colemak'],
-                ['&mo test', '&mo numbers', '&none']
+                ['&none', '&mo numbers', '&none']
             ],
             sensor: '&yan_encoder',
         },
@@ -204,23 +207,23 @@ ZMK_MACRO(shift_colemak,
                 ['&trans', '&trans', '&trans'],
             ]
         },
-        'test': {
-            keys: [
-                ['&kp LA(LG(LC(LS(F1))))', '&kp LA(LG(LC(LS(F2))))', '&kp LA(LG(LC(LS(F3))))', '&kp LA(LG(LC(LS(F4))))', '&kp LA(LG(LC(LS(F5))))'],
-                ['&kp LA(LG(LC(LS(F6))))', '&kp LA(LG(LC(LS(F7))))', '&kp LA(LG(LC(LS(F8))))', '&kp LA(LG(LC(LS(F9))))', '&kp LA(LG(LC(LS(F10))))'],
-                ['&kp LA(LG(LC(LS(F11))))', '&kp LA(LG(LC(LS(F12))))', '&none', '&none', '&none'],
+        // 'test': {
+        //     keys: [
+        //         ['&kp LA(LG(LC(LS(F1))))', '&kp LA(LG(LC(LS(F2))))', '&kp LA(LG(LC(LS(F3))))', '&kp LA(LG(LC(LS(F4))))', '&kp LA(LG(LC(LS(F5))))'],
+        //         ['&kp LA(LG(LC(LS(F6))))', '&kp LA(LG(LC(LS(F7))))', '&kp LA(LG(LC(LS(F8))))', '&kp LA(LG(LC(LS(F9))))', '&kp LA(LG(LC(LS(F10))))'],
+        //         ['&kp LA(LG(LC(LS(F11))))', '&kp LA(LG(LC(LS(F12))))', '&none', '&none', '&none'],
 
-                ['&trans', '&trans', '&trans'],
-                ['&trans', '&trans', '&trans'],
+        //         ['&trans', '&trans', '&trans'],
+        //         ['&trans', '&trans', '&trans'],
 
-                ['&kp LA(LG(LC(LS(F13))))', '&kp LA(LG(LC(LS(F14))))', '&kp LA(LG(LC(LS(F15))))', '&kp LA(LG(LC(LS(F16))))', '&kp LA(LG(LC(LS(F17))))'],
-                ['&kp LA(LG(LC(LS(F18))))', '&kp LA(LG(LC(LS(F19))))', '&kp LA(LG(LC(LS(F20))))', '&kp LA(LG(LC(LS(F21))))', '&kp LA(LG(LC(LS(F22))))'],
-                ['&kp LA(LG(LC(LS(F23))))', '&kp LA(LG(LC(LS(F24))))', '&none', '&none', '&none'],
+        //         ['&kp LA(LG(LC(LS(F13))))', '&kp LA(LG(LC(LS(F14))))', '&kp LA(LG(LC(LS(F15))))', '&kp LA(LG(LC(LS(F16))))', '&kp LA(LG(LC(LS(F17))))'],
+        //         ['&kp LA(LG(LC(LS(F18))))', '&kp LA(LG(LC(LS(F19))))', '&kp LA(LG(LC(LS(F20))))', '&kp LA(LG(LC(LS(F21))))', '&kp LA(LG(LC(LS(F22))))'],
+        //         ['&kp LA(LG(LC(LS(F23))))', '&kp LA(LG(LC(LS(F24))))', '&none', '&none', '&none'],
 
-                ['&trans', '&trans', '&trans'],
-                ['&trans', '&trans', '&trans'],
-            ]
-        },
+        //         ['&trans', '&trans', '&trans'],
+        //         ['&trans', '&trans', '&trans'],
+        //     ]
+        // },
 
         'mirror': {
             keys: [
@@ -292,7 +295,7 @@ ZMK_MACRO(shift_colemak,
         },
         'arrows': {
             keys: [
-                ['&kp LC(EQUAL)', '&kp SPACE', '&kp DELETE', '&kp LC(EQUAL)', '&kp K_VOLUME_UP'],
+                [odd.toggleLanguage, '&kp SPACE', '&kp DELETE', odd.toggleLanguage, '&kp K_VOLUME_UP'],
                 ['&kp ESCAPE', '&kp TAB', '&kp BACKSPACE', 'RETURN,LS(RETURN),LG(RETURN)', '&kp K_VOLUME_DOWN'],
                 ['&sk LEFT_ALT', '&sk LEFT_CONTROL', '&sk LEFT_SHIFT', '&sk LEFT_COMMAND', 'LG(SPACE),LC(LG(Q))'],
 
@@ -329,7 +332,7 @@ ZMK_MACRO(shift_colemak,
                 ['&kp LG(LEFT_BRACKET)', '&kp LS(LC(TAB))', '&kp LG(GRAVE)', m.macAppsWitchBackward, '&none'],
                 [m.appFinder, m.appTerminal, m.appVsCode, m.appBrowser, m.appSlack],
 
-                ['&kp LG(EQUAL)', m.appSignal, `${m.appTelegram},${m.appWhatsup}`, `${m.appSublime},${m.appNotes}`, `${m.showApps},${m.showDesktop}`],
+                [odd.fontBigger, m.appSignal, `${m.appTelegram},${m.appWhatsup}`, `${m.appSublime},${m.appNotes}`, `${m.showApps},${m.showDesktop}`],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
@@ -346,7 +349,7 @@ ZMK_MACRO(shift_colemak,
             keys: [
                 ['&kp LG(RIGHT_BRACKET)', '&kp LC(TAB)', '&kp LS(LG(GRAVE))', m.macAppsWitchForward, '&none'],
                 [`${m.winLSmall},${m.winLTop},${m.winLBottom}`, `${m.winLMed},${m.winLBig}`, `${m.winRMed},${m.winRBig}`, `${m.winRSmall},${m.winRTop},${m.winRBottom}`, '&none'],
-                ['&kp LG(MINUS)', '&shellrepeat', '&awesome', `${m.winCenterSmall},${m.winCenterMed},${m.winCenterBig}`, odd.screenshot],
+                [odd.fontSmaller, '&shellrepeat', '&awesome', `${m.winCenterSmall},${m.winCenterMed},${m.winCenterBig}`, odd.screenshot],
 
 
                 ['&trans', '&trans', '&trans'],
