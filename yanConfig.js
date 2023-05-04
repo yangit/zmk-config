@@ -6,12 +6,12 @@ const tapDanceTerm = 250
 
 /*
 for
-tappingTerm = 250
-tapDanceTerm = 300
+tappingTerm = 150
+tapDanceTerm = 250
 
-First tap < 250
-First hold  = 550
-Tap and hold = <300 and >250
+First tap < 400
+First hold  > 400
+Tap and hold = < 250 and > 150
 Double tap = ??
 */
 const quickTap = tappingTerm
