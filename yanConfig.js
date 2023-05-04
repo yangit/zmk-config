@@ -48,6 +48,8 @@ const odd = {
     appWindowForward: 'LG(GRAVE)',
     alfred: 'LG(SPACE)',
     lockScreen: 'LG(LC(Q))',
+    undo: 'LG(Z)',
+    redo: 'LG(LS(Z))',
 }
 
 const m = {
@@ -174,7 +176,7 @@ ZMK_MACRO(shift_colemak,
             keys: [
                 ['Q,LG(SLASH),LA(LG(Q))', 'W,LG(W),LG(Q)', 'F,LG(F),LA(LG(F))', 'P,LG(P),LS(LG(P))', '&mo config'],
                 ['+A', '+R', '+S', 'T,LG(T),LG(N)', 'G,LG(G),LG(D)'],
-                ['Z,LG(Z),LG(LS(Z))', '+X', '+C', 'D,LG(V),LG(LS(V))', 'B,LG(B),LG(LS(B))'],
+                ['Z', '+X', '+C', 'D,LG(V),LG(LS(V))', 'B,LG(B),LG(LS(B))'],
 
                 ['&mo windows', '&mo arrows', '&mo numbers'],
                 ['&mo windows2', '&mo mirror', '&ctrl_colemak'],
@@ -327,10 +329,9 @@ ZMK_MACRO(shift_colemak,
         },
         'windows': {
             keys: [
-                [odd.historyBack, odd.tabsBack, odd.appWindowBack, m.macAppsWitchBackward, '&none'],
+                [odd.historyBack, odd.tabsBack, odd.appWindowBack, m.macAppsWitchBackward, odd.fontBigger],
                 [m.appFinder, m.appTerminal, m.appVsCode, m.appBrowser, `${m.appSlack},${m.appInsomnia}`],
-
-                [odd.fontBigger, m.appSignal, `${m.appTelegram},${m.appWhatsup}`, `${m.appSublime},${m.appNotes}`, `${m.showApps},${m.showDesktop}`],
+                [odd.undo, m.appSignal, `${m.appTelegram},${m.appWhatsup}`, `${m.appSublime},${m.appNotes}`, `${m.showApps},${m.showDesktop}`],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
@@ -345,9 +346,9 @@ ZMK_MACRO(shift_colemak,
         },
         'windows2': {
             keys: [
-                [odd.historyForward, odd.tabsForward, odd.appWindowForward, m.macAppsWitchForward, '&none'],
+                [odd.historyForward, odd.tabsForward, odd.appWindowForward, m.macAppsWitchForward, odd.fontSmaller],
                 [m.winLSmall, `${m.winLMed},${m.winLBig}`, `${m.winRMed},${m.winRBig}`, m.winRSmall, '&none'],
-                [odd.fontSmaller, '&shellrepeat', '&awesome', `${m.winCenterSmall},${m.winCenterMed},${m.winCenterBig}`, odd.screenshot],
+                [odd.redo, '&shellrepeat', '&awesome', `${m.winCenterSmall},${m.winCenterMed},${m.winCenterBig}`, odd.screenshot],
 
 
                 ['&trans', '&trans', '&trans'],
