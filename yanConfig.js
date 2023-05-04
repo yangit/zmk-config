@@ -101,15 +101,13 @@ const m = {
     winCenterMed: 'LA(LG(LC(LS(F13))))',
     winCenterBig: 'LA(LG(LC(LS(F14))))',
     winLSmall: 'LA(LG(LC(LS(F15))))',
-    // winLTop: 'LA(LG(LC(LS(F16))))',
-    // winLBottom: 'LA(LG(LC(LS(F17))))',
     winLMed: 'LA(LG(LC(LS(F18))))',
     winLBig: 'LA(LG(LC(LS(F19))))',
-    winRMed: 'LA(LG(LC(LS(F20))))',
+    winLXL: 'LA(LG(LC(LS(KP_PLUS))))',
+    winRXL: 'LA(LG(LC(LS(KP_DIVIDE))))',
     winRBig: 'LA(LG(LC(LS(N2))))',
+    winRMed: 'LA(LG(LC(LS(F20))))',    
     winRSmall: 'LA(LG(LC(LS(N3))))',
-    // winRTop: 'LA(LG(LC(LS(F23))))',
-    // winRBottom: 'LA(LG(LC(LS(F24))))',
 
 }
 const layerToLayer = (layer) => `L_${layer.toUpperCase()}`
