@@ -183,23 +183,23 @@ ZMK_MACRO(shift_colemak,
                 ['+M', '+N', '+E', 'I,LG(I),LG(LA(I))', '+O'],
                 ['+J', '+H', '+V', '+K', '&none'],
 
-                ['&kp SPACE', '&mo symbols', '&shift_colemak'],
+                ['SPACE', '&mo symbols', '&shift_colemak'],
                 ['&none', '&mo numbers', '&none']
             ],
             sensor: '&yan_encoder',
         },
         'russian': {
             keys: [
-                ['&kp Q', '&kp W', '&kp E', '&kp R', 'T,SLASH'],
-                ['&kp A', '&kp S', '&kp D', '&kp F', '&kp G'],
-                ['&kp Z', '&kp X', '&kp C', '&kp V', '&kp B'],
+                ['Q', 'W', 'E', 'R', 'T,SLASH'],
+                ['A', 'S', 'D', 'F', 'G'],
+                ['Z', 'X', 'C', 'V', 'B'],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
 
-                ['&kp Y', '&kp U', '&kp I', '&kp O', '&kp P'],
-                ['&kp H', '&kp J', '&kp K', '&kp L', '&kp SEMICOLON'],
-                ['&kp N', 'M,RIGHT_BRACKET', '&kp COMMA', '&kp PERIOD', 'SINGLE_QUOTE,LEFT_BRACKET'],
+                ['Y', 'U', 'I', 'O', 'P'],
+                ['H', 'J', 'K', 'L', 'SEMICOLON'],
+                ['N', 'M,RIGHT_BRACKET', 'COMMA', 'PERIOD', 'SINGLE_QUOTE,LEFT_BRACKET'],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
@@ -207,16 +207,16 @@ ZMK_MACRO(shift_colemak,
         },
         // 'test': {
         //     keys: [
-        //         ['&kp LA(LG(LC(LS(F1))))', '&kp LA(LG(LC(LS(F2))))', '&kp LA(LG(LC(LS(F3))))', '&kp LA(LG(LC(LS(F4))))', '&kp LA(LG(LC(LS(F5))))'],
-        //         ['&kp LA(LG(LC(LS(F6))))', '&kp LA(LG(LC(LS(F7))))', '&kp LA(LG(LC(LS(F8))))', '&kp LA(LG(LC(LS(F9))))', '&kp LA(LG(LC(LS(F10))))'],
-        //         ['&kp LA(LG(LC(LS(F11))))', '&kp LA(LG(LC(LS(F12))))', '&none', '&none', '&none'],
+        //         ['LA(LG(LC(LS(F1))))', 'LA(LG(LC(LS(F2))))', 'LA(LG(LC(LS(F3))))', 'LA(LG(LC(LS(F4))))', 'LA(LG(LC(LS(F5))))'],
+        //         ['LA(LG(LC(LS(F6))))', 'LA(LG(LC(LS(F7))))', 'LA(LG(LC(LS(F8))))', 'LA(LG(LC(LS(F9))))', 'LA(LG(LC(LS(F10))))'],
+        //         ['LA(LG(LC(LS(F11))))', 'LA(LG(LC(LS(F12))))', '&none', '&none', '&none'],
 
         //         ['&trans', '&trans', '&trans'],
         //         ['&trans', '&trans', '&trans'],
 
-        //         ['&kp LA(LG(LC(LS(F13))))', '&kp LA(LG(LC(LS(F14))))', '&kp LA(LG(LC(LS(F15))))', '&kp LA(LG(LC(LS(F16))))', '&kp LA(LG(LC(LS(F17))))'],
-        //         ['&kp LA(LG(LC(LS(F18))))', '&kp LA(LG(LC(LS(F19))))', '&kp LA(LG(LC(LS(F20))))', '&kp LA(LG(LC(LS(F21))))', '&kp LA(LG(LC(LS(F22))))'],
-        //         ['&kp LA(LG(LC(LS(F23))))', '&kp LA(LG(LC(LS(F24))))', '&none', '&none', '&none'],
+        //         ['LA(LG(LC(LS(F13))))', 'LA(LG(LC(LS(F14))))', 'LA(LG(LC(LS(F15))))', 'LA(LG(LC(LS(F16))))', 'LA(LG(LC(LS(F17))))'],
+        //         ['LA(LG(LC(LS(F18))))', 'LA(LG(LC(LS(F19))))', 'LA(LG(LC(LS(F20))))', 'LA(LG(LC(LS(F21))))', 'LA(LG(LC(LS(F22))))'],
+        //         ['LA(LG(LC(LS(F23))))', 'LA(LG(LC(LS(F24))))', '&none', '&none', '&none'],
 
         //         ['&trans', '&trans', '&trans'],
         //         ['&trans', '&trans', '&trans'],
@@ -242,16 +242,16 @@ ZMK_MACRO(shift_colemak,
         },
         'qwerty': {
             keys: [
-                ['&kp Q', '&kp W', '&kp E', '&kp R', '&kp T'],
-                ['&kp A', '&kp S', '&kp D', '&kp F', '&kp G'],
-                ['&kp Z', '&kp X', '&kp C', '&kp V', '&kp B'],
+                ['Q', 'W', 'E', 'R', 'T'],
+                ['A', 'S', 'D', 'F', 'G'],
+                ['Z', 'X', 'C', 'V', 'B'],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
 
-                ['&kp Y', '&kp U', '&kp I', '&kp O', '&kp P'],
-                ['&kp H', '&kp J', '&kp K', '&kp L', '&kp SEMICOLON'],
-                ['&kp N', '&kp M', '&kp COMMA', '&kp PERIOD', '&kp SLASH'],
+                ['Y', 'U', 'I', 'O', 'P'],
+                ['H', 'J', 'K', 'L', 'SEMICOLON'],
+                ['N', 'M', 'COMMA', 'PERIOD', 'SLASH'],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
@@ -259,16 +259,16 @@ ZMK_MACRO(shift_colemak,
         },
         'colemak': {
             keys: [
-                ['&kp Q', '&kp W', '&kp F', '&kp P', '&none'],
-                ['&kp A', '&kp R', '&kp S', '&kp T', '&kp G'],
-                ['&kp Z', '&kp X', '&kp C', '&kp D', '&kp B'],
+                ['Q', 'W', 'F', 'P', '&none'],
+                ['A', 'R', 'S', 'T', 'G'],
+                ['Z', 'X', 'C', 'D', 'B'],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
 
-                ['&none', '&kp L', '&kp U', '&kp Y', '&none'],
-                ['&kp M', '&kp N', '&kp E', '&kp I', '&kp O'],
-                ['&kp J', '&kp H', '&kp V', '&kp K', '&none'],
+                ['&none', 'L', 'U', 'Y', '&none'],
+                ['M', 'N', 'E', 'I', 'O'],
+                ['J', 'H', 'V', 'K', '&none'],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
@@ -276,9 +276,9 @@ ZMK_MACRO(shift_colemak,
         },
         'numbers': {
             keys: [
-                ['KP_MULTIPLY,KP_DIVIDE,COLON', '&kp N7', '&kp N8', '&kp N9', '&trans'],
-                ['KP_PLUS,KP_MINUS', '&kp N1', '&kp N2', '&kp N3', '&kp N0'],
-                ['KP_DOT,COMMA', '&kp N4', '&kp N5', '&kp N6', '&kp KP_EQUAL'],
+                ['KP_MULTIPLY,KP_DIVIDE,COLON', 'N7', 'N8', 'N9', '&trans'],
+                ['KP_PLUS,KP_MINUS', 'N1', 'N2', 'N3', 'N0'],
+                ['KP_DOT,COMMA', 'N4', 'N5', 'N6', 'KP_EQUAL'],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
@@ -293,16 +293,16 @@ ZMK_MACRO(shift_colemak,
         },
         'arrows': {
             keys: [
-                [odd.toggleLanguage, '&kp SPACE', '&kp DELETE', odd.toggleLanguage, '&kp K_VOLUME_UP'],
-                ['&kp ESCAPE', '&kp TAB', '&kp BACKSPACE', 'RETURN,LS(RETURN),LG(RETURN)', '&kp K_VOLUME_DOWN'],
+                [odd.toggleLanguage, 'SPACE', 'DELETE', odd.toggleLanguage, 'K_VOLUME_UP'],
+                ['ESCAPE', 'TAB', 'BACKSPACE', 'RETURN,LS(RETURN),LG(RETURN)', 'K_VOLUME_DOWN'],
                 ['&sk LEFT_ALT', '&sk LEFT_CONTROL', '&sk LEFT_SHIFT', '&sk LEFT_COMMAND', `${odd.alfred},${odd.lockScreen}`],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
 
-                ['&none', '&kp HOME', '&kp UP_ARROW', '&kp PAGE_UP', '&none'],
-                ['&none', '&kp LEFT_ARROW', '&kp DOWN_ARROW', '&kp RIGHT_ARROW', '&none'],
-                ['&none', '&kp END', '&none', '&kp PAGE_DOWN', '&none'],
+                ['&none', 'HOME', 'UP_ARROW', 'PAGE_UP', '&none'],
+                ['&none', 'LEFT_ARROW', 'DOWN_ARROW', 'RIGHT_ARROW', '&none'],
+                ['&none', 'END', '&none', 'PAGE_DOWN', '&none'],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
@@ -310,16 +310,16 @@ ZMK_MACRO(shift_colemak,
         },
         'symbols': {
             keys: [
-                ['&kp SLASH', '&kp LEFT_PARENTHESIS', '&kp RIGHT_PARENTHESIS', '&kp MINUS', '&kp PLUS'],
-                ['&kp LEFT_BRACKET', '&kp RIGHT_BRACKET', '&kp LEFT_BRACE', '&kp RIGHT_BRACE', '&kp ASTERISK'],
-                ['&kp DOLLAR', '&kp LESS_THAN', '&kp EQUAL', '&kp GREATER_THAN', '&kp AT_SIGN'],
+                ['SLASH', 'LEFT_PARENTHESIS', 'RIGHT_PARENTHESIS', 'MINUS', 'PLUS'],
+                ['LEFT_BRACKET', 'RIGHT_BRACKET', 'LEFT_BRACE', 'RIGHT_BRACE', 'ASTERISK'],
+                ['DOLLAR', 'LESS_THAN', 'EQUAL', 'GREATER_THAN', 'AT_SIGN'],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
 
-                ['&kp EXCLAMATION', '&kp QUESTION', '&kp COLON', '&kp SEMICOLON', 'BACKSLASH,PIPE'],
-                ['&kp TILDE', '&kp PERIOD', '&kp COMMA', '&kp GRAVE', '&kp SINGLE_QUOTE'],
-                ['PERCENT,CARET', '&kp HASH', '&kp UNDERSCORE', '&kp AMPERSAND', '&kp DOUBLE_QUOTES'],
+                ['EXCLAMATION', 'QUESTION', 'COLON', 'SEMICOLON', 'BACKSLASH,PIPE'],
+                ['TILDE', 'PERIOD', 'COMMA', 'GRAVE', 'SINGLE_QUOTE'],
+                ['PERCENT,CARET', 'HASH', 'UNDERSCORE', 'AMPERSAND', 'DOUBLE_QUOTES'],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
