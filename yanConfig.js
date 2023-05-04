@@ -1,8 +1,8 @@
 // Description: Yan's config file for ZMK
 const { log } = require('console');
 const fs = require('fs');
-const tappingTerm = 5000
-const tapDanceTerm = 2500
+const tappingTerm = 150
+const tapDanceTerm = 250
 
 /*
 for
