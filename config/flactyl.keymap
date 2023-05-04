@@ -34,8 +34,8 @@
         compatible = "zmk,combos";
         combo_spc {
             timeout-ms = <50>;
-            key-positions = <2 3>;
-            bindings = <&kp SPACE>;
+            key-positions = <0 3>;
+            bindings = <&kp LC(EQUAL)>;
         };
     };
     behaviors {
@@ -4001,7 +4001,7 @@
 &td_17	&td_18	&td_19	&td_20	&td_21
 &td_22	&td_23	&td_24	&td_25	&none
 &kp SPACE	&mo L_SYMBOLS	&shift_colemak
-&to 1	&kp LC(EQUAL)	&to 0
+&to 1	&mo L_NUMBERS	&to 0
             >;
  sensor-bindings = <&yan_encoder>;            
         };

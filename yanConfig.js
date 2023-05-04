@@ -132,8 +132,8 @@ const config = {
 compatible = "zmk,combos";
 combo_spc {
     timeout-ms = <50>;
-    key-positions = <2 3>;
-    bindings = <&kp SPACE>;
+    key-positions = <0 3>;
+    bindings = <&kp ${odd.toggleLanguage}>;
 };
 `
     ],
@@ -199,7 +199,7 @@ ZMK_MACRO(disable_rus,
                 ['+J', '+H', '+V', '+K', '&none'],
 
                 ['SPACE', '&mo symbols', '&shift_colemak'],
-                ['&to 1', odd.toggleLanguage, '&to 0']
+                ['&to 1', '&mo numbers', '&to 0']
             ],
             sensor: '&yan_encoder',
         },
