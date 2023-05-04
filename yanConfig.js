@@ -2,9 +2,18 @@
 const { log } = require('console');
 const fs = require('fs');
 const { consumers } = require('stream');
-const tappingTerm = 150
-const tapDanceTerm = 250
 
+
+// perceived value
+const timeToHold = 5000
+
+//calculated values
+const tapDanceTerm = 2500
+const tappingTerm = timeToHold - tapDanceTerm
+const tappingTerm2 = timeToHold
+if (tappingTerm < 0 || tappingTerm2 < 0 || tapDanceTerm < 0) {
+    throw new Error('tappingTerm or tapDanceTerm is negative');
+}
 /*
 for
 tappingTerm = 150
@@ -15,6 +24,9 @@ First hold  > 400
 Tap and hold = < 250 and > 150
 Double tap = ??
 */
+
+
+
 const quickTap = tappingTerm
 
 const mehSeed = [
@@ -534,7 +546,7 @@ td_${macroIndex}_second: td_${macroIndex}_second {
     label = "td_${macroIndex}_second";
     #binding-cells = <2>;
     flavor = "tap-preferred";
-    tapping-term-ms = <${tappingTerm}>;
+    tapping-term-ms = <${tappingTerm2}>;
     quick-tap-ms = <${quickTap}>;
     global-quick-tap;
     bindings = <&td_${macroIndex}_hold_second>, <&td_${macroIndex}_repeat>;
@@ -546,7 +558,7 @@ td_${macroIndex}_second: td_${macroIndex}_second {
     label = "td_${macroIndex}_second";
     #binding-cells = <2>;
     flavor = "tap-preferred";
-    tapping-term-ms = <${tappingTerm}>;
+    tapping-term-ms = <${tappingTerm2}>;
     quick-tap-ms = <${quickTap}>;
     global-quick-tap;
     bindings = <&td_${macroIndex}_repeat>, <&td_${macroIndex}_repeat>;
