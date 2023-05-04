@@ -2012,6 +2012,16 @@
                 , <&macro_pause_for_release>
                 , <&macro_release &mo L_COLEMAK &kp LEFT_SHIFT>;
         )
+        ZMK_MACRO(enable_rus,
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &to L_RUSSIAN &kp LC(EQUAL)>;
+        )
+        ZMK_MACRO(disable_rus,
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &to L_DEFAULT &kp LC(EQUAL)>;
+        )
         ZMK_MACRO(symbols_rus,
             wait-ms = <0>;
             bindings
@@ -3031,7 +3041,7 @@
         /* arrows 6 */
         arrows_layer {
             bindings = <
-&to 0	&kp SPACE	&kp DELETE	&to 1	&kp K_VOLUME_UP
+&disable_rus	&kp SPACE	&kp DELETE	&enable_rus	&kp K_VOLUME_UP
 &kp ESCAPE	&kp TAB	&kp BACKSPACE	&td_61	&kp K_VOLUME_DOWN
 &sk LEFT_ALT	&sk LEFT_CONTROL	&sk LEFT_SHIFT	&sk LEFT_COMMAND	&td_62
 &trans	&trans	&trans

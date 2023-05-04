@@ -171,6 +171,16 @@ ZMK_MACRO(shift_colemak,
         , <&macro_pause_for_release>
         , <&macro_release &mo ${layerToLayer('colemak')} &kp LEFT_SHIFT>;
 )
+ZMK_MACRO(enable_rus,
+    wait-ms = <0>;
+    bindings
+        = <&macro_tap &to ${layerToLayer('russian')} &kp ${odd.toggleLanguage}>;
+)
+ZMK_MACRO(disable_rus,
+    wait-ms = <0>;
+    bindings
+        = <&macro_tap &to ${layerToLayer('default')} &kp ${odd.toggleLanguage}>;
+)
 `
     ],
     keymap: {
@@ -279,7 +289,7 @@ ZMK_MACRO(shift_colemak,
         },
         'arrows': {
             keys: [
-                ['&to 0', 'SPACE', 'DELETE', '&to 1', 'K_VOLUME_UP'],
+                ['&disable_rus', 'SPACE', 'DELETE', '&enable_rus', 'K_VOLUME_UP'],
                 ['ESCAPE', 'TAB', 'BACKSPACE', 'RETURN,LS(RETURN),LG(RETURN)', 'K_VOLUME_DOWN'],
                 ['&sk LEFT_ALT', '&sk LEFT_CONTROL', '&sk LEFT_SHIFT', '&sk LEFT_COMMAND', `${odd.alfred},${odd.lockScreen}`],
 
@@ -374,7 +384,6 @@ rusLayers.forEach((layer)=>{
     if (!config.keymap[layer]){
         throw new Error(`Layer for russification does not exists: ${layer}`);
     }
-
     config.macros.push(`
 ZMK_MACRO(${layer}_rus,
     wait-ms = <0>;
