@@ -206,7 +206,7 @@ ZMK_MACRO(disable_rus,
         'russian': {
             keys: [
                 ['Q', 'W', 'E', 'R', 'T,SLASH'],
-                ['A,LG(A)', 'S,LG(R)', 'D,LG(S)', 'F,LG(T),LG(N)', 'G,LG(G),LG(D)'],
+                ['A', 'S', 'D', 'F', 'G'],
                 ['Z', 'X', 'C', 'V', 'B'],
 
                 ['&windows_rus', '&arrowsr_rus', '&numbers_rus'],
@@ -307,10 +307,10 @@ ZMK_MACRO(disable_rus,
         },
         'arrowsr': {
             keys: [
-                ['&disable_rus', '=', '=', '&none', '=' ],
+                ['&disable_rus', '=', '=', '&none', '='],
                 ['=', '=', '=', '=', '='],
                 ['=', '=', '=', '=', '='],
-                
+
                 ['=', '=', '='],
                 ['=', '=', '='],
 
@@ -398,8 +398,8 @@ ZMK_MACRO(disable_rus,
 
 
 const rusLayers = ['symbols', 'windows', 'windows2', 'numbers'];
-rusLayers.forEach((layer)=>{
-    if (!config.keymap[layer]){
+rusLayers.forEach((layer) => {
+    if (!config.keymap[layer]) {
         throw new Error(`Layer for russification does not exists: ${layer}`);
     }
     config.macros.push(`
@@ -462,14 +462,38 @@ config.keymap.mirror.keys[2] = config.keymap.default.keys[7].slice().reverse();
 config.keymap.mirror.keys[5] = config.keymap.default.keys[0].slice().reverse();
 config.keymap.mirror.keys[6] = config.keymap.default.keys[1].slice().reverse();
 config.keymap.mirror.keys[7] = config.keymap.default.keys[2].slice().reverse();
-config.keymap.arrowsr.keys = config.keymap.arrowsr.keys.map((line,lineIndex)=>{
-    return line.map((key,keyIndex)=>{
-        if (key==='=') {
+
+//Setup arrowR layer
+config.keymap.arrowsr.keys = config.keymap.arrowsr.keys.map((line, lineIndex) => {
+    return line.map((key, keyIndex) => {
+        if (key === '=') {
             return config.keymap.arrows.keys[lineIndex][keyIndex]
         }
         return key
     })
 })
+
+const uwrapPlus = (string) => `${string.slice(1)},LG(${string.slice(1)})`
+
+// Setup hold/tapHold for russian layer from english layer
+config.keymap.russian.keys = config.keymap.russian.keys.map((line, lineIndex) => {
+    return line.map((key, keyIndex) => {
+        const [tap, hold, tapHold, doubleTap] = key.split(',');
+        let defaultKey = config.keymap.default.keys[lineIndex][keyIndex];
+        if (defaultKey.startsWith('+')) {
+            defaultKey = uwrapPlus(defaultKey);
+        }
+        const [dTap, dHold, dTapHold, dDoubleTap] = defaultKey.split(',');
+        if (defaultKey.includes(',') && !key.startsWith('&') && !defaultKey.startsWith('&')) {
+            const result = [tap || dTap, hold || dHold, tapHold || dTapHold, doubleTap || dDoubleTap].filter((value) => value).join(',')
+            console.log(result)
+            return result;
+        }
+
+        return key
+      })
+})
+
 
 // #define L_DEFAULT 0
 // #define L_ARROWS   1
@@ -500,8 +524,8 @@ td_${macroIndex}_first: td_${macroIndex}_first {
     global-quick-tap;
     bindings = <&td_${macroIndex}_hold_first>, <&kp>;
 };`)
-if (tapHold) {
-    config.behaviors.push(`
+    if (tapHold) {
+        config.behaviors.push(`
 td_${macroIndex}_second: td_${macroIndex}_second {
     compatible = "zmk,behavior-hold-tap";
     label = "td_${macroIndex}_second";
@@ -512,8 +536,8 @@ td_${macroIndex}_second: td_${macroIndex}_second {
     global-quick-tap;
     bindings = <&td_${macroIndex}_hold_second>, <&td_${macroIndex}_repeat>;
 };`)
-} else{
-    config.behaviors.push(`
+    } else {
+        config.behaviors.push(`
 td_${macroIndex}_second: td_${macroIndex}_second {
     compatible = "zmk,behavior-hold-tap";
     label = "td_${macroIndex}_second";
@@ -524,7 +548,7 @@ td_${macroIndex}_second: td_${macroIndex}_second {
     global-quick-tap;
     bindings = <&td_${macroIndex}_repeat>, <&td_${macroIndex}_repeat>;
 };`)
-}
+    }
 
     config.macros.push(`
 ZMK_MACRO(td_${macroIndex}_hold_first,
@@ -544,6 +568,7 @@ ZMK_MACRO(td_${macroIndex}_repeat,
 
 }
 
+
 const keyMapper = (keyText, location) => {
 
     //layer switcher &mo L_LAYER
@@ -558,8 +583,7 @@ const keyMapper = (keyText, location) => {
         throw new Error(`keyText ${keyText} is not allowed at ${JSON.stringify(location)}`)
     }
     if (keyText.startsWith('+')) {
-        const symbol = keyText.slice(1)
-        return unwrapTapDance(`${symbol},LG(${symbol})`);
+        return unwrapTapDance(uwrapPlus(keyText));
     }
     if (keyText.includes(',')) {
         return unwrapTapDance(keyText);
@@ -574,7 +598,7 @@ const keyMapper = (keyText, location) => {
 for (let layer in config.keymap) {
     config.keymap[layer].keys = config.keymap[layer].keys.map((rows, rowIndex) => rows.map((keyText, index) => keyMapper(keyText, { layer, row: rowIndex, index })))
 }
-console.log(config.keymap);
+// console.log(config.keymap);
 
 const tab = (str, pad) => str.split('\n').map(line => `${pad}${line}`).join('\n')
 
