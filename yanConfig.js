@@ -17,10 +17,11 @@ Double tap = ??
 const quickTap = tappingTerm
 
 const mehSeed = [
-    'KP_N0', 'KP_N1', 'KP_N2', 'KP_N3', 'KP_N4', 'KP_N5', 'KP_N6', 'KP_N7', 'KP_N8', 'KP_N9', 'KP_MINUS', 'KP_DOT', 'KP_SLASH', 'KP_ASTERISK', 'KP_PLUS',
+    'KP_N0', 'KP_N1', 'KP_N2', 'KP_N3', 'KP_N4', 'KP_N5', 'KP_N6', 'KP_N7', 'KP_N8', 'KP_N9',
+    'KP_MINUS', 'KP_ASTERISK', 'KP_EQUAL',
     // used by mac for brightness and volume
     // 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12',
-    'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'F21', 'F22', 'F23', 'F24',
+    'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'F23', 'F24',
     'LANG1', 'LANG2', 'LANG3', 'LANG4', 'LANG5', 'LANG6', 'LANG7', 'LANG8', 'LANG9',
     'N0', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N9',
     'GRAVE', 'MINUS', 'EQUAL', 'LEFT_BRACKET', 'RIGHT_BRACKET', 'BACKSLASH', 'SEMI', 'SINGLE_QUOTE', 'COMMA', 'DOT', 'SLASH',
@@ -38,14 +39,14 @@ const odd = {
     fontBigger: 'LG(LS(EQUAL))',
     fontSmaller: 'LG(LS(MINUS))',
     toggleLanguage: 'LC(EQUAL)',
-    historyBack:'LG(LEFT_BRACKET)',
-    historyForward:'LG(RIGHT_BRACKET)',
-    tabsBack:'LS(LC(TAB))',
-    tabsForward:'LC(TAB)',
-    appWindowBack:'LS(LG(GRAVE))',
-    appWindowForward:'LG(GRAVE)',
-    alfred:'LG(SPACE)',
-    lockScreen:'LG(LC(Q))',
+    historyBack: 'LG(LEFT_BRACKET)',
+    historyForward: 'LG(RIGHT_BRACKET)',
+    tabsBack: 'LS(LC(TAB))',
+    tabsForward: 'LC(TAB)',
+    appWindowBack: 'LS(LG(GRAVE))',
+    appWindowForward: 'LG(GRAVE)',
+    alfred: 'LG(SPACE)',
+    lockScreen: 'LG(LC(Q))',
 }
 
 const m = {
@@ -61,26 +62,27 @@ const m = {
     appVsCode: 'LA(LG(LC(LS(KP_N6))))',
     appBrowser: 'LA(LG(LC(LS(KP_N7))))',
     appSlack: 'LA(LG(LC(LS(KP_N8))))',
+    appInsomnia: 'LA(LG(LC(LS(LANG1))))',
     appSublime: 'LA(LG(LC(LS(KP_N9))))',
     appNotes: 'LA(LG(LC(LS(KP_MINUS))))',
-    appSignal: 'LA(LG(LC(LS(KP_DOT))))',
-    appTelegram: 'LA(LG(LC(LS(KP_SLASH))))',
+    appSignal: 'LA(LG(LC(LS(KP_EQUAL))))',
+    appTelegram: 'LA(LG(LC(LS(LANG2))))',
     appWhatsup: 'LA(LG(LC(LS(KP_ASTERISK))))',
 
     // windows
-    winCenterSmall: 'LA(LG(LC(LS(KP_PLUS))))',
+    winCenterSmall: 'LA(LG(LC(LS(LANG3))))',
     winCenterMed: 'LA(LG(LC(LS(F13))))',
     winCenterBig: 'LA(LG(LC(LS(F14))))',
     winLSmall: 'LA(LG(LC(LS(F15))))',
-    winLTop: 'LA(LG(LC(LS(F16))))',
-    winLBottom: 'LA(LG(LC(LS(F17))))',
+    // winLTop: 'LA(LG(LC(LS(F16))))',
+    // winLBottom: 'LA(LG(LC(LS(F17))))',
     winLMed: 'LA(LG(LC(LS(F18))))',
     winLBig: 'LA(LG(LC(LS(F19))))',
     winRMed: 'LA(LG(LC(LS(F20))))',
-    winRBig: 'LA(LG(LC(LS(F21))))',
-    winRSmall: 'LA(LG(LC(LS(F22))))',
-    winRTop: 'LA(LG(LC(LS(F23))))',
-    winRBottom: 'LA(LG(LC(LS(F24))))',
+    winRBig: 'LA(LG(LC(LS(LANG4))))',
+    winRSmall: 'LA(LG(LC(LS(LANG5))))',
+    // winRTop: 'LA(LG(LC(LS(F23))))',
+    // winRBottom: 'LA(LG(LC(LS(F24))))',
 
 
     // winCenterMed: 'LA(LG(LC(LS(GRAVE))))',
@@ -356,7 +358,7 @@ ZMK_MACRO(shift_colemak,
         'windows2': {
             keys: [
                 [odd.historyForward, odd.tabsForward, odd.appWindowForward, m.macAppsWitchForward, '&none'],
-                [`${m.winLSmall},${m.winLTop},${m.winLBottom}`, `${m.winLMed},${m.winLBig}`, `${m.winRMed},${m.winRBig}`, `${m.winRSmall},${m.winRTop},${m.winRBottom}`, '&none'],
+                [m.winLSmall, `${m.winLMed},${m.winLBig}`, `${m.winRMed},${m.winRBig}`, m.winRSmall, '&none'],
                 [odd.fontSmaller, '&shellrepeat', '&awesome', `${m.winCenterSmall},${m.winCenterMed},${m.winCenterBig}`, odd.screenshot],
 
 
