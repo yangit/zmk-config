@@ -447,13 +447,16 @@ for (let layer in config.keymap) {
 }
 
 
-
-
+const reverseNumbersRow = (row) => {
+    const [one, two, three, four, five] = row;
+    return [five, two, three, four, one];
+}
 
 // mirror numbers layer
-config.keymap.numbers.keys[5] = config.keymap.numbers.keys[0].slice().reverse();
-config.keymap.numbers.keys[6] = config.keymap.numbers.keys[1].slice().reverse();
-config.keymap.numbers.keys[7] = config.keymap.numbers.keys[2].slice().reverse();
+config.keymap.numbers.keys[5] = reverseNumbersRow(config.keymap.numbers.keys[0]);
+config.keymap.numbers.keys[6] = reverseNumbersRow(config.keymap.numbers.keys[1]);
+config.keymap.numbers.keys[7] = reverseNumbersRow(config.keymap.numbers.keys[2]);
+
 
 //add mirror layer
 config.keymap.mirror.keys[0] = config.keymap.default.keys[5].slice().reverse();
@@ -491,7 +494,7 @@ config.keymap.russian.keys = config.keymap.russian.keys.map((line, lineIndex) =>
         }
 
         return key
-      })
+    })
 })
 
 
