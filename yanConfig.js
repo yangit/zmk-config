@@ -154,7 +154,7 @@ ZMK_MACRO(awesome,
 `, `
 ZMK_MACRO(shellrepeat,
     wait-ms = <400>;
-    bindings = <&macro_tap &kp LG(KP_N1) &kp UP_ARROW &kp RETURN>;
+    bindings = <&macro_tap &kp ${m.appTerminal} &kp UP_ARROW &kp RETURN>;
 )
 `, `
 ZMK_MACRO(ctrl_colemak,

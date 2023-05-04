@@ -1996,7 +1996,7 @@
         )
         ZMK_MACRO(shellrepeat,
             wait-ms = <400>;
-            bindings = <&macro_tap &kp LG(KP_N1) &kp UP_ARROW &kp RETURN>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_N5)))) &kp UP_ARROW &kp RETURN>;
         )
         ZMK_MACRO(ctrl_colemak,
             wait-ms = <0>;
