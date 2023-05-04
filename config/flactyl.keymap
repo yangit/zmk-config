@@ -2863,7 +2863,7 @@
         )
         ZMK_MACRO(td_64_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LC(LG(Q))>;
+            bindings = <&macro_tap &kp LG(LC(Q))>;
         )
         ZMK_MACRO(td_64_hold_second,
             wait-ms = <0>;
@@ -3137,7 +3137,7 @@
         /* windows 8 */
         windows_layer {
             bindings = <
-&kp LG(LEFT_BRACKET)	&kp LS(LC(TAB))	&kp LG(GRAVE)	&kp LA(LG(LC(LS(KP_N0))))	&none
+&kp LG(LEFT_BRACKET)	&kp LS(LC(TAB))	&kp LS(LG(GRAVE))	&kp LA(LG(LC(LS(KP_N0))))	&none
 &kp LA(LG(LC(LS(KP_N4))))	&kp LA(LG(LC(LS(KP_N5))))	&kp LA(LG(LC(LS(KP_N6))))	&kp LA(LG(LC(LS(KP_N7))))	&kp LA(LG(LC(LS(KP_N8))))
 &kp LG(LS(EQUAL))	&kp LA(LG(LC(LS(KP_DOT))))	&td_67_first 0 LA(LG(LC(LS(KP_SLASH))))	&td_68_first 0 LA(LG(LC(LS(KP_N9))))	&td_69_first 0 LA(LG(LC(LS(KP_N2))))
 &trans	&trans	&trans
@@ -3154,7 +3154,7 @@
         /* windows2 9 */
         windows2_layer {
             bindings = <
-&kp LG(RIGHT_BRACKET)	&kp LC(TAB)	&kp LS(LG(GRAVE))	&kp LA(LG(LC(LS(KP_N1))))	&none
+&kp LG(RIGHT_BRACKET)	&kp LC(TAB)	&kp LG(GRAVE)	&kp LA(LG(LC(LS(KP_N1))))	&none
 &td_70	&td_71_first 0 LA(LG(LC(LS(F18))))	&td_72_first 0 LA(LG(LC(LS(F20))))	&td_73	&none
 &kp LG(LS(MINUS))	&shellrepeat	&awesome	&td_74	&kp LG(LS(N4))
 &trans	&trans	&trans

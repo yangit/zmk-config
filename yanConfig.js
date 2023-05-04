@@ -38,6 +38,14 @@ const odd = {
     fontBigger: 'LG(LS(EQUAL))',
     fontSmaller: 'LG(LS(MINUS))',
     toggleLanguage: 'LC(EQUAL)',
+    historyBack:'LG(LEFT_BRACKET)',
+    historyForward:'LG(RIGHT_BRACKET)',
+    tabsBack:'LS(LC(TAB))',
+    tabsForward:'LC(TAB)',
+    appWindowBack:'LS(LG(GRAVE))',
+    appWindowForward:'LG(GRAVE)',
+    alfred:'LG(SPACE)',
+    lockScreen:'LG(LC(Q))',
 }
 
 const m = {
@@ -297,7 +305,7 @@ ZMK_MACRO(shift_colemak,
             keys: [
                 [odd.toggleLanguage, '&kp SPACE', '&kp DELETE', odd.toggleLanguage, '&kp K_VOLUME_UP'],
                 ['&kp ESCAPE', '&kp TAB', '&kp BACKSPACE', 'RETURN,LS(RETURN),LG(RETURN)', '&kp K_VOLUME_DOWN'],
-                ['&sk LEFT_ALT', '&sk LEFT_CONTROL', '&sk LEFT_SHIFT', '&sk LEFT_COMMAND', 'LG(SPACE),LC(LG(Q))'],
+                ['&sk LEFT_ALT', '&sk LEFT_CONTROL', '&sk LEFT_SHIFT', '&sk LEFT_COMMAND', `${odd.alfred},${odd.lockScreen}`],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
@@ -329,7 +337,7 @@ ZMK_MACRO(shift_colemak,
         },
         'windows': {
             keys: [
-                ['&kp LG(LEFT_BRACKET)', '&kp LS(LC(TAB))', '&kp LG(GRAVE)', m.macAppsWitchBackward, '&none'],
+                [odd.historyBack, odd.tabsBack, odd.appWindowBack, m.macAppsWitchBackward, '&none'],
                 [m.appFinder, m.appTerminal, m.appVsCode, m.appBrowser, m.appSlack],
 
                 [odd.fontBigger, m.appSignal, `${m.appTelegram},${m.appWhatsup}`, `${m.appSublime},${m.appNotes}`, `${m.showApps},${m.showDesktop}`],
@@ -347,7 +355,7 @@ ZMK_MACRO(shift_colemak,
         },
         'windows2': {
             keys: [
-                ['&kp LG(RIGHT_BRACKET)', '&kp LC(TAB)', '&kp LS(LG(GRAVE))', m.macAppsWitchForward, '&none'],
+                [odd.historyForward, odd.tabsForward, odd.appWindowForward, m.macAppsWitchForward, '&none'],
                 [`${m.winLSmall},${m.winLTop},${m.winLBottom}`, `${m.winLMed},${m.winLBig}`, `${m.winRMed},${m.winRBig}`, `${m.winRSmall},${m.winRTop},${m.winRBottom}`, '&none'],
                 [odd.fontSmaller, '&shellrepeat', '&awesome', `${m.winCenterSmall},${m.winCenterMed},${m.winCenterBig}`, odd.screenshot],
 
