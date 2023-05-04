@@ -17,55 +17,61 @@ Double tap = ??
 const quickTap = tappingTerm
 
 
-// ~50 items
-let mehIndex = 0
 const mehArray = [
     'KP_N0', 'KP_N1', 'KP_N2', 'KP_N3', 'KP_N4', 'KP_N5', 'KP_N6', 'KP_N7', 'KP_N8', 'KP_N9',
-    // 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', 
+    'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12',
     'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'F21', 'F22', 'F23', 'F24',
     'LANG1', 'LANG2', 'LANG3', 'LANG4', 'LANG5', 'LANG6', 'LANG7', 'LANG8', 'LANG9',
     'GRAVE', 'MINUS', 'EQUAL', 'LEFT_BRACKET', 'RIGHT_BRACKET', 'BACKSLASH', 'SEMI', 'SINGLE_QUOTE', 'COMMA', 'DOT', 'SLASH'
-].map((item) => `LA(LG(LC(LS(${item}))))`);
+].map((item) => ({ key: item, modifier: 'super', value: `LA(LG(LC(LS(${item}))))`, used: false }));
 
-const getMeh = () => {
-    if (mehIndex >= mehArray.length) {
-        throw new Error('mehArray is finished, define more keys');
-    }
-    return mehArray[mehIndex++]
+const odd = {
+    screenshot: 'LG(LS(N4))',
 }
 
-const macAppsWitchBackward = getMeh();
-const macAppsWitchForward = getMeh();
+const m = {
+    macAppsWitchBackward: 'LA(LG(LC(LS(F1))))',
+    macAppsWitchForward: 'LA(LG(LC(LS(KP_N0))))',
+    showApps: '',
+    showDesktop: '',
+    appFinder: '',
+    appTerminal: '',
+    appVsCode: '',
+    appBrowser: '',
+    appSlack: '',
+    appSublime: '',
+    appNotes: '',
+    appSignal: '',
+    appTelegram: '',
+    appWhatsup: '',
+    winCenterSmall: '',
+    winCenterMed: '',
+    winCenterBig: '',
+    winLSmall: '',
+    winLTop: '',
+    winLBottom: '',
+    winLMed: '',
+    winLBig: '',
+    winRMed: '',
+    winRBig: '',
+    winRSmall: '',
+    winRTop: '',
+    winRBottom: '',
+}
 
-const showApps = getMeh();
-const showDesktop = getMeh();
-const screenshot = getMeh();
+const legalValues = mehArray.map((item) => item.value);
+Object.values(m).forEach((value) => {
+    const meh = mehArray.find((item) => item.value === value);
+    if (!meh) {
+        // throw new Error(`Value ${value} is not legal`);
+    } else {
+        if (meh.used) {
+            throw new Error(`Key is used already, possible duplicate MEH hotkeys on different switches ${meh.value}`);
+        }
+        meh.used = true;
+    }
 
-const appFinder = getMeh();
-const appTerminal = getMeh();
-const appVsCode = getMeh();
-const appBrowser = getMeh();
-const appSlack = getMeh();
-const appSublime = getMeh();
-const appNotes = getMeh();
-const appSignal = getMeh();
-const appTelegram = getMeh();
-const appWhatsup = getMeh();
-
-const winCenterSmall = getMeh();
-const winCenterMed = getMeh();
-const winCenterBig = getMeh();
-const winLSmall = getMeh();
-const winLTop = getMeh();
-const winLBottom = getMeh();
-const winLMed = getMeh();
-const winLBig = getMeh();
-const winRMed = getMeh();
-const winRBig = getMeh();
-const winRSmall = getMeh();
-const winRTop = getMeh();
-const winRBottom = getMeh();
-
+})
 
 const config = {
     header: `/*
@@ -150,7 +156,7 @@ ZMK_MACRO(shift_colemak,
                 ['+J', '+H', '+V', 'K,LG(K)', '&none'],
 
                 ['&kp SPACE', '&mo symbols', '&shift_colemak'],
-                ['&none', '&mo numbers', '&none']
+                ['&mo test', '&mo numbers', '&none']
             ],
             sensor: '&yan_encoder',
         },
@@ -171,6 +177,24 @@ ZMK_MACRO(shift_colemak,
                 ['&trans', '&trans', '&trans'],
             ]
         },
+        'test': {
+            keys: [
+                ['&kp LA(LG(LC(LS(F1))))', '&kp LA(LG(LC(LS(F2))))', '&kp LA(LG(LC(LS(F3))))', '&kp LA(LG(LC(LS(F4))))', '&kp LA(LG(LC(LS(F5))))'],
+                ['&kp LA(LG(LC(LS(F6))))', '&kp LA(LG(LC(LS(F7))))', '&kp LA(LG(LC(LS(F8))))', '&kp LA(LG(LC(LS(F9))))', '&kp LA(LG(LC(LS(F10))))'],
+                ['&kp LA(LG(LC(LS(F11))))', '&kp LA(LG(LC(LS(F12))))', '&none', '&none', '&none'],
+
+                ['&trans', '&trans', '&trans'],
+                ['&trans', '&trans', '&trans'],
+
+                ['&kp LA(LG(LC(LS(F13))))', '&kp LA(LG(LC(LS(F14))))', '&kp LA(LG(LC(LS(F15))))', '&kp LA(LG(LC(LS(F16))))', '&kp LA(LG(LC(LS(F17))))'],
+                ['&kp LA(LG(LC(LS(F18))))', '&kp LA(LG(LC(LS(F19))))', '&kp LA(LG(LC(LS(F20))))', '&kp LA(LG(LC(LS(F21))))', '&kp LA(LG(LC(LS(F22))))'],
+                ['&kp LA(LG(LC(LS(F23))))', '&kp LA(LG(LC(LS(F24))))', '&none', '&none', '&none'],
+
+                ['&trans', '&trans', '&trans'],
+                ['&trans', '&trans', '&trans'],
+            ]
+        },
+
         'mirror': {
             keys: [
                 ['=', '=', '=', '=', '='],
@@ -275,10 +299,10 @@ ZMK_MACRO(shift_colemak,
         },
         'windows': {
             keys: [
-                ['&kp LG(LEFT_BRACKET)', '&kp LS(LC(TAB))', '&kp LG(GRAVE)', macAppsWitchBackward, '&none'],
-                [appFinder, appTerminal, appVsCode, appBrowser, appSlack],
+                ['&kp LG(LEFT_BRACKET)', '&kp LS(LC(TAB))', '&kp LG(GRAVE)', m.macAppsWitchBackward, '&none'],
+                [m.appFinder, m.appTerminal, m.appVsCode, m.appBrowser, m.appSlack],
 
-                ['&kp LG(EQUAL)', appSignal, `${appTelegram},${appWhatsup}`, `${appSublime},${appNotes}`, `${showApps},${showDesktop}`],
+                ['&kp LG(EQUAL)', m.appSignal, `${m.appTelegram},${m.appWhatsup}`, `${m.appSublime},${m.appNotes}`, `${m.showApps},${m.showDesktop}`],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
@@ -293,9 +317,9 @@ ZMK_MACRO(shift_colemak,
         },
         'windows2': {
             keys: [
-                ['&kp LG(RIGHT_BRACKET)', '&kp LC(TAB)', '&kp LS(LG(GRAVE))', macAppsWitchForward, '&none'],
-                [`${winLSmall},${winLTop},${winLBottom}`, `${winLMed},${winLBig}`, `${winRMed},${winRBig}`, `${winRSmall},${winRTop},${winRBottom}`, '&none'],
-                ['&kp LG(MINUS)', '&shellrepeat', '&awesome', `${winCenterSmall},${winCenterMed},${winCenterBig}`, screenshot],
+                ['&kp LG(RIGHT_BRACKET)', '&kp LC(TAB)', '&kp LS(LG(GRAVE))', m.macAppsWitchForward, '&none'],
+                [`${m.winLSmall},${m.winLTop},${m.winLBottom}`, `${m.winLMed},${m.winLBig}`, `${m.winRMed},${m.winRBig}`, `${m.winRSmall},${m.winRTop},${m.winRBottom}`, '&none'],
+                ['&kp LG(MINUS)', '&shellrepeat', '&awesome', `${m.winCenterSmall},${m.winCenterMed},${m.winCenterBig}`, odd.screenshot],
 
 
                 ['&trans', '&trans', '&trans'],
@@ -444,16 +468,15 @@ const keyMapper = (keyText, location) => {
     if (keyText === '=') {
         throw new Error(`keyText ${keyText} is not allowed at ${JSON.stringify(location)}`)
     }
-
-    if (mehArray.includes(keyText)) {
-        return `&kp ${keyText}`;
-    }
     if (keyText.startsWith('+')) {
         const symbol = keyText.slice(1)
         return unwrapTapDance(`${symbol},LG(${symbol})`);
     }
     if (keyText.includes(',')) {
         return unwrapTapDance(keyText);
+    }
+    if (!keyText.startsWith('&')) {
+        return `&kp ${keyText}`;
     }
     return keyText;
 }
@@ -495,3 +518,4 @@ ${config.keymap[layer].keys.map(row => row.join('\t')).join('\n')}
 fs.writeFileSync('./config/flactyl.keymap', output)
 console.log(output);
 
+console.log(mehArray.filter(({ used }) => !used).map(item => item.value));
