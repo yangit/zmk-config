@@ -369,8 +369,8 @@ ZMK_MACRO(shift_colemak,
                 ['&none', '&none', '&none'],
                 ['&none', '&none', '&none'],
 
-                ['&none', '&none', '&none', '&none', '&bootloader'],
-                ['&none', '&none', '&none', '&none', '&sys_reset',],
+                ['&none', '&none', '&none', '&sys_reset', '&bootloader'],
+                ['&none', '&none', '&none', '&none', '&none',],
                 ['&none', '&none', '&none', '&none', '&none',],
 
                 ['&none', '&none', '&none'],
