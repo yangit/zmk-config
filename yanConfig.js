@@ -171,15 +171,6 @@ ZMK_MACRO(shift_colemak,
         , <&macro_pause_for_release>
         , <&macro_release &mo L_COLEMAK &kp LEFT_SHIFT>;
 )
-ZMK_MACRO(symbols_rus,
-    wait-ms = <0>;
-    bindings 
-        = <&macro_press &mo L_SYMBOLS>
-        , <&macro_tap &kp ${odd.toggleLanguage}>
-        , <&macro_pause_for_release>
-        , <&macro_tap &kp ${odd.toggleLanguage}>
-        , <&macro_release &mo L_SYMBOLS>;
-)
 `
     ],
     keymap: {
@@ -207,14 +198,14 @@ ZMK_MACRO(symbols_rus,
                 ['A', 'S', 'D', 'F', 'G'],
                 ['Z', 'X', 'C', 'V', 'B'],
 
-                ['&trans', '&trans', '&trans'],
-                ['&trans', '&trans', '&trans'],
+                ['&windows_rus', '&arrows_rus', '&numbers_rus'],
+                ['&windows2_rus', '&trans', '&trans'],
 
                 ['Y', 'U', 'I', 'O', 'P'],
                 ['H', 'J', 'K', 'L', 'SEMICOLON'],
                 ['N', 'M,RIGHT_BRACKET', 'COMMA', 'PERIOD', 'SINGLE_QUOTE,LEFT_BRACKET'],
 
-                ['&trans', '&mo symbols', '&kp SHIFT'],
+                ['&trans', '&symbols_rus', '&kp LSHFT'],
                 ['&trans', '&trans', '&trans'],
             ]
         },
@@ -395,6 +386,20 @@ ZMK_MACRO(symbols_rus,
     }
 };
 
+['symbols','windows','windows2','arrows','numbers'].forEach((layer)=>{
+    config.macros.push(`
+ZMK_MACRO(${layer}_rus,
+    wait-ms = <0>;
+    bindings
+        = <&macro_press &mo L_${layer.toLocaleUpperCase()}>
+        , <&macro_tap &kp ${odd.toggleLanguage}>
+        , <&macro_pause_for_release>
+        , <&macro_tap &kp ${odd.toggleLanguage}>
+        , <&macro_release &mo L_${layer.toLocaleUpperCase()}>;
+)
+ `)
+
+})
 //layer #defines
 
 
