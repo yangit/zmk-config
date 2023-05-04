@@ -206,7 +206,7 @@ ZMK_MACRO(disable_rus,
         'russian': {
             keys: [
                 ['Q', 'W', 'E', 'R', 'T,SLASH'],
-                ['A', 'S', 'D', 'F', 'G'],
+                ['A,LG(A)', 'S,LG(R)', 'D,LG(S)', 'F,LG(T),LG(N)', 'G,LG(G),LG(D)'],
                 ['Z', 'X', 'C', 'V', 'B'],
 
                 ['&windows_rus', '&arrowsr_rus', '&numbers_rus'],
