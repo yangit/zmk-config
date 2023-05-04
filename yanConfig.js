@@ -181,7 +181,7 @@ ZMK_MACRO(shift_colemak,
 
                 ['&mo config', '+L', '+U', '+Y', 'N1,N2,N3'],
                 ['+M', '+N', '+E', 'I,LG(I),LG(LA(I))', '+O'],
-                ['+J', '+H', '+V', 'K,LG(K)', '&none'],
+                ['+J', '+H', '+V', '+K', '&none'],
 
                 ['&kp SPACE', '&mo symbols', '&shift_colemak'],
                 ['&none', '&mo numbers', '&none']
