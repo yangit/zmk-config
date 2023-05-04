@@ -171,6 +171,15 @@ ZMK_MACRO(shift_colemak,
         , <&macro_pause_for_release>
         , <&macro_release &mo L_COLEMAK &kp LEFT_SHIFT>;
 )
+ZMK_MACRO(symbols_rus,
+    wait-ms = <0>;
+    bindings 
+        = <&macro_press &mo L_SYMBOLS>
+        , <&macro_tap &kp ${odd.toggleLanguage}>
+        , <&macro_pause_for_release>
+        , <&macro_tap &kp ${odd.toggleLanguage}>
+        , <&macro_release &mo L_SYMBOLS>;
+)
 `
     ],
     keymap: {
@@ -188,7 +197,7 @@ ZMK_MACRO(shift_colemak,
                 ['+J', '+H', '+V', '+K', '&none'],
 
                 ['SPACE', '&mo symbols', '&shift_colemak'],
-                ['&none', '&mo numbers', '&none']
+                ['&to 1', '&mo numbers', '&to 0']
             ],
             sensor: '&yan_encoder',
         },
@@ -205,7 +214,7 @@ ZMK_MACRO(shift_colemak,
                 ['H', 'J', 'K', 'L', 'SEMICOLON'],
                 ['N', 'M,RIGHT_BRACKET', 'COMMA', 'PERIOD', 'SINGLE_QUOTE,LEFT_BRACKET'],
 
-                ['&trans', '&trans', '&trans'],
+                ['&trans', '&mo symbols', '&kp SHIFT'],
                 ['&trans', '&trans', '&trans'],
             ]
         },
