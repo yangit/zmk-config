@@ -90,8 +90,8 @@ const m = {
     // winRBottom: 'LA(LG(LC(LS(F24))))',
 
 }
+const layerToLayer = (layer) => `L_${layer.toUpperCase()}`
 
-const legalValues = mehArray.map((item) => item.value);
 Object.values(m).forEach((value) => {
     const meh = mehArray.find((item) => item.value === value);
     if (!meh) {
@@ -160,16 +160,16 @@ ZMK_MACRO(shellrepeat,
 ZMK_MACRO(ctrl_colemak,
     wait-ms = <0>;
     bindings 
-        = <&macro_press &mo L_COLEMAK &kp LEFT_CONTROL>
+        = <&macro_press &mo ${layerToLayer('colemak')} &kp LEFT_CONTROL>
         , <&macro_pause_for_release>
-        , <&macro_release &mo L_COLEMAK &kp LEFT_CONTROL>;
+        , <&macro_release &mo ${layerToLayer('colemak')} &kp LEFT_CONTROL>;
 )
 ZMK_MACRO(shift_colemak,
     wait-ms = <0>;
     bindings 
-        = <&macro_press &mo L_COLEMAK &kp LEFT_SHIFT>
+        = <&macro_press &mo ${layerToLayer('colemak')} &kp LEFT_SHIFT>
         , <&macro_pause_for_release>
-        , <&macro_release &mo L_COLEMAK &kp LEFT_SHIFT>;
+        , <&macro_release &mo ${layerToLayer('colemak')} &kp LEFT_SHIFT>;
 )
 `
     ],
@@ -188,7 +188,7 @@ ZMK_MACRO(shift_colemak,
                 ['+J', '+H', '+V', '+K', '&none'],
 
                 ['SPACE', '&mo symbols', '&shift_colemak'],
-                ['&to 1', '&mo numbers', '&to 0']
+                ['&to 1', odd.toggleLanguage, '&to 0']
             ],
             sensor: '&yan_encoder',
         },
@@ -209,24 +209,6 @@ ZMK_MACRO(shift_colemak,
                 ['&trans', '&trans', '&trans'],
             ]
         },
-        // 'test': {
-        //     keys: [
-        //         ['LA(LG(LC(LS(F1))))', 'LA(LG(LC(LS(F2))))', 'LA(LG(LC(LS(F3))))', 'LA(LG(LC(LS(F4))))', 'LA(LG(LC(LS(F5))))'],
-        //         ['LA(LG(LC(LS(F6))))', 'LA(LG(LC(LS(F7))))', 'LA(LG(LC(LS(F8))))', 'LA(LG(LC(LS(F9))))', 'LA(LG(LC(LS(F10))))'],
-        //         ['LA(LG(LC(LS(F11))))', 'LA(LG(LC(LS(F12))))', '&none', '&none', '&none'],
-
-        //         ['&trans', '&trans', '&trans'],
-        //         ['&trans', '&trans', '&trans'],
-
-        //         ['LA(LG(LC(LS(F13))))', 'LA(LG(LC(LS(F14))))', 'LA(LG(LC(LS(F15))))', 'LA(LG(LC(LS(F16))))', 'LA(LG(LC(LS(F17))))'],
-        //         ['LA(LG(LC(LS(F18))))', 'LA(LG(LC(LS(F19))))', 'LA(LG(LC(LS(F20))))', 'LA(LG(LC(LS(F21))))', 'LA(LG(LC(LS(F22))))'],
-        //         ['LA(LG(LC(LS(F23))))', 'LA(LG(LC(LS(F24))))', '&none', '&none', '&none'],
-
-        //         ['&trans', '&trans', '&trans'],
-        //         ['&trans', '&trans', '&trans'],
-        //     ]
-        // },
-
         'mirror': {
             keys: [
                 ['=', '=', '=', '=', '='],
@@ -297,7 +279,7 @@ ZMK_MACRO(shift_colemak,
         },
         'arrows': {
             keys: [
-                [odd.toggleLanguage, 'SPACE', 'DELETE', odd.toggleLanguage, 'K_VOLUME_UP'],
+                ['&to 0', 'SPACE', 'DELETE', '&to 1', 'K_VOLUME_UP'],
                 ['ESCAPE', 'TAB', 'BACKSPACE', 'RETURN,LS(RETURN),LG(RETURN)', 'K_VOLUME_DOWN'],
                 ['&sk LEFT_ALT', '&sk LEFT_CONTROL', '&sk LEFT_SHIFT', '&sk LEFT_COMMAND', `${odd.alfred},${odd.lockScreen}`],
 
@@ -386,16 +368,22 @@ ZMK_MACRO(shift_colemak,
     }
 };
 
-['symbols','windows','windows2','arrows','numbers'].forEach((layer)=>{
+
+const rusLayers = ['symbols', 'windows', 'windows2', 'arrows', 'numbers'];
+rusLayers.forEach((layer)=>{
+    if (!config.keymap[layer]){
+        throw new Error(`Layer for russification does not exists: ${layer}`);
+    }
+
     config.macros.push(`
 ZMK_MACRO(${layer}_rus,
     wait-ms = <0>;
     bindings
-        = <&macro_press &mo L_${layer.toLocaleUpperCase()}>
+        = <&macro_press &mo ${layerToLayer(layer)}>
         , <&macro_tap &kp ${odd.toggleLanguage}>
         , <&macro_pause_for_release>
         , <&macro_tap &kp ${odd.toggleLanguage}>
-        , <&macro_release &mo L_${layer.toLocaleUpperCase()}>;
+        , <&macro_release &mo ${layerToLayer(layer)}>;
 )
  `)
 
@@ -441,7 +429,7 @@ config.keymap.mirror.keys[7] = config.keymap.default.keys[2].slice().reverse();
 // #define L_DEFAULT 0
 // #define L_ARROWS   1
 // #define L_SYMBOLS 2
-const defines = Object.keys(config.keymap).map((layer, index) => `#define L_${layer.toUpperCase()} ${index}`).join('\n')
+const defines = Object.keys(config.keymap).map((layer, index) => `#define ${layerToLayer(layer)} ${index}`).join('\n')
 let macroCounter = 0
 const unwrapTapDance = (keyText, location) => {
     const [tap, hold, tapHold, doubleTap] = keyText.split(',');

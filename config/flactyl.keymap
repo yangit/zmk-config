@@ -2937,7 +2937,7 @@
 &td_17	&td_18	&td_19	&td_20	&td_21
 &td_22	&td_23	&td_24	&td_25	&none
 &kp SPACE	&mo L_SYMBOLS	&shift_colemak
-&to 1	&mo L_NUMBERS	&to 0
+&to 1	&kp LC(EQUAL)	&to 0
             >;
  sensor-bindings = <&yan_encoder>;            
         };
@@ -3031,7 +3031,7 @@
         /* arrows 6 */
         arrows_layer {
             bindings = <
-&kp LC(EQUAL)	&kp SPACE	&kp DELETE	&kp LC(EQUAL)	&kp K_VOLUME_UP
+&to 0	&kp SPACE	&kp DELETE	&to 1	&kp K_VOLUME_UP
 &kp ESCAPE	&kp TAB	&kp BACKSPACE	&td_61	&kp K_VOLUME_DOWN
 &sk LEFT_ALT	&sk LEFT_CONTROL	&sk LEFT_SHIFT	&sk LEFT_COMMAND	&td_62
 &trans	&trans	&trans
