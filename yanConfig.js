@@ -22,7 +22,8 @@ const mehSeed = [
     // used by mac for brightness and volume
     // 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12',
     'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'F21', 'F22', 'F23', 'F24',
-    'LANG1', 'LANG2', 'LANG3', 'LANG4', 'LANG5', 'LANG6', 'LANG7', 'LANG8', 'LANG9',
+    // LANG does not work on alfred and divvy
+    // 'LANG1', 'LANG2', 'LANG3', 'LANG4', 'LANG5', 'LANG6', 'LANG7', 'LANG8', 'LANG9',
     'N0', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N9',
     'GRAVE', 'MINUS', 'EQUAL', 'LEFT_BRACKET', 'RIGHT_BRACKET', 'BACKSLASH', 'SEMI', 'SINGLE_QUOTE', 'COMMA', 'DOT', 'SLASH',
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
@@ -62,11 +63,11 @@ const m = {
     appVsCode: 'LA(LG(LC(LS(KP_N6))))',
     appBrowser: 'LA(LG(LC(LS(KP_N7))))',
     appSlack: 'LA(LG(LC(LS(KP_N8))))',
-    appInsomnia: 'LA(LG(LC(LS(LANG1))))',
+    appInsomnia: 'LA(LG(LC(LS(F16))))',
     appSublime: 'LA(LG(LC(LS(KP_N9))))',
     appNotes: 'LA(LG(LC(LS(KP_MINUS))))',
     appSignal: 'LA(LG(LC(LS(KP_EQUAL))))',
-    appTelegram: 'LA(LG(LC(LS(LANG2))))',
+    appTelegram: 'LA(LG(LC(LS(F17))))',
     appWhatsup: 'LA(LG(LC(LS(KP_ASTERISK))))',
 
     // windows
@@ -327,7 +328,7 @@ ZMK_MACRO(shift_colemak,
         'windows': {
             keys: [
                 [odd.historyBack, odd.tabsBack, odd.appWindowBack, m.macAppsWitchBackward, '&none'],
-                [m.appFinder, m.appTerminal, m.appVsCode, m.appBrowser, m.appSlack],
+                [m.appFinder, m.appTerminal, m.appVsCode, m.appBrowser, `${m.appSlack},${m.appInsomnia}`],
 
                 [odd.fontBigger, m.appSignal, `${m.appTelegram},${m.appWhatsup}`, `${m.appSublime},${m.appNotes}`, `${m.showApps},${m.showDesktop}`],
 
