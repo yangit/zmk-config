@@ -514,7 +514,7 @@ Object.entries(conditionalLayers).forEach(([layer, targets]) => {
     })
     config.conditinalLayers.push(`
 compatible = "zmk,conditional-layers";
-    ${layer}_${targets.join('_')} {
+    ${layer}__${targets.join('__')} {
         if-layers = <${layerToLayer(targets[0])} ${layerToLayer(targets[1])}>;
         then-layer = <${layerToLayer(layer)}>;
     };
