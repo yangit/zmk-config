@@ -112,7 +112,7 @@ const m = {
 
 }
 const layerToLayer = (layer) => `L_${layer.toUpperCase()}`
-
+const uwrapPlus = (string) => `${string.slice(1)},LG(${string.slice(1)})`
 Object.values(m).forEach((value) => {
     const meh = mehArray.find((item) => item.value === value);
     if (!meh) {
@@ -125,6 +125,25 @@ Object.values(m).forEach((value) => {
     }
 
 })
+const reverseLayerFrom = (layer) => (configLocal) => {
+    console.log(configLocal);
+    
+    if (!configLocal.keymap[layer]) {
+        throw new Error(`Layer ${layer} is not defined`);
+    }
+    return { keys: config.keymap[layer].keys.map((row) => row.slice().reverse()) }
+}
+
+const addModifierToLayer = (layer, modifier) => (configLocal) => {
+    if (!configLocal.keymap[layer]) {
+        throw new Error(`Layer ${layer} is not defined`);
+    }
+    const keys = configLocal.keymap[layer].keys.map(row => row.map(key => {
+        if (key.startsWith('&')) { return key }
+        return `${modifier}(${key})`
+    }))
+    return { keys }
+}
 
 const config = {
     header: `/*
@@ -213,51 +232,56 @@ ZMK_MACRO(disable_rus,
                 ['Z', '+X', '+C', 'D,LG(V),LG(LS(V))', 'B,LG(B),LG(LS(B))'],
 
                 ['&mo windows', '&mo arrows', '&mo numbers'],
-                ['&mo symbols', '&mo mirror', '&shift_colemak'],
+                ['&mo symbols', '&mo default_mirror', '&mo colemak_shift'],
 
                 ['&mo config', '+L', '+U', '+Y', 'N1,N2,N3'],
                 ['+M', '+N', '+E', 'I,LG(I),LG(LA(I))', '+O'],
                 ['+J', '+H', '+V', '+K', '&none'],
 
-                ['SPACE', '&mo symbols', '&shift_colemak'],
+                ['SPACE', '&mo symbols', '&mo colemak_shift'],
                 ['&none', '&mo numbers', '&none']
             ],
             sensor: '&yan_encoder',
         },
-        'russian': {
-            keys: [
+        'russian': (configLocal) => {
+            // console.log('russian init',config.keymap);
+            const keysSeed = [
                 ['Q', 'W', 'E', 'R', 'T,SLASH'],
                 ['A', 'S', 'D', 'F', 'G'],
                 ['Z', 'X', 'C', 'V', 'B'],
 
                 ['&windows_rus', '&arrowsr_rus', '&numbers_rus'],
-                ['&windows2_rus', '&trans', '&trans'],
+                ['&symbols_rus', '&mo russian_mirror', '&colemak_shift_rus'],
 
                 ['Y', 'U', 'I', 'O', 'P'],
                 ['H', 'J', 'K', 'L', 'SEMICOLON'],
                 ['N', 'M,RIGHT_BRACKET', 'COMMA', 'PERIOD', 'SINGLE_QUOTE,LEFT_BRACKET'],
 
-                ['&trans', '&symbols_rus', '&kp LSHFT'],
-                ['&trans', '&trans', '&trans'],
+                ['&trans', '&symbols_rus', '&mo russian_shift'],
+                ['&trans', '&numbers_rus', '&trans'],
             ]
+            // Copy hold and tapHold macros from default layer
+            const keys = keysSeed.map((line, lineIndex) => line.map((key, keyIndex) => {
+                const [tap, hold, tapHold, doubleTap] = key.split(',');
+                let defaultKey = configLocal.keymap.default.keys[lineIndex][keyIndex];
+                if (defaultKey.startsWith('+')) {
+                    defaultKey = uwrapPlus(defaultKey);
+                }
+                const [dTap, dHold, dTapHold, dDoubleTap] = defaultKey.split(',');
+                if (defaultKey.includes(',') && !key.startsWith('&') && !defaultKey.startsWith('&')) {
+                    const result = [tap || dTap, hold || dHold, tapHold || dTapHold, doubleTap || dDoubleTap].filter((value) => value).join(',')
+                    return result;
+                }
+                return key
+            }))
+
+            return {
+                keys
+            }
         },
-        'mirror': {
-            keys: [
-                ['=', '=', '=', '=', '='],
-                ['=', '=', '=', '=', '='],
-                ['=', '=', '=', '=', '='],
-
-                ['&none', '&none', '&none'],
-                ['&none', '&none', '&none'],
-
-                ['=', '=', '=', '=', '='],
-                ['=', '=', '=', '=', '='],
-                ['=', '=', '=', '=', '='],
-
-                ['&none', '&none', '&none'],
-                ['&none', '&none', '&none'],
-            ]
-        },
+        'russian_mirror': reverseLayerFrom('russian'),
+        'russian_shift': addModifierToLayer('russian', 'LS'),
+        'default_mirror': reverseLayerFrom('default'),
         'qwerty': {
             keys: [
                 ['Q', 'W', 'E', 'R', 'T'],
@@ -292,8 +316,15 @@ ZMK_MACRO(disable_rus,
                 ['&trans', '&trans', '&trans'],
             ]
         },
-        'numbers': {
-            keys: [
+        'colemak_control': addModifierToLayer('colemak', 'LC'),
+        'colemak_shift': addModifierToLayer('colemak', 'LS'),
+        'colemak_shift_mirror': reverseLayerFrom('colemak_shift'),
+        'numbers': () => {
+            const reverseNumbersRow = (row) => {
+                const [one, two, three, four, five] = row;
+                return [five, two, three, four, one];
+            }
+            const keys = [
                 ['KP_MULTIPLY,KP_DIVIDE,COLON', 'N7', 'N8', 'N9', '&trans'],
                 ['KP_PLUS,KP_MINUS', 'N1', 'N2', 'N3', 'N0'],
                 ['KP_DOT,COMMA', 'N4', 'N5', 'N6', 'KP_EQUAL'],
@@ -307,7 +338,13 @@ ZMK_MACRO(disable_rus,
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
-            ]
+            ];
+
+            // mirror numbers layer
+            keys[5] = reverseNumbersRow(keys[0]);
+            keys[6] = reverseNumbersRow(keys[1]);
+            keys[7] = reverseNumbersRow(keys[2]);
+            return { keys }
         },
         'arrows': {
             keys: [
@@ -326,6 +363,7 @@ ZMK_MACRO(disable_rus,
                 ['&trans', '&trans', '&trans'],
             ]
         },
+        'arrows_mirror': reverseLayerFrom('arrows'),
         'arrowsr': {
             keys: [
                 ['&disable_rus', '&trans', '&trans', '&none', '&trans'],
@@ -360,6 +398,7 @@ ZMK_MACRO(disable_rus,
                 ['&trans', '&trans', '&trans'],
             ]
         },
+        'symbols_mirror': reverseLayerFrom('symbols'),
         'windows': {
             keys: [
                 [odd.historyBack, odd.tabsBack, odd.appWindowBack, m.macAppsWitchBackward, odd.fontBigger],
@@ -417,8 +456,19 @@ ZMK_MACRO(disable_rus,
     }
 };
 
+// invoke layer config with configLocal
+Object.entries(config.keymap).forEach(([layer, layerConfig]) => {
+    if (typeof layerConfig === 'function') {
+        console.log(layer,Object.keys(config.keymap), config.keymap.russian);
+        
+        config.keymap[layer] = layerConfig(config);
+    }
+});
 
-const rusLayers = ['symbols', 'windows', 'windows2', 'numbers'];
+
+
+//Add macros to be used in russian layer
+const rusLayers = ['symbols', 'windows', 'windows2', 'numbers', 'symbols_mirror', 'arrows_mirror', 'colemak_shift_mirror'];
 rusLayers.forEach((layer) => {
     if (!config.keymap[layer]) {
         throw new Error(`Layer for russification does not exists: ${layer}`);
@@ -434,7 +484,10 @@ ZMK_MACRO(${layer}_rus,
         , <&macro_release &mo ${layerToLayer(layer)}>;
 )
  `)
-})
+});
+
+// Since arrows layer contain toggles for language, we need to make it special
+// There are two variants, russian one does not allow to enable russian again, and english does not all to enable english again
 config.macros.push(`
 ZMK_MACRO(arrowsr_rus,
     wait-ms = <0>;
@@ -447,10 +500,24 @@ ZMK_MACRO(arrowsr_rus,
 )
  `)
 
+
+// Conditional layers
+
 const conditionalLayers = {
+    colemak_control: ['numbers', 'arrows'],
     windows2: ['arrows', 'windows'],
+
+    symbols_mirror: ['default_mirror', 'symbols'],
+    arrows_mirror: ['default_mirror', 'arrows'],
+    colemak_shift_mirror: ['default_mirror', 'colemak_shift'],
+
+    symbols_mirror: ['russian_mirror', 'symbols'],
+    arrows_mirror: ['russian_mirror', 'arrows'],
+    colemak_shift_mirror: ['russian_mirror', 'colemak_shift'],
+    
 };
-Object.keys(conditionalLayers).forEach((layer) => {
+
+Object.entries(conditionalLayers).forEach(([layer, targets]) => {
     if (!config.keymap[layer]) {
         throw new Error(`Layer for conditional layer does not exists: ${layer}`);
     }
@@ -459,9 +526,6 @@ Object.keys(conditionalLayers).forEach((layer) => {
             throw new Error(`Target layer for conditional layer does not exists: ${target}`);
         }
     })
-});
-
-Object.entries(conditionalLayers).forEach(([layer, targets]) => {
     config.conditinalLayers.push(`
 compatible = "zmk,conditional-layers";
     tri_layer {
@@ -470,8 +534,6 @@ compatible = "zmk,conditional-layers";
     };
 `)
 })
-
-//use generated hotkey combinations such that I do not have to invent them
 
 // verify all keys of config.keymap contain 10 arrays and 5,5,5,3,3,5,5,5,3,3 elements in each array
 for (let layer in config.keymap) {
@@ -489,52 +551,8 @@ for (let layer in config.keymap) {
 }
 
 
-const reverseNumbersRow = (row) => {
-    const [one, two, three, four, five] = row;
-    return [five, two, three, four, one];
-}
-
-// mirror numbers layer
-config.keymap.numbers.keys[5] = reverseNumbersRow(config.keymap.numbers.keys[0]);
-config.keymap.numbers.keys[6] = reverseNumbersRow(config.keymap.numbers.keys[1]);
-config.keymap.numbers.keys[7] = reverseNumbersRow(config.keymap.numbers.keys[2]);
-
-
-//add mirror layer
-config.keymap.mirror.keys[0] = config.keymap.default.keys[5].slice().reverse();
-config.keymap.mirror.keys[1] = config.keymap.default.keys[6].slice().reverse();
-config.keymap.mirror.keys[2] = config.keymap.default.keys[7].slice().reverse();
-config.keymap.mirror.keys[5] = config.keymap.default.keys[0].slice().reverse();
-config.keymap.mirror.keys[6] = config.keymap.default.keys[1].slice().reverse();
-config.keymap.mirror.keys[7] = config.keymap.default.keys[2].slice().reverse();
-
-
-const uwrapPlus = (string) => `${string.slice(1)},LG(${string.slice(1)})`
-
-// Copy hold/tapHold for russian layer from english layer
-config.keymap.russian.keys = config.keymap.russian.keys.map((line, lineIndex) => {
-    return line.map((key, keyIndex) => {
-        const [tap, hold, tapHold, doubleTap] = key.split(',');
-        let defaultKey = config.keymap.default.keys[lineIndex][keyIndex];
-        if (defaultKey.startsWith('+')) {
-            defaultKey = uwrapPlus(defaultKey);
-        }
-        const [dTap, dHold, dTapHold, dDoubleTap] = defaultKey.split(',');
-        if (defaultKey.includes(',') && !key.startsWith('&') && !defaultKey.startsWith('&')) {
-            const result = [tap || dTap, hold || dHold, tapHold || dTapHold, doubleTap || dDoubleTap].filter((value) => value).join(',')
-            console.log(result)
-            return result;
-        }
-
-        return key
-    })
-})
-
-
-// #define L_DEFAULT 0
-// #define L_ARROWS   1
-// #define L_SYMBOLS 2
 const defines = Object.keys(config.keymap).map((layer, index) => `#define ${layerToLayer(layer)} ${index}`).join('\n')
+
 let macroCounter = 0
 const unwrapTapDance = (keyText, location) => {
     const [tap, hold, tapHold, doubleTap] = keyText.split(',');
@@ -589,12 +607,10 @@ ZMK_MACRO(td_${macroIndex}_repeat,
 )
 `)
     return `&td_${macroIndex}`
-
 }
 
 
 const keyMapper = (keyText, location) => {
-
     //layer switcher &mo L_LAYER
     if (keyText.startsWith('&mo ')) {
         const [, layer] = keyText.split(' ')
@@ -622,8 +638,9 @@ const keyMapper = (keyText, location) => {
 for (let layer in config.keymap) {
     config.keymap[layer].keys = config.keymap[layer].keys.map((rows, rowIndex) => rows.map((keyText, index) => keyMapper(keyText, { layer, row: rowIndex, index })))
 }
-// console.log(config.keymap);
 
+
+// console.log(config.keymap);
 const tab = (str, pad) => str.split('\n').map(line => `${pad}${line}`).join('\n')
 
 const output = `${config.header}
