@@ -19,9 +19,10 @@ for
 tappingTerm = 150
 tapDanceTerm = 250
 
-First tap < 400
-First hold  > 400
-Tap and hold = < 250 and > 150
+First tap will not fire until 250 wait expired (the tap dance term)
+First tap will fire if held shorter than < 400
+First hold will fire if held longer than > 400
+Tap and hold will fire in 400 if tapped previously
 Double tap = ??
 */
 
@@ -156,6 +157,14 @@ combo_spc {
 };
 `
     ],
+    conditinalLayers: [`
+compatible = "zmk,conditional-layers";
+    tri_layer {
+        if-layers = <L_ARROWS L_WINDOWS>;
+        then-layer = <L_WINDOWS2>;
+    };
+`
+    ],
     behaviors: [
         `
 yan_encoder: yan_encoder {
@@ -211,14 +220,14 @@ ZMK_MACRO(disable_rus,
                 ['Z', '+X', '+C', 'D,LG(V),LG(LS(V))', 'B,LG(B),LG(LS(B))'],
 
                 ['&mo windows', '&mo arrows', '&mo numbers'],
-                ['&mo windows2', '&mo mirror', '&ctrl_colemak'],
+                ['&mo symbols', '&mo mirror', '&shift_colemak'],
 
                 ['&mo config', '+L', '+U', '+Y', 'N1,N2,N3'],
                 ['+M', '+N', '+E', 'I,LG(I),LG(LA(I))', '+O'],
                 ['+J', '+H', '+V', '+K', '&none'],
 
                 ['SPACE', '&mo symbols', '&shift_colemak'],
-                ['&to 1', '&mo numbers', '&to 0']
+                ['&none', '&mo numbers', '&none']
             ],
             sensor: '&yan_encoder',
         },
@@ -525,7 +534,7 @@ td_${macroIndex}: td_${macroIndex} {
     label = "td_${macroIndex}";
     #binding-cells = <0>;
     tapping-term-ms = <${tapDanceTerm}>;
-    bindings = <&td_${macroIndex}_first 0 ${tap}>, <&td_${macroIndex}_second 0 0>;
+    bindings = <&td_${macroIndex}_first 0 ${tap}>, ${tapHold ? `<&td_${macroIndex}_second 0 0>` : `&td_${macroIndex}_repeat`};
 };
 td_${macroIndex}_first: td_${macroIndex}_first {
     compatible = "zmk,behavior-hold-tap";
@@ -548,18 +557,6 @@ td_${macroIndex}_second: td_${macroIndex}_second {
     quick-tap-ms = <${quickTap}>;
     global-quick-tap;
     bindings = <&td_${macroIndex}_hold_second>, <&td_${macroIndex}_repeat>;
-};`)
-    } else {
-        config.behaviors.push(`
-td_${macroIndex}_second: td_${macroIndex}_second {
-    compatible = "zmk,behavior-hold-tap";
-    label = "td_${macroIndex}_second";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <${tappingTerm2}>;
-    quick-tap-ms = <${quickTap}>;
-    global-quick-tap;
-    bindings = <&td_${macroIndex}_repeat>, <&td_${macroIndex}_repeat>;
 };`)
     }
 
@@ -618,6 +615,9 @@ const tab = (str, pad) => str.split('\n').map(line => `${pad}${line}`).join('\n'
 const output = `${config.header}
 ${defines}
 ${config.postHeader}
+    conditional_layers {
+${tab(config.conditinalLayers.map(macro=>macro.trim()).join('\n'), '        ')}
+    };
     combos {
 ${tab(config.combos.map(macro => macro.trim()).join('\n'), '        ')}
     };
