@@ -316,7 +316,6 @@ ZMK_MACRO(disable_rus,
                 ['&trans', '&trans', '&trans'],
             ]
         },
-        'colemak_control': addModifierToLayer('colemak', 'LC'),
         'colemak_shift': addModifierToLayer('colemak', 'LS'),
         'colemak_shift_mirror': reverseLayerFrom('colemak_shift'),
         'numbers': () => {
@@ -363,6 +362,7 @@ ZMK_MACRO(disable_rus,
                 ['&trans', '&trans', '&trans'],
             ]
         },
+        'colemak_control': addModifierToLayer('colemak', 'LC'),
         'arrows_mirror': reverseLayerFrom('arrows'),
         'arrowsr': {
             keys: [
@@ -504,7 +504,7 @@ ZMK_MACRO(arrowsr_rus,
 // Conditional layers
 
 const conditionalLayers = {
-    colemak_control: ['numbers', 'arrows'],
+    colemak_control: ['arrows', 'numbers'],
     windows2: ['arrows', 'windows'],
 
     symbols_mirror: ['default_mirror', 'symbols'],

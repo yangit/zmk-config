@@ -16,11 +16,11 @@
 #define L_DEFAULT_MIRROR 4
 #define L_QWERTY 5
 #define L_COLEMAK 6
-#define L_COLEMAK_CONTROL 7
-#define L_COLEMAK_SHIFT 8
-#define L_COLEMAK_SHIFT_MIRROR 9
-#define L_NUMBERS 10
-#define L_ARROWS 11
+#define L_COLEMAK_SHIFT 7
+#define L_COLEMAK_SHIFT_MIRROR 8
+#define L_NUMBERS 9
+#define L_ARROWS 10
+#define L_COLEMAK_CONTROL 11
 #define L_ARROWS_MIRROR 12
 #define L_ARROWSR 13
 #define L_SYMBOLS 14
@@ -39,8 +39,8 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-            colemak_control__numbers__arrows {
-                if-layers = <L_NUMBERS L_ARROWS>;
+            colemak_control__arrows__numbers {
+                if-layers = <L_ARROWS L_NUMBERS>;
                 then-layer = <L_COLEMAK_CONTROL>;
             };
         compatible = "zmk,conditional-layers";
@@ -4486,24 +4486,7 @@
         };
     
 
-        /* colemak_control 7 */
-        colemak_control_layer {
-            bindings = <
-&kp LC(Q)	&kp LC(W)	&kp LC(F)	&kp LC(P)	&none
-&kp LC(A)	&kp LC(R)	&kp LC(S)	&kp LC(T)	&kp LC(G)
-&kp LC(Z)	&kp LC(X)	&kp LC(C)	&kp LC(D)	&kp LC(B)
-&trans	&trans	&trans
-&trans	&trans	&trans
-&none	&kp LC(L)	&kp LC(U)	&kp LC(Y)	&none
-&kp LC(M)	&kp LC(N)	&kp LC(E)	&kp LC(I)	&kp LC(O)
-&kp LC(J)	&kp LC(H)	&kp LC(V)	&kp LC(K)	&none
-&trans	&trans	&trans
-&trans	&trans	&trans
-            >;            
-        };
-    
-
-        /* colemak_shift 8 */
+        /* colemak_shift 7 */
         colemak_shift_layer {
             bindings = <
 &kp LS(Q)	&kp LS(W)	&kp LS(F)	&kp LS(P)	&none
@@ -4520,7 +4503,7 @@
         };
     
 
-        /* colemak_shift_mirror 9 */
+        /* colemak_shift_mirror 8 */
         colemak_shift_mirror_layer {
             bindings = <
 &none	&kp LS(Y)	&kp LS(U)	&kp LS(L)	&none
@@ -4537,7 +4520,7 @@
         };
     
 
-        /* numbers 10 */
+        /* numbers 9 */
         numbers_layer {
             bindings = <
 &td_108	&kp N7	&kp N8	&kp N9	&trans
@@ -4554,7 +4537,7 @@
         };
     
 
-        /* arrows 11 */
+        /* arrows 10 */
         arrows_layer {
             bindings = <
 &none	&kp SPACE	&kp DELETE	&enable_rus	&kp K_VOLUME_UP
@@ -4565,6 +4548,23 @@
 &none	&kp HOME	&kp UP_ARROW	&kp PAGE_UP	&none
 &none	&kp LEFT_ARROW	&kp DOWN_ARROW	&kp RIGHT_ARROW	&none
 &none	&kp END	&none	&kp PAGE_DOWN	&none
+&trans	&trans	&trans
+&trans	&trans	&trans
+            >;            
+        };
+    
+
+        /* colemak_control 11 */
+        colemak_control_layer {
+            bindings = <
+&kp LC(Q)	&kp LC(W)	&kp LC(F)	&kp LC(P)	&none
+&kp LC(A)	&kp LC(R)	&kp LC(S)	&kp LC(T)	&kp LC(G)
+&kp LC(Z)	&kp LC(X)	&kp LC(C)	&kp LC(D)	&kp LC(B)
+&trans	&trans	&trans
+&trans	&trans	&trans
+&none	&kp LC(L)	&kp LC(U)	&kp LC(Y)	&none
+&kp LC(M)	&kp LC(N)	&kp LC(E)	&kp LC(I)	&kp LC(O)
+&kp LC(J)	&kp LC(H)	&kp LC(V)	&kp LC(K)	&none
 &trans	&trans	&trans
 &trans	&trans	&trans
             >;            
