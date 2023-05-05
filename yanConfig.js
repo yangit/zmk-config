@@ -107,7 +107,7 @@ const m = {
     winLXL: 'LA(LG(LC(LS(KP_PLUS))))',
     winRXL: 'LA(LG(LC(LS(KP_DIVIDE))))',
     winRBig: 'LA(LG(LC(LS(N2))))',
-    winRMed: 'LA(LG(LC(LS(F20))))',    
+    winRMed: 'LA(LG(LC(LS(F20))))',
     winRSmall: 'LA(LG(LC(LS(N3))))',
 
 }
@@ -157,14 +157,7 @@ combo_spc {
 };
 `
     ],
-    conditinalLayers: [`
-compatible = "zmk,conditional-layers";
-    tri_layer {
-        if-layers = <L_ARROWS L_WINDOWS>;
-        then-layer = <L_WINDOWS2>;
-    };
-`
-    ],
+    conditinalLayers: [],
     behaviors: [
         `
 yan_encoder: yan_encoder {
@@ -442,7 +435,6 @@ ZMK_MACRO(${layer}_rus,
 )
  `)
 })
-
 config.macros.push(`
 ZMK_MACRO(arrowsr_rus,
     wait-ms = <0>;
@@ -455,7 +447,29 @@ ZMK_MACRO(arrowsr_rus,
 )
  `)
 
+const conditionalLayers = {
+    windows2: ['arrows', 'windows'],
+};
+Object.keys(conditionalLayers).forEach((layer) => {
+    if (!config.keymap[layer]) {
+        throw new Error(`Layer for conditional layer does not exists: ${layer}`);
+    }
+    conditionalLayers[layer].forEach((target) => {
+        if (!config.keymap[target]) {
+            throw new Error(`Target layer for conditional layer does not exists: ${target}`);
+        }
+    })
+});
 
+Object.entries(conditionalLayers).forEach(([layer, targets]) => {
+    config.conditinalLayers.push(`
+compatible = "zmk,conditional-layers";
+    tri_layer {
+        if-layers = <${layerToLayer(targets[0])} ${layerToLayer(targets[1])}>;
+        then-layer = <${layerToLayer(layer)}>;
+    };
+`)
+})
 
 //use generated hotkey combinations such that I do not have to invent them
 
@@ -534,7 +548,7 @@ td_${macroIndex}: td_${macroIndex} {
     label = "td_${macroIndex}";
     #binding-cells = <0>;
     tapping-term-ms = <${tapDanceTerm}>;
-    bindings = <&td_${macroIndex}_first 0 ${tap}>, ${tapHold ? `<&td_${macroIndex}_second 0 0>` : `&td_${macroIndex}_repeat`};
+    bindings = <&td_${macroIndex}_first 0 ${tap}>, ${tapHold ? `<&td_${macroIndex}_second 0 0>` : `<&td_${macroIndex}_repeat>`};
 };
 td_${macroIndex}_first: td_${macroIndex}_first {
     compatible = "zmk,behavior-hold-tap";
@@ -616,7 +630,7 @@ const output = `${config.header}
 ${defines}
 ${config.postHeader}
     conditional_layers {
-${tab(config.conditinalLayers.map(macro=>macro.trim()).join('\n'), '        ')}
+${tab(config.conditinalLayers.map(macro => macro.trim()).join('\n'), '        ')}
     };
     combos {
 ${tab(config.combos.map(macro => macro.trim()).join('\n'), '        ')}

@@ -165,7 +165,7 @@
             label = "td_4";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_4_first 0 A>, &td_4_repeat;
+            bindings = <&td_4_first 0 A>, <&td_4_repeat>;
         };
         td_4_first: td_4_first {
             compatible = "zmk,behavior-hold-tap";
@@ -182,7 +182,7 @@
             label = "td_5";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_5_first 0 R>, &td_5_repeat;
+            bindings = <&td_5_first 0 R>, <&td_5_repeat>;
         };
         td_5_first: td_5_first {
             compatible = "zmk,behavior-hold-tap";
@@ -199,7 +199,7 @@
             label = "td_6";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_6_first 0 S>, &td_6_repeat;
+            bindings = <&td_6_first 0 S>, <&td_6_repeat>;
         };
         td_6_first: td_6_first {
             compatible = "zmk,behavior-hold-tap";
@@ -270,7 +270,7 @@
             label = "td_9";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_9_first 0 X>, &td_9_repeat;
+            bindings = <&td_9_first 0 X>, <&td_9_repeat>;
         };
         td_9_first: td_9_first {
             compatible = "zmk,behavior-hold-tap";
@@ -287,7 +287,7 @@
             label = "td_10";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_10_first 0 C>, &td_10_repeat;
+            bindings = <&td_10_first 0 C>, <&td_10_repeat>;
         };
         td_10_first: td_10_first {
             compatible = "zmk,behavior-hold-tap";
@@ -358,7 +358,7 @@
             label = "td_13";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_13_first 0 L>, &td_13_repeat;
+            bindings = <&td_13_first 0 L>, <&td_13_repeat>;
         };
         td_13_first: td_13_first {
             compatible = "zmk,behavior-hold-tap";
@@ -375,7 +375,7 @@
             label = "td_14";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_14_first 0 U>, &td_14_repeat;
+            bindings = <&td_14_first 0 U>, <&td_14_repeat>;
         };
         td_14_first: td_14_first {
             compatible = "zmk,behavior-hold-tap";
@@ -392,7 +392,7 @@
             label = "td_15";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_15_first 0 Y>, &td_15_repeat;
+            bindings = <&td_15_first 0 Y>, <&td_15_repeat>;
         };
         td_15_first: td_15_first {
             compatible = "zmk,behavior-hold-tap";
@@ -436,7 +436,7 @@
             label = "td_17";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_17_first 0 M>, &td_17_repeat;
+            bindings = <&td_17_first 0 M>, <&td_17_repeat>;
         };
         td_17_first: td_17_first {
             compatible = "zmk,behavior-hold-tap";
@@ -453,7 +453,7 @@
             label = "td_18";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_18_first 0 N>, &td_18_repeat;
+            bindings = <&td_18_first 0 N>, <&td_18_repeat>;
         };
         td_18_first: td_18_first {
             compatible = "zmk,behavior-hold-tap";
@@ -470,7 +470,7 @@
             label = "td_19";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_19_first 0 E>, &td_19_repeat;
+            bindings = <&td_19_first 0 E>, <&td_19_repeat>;
         };
         td_19_first: td_19_first {
             compatible = "zmk,behavior-hold-tap";
@@ -514,7 +514,7 @@
             label = "td_21";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_21_first 0 O>, &td_21_repeat;
+            bindings = <&td_21_first 0 O>, <&td_21_repeat>;
         };
         td_21_first: td_21_first {
             compatible = "zmk,behavior-hold-tap";
@@ -531,7 +531,7 @@
             label = "td_22";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_22_first 0 J>, &td_22_repeat;
+            bindings = <&td_22_first 0 J>, <&td_22_repeat>;
         };
         td_22_first: td_22_first {
             compatible = "zmk,behavior-hold-tap";
@@ -548,7 +548,7 @@
             label = "td_23";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_23_first 0 H>, &td_23_repeat;
+            bindings = <&td_23_first 0 H>, <&td_23_repeat>;
         };
         td_23_first: td_23_first {
             compatible = "zmk,behavior-hold-tap";
@@ -565,7 +565,7 @@
             label = "td_24";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_24_first 0 V>, &td_24_repeat;
+            bindings = <&td_24_first 0 V>, <&td_24_repeat>;
         };
         td_24_first: td_24_first {
             compatible = "zmk,behavior-hold-tap";
@@ -582,7 +582,7 @@
             label = "td_25";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_25_first 0 K>, &td_25_repeat;
+            bindings = <&td_25_first 0 K>, <&td_25_repeat>;
         };
         td_25_first: td_25_first {
             compatible = "zmk,behavior-hold-tap";
@@ -707,7 +707,7 @@
             label = "td_30";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_30_first 0 T>, &td_30_repeat;
+            bindings = <&td_30_first 0 T>, <&td_30_repeat>;
         };
         td_30_first: td_30_first {
             compatible = "zmk,behavior-hold-tap";
@@ -724,7 +724,7 @@
             label = "td_31";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_31_first 0 A>, &td_31_repeat;
+            bindings = <&td_31_first 0 A>, <&td_31_repeat>;
         };
         td_31_first: td_31_first {
             compatible = "zmk,behavior-hold-tap";
@@ -741,7 +741,7 @@
             label = "td_32";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_32_first 0 S>, &td_32_repeat;
+            bindings = <&td_32_first 0 S>, <&td_32_repeat>;
         };
         td_32_first: td_32_first {
             compatible = "zmk,behavior-hold-tap";
@@ -758,7 +758,7 @@
             label = "td_33";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_33_first 0 D>, &td_33_repeat;
+            bindings = <&td_33_first 0 D>, <&td_33_repeat>;
         };
         td_33_first: td_33_first {
             compatible = "zmk,behavior-hold-tap";
@@ -829,7 +829,7 @@
             label = "td_36";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_36_first 0 X>, &td_36_repeat;
+            bindings = <&td_36_first 0 X>, <&td_36_repeat>;
         };
         td_36_first: td_36_first {
             compatible = "zmk,behavior-hold-tap";
@@ -846,7 +846,7 @@
             label = "td_37";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_37_first 0 C>, &td_37_repeat;
+            bindings = <&td_37_first 0 C>, <&td_37_repeat>;
         };
         td_37_first: td_37_first {
             compatible = "zmk,behavior-hold-tap";
@@ -917,7 +917,7 @@
             label = "td_40";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_40_first 0 U>, &td_40_repeat;
+            bindings = <&td_40_first 0 U>, <&td_40_repeat>;
         };
         td_40_first: td_40_first {
             compatible = "zmk,behavior-hold-tap";
@@ -934,7 +934,7 @@
             label = "td_41";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_41_first 0 I>, &td_41_repeat;
+            bindings = <&td_41_first 0 I>, <&td_41_repeat>;
         };
         td_41_first: td_41_first {
             compatible = "zmk,behavior-hold-tap";
@@ -951,7 +951,7 @@
             label = "td_42";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_42_first 0 O>, &td_42_repeat;
+            bindings = <&td_42_first 0 O>, <&td_42_repeat>;
         };
         td_42_first: td_42_first {
             compatible = "zmk,behavior-hold-tap";
@@ -995,7 +995,7 @@
             label = "td_44";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_44_first 0 H>, &td_44_repeat;
+            bindings = <&td_44_first 0 H>, <&td_44_repeat>;
         };
         td_44_first: td_44_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1012,7 +1012,7 @@
             label = "td_45";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_45_first 0 J>, &td_45_repeat;
+            bindings = <&td_45_first 0 J>, <&td_45_repeat>;
         };
         td_45_first: td_45_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1029,7 +1029,7 @@
             label = "td_46";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_46_first 0 K>, &td_46_repeat;
+            bindings = <&td_46_first 0 K>, <&td_46_repeat>;
         };
         td_46_first: td_46_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1073,7 +1073,7 @@
             label = "td_48";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_48_first 0 SEMICOLON>, &td_48_repeat;
+            bindings = <&td_48_first 0 SEMICOLON>, <&td_48_repeat>;
         };
         td_48_first: td_48_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1090,7 +1090,7 @@
             label = "td_49";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_49_first 0 N>, &td_49_repeat;
+            bindings = <&td_49_first 0 N>, <&td_49_repeat>;
         };
         td_49_first: td_49_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1107,7 +1107,7 @@
             label = "td_50";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_50_first 0 M>, &td_50_repeat;
+            bindings = <&td_50_first 0 M>, <&td_50_repeat>;
         };
         td_50_first: td_50_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1124,7 +1124,7 @@
             label = "td_51";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_51_first 0 COMMA>, &td_51_repeat;
+            bindings = <&td_51_first 0 COMMA>, <&td_51_repeat>;
         };
         td_51_first: td_51_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1141,7 +1141,7 @@
             label = "td_52";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_52_first 0 PERIOD>, &td_52_repeat;
+            bindings = <&td_52_first 0 PERIOD>, <&td_52_repeat>;
         };
         td_52_first: td_52_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1158,7 +1158,7 @@
             label = "td_53";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_53_first 0 SINGLE_QUOTE>, &td_53_repeat;
+            bindings = <&td_53_first 0 SINGLE_QUOTE>, <&td_53_repeat>;
         };
         td_53_first: td_53_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1202,7 +1202,7 @@
             label = "td_55";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_55_first 0 Y>, &td_55_repeat;
+            bindings = <&td_55_first 0 Y>, <&td_55_repeat>;
         };
         td_55_first: td_55_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1219,7 +1219,7 @@
             label = "td_56";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_56_first 0 U>, &td_56_repeat;
+            bindings = <&td_56_first 0 U>, <&td_56_repeat>;
         };
         td_56_first: td_56_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1236,7 +1236,7 @@
             label = "td_57";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_57_first 0 L>, &td_57_repeat;
+            bindings = <&td_57_first 0 L>, <&td_57_repeat>;
         };
         td_57_first: td_57_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1253,7 +1253,7 @@
             label = "td_58";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_58_first 0 O>, &td_58_repeat;
+            bindings = <&td_58_first 0 O>, <&td_58_repeat>;
         };
         td_58_first: td_58_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1297,7 +1297,7 @@
             label = "td_60";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_60_first 0 E>, &td_60_repeat;
+            bindings = <&td_60_first 0 E>, <&td_60_repeat>;
         };
         td_60_first: td_60_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1314,7 +1314,7 @@
             label = "td_61";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_61_first 0 N>, &td_61_repeat;
+            bindings = <&td_61_first 0 N>, <&td_61_repeat>;
         };
         td_61_first: td_61_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1331,7 +1331,7 @@
             label = "td_62";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_62_first 0 M>, &td_62_repeat;
+            bindings = <&td_62_first 0 M>, <&td_62_repeat>;
         };
         td_62_first: td_62_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1348,7 +1348,7 @@
             label = "td_63";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_63_first 0 K>, &td_63_repeat;
+            bindings = <&td_63_first 0 K>, <&td_63_repeat>;
         };
         td_63_first: td_63_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1365,7 +1365,7 @@
             label = "td_64";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_64_first 0 V>, &td_64_repeat;
+            bindings = <&td_64_first 0 V>, <&td_64_repeat>;
         };
         td_64_first: td_64_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1382,7 +1382,7 @@
             label = "td_65";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_65_first 0 H>, &td_65_repeat;
+            bindings = <&td_65_first 0 H>, <&td_65_repeat>;
         };
         td_65_first: td_65_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1399,7 +1399,7 @@
             label = "td_66";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_66_first 0 J>, &td_66_repeat;
+            bindings = <&td_66_first 0 J>, <&td_66_repeat>;
         };
         td_66_first: td_66_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1578,7 +1578,7 @@
             label = "td_73";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_73_first 0 S>, &td_73_repeat;
+            bindings = <&td_73_first 0 S>, <&td_73_repeat>;
         };
         td_73_first: td_73_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1595,7 +1595,7 @@
             label = "td_74";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_74_first 0 R>, &td_74_repeat;
+            bindings = <&td_74_first 0 R>, <&td_74_repeat>;
         };
         td_74_first: td_74_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1612,7 +1612,7 @@
             label = "td_75";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_75_first 0 A>, &td_75_repeat;
+            bindings = <&td_75_first 0 A>, <&td_75_repeat>;
         };
         td_75_first: td_75_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1683,7 +1683,7 @@
             label = "td_78";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_78_first 0 C>, &td_78_repeat;
+            bindings = <&td_78_first 0 C>, <&td_78_repeat>;
         };
         td_78_first: td_78_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1700,7 +1700,7 @@
             label = "td_79";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_79_first 0 X>, &td_79_repeat;
+            bindings = <&td_79_first 0 X>, <&td_79_repeat>;
         };
         td_79_first: td_79_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1744,7 +1744,7 @@
             label = "td_81";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_81_first 0 KP_PLUS>, &td_81_repeat;
+            bindings = <&td_81_first 0 KP_PLUS>, <&td_81_repeat>;
         };
         td_81_first: td_81_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1761,7 +1761,7 @@
             label = "td_82";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_82_first 0 KP_DOT>, &td_82_repeat;
+            bindings = <&td_82_first 0 KP_DOT>, <&td_82_repeat>;
         };
         td_82_first: td_82_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1805,7 +1805,7 @@
             label = "td_84";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_84_first 0 KP_PLUS>, &td_84_repeat;
+            bindings = <&td_84_first 0 KP_PLUS>, <&td_84_repeat>;
         };
         td_84_first: td_84_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1822,7 +1822,7 @@
             label = "td_85";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_85_first 0 KP_DOT>, &td_85_repeat;
+            bindings = <&td_85_first 0 KP_DOT>, <&td_85_repeat>;
         };
         td_85_first: td_85_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1866,7 +1866,7 @@
             label = "td_87";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_87_first 0 LG(SPACE)>, &td_87_repeat;
+            bindings = <&td_87_first 0 LG(SPACE)>, <&td_87_repeat>;
         };
         td_87_first: td_87_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1883,7 +1883,7 @@
             label = "td_88";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_88_first 0 BACKSLASH>, &td_88_repeat;
+            bindings = <&td_88_first 0 BACKSLASH>, <&td_88_repeat>;
         };
         td_88_first: td_88_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1900,7 +1900,7 @@
             label = "td_89";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_89_first 0 PERCENT>, &td_89_repeat;
+            bindings = <&td_89_first 0 PERCENT>, <&td_89_repeat>;
         };
         td_89_first: td_89_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1917,7 +1917,7 @@
             label = "td_90";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_90_first 0 LA(LG(LC(LS(KP_N8))))>, &td_90_repeat;
+            bindings = <&td_90_first 0 LA(LG(LC(LS(KP_N8))))>, <&td_90_repeat>;
         };
         td_90_first: td_90_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1934,7 +1934,7 @@
             label = "td_91";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_91_first 0 LA(LG(LC(LS(F17))))>, &td_91_repeat;
+            bindings = <&td_91_first 0 LA(LG(LC(LS(F17))))>, <&td_91_repeat>;
         };
         td_91_first: td_91_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1951,7 +1951,7 @@
             label = "td_92";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_92_first 0 LA(LG(LC(LS(KP_N9))))>, &td_92_repeat;
+            bindings = <&td_92_first 0 LA(LG(LC(LS(KP_N9))))>, <&td_92_repeat>;
         };
         td_92_first: td_92_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1968,7 +1968,7 @@
             label = "td_93";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_93_first 0 LA(LG(LC(LS(KP_N2))))>, &td_93_repeat;
+            bindings = <&td_93_first 0 LA(LG(LC(LS(KP_N2))))>, <&td_93_repeat>;
         };
         td_93_first: td_93_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1985,7 +1985,7 @@
             label = "td_94";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_94_first 0 LA(LG(LC(LS(F18))))>, &td_94_repeat;
+            bindings = <&td_94_first 0 LA(LG(LC(LS(F18))))>, <&td_94_repeat>;
         };
         td_94_first: td_94_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2002,7 +2002,7 @@
             label = "td_95";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_95_first 0 LA(LG(LC(LS(F20))))>, &td_95_repeat;
+            bindings = <&td_95_first 0 LA(LG(LC(LS(F20))))>, <&td_95_repeat>;
         };
         td_95_first: td_95_first {
             compatible = "zmk,behavior-hold-tap";
