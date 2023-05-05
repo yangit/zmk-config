@@ -39,27 +39,27 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-            tri_layer {
+            colemak_control_numbers_arrows {
                 if-layers = <L_NUMBERS L_ARROWS>;
                 then-layer = <L_COLEMAK_CONTROL>;
             };
         compatible = "zmk,conditional-layers";
-            tri_layer {
+            windows2_arrows_windows {
                 if-layers = <L_ARROWS L_WINDOWS>;
                 then-layer = <L_WINDOWS2>;
             };
         compatible = "zmk,conditional-layers";
-            tri_layer {
+            symbols_mirror_russian_mirror_symbols {
                 if-layers = <L_RUSSIAN_MIRROR L_SYMBOLS>;
                 then-layer = <L_SYMBOLS_MIRROR>;
             };
         compatible = "zmk,conditional-layers";
-            tri_layer {
+            arrows_mirror_russian_mirror_arrows {
                 if-layers = <L_RUSSIAN_MIRROR L_ARROWS>;
                 then-layer = <L_ARROWS_MIRROR>;
             };
         compatible = "zmk,conditional-layers";
-            tri_layer {
+            colemak_shift_mirror_russian_mirror_colemak_shift {
                 if-layers = <L_RUSSIAN_MIRROR L_COLEMAK_SHIFT>;
                 then-layer = <L_COLEMAK_SHIFT_MIRROR>;
             };
