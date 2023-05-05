@@ -4391,7 +4391,7 @@
 &td_31	&td_32	&td_33	&td_34	&td_35
 &kp Z	&td_36	&td_37	&td_38	&td_39
 &windows_rus	&arrowsr_rus	&numbers_rus
-&symbols_rus	&mo L_RUSSIAN_MIRROR	&colemak_shift_rus
+&symbols_rus	&mo L_RUSSIAN_MIRROR	&mo L_RUSSIAN_SHIFT
 &kp Y	&td_40	&td_41	&td_42	&td_43
 &td_44	&td_45	&td_46	&td_47	&td_48
 &td_49	&td_50	&td_51	&td_52	&td_53
@@ -4408,7 +4408,7 @@
 &td_59	&td_60	&td_61	&td_62	&td_63
 &td_64	&td_65	&td_66	&td_67	&kp Z
 &numbers_rus	&arrowsr_rus	&windows_rus
-&colemak_shift_rus	&mo L_RUSSIAN_MIRROR	&symbols_rus
+&mo L_RUSSIAN_SHIFT	&mo L_RUSSIAN_MIRROR	&symbols_rus
 &td_68	&td_69	&td_70	&td_71	&kp Y
 &td_72	&td_73	&td_74	&td_75	&td_76
 &td_77	&td_78	&td_79	&td_80	&td_81
@@ -4425,7 +4425,7 @@
 &kp LS(A)	&kp LS(S)	&kp LS(D)	&kp LS(F)	&kp LS(G)
 &kp LS(Z)	&kp LS(X)	&kp LS(C)	&kp LS(V)	&kp LS(B)
 &windows_rus	&arrowsr_rus	&numbers_rus
-&symbols_rus	&mo L_RUSSIAN_MIRROR	&colemak_shift_rus
+&symbols_rus	&mo L_RUSSIAN_MIRROR	&mo L_RUSSIAN_SHIFT
 &kp LS(Y)	&kp LS(U)	&kp LS(I)	&kp LS(O)	&kp LS(P)
 &kp LS(H)	&kp LS(J)	&kp LS(K)	&kp LS(L)	&kp LS(SEMICOLON)
 &kp LS(N)	&kp LS(M)	&kp LS(COMMA)	&kp LS(PERIOD)	&kp LS(SINGLE_QUOTE)

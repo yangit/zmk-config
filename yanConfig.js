@@ -237,7 +237,7 @@ ZMK_MACRO(disable_rus,
                 ['Z', 'X', 'C', 'V', 'B'],
 
                 ['&windows_rus', '&arrowsr_rus', '&numbers_rus'],
-                ['&symbols_rus', '&mo russian_mirror', '&colemak_shift_rus'],
+                ['&symbols_rus', '&mo russian_mirror', '&mo russian_shift'],
 
                 ['Y', 'U', 'I', 'O', 'P'],
                 ['H', 'J', 'K', 'L', 'SEMICOLON'],
