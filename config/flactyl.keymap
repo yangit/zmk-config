@@ -1202,7 +1202,7 @@
             label = "td_54";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_54_first 0 T>, <&td_54_repeat>;
+            bindings = <&td_54_first 0 U>, <&td_54_repeat>;
         };
         td_54_first: td_54_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1219,7 +1219,7 @@
             label = "td_55";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_55_first 0 R>, <&td_55_second 0 0>;
+            bindings = <&td_55_first 0 I>, <&td_55_repeat>;
         };
         td_55_first: td_55_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1231,22 +1231,12 @@
             global-quick-tap;
             bindings = <&td_55_hold_first>, <&kp>;
         };
-        td_55_second: td_55_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_55_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_55_hold_second>, <&td_55_repeat>;
-        };
         td_56: td_56 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_56";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_56_first 0 E>, <&td_56_second 0 0>;
+            bindings = <&td_56_first 0 O>, <&td_56_repeat>;
         };
         td_56_first: td_56_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1258,22 +1248,12 @@
             global-quick-tap;
             bindings = <&td_56_hold_first>, <&kp>;
         };
-        td_56_second: td_56_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_56_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_56_hold_second>, <&td_56_repeat>;
-        };
         td_57: td_57 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_57";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_57_first 0 W>, <&td_57_second 0 0>;
+            bindings = <&td_57_first 0 P>, <&td_57_second 0 0>;
         };
         td_57_first: td_57_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1300,7 +1280,7 @@
             label = "td_58";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_58_first 0 Q>, <&td_58_second 0 0>;
+            bindings = <&td_58_first 0 H>, <&td_58_repeat>;
         };
         td_58_first: td_58_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1312,22 +1292,12 @@
             global-quick-tap;
             bindings = <&td_58_hold_first>, <&kp>;
         };
-        td_58_second: td_58_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_58_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_58_hold_second>, <&td_58_repeat>;
-        };
         td_59: td_59 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_59";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_59_first 0 G>, <&td_59_second 0 0>;
+            bindings = <&td_59_first 0 J>, <&td_59_repeat>;
         };
         td_59_first: td_59_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1339,22 +1309,12 @@
             global-quick-tap;
             bindings = <&td_59_hold_first>, <&kp>;
         };
-        td_59_second: td_59_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_59_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_59_hold_second>, <&td_59_repeat>;
-        };
         td_60: td_60 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_60";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_60_first 0 F>, <&td_60_second 0 0>;
+            bindings = <&td_60_first 0 K>, <&td_60_repeat>;
         };
         td_60_first: td_60_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1366,22 +1326,12 @@
             global-quick-tap;
             bindings = <&td_60_hold_first>, <&kp>;
         };
-        td_60_second: td_60_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_60_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_60_hold_second>, <&td_60_repeat>;
-        };
         td_61: td_61 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_61";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_61_first 0 D>, <&td_61_repeat>;
+            bindings = <&td_61_first 0 L>, <&td_61_second 0 0>;
         };
         td_61_first: td_61_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1393,12 +1343,22 @@
             global-quick-tap;
             bindings = <&td_61_hold_first>, <&kp>;
         };
+        td_61_second: td_61_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_61_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_61_hold_second>, <&td_61_repeat>;
+        };
         td_62: td_62 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_62";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_62_first 0 S>, <&td_62_repeat>;
+            bindings = <&td_62_first 0 SEMICOLON>, <&td_62_repeat>;
         };
         td_62_first: td_62_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1415,7 +1375,7 @@
             label = "td_63";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_63_first 0 A>, <&td_63_repeat>;
+            bindings = <&td_63_first 0 N>, <&td_63_repeat>;
         };
         td_63_first: td_63_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1432,7 +1392,7 @@
             label = "td_64";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_64_first 0 B>, <&td_64_second 0 0>;
+            bindings = <&td_64_first 0 M>, <&td_64_repeat>;
         };
         td_64_first: td_64_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1444,22 +1404,12 @@
             global-quick-tap;
             bindings = <&td_64_hold_first>, <&kp>;
         };
-        td_64_second: td_64_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_64_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_64_hold_second>, <&td_64_repeat>;
-        };
         td_65: td_65 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_65";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_65_first 0 V>, <&td_65_second 0 0>;
+            bindings = <&td_65_first 0 COMMA>, <&td_65_repeat>;
         };
         td_65_first: td_65_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1471,22 +1421,12 @@
             global-quick-tap;
             bindings = <&td_65_hold_first>, <&kp>;
         };
-        td_65_second: td_65_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_65_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_65_hold_second>, <&td_65_repeat>;
-        };
         td_66: td_66 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_66";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_66_first 0 C>, <&td_66_repeat>;
+            bindings = <&td_66_first 0 PERIOD>, <&td_66_repeat>;
         };
         td_66_first: td_66_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1503,7 +1443,7 @@
             label = "td_67";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_67_first 0 X>, <&td_67_repeat>;
+            bindings = <&td_67_first 0 SINGLE_QUOTE>, <&td_67_repeat>;
         };
         td_67_first: td_67_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1520,7 +1460,7 @@
             label = "td_68";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_68_first 0 P>, <&td_68_second 0 0>;
+            bindings = <&td_68_first 0 Q>, <&td_68_second 0 0>;
         };
         td_68_first: td_68_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1547,7 +1487,7 @@
             label = "td_69";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_69_first 0 O>, <&td_69_repeat>;
+            bindings = <&td_69_first 0 W>, <&td_69_second 0 0>;
         };
         td_69_first: td_69_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1559,12 +1499,22 @@
             global-quick-tap;
             bindings = <&td_69_hold_first>, <&kp>;
         };
+        td_69_second: td_69_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_69_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_69_hold_second>, <&td_69_repeat>;
+        };
         td_70: td_70 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_70";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_70_first 0 I>, <&td_70_repeat>;
+            bindings = <&td_70_first 0 E>, <&td_70_second 0 0>;
         };
         td_70_first: td_70_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1576,12 +1526,22 @@
             global-quick-tap;
             bindings = <&td_70_hold_first>, <&kp>;
         };
+        td_70_second: td_70_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_70_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_70_hold_second>, <&td_70_repeat>;
+        };
         td_71: td_71 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_71";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_71_first 0 U>, <&td_71_repeat>;
+            bindings = <&td_71_first 0 R>, <&td_71_second 0 0>;
         };
         td_71_first: td_71_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1593,12 +1553,22 @@
             global-quick-tap;
             bindings = <&td_71_hold_first>, <&kp>;
         };
+        td_71_second: td_71_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_71_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_71_hold_second>, <&td_71_repeat>;
+        };
         td_72: td_72 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_72";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_72_first 0 SEMICOLON>, <&td_72_repeat>;
+            bindings = <&td_72_first 0 T>, <&td_72_repeat>;
         };
         td_72_first: td_72_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1615,7 +1585,7 @@
             label = "td_73";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_73_first 0 L>, <&td_73_second 0 0>;
+            bindings = <&td_73_first 0 A>, <&td_73_repeat>;
         };
         td_73_first: td_73_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1627,22 +1597,12 @@
             global-quick-tap;
             bindings = <&td_73_hold_first>, <&kp>;
         };
-        td_73_second: td_73_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_73_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_73_hold_second>, <&td_73_repeat>;
-        };
         td_74: td_74 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_74";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_74_first 0 K>, <&td_74_repeat>;
+            bindings = <&td_74_first 0 S>, <&td_74_repeat>;
         };
         td_74_first: td_74_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1659,7 +1619,7 @@
             label = "td_75";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_75_first 0 J>, <&td_75_repeat>;
+            bindings = <&td_75_first 0 D>, <&td_75_repeat>;
         };
         td_75_first: td_75_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1676,7 +1636,7 @@
             label = "td_76";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_76_first 0 H>, <&td_76_repeat>;
+            bindings = <&td_76_first 0 F>, <&td_76_second 0 0>;
         };
         td_76_first: td_76_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1688,12 +1648,22 @@
             global-quick-tap;
             bindings = <&td_76_hold_first>, <&kp>;
         };
+        td_76_second: td_76_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_76_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_76_hold_second>, <&td_76_repeat>;
+        };
         td_77: td_77 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_77";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_77_first 0 SINGLE_QUOTE>, <&td_77_repeat>;
+            bindings = <&td_77_first 0 G>, <&td_77_second 0 0>;
         };
         td_77_first: td_77_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1705,12 +1675,22 @@
             global-quick-tap;
             bindings = <&td_77_hold_first>, <&kp>;
         };
+        td_77_second: td_77_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_77_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_77_hold_second>, <&td_77_repeat>;
+        };
         td_78: td_78 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_78";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_78_first 0 PERIOD>, <&td_78_repeat>;
+            bindings = <&td_78_first 0 X>, <&td_78_repeat>;
         };
         td_78_first: td_78_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1727,7 +1707,7 @@
             label = "td_79";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_79_first 0 COMMA>, <&td_79_repeat>;
+            bindings = <&td_79_first 0 C>, <&td_79_repeat>;
         };
         td_79_first: td_79_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1744,7 +1724,7 @@
             label = "td_80";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_80_first 0 M>, <&td_80_repeat>;
+            bindings = <&td_80_first 0 V>, <&td_80_second 0 0>;
         };
         td_80_first: td_80_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1756,12 +1736,22 @@
             global-quick-tap;
             bindings = <&td_80_hold_first>, <&kp>;
         };
+        td_80_second: td_80_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_80_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_80_hold_second>, <&td_80_repeat>;
+        };
         td_81: td_81 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_81";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_81_first 0 N>, <&td_81_repeat>;
+            bindings = <&td_81_first 0 B>, <&td_81_second 0 0>;
         };
         td_81_first: td_81_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1773,12 +1763,22 @@
             global-quick-tap;
             bindings = <&td_81_hold_first>, <&kp>;
         };
+        td_81_second: td_81_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_81_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_81_hold_second>, <&td_81_repeat>;
+        };
         td_82: td_82 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_82";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_82_first 0 P>, <&td_82_second 0 0>;
+            bindings = <&td_82_first 0 L>, <&td_82_repeat>;
         };
         td_82_first: td_82_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1790,22 +1790,12 @@
             global-quick-tap;
             bindings = <&td_82_hold_first>, <&kp>;
         };
-        td_82_second: td_82_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_82_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_82_hold_second>, <&td_82_repeat>;
-        };
         td_83: td_83 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_83";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_83_first 0 F>, <&td_83_second 0 0>;
+            bindings = <&td_83_first 0 U>, <&td_83_repeat>;
         };
         td_83_first: td_83_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1817,22 +1807,12 @@
             global-quick-tap;
             bindings = <&td_83_hold_first>, <&kp>;
         };
-        td_83_second: td_83_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_83_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_83_hold_second>, <&td_83_repeat>;
-        };
         td_84: td_84 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_84";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_84_first 0 W>, <&td_84_second 0 0>;
+            bindings = <&td_84_first 0 Y>, <&td_84_repeat>;
         };
         td_84_first: td_84_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1844,22 +1824,12 @@
             global-quick-tap;
             bindings = <&td_84_hold_first>, <&kp>;
         };
-        td_84_second: td_84_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_84_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_84_hold_second>, <&td_84_repeat>;
-        };
         td_85: td_85 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_85";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_85_first 0 Q>, <&td_85_second 0 0>;
+            bindings = <&td_85_first 0 N1>, <&td_85_second 0 0>;
         };
         td_85_first: td_85_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1886,7 +1856,7 @@
             label = "td_86";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_86_first 0 G>, <&td_86_second 0 0>;
+            bindings = <&td_86_first 0 M>, <&td_86_repeat>;
         };
         td_86_first: td_86_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1898,22 +1868,12 @@
             global-quick-tap;
             bindings = <&td_86_hold_first>, <&kp>;
         };
-        td_86_second: td_86_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_86_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_86_hold_second>, <&td_86_repeat>;
-        };
         td_87: td_87 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_87";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_87_first 0 T>, <&td_87_second 0 0>;
+            bindings = <&td_87_first 0 N>, <&td_87_repeat>;
         };
         td_87_first: td_87_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1925,22 +1885,12 @@
             global-quick-tap;
             bindings = <&td_87_hold_first>, <&kp>;
         };
-        td_87_second: td_87_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_87_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_87_hold_second>, <&td_87_repeat>;
-        };
         td_88: td_88 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_88";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_88_first 0 S>, <&td_88_repeat>;
+            bindings = <&td_88_first 0 E>, <&td_88_repeat>;
         };
         td_88_first: td_88_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1957,7 +1907,7 @@
             label = "td_89";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_89_first 0 R>, <&td_89_repeat>;
+            bindings = <&td_89_first 0 I>, <&td_89_second 0 0>;
         };
         td_89_first: td_89_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1969,12 +1919,22 @@
             global-quick-tap;
             bindings = <&td_89_hold_first>, <&kp>;
         };
+        td_89_second: td_89_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_89_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_89_hold_second>, <&td_89_repeat>;
+        };
         td_90: td_90 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_90";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_90_first 0 A>, <&td_90_repeat>;
+            bindings = <&td_90_first 0 O>, <&td_90_repeat>;
         };
         td_90_first: td_90_first {
             compatible = "zmk,behavior-hold-tap";
@@ -1991,7 +1951,7 @@
             label = "td_91";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_91_first 0 B>, <&td_91_second 0 0>;
+            bindings = <&td_91_first 0 J>, <&td_91_repeat>;
         };
         td_91_first: td_91_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2003,22 +1963,12 @@
             global-quick-tap;
             bindings = <&td_91_hold_first>, <&kp>;
         };
-        td_91_second: td_91_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_91_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_91_hold_second>, <&td_91_repeat>;
-        };
         td_92: td_92 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_92";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_92_first 0 D>, <&td_92_second 0 0>;
+            bindings = <&td_92_first 0 H>, <&td_92_repeat>;
         };
         td_92_first: td_92_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2030,22 +1980,12 @@
             global-quick-tap;
             bindings = <&td_92_hold_first>, <&kp>;
         };
-        td_92_second: td_92_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_92_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_92_hold_second>, <&td_92_repeat>;
-        };
         td_93: td_93 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_93";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_93_first 0 C>, <&td_93_repeat>;
+            bindings = <&td_93_first 0 V>, <&td_93_repeat>;
         };
         td_93_first: td_93_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2062,7 +2002,7 @@
             label = "td_94";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_94_first 0 X>, <&td_94_repeat>;
+            bindings = <&td_94_first 0 K>, <&td_94_repeat>;
         };
         td_94_first: td_94_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2079,7 +2019,7 @@
             label = "td_95";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_95_first 0 N1>, <&td_95_second 0 0>;
+            bindings = <&td_95_first 0 Q>, <&td_95_second 0 0>;
         };
         td_95_first: td_95_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2106,7 +2046,7 @@
             label = "td_96";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_96_first 0 Y>, <&td_96_repeat>;
+            bindings = <&td_96_first 0 W>, <&td_96_second 0 0>;
         };
         td_96_first: td_96_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2118,12 +2058,22 @@
             global-quick-tap;
             bindings = <&td_96_hold_first>, <&kp>;
         };
+        td_96_second: td_96_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_96_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_96_hold_second>, <&td_96_repeat>;
+        };
         td_97: td_97 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_97";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_97_first 0 U>, <&td_97_repeat>;
+            bindings = <&td_97_first 0 F>, <&td_97_second 0 0>;
         };
         td_97_first: td_97_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2135,12 +2085,22 @@
             global-quick-tap;
             bindings = <&td_97_hold_first>, <&kp>;
         };
+        td_97_second: td_97_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_97_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_97_hold_second>, <&td_97_repeat>;
+        };
         td_98: td_98 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_98";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_98_first 0 L>, <&td_98_repeat>;
+            bindings = <&td_98_first 0 P>, <&td_98_second 0 0>;
         };
         td_98_first: td_98_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2152,12 +2112,22 @@
             global-quick-tap;
             bindings = <&td_98_hold_first>, <&kp>;
         };
+        td_98_second: td_98_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_98_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_98_hold_second>, <&td_98_repeat>;
+        };
         td_99: td_99 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_99";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_99_first 0 O>, <&td_99_repeat>;
+            bindings = <&td_99_first 0 A>, <&td_99_repeat>;
         };
         td_99_first: td_99_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2174,7 +2144,7 @@
             label = "td_100";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_100_first 0 I>, <&td_100_second 0 0>;
+            bindings = <&td_100_first 0 R>, <&td_100_repeat>;
         };
         td_100_first: td_100_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2186,22 +2156,12 @@
             global-quick-tap;
             bindings = <&td_100_hold_first>, <&kp>;
         };
-        td_100_second: td_100_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_100_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_100_hold_second>, <&td_100_repeat>;
-        };
         td_101: td_101 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_101";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_101_first 0 E>, <&td_101_repeat>;
+            bindings = <&td_101_first 0 S>, <&td_101_repeat>;
         };
         td_101_first: td_101_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2218,7 +2178,7 @@
             label = "td_102";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_102_first 0 N>, <&td_102_repeat>;
+            bindings = <&td_102_first 0 T>, <&td_102_second 0 0>;
         };
         td_102_first: td_102_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2230,12 +2190,22 @@
             global-quick-tap;
             bindings = <&td_102_hold_first>, <&kp>;
         };
+        td_102_second: td_102_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_102_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_102_hold_second>, <&td_102_repeat>;
+        };
         td_103: td_103 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_103";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_103_first 0 M>, <&td_103_repeat>;
+            bindings = <&td_103_first 0 G>, <&td_103_second 0 0>;
         };
         td_103_first: td_103_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2247,12 +2217,22 @@
             global-quick-tap;
             bindings = <&td_103_hold_first>, <&kp>;
         };
+        td_103_second: td_103_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_103_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_103_hold_second>, <&td_103_repeat>;
+        };
         td_104: td_104 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_104";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_104_first 0 K>, <&td_104_repeat>;
+            bindings = <&td_104_first 0 X>, <&td_104_repeat>;
         };
         td_104_first: td_104_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2269,7 +2249,7 @@
             label = "td_105";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_105_first 0 V>, <&td_105_repeat>;
+            bindings = <&td_105_first 0 C>, <&td_105_repeat>;
         };
         td_105_first: td_105_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2286,7 +2266,7 @@
             label = "td_106";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_106_first 0 H>, <&td_106_repeat>;
+            bindings = <&td_106_first 0 D>, <&td_106_second 0 0>;
         };
         td_106_first: td_106_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2298,12 +2278,22 @@
             global-quick-tap;
             bindings = <&td_106_hold_first>, <&kp>;
         };
+        td_106_second: td_106_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_106_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_106_hold_second>, <&td_106_repeat>;
+        };
         td_107: td_107 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_107";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_107_first 0 J>, <&td_107_repeat>;
+            bindings = <&td_107_first 0 B>, <&td_107_second 0 0>;
         };
         td_107_first: td_107_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2314,6 +2304,16 @@
             quick-tap-ms = <150>;
             global-quick-tap;
             bindings = <&td_107_hold_first>, <&kp>;
+        };
+        td_107_second: td_107_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_107_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_107_hold_second>, <&td_107_repeat>;
         };
         td_108: td_108 {
             compatible = "zmk,behavior-tap-dance";
@@ -3464,7 +3464,7 @@
         )
         ZMK_MACRO(td_54_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp ASTERISK>;
+            bindings = <&macro_tap &kp LG(L)>;
         )
         ZMK_MACRO(td_54_hold_second,
             wait-ms = <0>;
@@ -3472,95 +3472,95 @@
         )
         ZMK_MACRO(td_54_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp T &kp T>;
+            bindings = <&macro_tap &kp U &kp U>;
         )
         ZMK_MACRO(td_55_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(P)>;
+            bindings = <&macro_tap &kp LG(U)>;
         )
         ZMK_MACRO(td_55_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LS(LG(P))>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_55_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp R &kp R>;
+            bindings = <&macro_tap &kp I &kp I>;
         )
         ZMK_MACRO(td_56_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(F)>;
+            bindings = <&macro_tap &kp LG(Y)>;
         )
         ZMK_MACRO(td_56_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(F))>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_56_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp E &kp E>;
+            bindings = <&macro_tap &kp O &kp O>;
         )
         ZMK_MACRO(td_57_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(W)>;
+            bindings = <&macro_tap &kp N2>;
         )
         ZMK_MACRO(td_57_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(Q)>;
+            bindings = <&macro_tap &kp N3>;
         )
         ZMK_MACRO(td_57_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp W &kp W>;
+            bindings = <&macro_tap &kp P &kp P>;
         )
         ZMK_MACRO(td_58_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(SLASH)>;
+            bindings = <&macro_tap &kp LG(M)>;
         )
         ZMK_MACRO(td_58_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(Q))>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_58_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp Q &kp Q>;
+            bindings = <&macro_tap &kp H &kp H>;
         )
         ZMK_MACRO(td_59_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(G)>;
+            bindings = <&macro_tap &kp LG(N)>;
         )
         ZMK_MACRO(td_59_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(D)>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_59_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp G &kp G>;
+            bindings = <&macro_tap &kp J &kp J>;
         )
         ZMK_MACRO(td_60_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(T)>;
+            bindings = <&macro_tap &kp LG(E)>;
         )
         ZMK_MACRO(td_60_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(N)>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_60_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp F &kp F>;
+            bindings = <&macro_tap &kp K &kp K>;
         )
         ZMK_MACRO(td_61_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(S)>;
+            bindings = <&macro_tap &kp LG(I)>;
         )
         ZMK_MACRO(td_61_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LG(LA(I))>;
         )
         ZMK_MACRO(td_61_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp D &kp D>;
+            bindings = <&macro_tap &kp L &kp L>;
         )
         ZMK_MACRO(td_62_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(R)>;
+            bindings = <&macro_tap &kp LG(O)>;
         )
         ZMK_MACRO(td_62_hold_second,
             wait-ms = <0>;
@@ -3568,11 +3568,11 @@
         )
         ZMK_MACRO(td_62_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp S &kp S>;
+            bindings = <&macro_tap &kp SEMICOLON &kp SEMICOLON>;
         )
         ZMK_MACRO(td_63_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(A)>;
+            bindings = <&macro_tap &kp LG(J)>;
         )
         ZMK_MACRO(td_63_hold_second,
             wait-ms = <0>;
@@ -3580,19 +3580,19 @@
         )
         ZMK_MACRO(td_63_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp A &kp A>;
+            bindings = <&macro_tap &kp N &kp N>;
         )
         ZMK_MACRO(td_64_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(B)>;
+            bindings = <&macro_tap &kp RIGHT_BRACKET>;
         )
         ZMK_MACRO(td_64_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(LS(B))>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_64_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp B &kp B>;
+            bindings = <&macro_tap &kp M &kp M>;
         )
         ZMK_MACRO(td_65_hold_first,
             wait-ms = <0>;
@@ -3600,15 +3600,15 @@
         )
         ZMK_MACRO(td_65_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(LS(V))>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_65_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp V &kp V>;
+            bindings = <&macro_tap &kp COMMA &kp COMMA>;
         )
         ZMK_MACRO(td_66_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(C)>;
+            bindings = <&macro_tap &kp LG(K)>;
         )
         ZMK_MACRO(td_66_hold_second,
             wait-ms = <0>;
@@ -3616,11 +3616,11 @@
         )
         ZMK_MACRO(td_66_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp C &kp C>;
+            bindings = <&macro_tap &kp PERIOD &kp PERIOD>;
         )
         ZMK_MACRO(td_67_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(X)>;
+            bindings = <&macro_tap &kp LEFT_BRACKET>;
         )
         ZMK_MACRO(td_67_hold_second,
             wait-ms = <0>;
@@ -3628,59 +3628,59 @@
         )
         ZMK_MACRO(td_67_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X &kp X>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp SINGLE_QUOTE>;
         )
         ZMK_MACRO(td_68_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp N2>;
+            bindings = <&macro_tap &kp LG(SLASH)>;
         )
         ZMK_MACRO(td_68_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp N3>;
+            bindings = <&macro_tap &kp LA(LG(Q))>;
         )
         ZMK_MACRO(td_68_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp P &kp P>;
+            bindings = <&macro_tap &kp Q &kp Q>;
         )
         ZMK_MACRO(td_69_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(Y)>;
+            bindings = <&macro_tap &kp LG(W)>;
         )
         ZMK_MACRO(td_69_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LG(Q)>;
         )
         ZMK_MACRO(td_69_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp O &kp O>;
+            bindings = <&macro_tap &kp W &kp W>;
         )
         ZMK_MACRO(td_70_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(U)>;
+            bindings = <&macro_tap &kp LG(F)>;
         )
         ZMK_MACRO(td_70_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LA(LG(F))>;
         )
         ZMK_MACRO(td_70_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp I &kp I>;
+            bindings = <&macro_tap &kp E &kp E>;
         )
         ZMK_MACRO(td_71_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(L)>;
+            bindings = <&macro_tap &kp LG(P)>;
         )
         ZMK_MACRO(td_71_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LS(LG(P))>;
         )
         ZMK_MACRO(td_71_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp U &kp U>;
+            bindings = <&macro_tap &kp R &kp R>;
         )
         ZMK_MACRO(td_72_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(O)>;
+            bindings = <&macro_tap &kp ASTERISK>;
         )
         ZMK_MACRO(td_72_hold_second,
             wait-ms = <0>;
@@ -3688,23 +3688,23 @@
         )
         ZMK_MACRO(td_72_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp SEMICOLON &kp SEMICOLON>;
+            bindings = <&macro_tap &kp T &kp T>;
         )
         ZMK_MACRO(td_73_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(I)>;
+            bindings = <&macro_tap &kp LG(A)>;
         )
         ZMK_MACRO(td_73_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(LA(I))>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_73_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp L &kp L>;
+            bindings = <&macro_tap &kp A &kp A>;
         )
         ZMK_MACRO(td_74_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(E)>;
+            bindings = <&macro_tap &kp LG(R)>;
         )
         ZMK_MACRO(td_74_hold_second,
             wait-ms = <0>;
@@ -3712,11 +3712,11 @@
         )
         ZMK_MACRO(td_74_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp K &kp K>;
+            bindings = <&macro_tap &kp S &kp S>;
         )
         ZMK_MACRO(td_75_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(N)>;
+            bindings = <&macro_tap &kp LG(S)>;
         )
         ZMK_MACRO(td_75_hold_second,
             wait-ms = <0>;
@@ -3724,35 +3724,35 @@
         )
         ZMK_MACRO(td_75_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp J &kp J>;
+            bindings = <&macro_tap &kp D &kp D>;
         )
         ZMK_MACRO(td_76_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(M)>;
+            bindings = <&macro_tap &kp LG(T)>;
         )
         ZMK_MACRO(td_76_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LG(N)>;
         )
         ZMK_MACRO(td_76_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp H &kp H>;
+            bindings = <&macro_tap &kp F &kp F>;
         )
         ZMK_MACRO(td_77_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LEFT_BRACKET>;
+            bindings = <&macro_tap &kp LG(G)>;
         )
         ZMK_MACRO(td_77_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LG(D)>;
         )
         ZMK_MACRO(td_77_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp SINGLE_QUOTE &kp SINGLE_QUOTE>;
+            bindings = <&macro_tap &kp G &kp G>;
         )
         ZMK_MACRO(td_78_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(K)>;
+            bindings = <&macro_tap &kp LG(X)>;
         )
         ZMK_MACRO(td_78_hold_second,
             wait-ms = <0>;
@@ -3760,11 +3760,11 @@
         )
         ZMK_MACRO(td_78_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp PERIOD &kp PERIOD>;
+            bindings = <&macro_tap &kp X &kp X>;
         )
         ZMK_MACRO(td_79_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(V)>;
+            bindings = <&macro_tap &kp LG(C)>;
         )
         ZMK_MACRO(td_79_hold_second,
             wait-ms = <0>;
@@ -3772,107 +3772,107 @@
         )
         ZMK_MACRO(td_79_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp COMMA &kp COMMA>;
+            bindings = <&macro_tap &kp C &kp C>;
         )
         ZMK_MACRO(td_80_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp RIGHT_BRACKET>;
+            bindings = <&macro_tap &kp LG(V)>;
         )
         ZMK_MACRO(td_80_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LG(LS(V))>;
         )
         ZMK_MACRO(td_80_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp M &kp M>;
+            bindings = <&macro_tap &kp V &kp V>;
         )
         ZMK_MACRO(td_81_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(J)>;
+            bindings = <&macro_tap &kp LG(B)>;
         )
         ZMK_MACRO(td_81_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LG(LS(B))>;
         )
         ZMK_MACRO(td_81_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp N &kp N>;
+            bindings = <&macro_tap &kp B &kp B>;
         )
         ZMK_MACRO(td_82_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(P)>;
+            bindings = <&macro_tap &kp LG(L)>;
         )
         ZMK_MACRO(td_82_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LS(LG(P))>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_82_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp P &kp P>;
+            bindings = <&macro_tap &kp L &kp L>;
         )
         ZMK_MACRO(td_83_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(F)>;
+            bindings = <&macro_tap &kp LG(U)>;
         )
         ZMK_MACRO(td_83_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(F))>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_83_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp F &kp F>;
+            bindings = <&macro_tap &kp U &kp U>;
         )
         ZMK_MACRO(td_84_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(W)>;
+            bindings = <&macro_tap &kp LG(Y)>;
         )
         ZMK_MACRO(td_84_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(Q)>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_84_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp W &kp W>;
+            bindings = <&macro_tap &kp Y &kp Y>;
         )
         ZMK_MACRO(td_85_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(SLASH)>;
+            bindings = <&macro_tap &kp N2>;
         )
         ZMK_MACRO(td_85_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(Q))>;
+            bindings = <&macro_tap &kp N3>;
         )
         ZMK_MACRO(td_85_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp Q &kp Q>;
+            bindings = <&macro_tap &kp N1 &kp N1>;
         )
         ZMK_MACRO(td_86_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(G)>;
+            bindings = <&macro_tap &kp LG(M)>;
         )
         ZMK_MACRO(td_86_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(D)>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_86_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp G &kp G>;
+            bindings = <&macro_tap &kp M &kp M>;
         )
         ZMK_MACRO(td_87_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(T)>;
+            bindings = <&macro_tap &kp LG(N)>;
         )
         ZMK_MACRO(td_87_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(N)>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_87_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp T &kp T>;
+            bindings = <&macro_tap &kp N &kp N>;
         )
         ZMK_MACRO(td_88_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(S)>;
+            bindings = <&macro_tap &kp LG(E)>;
         )
         ZMK_MACRO(td_88_hold_second,
             wait-ms = <0>;
@@ -3880,23 +3880,23 @@
         )
         ZMK_MACRO(td_88_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp S &kp S>;
+            bindings = <&macro_tap &kp E &kp E>;
         )
         ZMK_MACRO(td_89_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(R)>;
+            bindings = <&macro_tap &kp LG(I)>;
         )
         ZMK_MACRO(td_89_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LG(LA(I))>;
         )
         ZMK_MACRO(td_89_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp R &kp R>;
+            bindings = <&macro_tap &kp I &kp I>;
         )
         ZMK_MACRO(td_90_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(A)>;
+            bindings = <&macro_tap &kp LG(O)>;
         )
         ZMK_MACRO(td_90_hold_second,
             wait-ms = <0>;
@@ -3904,35 +3904,35 @@
         )
         ZMK_MACRO(td_90_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp A &kp A>;
+            bindings = <&macro_tap &kp O &kp O>;
         )
         ZMK_MACRO(td_91_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(B)>;
+            bindings = <&macro_tap &kp LG(J)>;
         )
         ZMK_MACRO(td_91_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(LS(B))>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_91_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp B &kp B>;
+            bindings = <&macro_tap &kp J &kp J>;
         )
         ZMK_MACRO(td_92_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(V)>;
+            bindings = <&macro_tap &kp LG(H)>;
         )
         ZMK_MACRO(td_92_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(LS(V))>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_92_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp D &kp D>;
+            bindings = <&macro_tap &kp H &kp H>;
         )
         ZMK_MACRO(td_93_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(C)>;
+            bindings = <&macro_tap &kp LG(V)>;
         )
         ZMK_MACRO(td_93_hold_second,
             wait-ms = <0>;
@@ -3940,11 +3940,11 @@
         )
         ZMK_MACRO(td_93_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp C &kp C>;
+            bindings = <&macro_tap &kp V &kp V>;
         )
         ZMK_MACRO(td_94_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(X)>;
+            bindings = <&macro_tap &kp LG(K)>;
         )
         ZMK_MACRO(td_94_hold_second,
             wait-ms = <0>;
@@ -3952,59 +3952,59 @@
         )
         ZMK_MACRO(td_94_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X &kp X>;
+            bindings = <&macro_tap &kp K &kp K>;
         )
         ZMK_MACRO(td_95_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp N2>;
+            bindings = <&macro_tap &kp LG(SLASH)>;
         )
         ZMK_MACRO(td_95_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp N3>;
+            bindings = <&macro_tap &kp LA(LG(Q))>;
         )
         ZMK_MACRO(td_95_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp N1 &kp N1>;
+            bindings = <&macro_tap &kp Q &kp Q>;
         )
         ZMK_MACRO(td_96_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(Y)>;
+            bindings = <&macro_tap &kp LG(W)>;
         )
         ZMK_MACRO(td_96_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LG(Q)>;
         )
         ZMK_MACRO(td_96_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp Y &kp Y>;
+            bindings = <&macro_tap &kp W &kp W>;
         )
         ZMK_MACRO(td_97_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(U)>;
+            bindings = <&macro_tap &kp LG(F)>;
         )
         ZMK_MACRO(td_97_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LA(LG(F))>;
         )
         ZMK_MACRO(td_97_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp U &kp U>;
+            bindings = <&macro_tap &kp F &kp F>;
         )
         ZMK_MACRO(td_98_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(L)>;
+            bindings = <&macro_tap &kp LG(P)>;
         )
         ZMK_MACRO(td_98_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LS(LG(P))>;
         )
         ZMK_MACRO(td_98_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp L &kp L>;
+            bindings = <&macro_tap &kp P &kp P>;
         )
         ZMK_MACRO(td_99_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(O)>;
+            bindings = <&macro_tap &kp LG(A)>;
         )
         ZMK_MACRO(td_99_hold_second,
             wait-ms = <0>;
@@ -4012,23 +4012,23 @@
         )
         ZMK_MACRO(td_99_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp O &kp O>;
+            bindings = <&macro_tap &kp A &kp A>;
         )
         ZMK_MACRO(td_100_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(I)>;
+            bindings = <&macro_tap &kp LG(R)>;
         )
         ZMK_MACRO(td_100_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(LA(I))>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_100_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp I &kp I>;
+            bindings = <&macro_tap &kp R &kp R>;
         )
         ZMK_MACRO(td_101_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(E)>;
+            bindings = <&macro_tap &kp LG(S)>;
         )
         ZMK_MACRO(td_101_hold_second,
             wait-ms = <0>;
@@ -4036,35 +4036,35 @@
         )
         ZMK_MACRO(td_101_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp E &kp E>;
+            bindings = <&macro_tap &kp S &kp S>;
         )
         ZMK_MACRO(td_102_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(N)>;
+            bindings = <&macro_tap &kp LG(T)>;
         )
         ZMK_MACRO(td_102_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LG(N)>;
         )
         ZMK_MACRO(td_102_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp N &kp N>;
+            bindings = <&macro_tap &kp T &kp T>;
         )
         ZMK_MACRO(td_103_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(M)>;
+            bindings = <&macro_tap &kp LG(G)>;
         )
         ZMK_MACRO(td_103_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LG(D)>;
         )
         ZMK_MACRO(td_103_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp M &kp M>;
+            bindings = <&macro_tap &kp G &kp G>;
         )
         ZMK_MACRO(td_104_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(K)>;
+            bindings = <&macro_tap &kp LG(X)>;
         )
         ZMK_MACRO(td_104_hold_second,
             wait-ms = <0>;
@@ -4072,11 +4072,11 @@
         )
         ZMK_MACRO(td_104_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp K &kp K>;
+            bindings = <&macro_tap &kp X &kp X>;
         )
         ZMK_MACRO(td_105_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(V)>;
+            bindings = <&macro_tap &kp LG(C)>;
         )
         ZMK_MACRO(td_105_hold_second,
             wait-ms = <0>;
@@ -4084,31 +4084,31 @@
         )
         ZMK_MACRO(td_105_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp V &kp V>;
+            bindings = <&macro_tap &kp C &kp C>;
         )
         ZMK_MACRO(td_106_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(H)>;
+            bindings = <&macro_tap &kp LG(V)>;
         )
         ZMK_MACRO(td_106_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LG(LS(V))>;
         )
         ZMK_MACRO(td_106_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp H &kp H>;
+            bindings = <&macro_tap &kp D &kp D>;
         )
         ZMK_MACRO(td_107_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LG(J)>;
+            bindings = <&macro_tap &kp LG(B)>;
         )
         ZMK_MACRO(td_107_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LG(LS(B))>;
         )
         ZMK_MACRO(td_107_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp J &kp J>;
+            bindings = <&macro_tap &kp B &kp B>;
         )
         ZMK_MACRO(td_108_hold_first,
             wait-ms = <0>;
@@ -4404,16 +4404,16 @@
         /* russian_mirror 2 */
         russian_mirror_layer {
             bindings = <
-&td_54	&td_55	&td_56	&td_57	&td_58
-&td_59	&td_60	&td_61	&td_62	&td_63
-&td_64	&td_65	&td_66	&td_67	&kp Z
-&numbers_rus	&arrowsr_rus	&windows_rus
-&mo L_RUSSIAN_SHIFT	&mo L_RUSSIAN_MIRROR	&symbols_rus
-&td_68	&td_69	&td_70	&td_71	&kp Y
-&td_72	&td_73	&td_74	&td_75	&td_76
-&td_77	&td_78	&td_79	&td_80	&td_81
-&mo L_RUSSIAN_SHIFT	&symbols_rus	&trans
+&kp Y	&td_54	&td_55	&td_56	&td_57
+&td_58	&td_59	&td_60	&td_61	&td_62
+&td_63	&td_64	&td_65	&td_66	&td_67
+&trans	&symbols_rus	&mo L_RUSSIAN_SHIFT
 &trans	&numbers_rus	&trans
+&td_68	&td_69	&td_70	&td_71	&td_72
+&td_73	&td_74	&td_75	&td_76	&td_77
+&kp Z	&td_78	&td_79	&td_80	&td_81
+&windows_rus	&arrowsr_rus	&numbers_rus
+&symbols_rus	&mo L_RUSSIAN_MIRROR	&mo L_RUSSIAN_SHIFT
             >;            
         };
     
@@ -4440,14 +4440,14 @@
             bindings = <
 &mo L_CONFIG	&td_82	&td_83	&td_84	&td_85
 &td_86	&td_87	&td_88	&td_89	&td_90
-&td_91	&td_92	&td_93	&td_94	&kp Z
-&mo L_NUMBERS	&mo L_ARROWS	&mo L_WINDOWS
-&mo L_COLEMAK_SHIFT	&mo L_DEFAULT_MIRROR	&mo L_SYMBOLS
+&td_91	&td_92	&td_93	&td_94	&none
+&kp SPACE	&mo L_SYMBOLS	&mo L_COLEMAK_SHIFT
+&none	&mo L_NUMBERS	&none
 &td_95	&td_96	&td_97	&td_98	&mo L_CONFIG
 &td_99	&td_100	&td_101	&td_102	&td_103
-&none	&td_104	&td_105	&td_106	&td_107
-&mo L_COLEMAK_SHIFT	&mo L_SYMBOLS	&kp SPACE
-&none	&mo L_NUMBERS	&none
+&kp Z	&td_104	&td_105	&td_106	&td_107
+&mo L_WINDOWS	&mo L_ARROWS	&mo L_NUMBERS
+&mo L_SYMBOLS	&mo L_DEFAULT_MIRROR	&mo L_COLEMAK_SHIFT
             >;            
         };
     
@@ -4523,14 +4523,14 @@
         /* colemak_shift_mirror 9 */
         colemak_shift_mirror_layer {
             bindings = <
-&none	&kp LS(P)	&kp LS(F)	&kp LS(W)	&kp LS(Q)
-&kp LS(G)	&kp LS(T)	&kp LS(S)	&kp LS(R)	&kp LS(A)
-&kp LS(B)	&kp LS(D)	&kp LS(C)	&kp LS(X)	&kp LS(Z)
+&none	&kp LS(L)	&kp LS(U)	&kp LS(Y)	&none
+&kp LS(M)	&kp LS(N)	&kp LS(E)	&kp LS(I)	&kp LS(O)
+&kp LS(J)	&kp LS(H)	&kp LS(V)	&kp LS(K)	&none
 &trans	&trans	&trans
 &trans	&trans	&trans
-&none	&kp LS(Y)	&kp LS(U)	&kp LS(L)	&none
-&kp LS(O)	&kp LS(I)	&kp LS(E)	&kp LS(N)	&kp LS(M)
-&none	&kp LS(K)	&kp LS(V)	&kp LS(H)	&kp LS(J)
+&kp LS(Q)	&kp LS(W)	&kp LS(F)	&kp LS(P)	&none
+&kp LS(A)	&kp LS(R)	&kp LS(S)	&kp LS(T)	&kp LS(G)
+&kp LS(Z)	&kp LS(X)	&kp LS(C)	&kp LS(D)	&kp LS(B)
 &trans	&trans	&trans
 &trans	&trans	&trans
             >;            
@@ -4574,14 +4574,14 @@
         /* arrows_mirror 12 */
         arrows_mirror_layer {
             bindings = <
-&kp K_VOLUME_UP	&enable_rus	&kp DELETE	&kp SPACE	&none
-&kp K_VOLUME_DOWN	&td_116	&kp BACKSPACE	&kp TAB	&kp ESCAPE
-&td_117	&sk LEFT_COMMAND	&sk LEFT_SHIFT	&sk LEFT_CONTROL	&sk LEFT_ALT
+&none	&kp HOME	&kp UP_ARROW	&kp PAGE_UP	&none
+&none	&kp LEFT_ARROW	&kp DOWN_ARROW	&kp RIGHT_ARROW	&none
+&none	&kp END	&none	&kp PAGE_DOWN	&none
 &trans	&trans	&trans
 &trans	&trans	&trans
-&none	&kp PAGE_UP	&kp UP_ARROW	&kp HOME	&none
-&none	&kp RIGHT_ARROW	&kp DOWN_ARROW	&kp LEFT_ARROW	&none
-&none	&kp PAGE_DOWN	&none	&kp END	&none
+&none	&kp SPACE	&kp DELETE	&enable_rus	&kp K_VOLUME_UP
+&kp ESCAPE	&kp TAB	&kp BACKSPACE	&td_116	&kp K_VOLUME_DOWN
+&sk LEFT_ALT	&sk LEFT_CONTROL	&sk LEFT_SHIFT	&sk LEFT_COMMAND	&td_117
 &trans	&trans	&trans
 &trans	&trans	&trans
             >;            
@@ -4625,14 +4625,14 @@
         /* symbols_mirror 15 */
         symbols_mirror_layer {
             bindings = <
-&kp PLUS	&kp MINUS	&kp RIGHT_PARENTHESIS	&kp LEFT_PARENTHESIS	&kp SLASH
-&kp ASTERISK	&kp RIGHT_BRACE	&kp LEFT_BRACE	&kp RIGHT_BRACKET	&kp LEFT_BRACKET
-&kp AT_SIGN	&kp GREATER_THAN	&kp EQUAL	&kp LESS_THAN	&kp DOLLAR
+&kp EXCLAMATION	&kp QUESTION	&kp COLON	&kp SEMICOLON	&td_120
+&kp TILDE	&kp PERIOD	&kp COMMA	&kp GRAVE	&kp SINGLE_QUOTE
+&td_121	&kp HASH	&kp UNDERSCORE	&kp AMPERSAND	&kp DOUBLE_QUOTES
 &trans	&trans	&trans
 &trans	&trans	&trans
-&td_120	&kp SEMICOLON	&kp COLON	&kp QUESTION	&kp EXCLAMATION
-&kp SINGLE_QUOTE	&kp GRAVE	&kp COMMA	&kp PERIOD	&kp TILDE
-&kp DOUBLE_QUOTES	&kp AMPERSAND	&kp UNDERSCORE	&kp HASH	&td_121
+&kp SLASH	&kp LEFT_PARENTHESIS	&kp RIGHT_PARENTHESIS	&kp MINUS	&kp PLUS
+&kp LEFT_BRACKET	&kp RIGHT_BRACKET	&kp LEFT_BRACE	&kp RIGHT_BRACE	&kp ASTERISK
+&kp DOLLAR	&kp LESS_THAN	&kp EQUAL	&kp GREATER_THAN	&kp AT_SIGN
 &trans	&trans	&trans
 &trans	&trans	&trans
             >;            

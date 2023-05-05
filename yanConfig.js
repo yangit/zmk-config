@@ -127,11 +127,12 @@ Object.values(m).forEach((value) => {
 })
 const reverseLayerFrom = (layer) => (configLocal) => {
     console.log(configLocal);
-    
+
     if (!configLocal.keymap[layer]) {
         throw new Error(`Layer ${layer} is not defined`);
     }
-    return { keys: config.keymap[layer].keys.map((row) => row.slice().reverse()) }
+    const [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10] = configLocal.keymap[layer].keys
+    return { keys: [r6, r7, r8, r9, r10, r1, r2, r3, r4, r5] }
 }
 
 const addModifierToLayer = (layer, modifier) => (configLocal) => {
@@ -445,8 +446,8 @@ ZMK_MACRO(disable_rus,
 // invoke layer config with configLocal
 Object.entries(config.keymap).forEach(([layer, layerConfig]) => {
     if (typeof layerConfig === 'function') {
-        console.log(layer,Object.keys(config.keymap), config.keymap.russian);
-        
+        console.log(layer, Object.keys(config.keymap), config.keymap.russian);
+
         config.keymap[layer] = layerConfig(config);
     }
 });
@@ -500,7 +501,7 @@ const conditionalLayers = {
     symbols_mirror: ['russian_mirror', 'symbols'],
     arrows_mirror: ['russian_mirror', 'arrows'],
     colemak_shift_mirror: ['russian_mirror', 'colemak_shift'],
-    
+
 };
 
 Object.entries(conditionalLayers).forEach(([layer, targets]) => {
