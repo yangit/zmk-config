@@ -140,7 +140,7 @@ const addModifierToLayer = (layer, modifier) => (configLocal) => {
     }
     const keys = configLocal.keymap[layer].keys.map(row => row.map(key => {
         if (key.startsWith('&')) { return key }
-        return `${modifier}(${key})`
+        return `${modifier}(${key.split(',')[0]})`
     }))
     return { keys }
 }
@@ -198,20 +198,6 @@ ZMK_MACRO(shellrepeat,
     bindings = <&macro_tap &kp ${m.appTerminal} &kp UP_ARROW &kp RETURN>;
 )
 `, `
-ZMK_MACRO(ctrl_colemak,
-    wait-ms = <0>;
-    bindings 
-        = <&macro_press &mo ${layerToLayer('colemak')} &kp LEFT_CONTROL>
-        , <&macro_pause_for_release>
-        , <&macro_release &mo ${layerToLayer('colemak')} &kp LEFT_CONTROL>;
-)
-ZMK_MACRO(shift_colemak,
-    wait-ms = <0>;
-    bindings 
-        = <&macro_press &mo ${layerToLayer('colemak')} &kp LEFT_SHIFT>
-        , <&macro_pause_for_release>
-        , <&macro_release &mo ${layerToLayer('colemak')} &kp LEFT_SHIFT>;
-)
 ZMK_MACRO(enable_rus,
     wait-ms = <0>;
     bindings
@@ -559,7 +545,8 @@ const unwrapTapDance = (keyText, location) => {
     if (doubleTap) {
         throw new Error(`double tap is not implemented yet at: ${JSON.stringify(location)}`);
     }
-    const macroIndex = macroCounter++
+    const macroIndex = macroCounter++;
+
     config.behaviors.push(`
 td_${macroIndex}: td_${macroIndex} {
     compatible = "zmk,behavior-tap-dance";
