@@ -131,7 +131,7 @@ const reverseLayerFrom = (layer) => (configLocal) => {
     if (!configLocal.keymap[layer]) {
         throw new Error(`Layer ${layer} is not defined`);
     }
-    const [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10] = configLocal.keymap[layer].keys
+    const [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10] = configLocal.keymap[layer].keys.map((row) => row.slice().reverse())
     return { keys: [r6, r7, r8, r9, r10, r1, r2, r3, r4, r5] }
 }
 
