@@ -232,7 +232,7 @@ ZMK_MACRO(disable_rus,
         'russian': (configLocal) => {
             // console.log('russian init',config.keymap);
             const keysSeed = [
-                ['Q', 'W', 'E', 'R', 'T,SLASH'],
+                ['Q', 'W', 'E', 'R', 'T,ASTERISK'],
                 ['A', 'S', 'D', 'F', 'G'],
                 ['Z', 'X', 'C', 'V', 'B'],
 

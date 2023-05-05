@@ -3176,7 +3176,7 @@
         )
         ZMK_MACRO(td_30_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp SLASH>;
+            bindings = <&macro_tap &kp ASTERISK>;
         )
         ZMK_MACRO(td_30_hold_second,
             wait-ms = <0>;
@@ -3464,7 +3464,7 @@
         )
         ZMK_MACRO(td_54_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp SLASH>;
+            bindings = <&macro_tap &kp ASTERISK>;
         )
         ZMK_MACRO(td_54_hold_second,
             wait-ms = <0>;
