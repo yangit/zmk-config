@@ -516,7 +516,7 @@ const conditionalLayers = {
     colemak_shift_mirror: ['russian_mirror', 'colemak_shift'],
 
 };
-
+const layerOrder = Object.keys(config.keymap);
 Object.entries(conditionalLayers).forEach(([layer, targets]) => {
     if (!config.keymap[layer]) {
         throw new Error(`Layer for conditional layer does not exists: ${layer}`);
@@ -526,6 +526,11 @@ Object.entries(conditionalLayers).forEach(([layer, targets]) => {
             throw new Error(`Target layer for conditional layer does not exists: ${target}`);
         }
     })
+    const layerIndex = layerOrder.indexOf(layer);
+    const targetsIndexes = targets.map((target) => layerOrder.indexOf(target));
+    if (targetsIndexes.find((targetIndex)=>targetIndex>layerIndex)) {
+        throw new Error(`Conditional layer ${layer} should be defined after all targets ${targets}`);
+    }
     config.conditinalLayers.push(`
 compatible = "zmk,conditional-layers";
     ${layer}__${targets.join('__')} {
