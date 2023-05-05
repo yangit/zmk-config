@@ -4407,13 +4407,13 @@
 &td_54	&td_55	&td_56	&td_57	&kp Y
 &td_58	&td_59	&td_60	&td_61	&td_62
 &td_63	&td_64	&td_65	&td_66	&td_67
-&mo L_RUSSIAN_SHIFT	&symbols_rus	&trans
-&trans	&numbers_rus	&trans
+&trans	&trans	&trans
+&trans	&trans	&trans
 &td_68	&td_69	&td_70	&td_71	&td_72
 &td_73	&td_74	&td_75	&td_76	&td_77
 &td_78	&td_79	&td_80	&td_81	&kp Z
-&numbers_rus	&arrowsr_rus	&windows_rus
-&mo L_RUSSIAN_SHIFT	&mo L_RUSSIAN_MIRROR	&symbols_rus
+&trans	&trans	&trans
+&trans	&trans	&trans
             >;            
         };
     
@@ -4441,13 +4441,13 @@
 &td_82	&td_83	&td_84	&td_85	&mo L_CONFIG
 &td_86	&td_87	&td_88	&td_89	&td_90
 &none	&td_91	&td_92	&td_93	&td_94
-&mo L_COLEMAK_SHIFT	&mo L_SYMBOLS	&kp SPACE
-&none	&mo L_NUMBERS	&none
+&trans	&trans	&trans
+&trans	&trans	&trans
 &mo L_CONFIG	&td_95	&td_96	&td_97	&td_98
 &td_99	&td_100	&td_101	&td_102	&td_103
 &td_104	&td_105	&td_106	&td_107	&kp Z
-&mo L_NUMBERS	&mo L_ARROWS	&mo L_WINDOWS
-&mo L_COLEMAK_SHIFT	&mo L_DEFAULT_MIRROR	&mo L_SYMBOLS
+&trans	&trans	&trans
+&trans	&trans	&trans
             >;            
         };
     
