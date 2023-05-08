@@ -60,8 +60,8 @@ mehSeed.forEach((key) => mehArray.push({ key, modifier: 'super', value: `LA(LG(L
 
 const odd = {
     screenshot: 'LG(LS(N4))',
-    fontBigger: 'LG(LS(EQUAL))',
-    fontSmaller: 'LG(LS(MINUS))',
+    fontBigger: 'LG(EQUAL)',
+    fontSmaller: 'LG(MINUS)',
     toggleLanguage: 'LC(EQUAL)',
     historyBack: 'LG(LEFT_BRACKET)',
     historyForward: 'LG(RIGHT_BRACKET)',

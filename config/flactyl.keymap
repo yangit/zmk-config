@@ -4642,7 +4642,7 @@
         /* windows 16 */
         windows_layer {
             bindings = <
-&kp LG(LEFT_BRACKET)	&kp LS(LC(TAB))	&kp LS(LG(GRAVE))	&kp LA(LG(LC(LS(KP_N0))))	&kp LG(LS(EQUAL))
+&kp LG(LEFT_BRACKET)	&kp LS(LC(TAB))	&kp LS(LG(GRAVE))	&kp LA(LG(LC(LS(KP_N0))))	&kp LG(EQUAL)
 &kp LA(LG(LC(LS(KP_N4))))	&kp LA(LG(LC(LS(KP_N5))))	&kp LA(LG(LC(LS(KP_N6))))	&kp LA(LG(LC(LS(KP_N7))))	&td_122
 &kp LG(Z)	&kp LA(LG(LC(LS(KP_EQUAL))))	&td_123	&td_124	&td_125
 &trans	&trans	&trans
@@ -4659,7 +4659,7 @@
         /* windows2 17 */
         windows2_layer {
             bindings = <
-&kp LG(RIGHT_BRACKET)	&kp LC(TAB)	&kp LG(GRAVE)	&kp LA(LG(LC(LS(KP_N1))))	&kp LG(LS(MINUS))
+&kp LG(RIGHT_BRACKET)	&kp LC(TAB)	&kp LG(GRAVE)	&kp LA(LG(LC(LS(KP_N1))))	&kp LG(MINUS)
 &kp LA(LG(LC(LS(F15))))	&td_126	&td_127	&kp LA(LG(LC(LS(N3))))	&kp LA(LG(LC(LS(N1))))
 &kp LG(LS(Z))	&shellrepeat	&awesome	&td_128	&kp LG(LS(N4))
 &trans	&trans	&trans
