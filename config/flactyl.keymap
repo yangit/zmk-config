@@ -49,6 +49,21 @@
                 then-layer = <L_WINDOWS2>;
             };
         compatible = "zmk,conditional-layers";
+            symbols_mirror__default_mirror__symbols {
+                if-layers = <L_DEFAULT_MIRROR L_SYMBOLS>;
+                then-layer = <L_SYMBOLS_MIRROR>;
+            };
+        compatible = "zmk,conditional-layers";
+            arrows_mirror__default_mirror__arrows {
+                if-layers = <L_DEFAULT_MIRROR L_ARROWS>;
+                then-layer = <L_ARROWS_MIRROR>;
+            };
+        compatible = "zmk,conditional-layers";
+            colemak_shift_mirror__default_mirror__colemak_shift {
+                if-layers = <L_DEFAULT_MIRROR L_COLEMAK_SHIFT>;
+                then-layer = <L_COLEMAK_SHIFT_MIRROR>;
+            };
+        compatible = "zmk,conditional-layers";
             symbols_mirror__russian_mirror__symbols {
                 if-layers = <L_RUSSIAN_MIRROR L_SYMBOLS>;
                 then-layer = <L_SYMBOLS_MIRROR>;

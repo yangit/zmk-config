@@ -503,32 +503,34 @@ ZMK_MACRO(arrowsr_rus,
 
 // Conditional layers
 
-const conditionalLayers = {
-    colemak_control: ['arrows', 'numbers'],
-    windows2: ['arrows', 'windows'],
+const conditionalLayers = [
+    { layer: 'colemak_control', targets: ['arrows', 'numbers'] },
+    { layer: 'windows2', targets: ['arrows', 'windows'] },
 
-    symbols_mirror: ['default_mirror', 'symbols'],
-    arrows_mirror: ['default_mirror', 'arrows'],
-    colemak_shift_mirror: ['default_mirror', 'colemak_shift'],
+    //Eng
+    { layer: 'symbols_mirror', targets: ['default_mirror', 'symbols'] },
+    { layer: 'arrows_mirror', targets: ['default_mirror', 'arrows'] },
+    { layer: 'colemak_shift_mirror', targets: ['default_mirror', 'colemak_shift'] },
 
-    symbols_mirror: ['russian_mirror', 'symbols'],
-    arrows_mirror: ['russian_mirror', 'arrows'],
-    colemak_shift_mirror: ['russian_mirror', 'colemak_shift'],
+    //Russian
+    { layer: 'symbols_mirror', targets: ['russian_mirror', 'symbols'] },
+    { layer: 'arrows_mirror', targets: ['russian_mirror', 'arrows'] },
+    { layer: 'colemak_shift_mirror', targets: ['russian_mirror', 'colemak_shift'] },
 
-};
+];
 const layerOrder = Object.keys(config.keymap);
-Object.entries(conditionalLayers).forEach(([layer, targets]) => {
+conditionalLayers.forEach(({layer, targets},index) => {
     if (!config.keymap[layer]) {
         throw new Error(`Layer for conditional layer does not exists: ${layer}`);
     }
-    conditionalLayers[layer].forEach((target) => {
+    conditionalLayers[index].targets.forEach((target) => {
         if (!config.keymap[target]) {
             throw new Error(`Target layer for conditional layer does not exists: ${target}`);
         }
     })
     const layerIndex = layerOrder.indexOf(layer);
     const targetsIndexes = targets.map((target) => layerOrder.indexOf(target));
-    if (targetsIndexes.find((targetIndex)=>targetIndex>layerIndex)) {
+    if (targetsIndexes.find((targetIndex) => targetIndex > layerIndex)) {
         throw new Error(`Conditional layer ${layer} should be defined after all targets ${targets}`);
     }
     config.conditinalLayers.push(`
