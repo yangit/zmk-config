@@ -228,8 +228,8 @@ ZMK_MACRO(disable_rus,
         'default': {
             keys: [
                 ['Q,LG(SLASH),LA(LG(Q))', 'W,LG(W),LG(Q)', 'F,LG(F),LA(LG(F))', 'P,LG(P),LS(LG(P))', '&mo config'],
-                ['+A', '+R', '+S', 'T,LG(T),LG(N)', 'G,LG(G),LG(D)'],
-                ['Z', '+X', '+C', 'D,LG(V),LG(LS(V))', 'B,LG(B),LG(LS(B))'],
+                ['+A', '+R', '+S', 'T,LG(T),LG(N)', '+G'],
+                ['Z', 'X', 'C', '+D', 'B,LG(B),LG(LS(B))'],
 
                 ['&mo windows', '&mo arrows', '&mo numbers'],
                 ['&mo symbols', '&mo default_mirror', '&mo colemak_shift'],
@@ -409,7 +409,7 @@ ZMK_MACRO(disable_rus,
             keys: [
                 [odd.historyBack, odd.tabsBack, odd.appWindowBack, m.macAppsWitchBackward, odd.fontBigger],
                 [m.appFinder, m.appTerminal, m.appVsCode, m.appBrowser, `${m.appSlack},${m.appInsomnia}`],
-                [odd.undo, m.appSignal, `${m.appTelegram},${m.appWhatsup}`, `${m.appSublime},${m.appNotes}`, `${m.showApps},${m.showDesktop}`],
+                [odd.undo, 'LG(X)', 'LG(V),LG(LS(V))', `${m.appSublime},${m.appNotes}`, `${m.showApps},${m.showDesktop}`],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
