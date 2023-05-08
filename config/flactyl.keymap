@@ -4590,7 +4590,7 @@
         arrows_mirror_layer {
             bindings = <
 &none	&kp PAGE_UP	&kp UP_ARROW	&kp HOME	&none
-&none	&kp RIGHT_ARROW	&kp DOWN_ARROW	&kp LEFT_ARROW	&none
+&none	&kp LEFT_ARROW	&kp DOWN_ARROW	&kp RIGHT_ARROW	&none
 &none	&kp PAGE_DOWN	&none	&kp END	&none
 &trans	&trans	&trans
 &trans	&trans	&trans

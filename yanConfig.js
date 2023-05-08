@@ -363,7 +363,13 @@ ZMK_MACRO(disable_rus,
             ]
         },
         'colemak_control': addModifierToLayer('colemak', 'LC'),
-        'arrows_mirror': reverseLayerFrom('arrows'),
+        'arrows_mirror': (configLocal) => {
+            const { keys } = reverseLayerFrom('arrows')(configLocal);
+
+            keys[1][1] = 'LEFT_ARROW';
+            keys[1][3] = 'RIGHT_ARROW';
+            return { keys };
+        },
         'arrowsr': {
             keys: [
                 ['&disable_rus', '&trans', '&trans', '&none', '&trans'],
@@ -519,7 +525,7 @@ const conditionalLayers = [
 
 ];
 const layerOrder = Object.keys(config.keymap);
-conditionalLayers.forEach(({layer, targets},index) => {
+conditionalLayers.forEach(({ layer, targets }, index) => {
     if (!config.keymap[layer]) {
         throw new Error(`Layer for conditional layer does not exists: ${layer}`);
     }
