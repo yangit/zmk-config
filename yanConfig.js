@@ -409,8 +409,9 @@ ZMK_MACRO(disable_rus,
             keys: [
                 [odd.historyBack, odd.tabsBack, odd.appWindowBack, m.macAppsWitchBackward, odd.fontBigger],
                 // `${m.appSlack},${m.appInsomnia}`
-                [odd.undo, 'LG(X)', 'LG(C)', 'LG(V),LG(LS(V))', m.showApps],
-                [m.appFinder, m.appTerminal, m.appVsCode, m.appBrowser, `${m.appSublime},${m.appNotes}`,],
+                [m.appFinder, m.appTerminal, m.appVsCode, m.appBrowser, `${m.appSublime},${m.appNotes}`],
+                [odd.undo, 'LG(X)', 'LG(C)', 'LG(V)', '&none'],
+
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
@@ -426,8 +427,8 @@ ZMK_MACRO(disable_rus,
         'windows2': {
             keys: [
                 [odd.historyForward, odd.tabsForward, odd.appWindowForward, m.macAppsWitchForward, odd.fontSmaller],
-                [odd.redo, `${m.winLMed},${m.winLBig},${m.winLSmall}`, `${m.winRMed},${m.winRBig},${m.winRSmall}`, m.showDesktop, m.divvy],
-                [odd.redo, '&shellrepeat', '&awesome', `${m.winCenterSmall},${m.winCenterMed},${m.winCenterBig}`, odd.screenshot],
+                [`${m.showApps},${m.showDesktop}`, `${m.winLMed},${m.winLBig},${m.winLSmall}`, `${m.winRMed},${m.winRBig},${m.winRSmall}`, `${m.winCenterSmall},${m.winCenterMed},${m.winCenterBig}`, m.divvy],
+                [odd.redo, '&shellrepeat', '&awesome', 'LG(LS(V))', odd.screenshot],
 
 
                 ['&trans', '&trans', '&trans'],
