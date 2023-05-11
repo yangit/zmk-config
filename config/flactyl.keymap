@@ -82,49 +82,49 @@
     combos {
         compatible = "zmk,combos";
         combo_default_0 {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <8 13>;
             bindings = <&td_0>;
             layers = <L_DEFAULT>;
         };
         compatible = "zmk,combos";
         combo_default_1 {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <7 12>;
             bindings = <&kp LG(C)>;
             layers = <L_DEFAULT>;
         };
         compatible = "zmk,combos";
         combo_default_2 {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <6 11>;
             bindings = <&kp LG(X)>;
             layers = <L_DEFAULT>;
         };
         compatible = "zmk,combos";
         combo_russian_0 {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <8 13>;
             bindings = <&td_1>;
             layers = <L_RUSSIAN>;
         };
         compatible = "zmk,combos";
         combo_russian_1 {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <7 12>;
             bindings = <&kp LG(C)>;
             layers = <L_RUSSIAN>;
         };
         compatible = "zmk,combos";
         combo_russian_2 {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <6 11>;
             bindings = <&kp LG(X)>;
             layers = <L_RUSSIAN>;
         };
         compatible = "zmk,combos";
         combo_arrows_0 {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <0 3>;
             bindings = <&kp LC(EQUAL)>;
             layers = <L_ARROWS>;

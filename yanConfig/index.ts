@@ -5,7 +5,7 @@ import { addModifierToLayer, configToOutput, configToParsed, keyMapper, layerToL
 
 // Description: Yan's config file for ZMK
 import fs from "fs";
-import { m, mehArray, odd } from "./config";
+import { comboTerm, m, mehArray, odd } from "./config";
 
 const config: Config = {
     header: `/*
@@ -375,7 +375,7 @@ Object.entries(configParsed.keymap).forEach(([layer, layerConfig]) => {
             configParsed.combos.push(`
 compatible = "zmk,combos";
 combo_${layer}_${comboIndex} {
-    timeout-ms = <50>;
+    timeout-ms = <${comboTerm}>;
     key-positions = <${keys.join(' ')}>;
     bindings = <${keyMapper(configParsed, binding, { layer: `combo_${layer}`, row: 0, index: comboIndex })}>;
     layers = <${layerToLayer(layer)}>;

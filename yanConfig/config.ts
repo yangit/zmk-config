@@ -6,6 +6,7 @@ export const tapDanceTerm = 200
 export const tappingTerm = timeToHold - tapDanceTerm
 export const tappingTerm2 = timeToHold
 export const quickTap = tappingTerm
+export const comboTerm = 100;
 if (tappingTerm < 0 || tappingTerm2 < 0 || tapDanceTerm < 0) {
     throw new Error('tappingTerm or tapDanceTerm is negative');
 }
