@@ -80,13 +80,7 @@
             };
     };
     combos {
-        compatible = "zmk,combos";
-        combo_spc {
-            timeout-ms = <50>;
-            key-positions = <0 3>;
-            bindings = <&kp LC(EQUAL)>;
-            layers = <L_ARROWS>;
-        };
+        
     };
     behaviors {
         yan_encoder: yan_encoder {

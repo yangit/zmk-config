@@ -180,17 +180,7 @@ const config = {
 
 / {
 `,
-    combos: [
-        `
-compatible = "zmk,combos";
-combo_spc {
-    timeout-ms = <50>;
-    key-positions = <0 3>;
-    bindings = <&kp ${odd.toggleLanguage}>;
-    layers = <L_ARROWS>;
-};
-`
-    ],
+    combos: [],
     conditinalLayers: [],
     behaviors: [
         `
@@ -361,6 +351,9 @@ ZMK_MACRO(disable_rus,
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
+            ],
+            combos: [
+                { keys: [0, 3], binding: `&kp ${odd.toggleLanguage}` },
             ]
         },
         'colemak_control': addModifierToLayer('colemak', 'LC'),
@@ -508,9 +501,27 @@ ZMK_MACRO(arrowsr_rus,
 )
  `)
 
+//Combos
+Object.entries(config).forEach(([layer, layerConfig]) => {
+    if (layerConfig.combos) {
+        layerConfig.combos.forEach((combo) => {
+            const { keys, binding } = combo;
+            config.combos.push(`
+compatible = "zmk,combos";
+combo_spc {
+    timeout-ms = <50>;
+    key-positions = <${keys.join(' ')}>;
+    bindings = <${binding}>;
+    layers = <${layerToLayer(layer)}>;
+};
+            `);
+        })
+    }
+});
+
+
 
 // Conditional layers
-
 const conditionalLayers = [
     { layer: 'colemak_control', targets: ['arrows', 'numbers'] },
     { layer: 'windows2', targets: ['arrows', 'windows'] },
