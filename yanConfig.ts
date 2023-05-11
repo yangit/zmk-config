@@ -257,6 +257,11 @@ ZMK_MACRO(disable_rus,
                 ['&none', '&mo numbers', '&none']
             ],
             sensor: '&yan_encoder',
+            combos: [
+                { keys: [8, 13], binding: '&kp LC(V)' },
+                { keys: [7, 12], binding: '&kp LC(C)' },
+                { keys: [6, 11], binding: '&kp LC(X)' },
+            ],
         },
         'russian': (configLocal) => {
             const keysSeed = [
@@ -286,7 +291,7 @@ ZMK_MACRO(disable_rus,
                     const result = [tap || dTap, hold || dHold, tapHold || dTapHold, doubleTap || dDoubleTap].filter((value) => value).join(',')
                     return result;
                 }
-               
+
 
                 return key
             }));
@@ -439,7 +444,7 @@ ZMK_MACRO(disable_rus,
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
-            ]
+            ],
         },
         'windows2': {
             keys: [
