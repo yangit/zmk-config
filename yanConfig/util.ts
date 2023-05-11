@@ -19,7 +19,7 @@ td_${macroIndex}: td_${macroIndex} {
     label = "td_${macroIndex}";
     #binding-cells = <0>;
     tapping-term-ms = <${tapDanceTerm}>;
-    bindings = <&td_${macroIndex}_first 0 ${tap}>, ${tapHold ? `<&td_${macroIndex}_second 0 0>` : `<&td_${macroIndex}_repeat>`};
+    bindings = <&td_${macroIndex}_first 0 ${tap}>, ${tapHold ? `<&td_${macroIndex}_second 0 ${doubleTap}>` : `<&td_${macroIndex}_repeat>`};
 };
 td_${macroIndex}_first: td_${macroIndex}_first {
     compatible = "zmk,behavior-hold-tap";
@@ -41,7 +41,7 @@ td_${macroIndex}_second: td_${macroIndex}_second {
     tapping-term-ms = <${tappingTerm2}>;
     quick-tap-ms = <${quickTap}>;
     global-quick-tap;
-    bindings = <&td_${macroIndex}_hold_second>, <${doubleTap ? `&kp ${doubleTap}` : `&td_${macroIndex}_repeat`}>;
+    bindings = <&td_${macroIndex}_hold_second>, <${doubleTap ? `&kp}` : `&td_${macroIndex}_repeat`}>;
 };`)
     }
 
