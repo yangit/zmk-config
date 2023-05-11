@@ -19,7 +19,7 @@ td_${macroIndex}: td_${macroIndex} {
     label = "td_${macroIndex}";
     #binding-cells = <0>;
     tapping-term-ms = <${tapDanceTerm}>;
-    bindings = <&td_${macroIndex}_first 0 ${tap}>, ${tapHold ? `<&td_${macroIndex}_second 0 ${doubleTap}>` : `<&td_${macroIndex}_repeat>`};
+    bindings = <&td_${macroIndex}_first 0 ${tap}>, ${tapHold ? `<&td_${macroIndex}_second 0 ${doubleTap ? doubleTap : 0}>` : `<&td_${macroIndex}_repeat>`};
 };
 td_${macroIndex}_first: td_${macroIndex}_first {
     compatible = "zmk,behavior-hold-tap";
