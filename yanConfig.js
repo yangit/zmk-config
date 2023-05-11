@@ -504,11 +504,11 @@ ZMK_MACRO(arrowsr_rus,
 //Combos
 Object.entries(config).forEach(([layer, layerConfig]) => {
     if (layerConfig.combos) {
-        layerConfig.combos.forEach((combo) => {
+        layerConfig.combos.forEach((combo,comboIndex) => {
             const { keys, binding } = combo;
             config.combos.push(`
 compatible = "zmk,combos";
-combo_spc {
+combo_${layer}_${comboIndex} {
     timeout-ms = <50>;
     key-positions = <${keys.join(' ')}>;
     bindings = <${binding}>;
