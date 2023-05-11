@@ -81,34 +81,6 @@
     };
     combos {
         compatible = "zmk,combos";
-        combo_default_0 {
-            timeout-ms = <50>;
-            key-positions = <8 13>;
-            bindings = <&kp LG(V)>;
-            layers = <L_DEFAULT>;
-        };
-        compatible = "zmk,combos";
-        combo_default_1 {
-            timeout-ms = <50>;
-            key-positions = <7 12>;
-            bindings = <&kp LG(C)>;
-            layers = <L_DEFAULT>;
-        };
-        compatible = "zmk,combos";
-        combo_default_2 {
-            timeout-ms = <50>;
-            key-positions = <6 11>;
-            bindings = <&kp LG(X)>;
-            layers = <L_DEFAULT>;
-        };
-        compatible = "zmk,combos";
-        combo_default_3 {
-            timeout-ms = <50>;
-            key-positions = <0 5>;
-            bindings = <&kp V>;
-            layers = <L_DEFAULT>;
-        };
-        compatible = "zmk,combos";
         combo_arrows_0 {
             timeout-ms = <50>;
             key-positions = <0 3>;
