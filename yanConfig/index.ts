@@ -276,8 +276,8 @@ ZMK_MACRO(disable_rus,
         'windows2': {
             keys: [
                 [odd.historyForward, odd.tabsForward, odd.appWindowForward, m.macAppsWitchForward, odd.fontSmaller],
-                [`${m.showApps},${m.showDesktop}`, `${m.winLMed},${m.winLBig},${m.winLSmall}`, `${m.winRMed},${m.winRBig},${m.winRSmall}`, `${m.winCenterSmall},${m.winCenterMed},${m.winCenterBig}`, m.divvy],
-                [odd.redo, '&shellrepeat', '&awesome', 'LG(LS(V))', odd.screenshot],
+                [`${m.showApps},${m.showDesktop}`, `${m.winL_M},${m.winL_L},${m.winL_XL},${m.winL_S}`, `${m.winR_M},${m.winR_L},${m.winR_XL},${m.winR_S}`, `${m.winCenter_S},${m.winCenter_M},${m.winCenter_L}`, m.divvy],
+                [odd.redo, '&shellrepeat', '&awesome', '&none', odd.screenshot],
 
 
                 ['&trans', '&trans', '&trans'],

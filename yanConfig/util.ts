@@ -6,11 +6,11 @@ interface KeyLocation { layer: string, row: number, index: number };
 let macroCounter = 0
 export const layerToLayer = (layer: string) => `L_${layer.toUpperCase()}`
 export const unwrapPlus = (string: string) => `${string.slice(1)},LG(${string.slice(1)})`
-export const unwrapTapDance = (configParsed: ConfigParsed, keyText: string, location: KeyLocation) => {
+export const unwrapTapDance = (configParsed: ConfigParsed, keyText: string, _location: KeyLocation) => {
     const [tap, hold, tapHold, doubleTap] = keyText.split(',');
-    if (doubleTap) {
-        throw new Error(`double tap is not implemented yet at ${keyText} ${JSON.stringify(location)}`);
-    }
+    // if (doubleTap) {
+    //     throw new Error(`double tap is not implemented yet at ${keyText} ${JSON.stringify(location)}`);
+    // }
     const macroIndex = macroCounter++;
 
     configParsed.behaviors.push(`
@@ -41,7 +41,7 @@ td_${macroIndex}_second: td_${macroIndex}_second {
     tapping-term-ms = <${tappingTerm2}>;
     quick-tap-ms = <${quickTap}>;
     global-quick-tap;
-    bindings = <&td_${macroIndex}_hold_second>, <&td_${macroIndex}_repeat>;
+    bindings = <&td_${macroIndex}_hold_second>, <${doubleTap ? `&kp ${doubleTap}` : `&td_${macroIndex}_repeat`}>;
 };`)
     }
 

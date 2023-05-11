@@ -2572,7 +2572,7 @@
             tapping-term-ms = <350>;
             quick-tap-ms = <150>;
             global-quick-tap;
-            bindings = <&td_120_hold_second>, <&td_120_repeat>;
+            bindings = <&td_120_hold_second>, <&kp LA(LG(LC(LS(F15))))>;
         };
         td_121: td_121 {
             compatible = "zmk,behavior-tap-dance";
@@ -2599,7 +2599,7 @@
             tapping-term-ms = <350>;
             quick-tap-ms = <150>;
             global-quick-tap;
-            bindings = <&td_121_hold_second>, <&td_121_repeat>;
+            bindings = <&td_121_hold_second>, <&kp LA(LG(LC(LS(N3))))>;
         };
         td_122: td_122 {
             compatible = "zmk,behavior-tap-dance";
@@ -4166,7 +4166,7 @@
         )
         ZMK_MACRO(td_120_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(F15))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_PLUS))))>;
         )
         ZMK_MACRO(td_120_repeat,
             wait-ms = <0>;
@@ -4178,7 +4178,7 @@
         )
         ZMK_MACRO(td_121_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(N3))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_DIVIDE))))>;
         )
         ZMK_MACRO(td_121_repeat,
             wait-ms = <0>;
@@ -4495,7 +4495,7 @@
             bindings = <
 &kp LG(RIGHT_BRACKET)	&kp LC(TAB)	&kp LG(GRAVE)	&kp LA(LG(LC(LS(KP_N1))))	&kp LG(MINUS)
 &td_119	&td_120	&td_121	&td_122	&kp LA(LG(LC(LS(N1))))
-&kp LG(LS(Z))	&shellrepeat	&awesome	&kp LG(LS(V))	&kp LG(LS(N4))
+&kp LG(LS(Z))	&shellrepeat	&awesome	&none	&kp LG(LS(N4))
 &trans	&trans	&trans
 &trans	&trans	&trans
 &trans	&trans	&trans	&trans	&trans

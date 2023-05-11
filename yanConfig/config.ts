@@ -88,17 +88,17 @@ export const m = {
 
     // windows
     divvy: 'LA(LG(LC(LS(N1))))',
-    winCenterSmall: 'LA(LG(LC(LS(N0))))',
-    winCenterMed: 'LA(LG(LC(LS(F13))))',
-    winCenterBig: 'LA(LG(LC(LS(F14))))',
-    winLSmall: 'LA(LG(LC(LS(F15))))',
-    winLMed: 'LA(LG(LC(LS(F18))))',
-    winLBig: 'LA(LG(LC(LS(F19))))',
-    winLXL: 'LA(LG(LC(LS(KP_PLUS))))',
-    winRXL: 'LA(LG(LC(LS(KP_DIVIDE))))',
-    winRBig: 'LA(LG(LC(LS(N2))))',
-    winRMed: 'LA(LG(LC(LS(F20))))',
-    winRSmall: 'LA(LG(LC(LS(N3))))',
+    winCenter_S: 'LA(LG(LC(LS(N0))))',
+    winCenter_M: 'LA(LG(LC(LS(F13))))',
+    winCenter_L: 'LA(LG(LC(LS(F14))))',
+    winL_S: 'LA(LG(LC(LS(F15))))',
+    winL_M: 'LA(LG(LC(LS(F18))))',
+    winL_L: 'LA(LG(LC(LS(F19))))',
+    winL_XL: 'LA(LG(LC(LS(KP_PLUS))))',
+    winR_XL: 'LA(LG(LC(LS(KP_DIVIDE))))',
+    winR_L: 'LA(LG(LC(LS(N2))))',
+    winR_M: 'LA(LG(LC(LS(F20))))',
+    winR_S: 'LA(LG(LC(LS(N3))))',
 }
 
 Object.values(m).forEach((value) => {
