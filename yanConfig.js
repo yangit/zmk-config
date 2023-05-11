@@ -187,7 +187,7 @@ combo_spc {
     timeout-ms = <50>;
     key-positions = <0 3>;
     bindings = <&kp ${odd.toggleLanguage}>;
-    layers = <L_ARROWS>
+    layers = <L_ARROWS>;
 };
 `
     ],

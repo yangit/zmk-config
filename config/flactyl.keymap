@@ -85,7 +85,7 @@
             timeout-ms = <50>;
             key-positions = <0 3>;
             bindings = <&kp LC(EQUAL)>;
-            layers = <L_ARROWS>
+            layers = <L_ARROWS>;
         };
     };
     behaviors {
