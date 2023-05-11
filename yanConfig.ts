@@ -1,7 +1,9 @@
+// @ts-ignore
+import { log } from "console";
+
 // Description: Yan's config file for ZMK
-const { log } = require('console');
 const fs = require('fs');
-const { consumers } = require('stream');
+
 
 
 // perceived value
@@ -54,9 +56,9 @@ const mehSeed = [
     'U', 'V', 'W', 'X', 'Y', 'Z',
 ]
 
-const mehArray = [];
+const mehArray: { key: string, modifier: string, value: string, used: boolean }[] = [];
 mehSeed.forEach((key) => mehArray.push({ key, modifier: 'super', value: `LA(LG(LC(LS(${key}))))`, used: false }));
-// mehSeed.forEach((key) => mehArray.push({ key, modifier: 'meh', value: `LA(LC(LS(${key})))`, used: false }));
+
 
 const odd = {
     screenshot: 'LG(LS(N4))',
@@ -111,8 +113,8 @@ const m = {
     winRSmall: 'LA(LG(LC(LS(N3))))',
 
 }
-const layerToLayer = (layer) => `L_${layer.toUpperCase()}`
-const uwrapPlus = (string) => `${string.slice(1)},LG(${string.slice(1)})`
+const layerToLayer = (layer: string) => `L_${layer.toUpperCase()}`
+const unwrapPlus = (string: string) => `${string.slice(1)},LG(${string.slice(1)})`
 Object.values(m).forEach((value) => {
     const meh = mehArray.find((item) => item.value === value);
     if (!meh) {
@@ -123,15 +125,14 @@ Object.values(m).forEach((value) => {
         }
         meh.used = true;
     }
-
 })
-const reverseLayerFrom = (layer) => (configLocal) => {
-    console.log(configLocal);
 
+const reverseLayerFrom = (layer: string) => (configLocal: ConfigParsed): LayerConfigObject => {
     if (!configLocal.keymap[layer]) {
         throw new Error(`Layer ${layer} is not defined`);
     }
-    const [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10] = configLocal.keymap[layer].keys.map((row) => row.slice().reverse())
+
+    const [r1, r2, r3, _r4, _r5, r6, r7, r8, _r9, _r10] = configLocal.keymap[layer].keys.map((row) => row.slice().reverse())
     return {
         keys: [
             r6,
@@ -148,7 +149,7 @@ const reverseLayerFrom = (layer) => (configLocal) => {
     }
 }
 
-const addModifierToLayer = (layer, modifier) => (configLocal) => {
+const addModifierToLayer = (layer: string, modifier: string) => (configLocal: ConfigParsed) => {
     if (!configLocal.keymap[layer]) {
         throw new Error(`Layer ${layer} is not defined`);
     }
@@ -158,8 +159,31 @@ const addModifierToLayer = (layer, modifier) => (configLocal) => {
     }))
     return { keys }
 }
+interface Combo { keys: number[], binding: string }
 
-const config = {
+type LayerConfig = LayerConfigFunction | LayerConfigObject
+type LayerConfigFunction = (configLocal: ConfigParsed) => LayerConfigObject
+interface LayerConfigObject {
+    keys: string[][],
+    combos?: Combo[],
+    sensor?: string,
+}
+
+interface Config {
+    header: string,
+    postHeader: string,
+    combos: string[],
+    conditionalLayers: string[],
+    behaviors: string[],
+    macros: string[],
+    keymap: Record<string, LayerConfig>
+}
+
+interface ConfigParsed extends Config {
+    keymap: Record<string, LayerConfigObject>
+};
+
+const config: Config = {
     header: `/*
  * Copyright (c) 2020 The ZMK Contributors
  *
@@ -181,7 +205,7 @@ const config = {
 / {
 `,
     combos: [],
-    conditinalLayers: [],
+    conditionalLayers: [],
     behaviors: [
         `
 yan_encoder: yan_encoder {
@@ -235,7 +259,6 @@ ZMK_MACRO(disable_rus,
             sensor: '&yan_encoder',
         },
         'russian': (configLocal) => {
-            // console.log('russian init',config.keymap);
             const keysSeed = [
                 ['Q', 'W', 'E', 'R', 'T,ASTERISK'],
                 ['A', 'S', 'D', 'F', 'G'],
@@ -256,16 +279,17 @@ ZMK_MACRO(disable_rus,
                 const [tap, hold, tapHold, doubleTap] = key.split(',');
                 let defaultKey = configLocal.keymap.default.keys[lineIndex][keyIndex];
                 if (defaultKey.startsWith('+')) {
-                    defaultKey = uwrapPlus(defaultKey);
+                    defaultKey = unwrapPlus(defaultKey);
                 }
-                const [dTap, dHold, dTapHold, dDoubleTap] = defaultKey.split(',');
                 if (defaultKey.includes(',') && !key.startsWith('&') && !defaultKey.startsWith('&')) {
+                    const [dTap, dHold, dTapHold, dDoubleTap] = defaultKey.split(',');
                     const result = [tap || dTap, hold || dHold, tapHold || dTapHold, doubleTap || dDoubleTap].filter((value) => value).join(',')
                     return result;
                 }
-                return key
-            }))
+               
 
+                return key
+            }));
             return {
                 keys
             }
@@ -310,7 +334,7 @@ ZMK_MACRO(disable_rus,
         'colemak_shift': addModifierToLayer('colemak', 'LS'),
         'colemak_shift_mirror': reverseLayerFrom('colemak_shift'),
         'numbers': () => {
-            const reverseNumbersRow = (row) => {
+            const reverseNumbersRow = (row: string[]) => {
                 const [one, two, three, four, five] = row;
                 return [five, two, three, four, one];
             }
@@ -457,24 +481,26 @@ ZMK_MACRO(disable_rus,
     }
 };
 
+const configParsed: ConfigParsed = { ...config, keymap: {} };
 // invoke layer config with configLocal
 Object.entries(config.keymap).forEach(([layer, layerConfig]) => {
     if (typeof layerConfig === 'function') {
-        console.log(layer, Object.keys(config.keymap), config.keymap.russian);
-
-        config.keymap[layer] = layerConfig(config);
+        // console.log(layer, Object.keys(config.keymap), config.keymap.russian);
+        configParsed.keymap[layer] = layerConfig(configParsed);
+    } else {
+        // @ts-ignore
+        configParsed.keymap[layer] = config.keymap[layer];
     }
 });
-
 
 
 //Add macros to be used in russian layer
 const rusLayers = ['symbols', 'windows', 'windows2', 'numbers', 'symbols_mirror', 'arrows_mirror', 'colemak_shift_mirror'];
 rusLayers.forEach((layer) => {
-    if (!config.keymap[layer]) {
+    if (!configParsed.keymap[layer]) {
         throw new Error(`Layer for russification does not exists: ${layer}`);
     }
-    config.macros.push(`
+    configParsed.macros.push(`
 ZMK_MACRO(${layer}_rus,
     wait-ms = <0>;
     bindings
@@ -489,7 +515,7 @@ ZMK_MACRO(${layer}_rus,
 
 // Since arrows layer contain toggles for language, we need to make it special
 // There are two variants, russian one does not allow to enable russian again, and english does not all to enable english again
-config.macros.push(`
+configParsed.macros.push(`
 ZMK_MACRO(arrowsr_rus,
     wait-ms = <0>;
     bindings
@@ -502,11 +528,11 @@ ZMK_MACRO(arrowsr_rus,
  `)
 
 //Combos
-Object.entries(config).forEach(([layer, layerConfig]) => {
+Object.entries(configParsed).forEach(([layer, layerConfig]) => {
     if (layerConfig.combos) {
-        layerConfig.combos.forEach((combo,comboIndex) => {
+        layerConfig.combos.forEach((combo: Combo, comboIndex: number) => {
             const { keys, binding } = combo;
-            config.combos.push(`
+            configParsed.combos.push(`
 compatible = "zmk,combos";
 combo_${layer}_${comboIndex} {
     timeout-ms = <50>;
@@ -537,13 +563,13 @@ const conditionalLayers = [
     { layer: 'colemak_shift_mirror', targets: ['russian_mirror', 'colemak_shift'] },
 
 ];
-const layerOrder = Object.keys(config.keymap);
+const layerOrder = Object.keys(configParsed.keymap);
 conditionalLayers.forEach(({ layer, targets }, index) => {
-    if (!config.keymap[layer]) {
+    if (!configParsed.keymap[layer]) {
         throw new Error(`Layer for conditional layer does not exists: ${layer}`);
     }
     conditionalLayers[index].targets.forEach((target) => {
-        if (!config.keymap[target]) {
+        if (!configParsed.keymap[target]) {
             throw new Error(`Target layer for conditional layer does not exists: ${target}`);
         }
     })
@@ -552,7 +578,7 @@ conditionalLayers.forEach(({ layer, targets }, index) => {
     if (targetsIndexes.find((targetIndex) => targetIndex > layerIndex)) {
         throw new Error(`Conditional layer ${layer} should be defined after all targets ${targets}`);
     }
-    config.conditinalLayers.push(`
+    configParsed.conditionalLayers.push(`
 compatible = "zmk,conditional-layers";
     ${layer}__${targets.join('__')} {
         if-layers = <${layerToLayer(targets[0])} ${layerToLayer(targets[1])}>;
@@ -561,33 +587,33 @@ compatible = "zmk,conditional-layers";
 `)
 })
 
-// verify all keys of config.keymap contain 10 arrays and 5,5,5,3,3,5,5,5,3,3 elements in each array
-for (let layer in config.keymap) {
-    if (config.keymap[layer].keys.length !== 10) {
-        throw new Error(`layer ${layer} does not contain 10 arrays it contains ${config.keymap[layer].keys.length}`);
+// verify all keys of configParsed.keymap contain 10 arrays and 5,5,5,3,3,5,5,5,3,3 elements in each array
+for (let layer in configParsed.keymap) {
+    if (configParsed.keymap[layer].keys.length !== 10) {
+        throw new Error(`layer ${layer} does not contain 10 arrays it contains ${configParsed.keymap[layer].keys.length}`);
     }
     for (let row = 0; row < 9; row++) {
-        if ([0, 1, 2, 5, 6, 7].includes(row) && config.keymap[layer].keys[row].length !== 5) {
-            throw new Error(`layer ${layer} row ${row} does not contain 5 elements it contains ${config.keymap[layer].keys[row].length}`);
+        if ([0, 1, 2, 5, 6, 7].includes(row) && configParsed.keymap[layer].keys[row].length !== 5) {
+            throw new Error(`layer ${layer} row ${row} does not contain 5 elements it contains ${configParsed.keymap[layer].keys[row].length}`);
         }
-        if ([3, 4, 8, 9].includes(row) && config.keymap[layer].keys[row].length !== 3) {
-            throw new Error(`layer ${layer} row ${row} does not contain 3 elements it contains ${config.keymap[layer].keys[row].length}`);
+        if ([3, 4, 8, 9].includes(row) && configParsed.keymap[layer].keys[row].length !== 3) {
+            throw new Error(`layer ${layer} row ${row} does not contain 3 elements it contains ${configParsed.keymap[layer].keys[row].length}`);
         }
     }
 }
 
 
-const defines = Object.keys(config.keymap).map((layer, index) => `#define ${layerToLayer(layer)} ${index}`).join('\n')
+const defines = Object.keys(configParsed.keymap).map((layer, index) => `#define ${layerToLayer(layer)} ${index}`).join('\n')
 
 let macroCounter = 0
-const unwrapTapDance = (keyText, location) => {
+const unwrapTapDance = (keyText: string, location: KeyLocation) => {
     const [tap, hold, tapHold, doubleTap] = keyText.split(',');
     if (doubleTap) {
-        throw new Error(`double tap is not implemented yet at: ${JSON.stringify(location)}`);
+        throw new Error(`double tap is not implemented yet at ${keyText} ${JSON.stringify(location)}`);
     }
     const macroIndex = macroCounter++;
 
-    config.behaviors.push(`
+    configParsed.behaviors.push(`
 td_${macroIndex}: td_${macroIndex} {
     compatible = "zmk,behavior-tap-dance";
     label = "td_${macroIndex}";
@@ -606,7 +632,7 @@ td_${macroIndex}_first: td_${macroIndex}_first {
     bindings = <&td_${macroIndex}_hold_first>, <&kp>;
 };`)
     if (tapHold) {
-        config.behaviors.push(`
+        configParsed.behaviors.push(`
 td_${macroIndex}_second: td_${macroIndex}_second {
     compatible = "zmk,behavior-hold-tap";
     label = "td_${macroIndex}_second";
@@ -619,7 +645,7 @@ td_${macroIndex}_second: td_${macroIndex}_second {
 };`)
     }
 
-    config.macros.push(`
+    configParsed.macros.push(`
 ZMK_MACRO(td_${macroIndex}_hold_first,
     wait-ms = <0>;
     bindings = <&macro_tap &kp ${hold}>;
@@ -636,12 +662,13 @@ ZMK_MACRO(td_${macroIndex}_repeat,
     return `&td_${macroIndex}`
 }
 
+interface KeyLocation { layer: string, row: number, index: number };
 
-const keyMapper = (keyText, location) => {
+const keyMapper = (keyText: string, location: KeyLocation) => {
     //layer switcher &mo L_LAYER
     if (keyText.startsWith('&mo ')) {
         const [, layer] = keyText.split(' ')
-        if (!Object.keys(config.keymap).includes(layer)) {
+        if (!Object.keys(configParsed.keymap).includes(layer)) {
             throw new Error(`layer ${layer} does not exist at keyText: ${keyText} :${JSON.stringify(location)}`)
         }
         return `&mo L_${layer.toUpperCase()}`
@@ -650,10 +677,10 @@ const keyMapper = (keyText, location) => {
         throw new Error(`keyText ${keyText} is not allowed at ${JSON.stringify(location)}`)
     }
     if (keyText.startsWith('+')) {
-        return unwrapTapDance(uwrapPlus(keyText));
+        return unwrapTapDance(unwrapPlus(keyText), location);
     }
     if (keyText.includes(',')) {
-        return unwrapTapDance(keyText);
+        return unwrapTapDance(keyText, location);
     }
     if (!keyText.startsWith('&')) {
         return `&kp ${keyText}`;
@@ -661,38 +688,38 @@ const keyMapper = (keyText, location) => {
     return keyText;
 }
 
-//map every key under config.keymap[layer][row] using keyMapper()
-for (let layer in config.keymap) {
-    config.keymap[layer].keys = config.keymap[layer].keys.map((rows, rowIndex) => rows.map((keyText, index) => keyMapper(keyText, { layer, row: rowIndex, index })))
+//map every key under configParsed.keymap[layer][row] using keyMapper()
+for (let layer in configParsed.keymap) {
+    configParsed.keymap[layer].keys = configParsed.keymap[layer].keys.map((rows, rowIndex) => rows.map((keyText, index) => keyMapper(keyText, { layer, row: rowIndex, index })))
 }
 
 
-// console.log(config.keymap);
-const tab = (str, pad) => str.split('\n').map(line => `${pad}${line}`).join('\n')
+// console.log(configParsed.keymap);
+const tab = (str: string, pad: string) => str.split('\n').map(line => `${pad}${line}`).join('\n')
 
-const output = `${config.header}
+const output = `${configParsed.header}
 ${defines}
-${config.postHeader}
+${configParsed.postHeader}
     conditional_layers {
-${tab(config.conditinalLayers.map(macro => macro.trim()).join('\n'), '        ')}
+${tab(configParsed.conditionalLayers.map(macro => macro.trim()).join('\n'), '        ')}
     };
     combos {
-${tab(config.combos.map(macro => macro.trim()).join('\n'), '        ')}
+${tab(configParsed.combos.map(macro => macro.trim()).join('\n'), '        ')}
     };
     behaviors {
-${tab(config.behaviors.map(macro => macro.trim()).join('\n'), '        ')}
+${tab(configParsed.behaviors.map(macro => macro.trim()).join('\n'), '        ')}
     };
     macros {
-${tab(config.macros.map(macro => macro.trim()).join('\n'), '        ')}
+${tab(configParsed.macros.map(macro => macro.trim()).join('\n'), '        ')}
     };
     keymap {
         compatible = "zmk,keymap";
-        ${Object.keys(config.keymap).map((layer, index) => `
+        ${Object.keys(configParsed.keymap).map((layer, index) => `
         /* ${layer} ${index} */
         ${layer}_layer {
             bindings = <
-${config.keymap[layer].keys.map(row => row.join('\t')).join('\n')}
-            >;${config.keymap[layer].sensor ? `\n sensor-bindings = <${config.keymap[layer].sensor}>;` : ''}            
+${configParsed.keymap[layer].keys.map(row => row.join('\t')).join('\n')}
+            >;${configParsed.keymap[layer].sensor ? `\n sensor-bindings = <${configParsed.keymap[layer].sensor}>;` : ''}            
         };
     `).join('\n')}
     };
@@ -700,6 +727,6 @@ ${config.keymap[layer].keys.map(row => row.join('\t')).join('\n')}
 `
 
 fs.writeFileSync('./config/flactyl.keymap', output)
-console.log(output);
+// console.log(output);
 
 console.log(mehArray.filter(({ used }) => !used).map(item => item.value));
