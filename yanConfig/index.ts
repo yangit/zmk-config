@@ -1,187 +1,11 @@
 // @ts-ignore
 import { log } from "console";
+import { Combo, Config } from "./types";
+import { addModifierToLayer, configToOutput, configToParsed, keyMapper, layerToLayer, reverseLayerFrom, unwrapPlus } from "./util";
 
 // Description: Yan's config file for ZMK
-const fs = require('fs');
-
-
-
-// perceived value
-const timeToHold = 350
-
-//calculated values
-const tapDanceTerm = 200
-const tappingTerm = timeToHold - tapDanceTerm
-const tappingTerm2 = timeToHold
-if (tappingTerm < 0 || tappingTerm2 < 0 || tapDanceTerm < 0) {
-    throw new Error('tappingTerm or tapDanceTerm is negative');
-}
-/*
-for
-tappingTerm = 150
-tapDanceTerm = 250
-
-First tap will not fire until 250 wait expired (the tap dance term)
-First tap will fire if held shorter than < 400
-First hold will fire if held longer than > 400
-Tap and hold will fire in 400 if tapped previously
-Double tap = ??
-*/
-
-
-
-const quickTap = tappingTerm
-
-const mehSeed = [
-    'KP_N0', 'KP_N1', 'KP_N2', 'KP_N3', 'KP_N4', 'KP_N5', 'KP_N6', 'KP_N7', 'KP_N8', 'KP_N9',
-    // below are first class citizens of numpad
-    'KP_PLUS', 'KP_MINUS', 'KP_MULTIPLY', 'KP_DIVIDE', 'KP_EQUAL', 'KP_DOT',
-
-    // used by mac for brightness and volume
-    // 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12',
-
-    'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20',
-
-    //the ones below do not work with Divy mybe work with Alfred
-    // 'F21', 'F22', 'F23', 'F24',
-
-    // LANG does not work on alfred and divvy
-    // 'LANG1', 'LANG2', 'LANG3', 'LANG4', 'LANG5', 'LANG6', 'LANG7', 'LANG8', 'LANG9',
-    'N0', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N9',
-
-    //Below are first class symbols
-    'GRAVE', 'MINUS', 'EQUAL', 'LEFT_BRACKET', 'RIGHT_BRACKET', 'BACKSLASH', 'SEMI', 'SINGLE_QUOTE', 'COMMA', 'DOT', 'SLASH',
-    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
-    'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-    'U', 'V', 'W', 'X', 'Y', 'Z',
-]
-
-const mehArray: { key: string, modifier: string, value: string, used: boolean }[] = [];
-mehSeed.forEach((key) => mehArray.push({ key, modifier: 'super', value: `LA(LG(LC(LS(${key}))))`, used: false }));
-
-
-const odd = {
-    screenshot: 'LG(LS(N4))',
-    fontBigger: 'LG(EQUAL)',
-    fontSmaller: 'LG(MINUS)',
-    toggleLanguage: 'LC(EQUAL)',
-    historyBack: 'LG(LEFT_BRACKET)',
-    historyForward: 'LG(RIGHT_BRACKET)',
-    tabsBack: 'LS(LC(TAB))',
-    tabsForward: 'LC(TAB)',
-    appWindowBack: 'LS(LG(GRAVE))',
-    appWindowForward: 'LG(GRAVE)',
-    alfred: 'LG(SPACE)',
-    lockScreen: 'LG(LC(Q))',
-    undo: 'LG(Z)',
-    redo: 'LG(LS(Z))',
-}
-
-const m = {
-    macAppsWitchBackward: 'LA(LG(LC(LS(KP_N0))))',
-    macAppsWitchForward: 'LA(LG(LC(LS(KP_N1))))',
-
-    showApps: 'LA(LG(LC(LS(KP_N2))))',
-    showDesktop: 'LA(LG(LC(LS(KP_N3))))',
-
-    // apps
-    appFinder: 'LA(LG(LC(LS(KP_N4))))',
-    appTerminal: 'LA(LG(LC(LS(KP_N5))))',
-    appVsCode: 'LA(LG(LC(LS(KP_N6))))',
-    appBrowser: 'LA(LG(LC(LS(KP_N7))))',
-    appSlack: 'LA(LG(LC(LS(KP_N8))))',
-    appInsomnia: 'LA(LG(LC(LS(F16))))',
-    appSublime: 'LA(LG(LC(LS(KP_N9))))',
-    appNotes: 'LA(LG(LC(LS(KP_MINUS))))',
-    appSignal: 'LA(LG(LC(LS(KP_EQUAL))))',
-    appTelegram: 'LA(LG(LC(LS(F17))))',
-    appWhatsup: 'LA(LG(LC(LS(KP_MULTIPLY))))',
-
-
-    // windows
-    divvy: 'LA(LG(LC(LS(N1))))',
-    winCenterSmall: 'LA(LG(LC(LS(N0))))',
-    winCenterMed: 'LA(LG(LC(LS(F13))))',
-    winCenterBig: 'LA(LG(LC(LS(F14))))',
-    winLSmall: 'LA(LG(LC(LS(F15))))',
-    winLMed: 'LA(LG(LC(LS(F18))))',
-    winLBig: 'LA(LG(LC(LS(F19))))',
-    winLXL: 'LA(LG(LC(LS(KP_PLUS))))',
-    winRXL: 'LA(LG(LC(LS(KP_DIVIDE))))',
-    winRBig: 'LA(LG(LC(LS(N2))))',
-    winRMed: 'LA(LG(LC(LS(F20))))',
-    winRSmall: 'LA(LG(LC(LS(N3))))',
-
-}
-const layerToLayer = (layer: string) => `L_${layer.toUpperCase()}`
-const unwrapPlus = (string: string) => `${string.slice(1)},LG(${string.slice(1)})`
-Object.values(m).forEach((value) => {
-    const meh = mehArray.find((item) => item.value === value);
-    if (!meh) {
-        throw new Error(`Value ${value} is not legal`);
-    } else {
-        if (meh.used) {
-            throw new Error(`Key is used already, possible duplicate MEH hotkeys on different switches ${meh.value}`);
-        }
-        meh.used = true;
-    }
-})
-
-const reverseLayerFrom = (layer: string) => (configLocal: ConfigParsed): LayerConfigObject => {
-    if (!configLocal.keymap[layer]) {
-        throw new Error(`Layer ${layer} is not defined`);
-    }
-
-    const [r1, r2, r3, _r4, _r5, r6, r7, r8, _r9, _r10] = configLocal.keymap[layer].keys.map((row) => row.slice().reverse())
-    return {
-        keys: [
-            r6,
-            r7,
-            r8,
-            ['&trans', '&trans', '&trans'],
-            ['&trans', '&trans', '&trans'],
-            r1,
-            r2,
-            r3,
-            ['&trans', '&trans', '&trans'],
-            ['&trans', '&trans', '&trans']
-        ]
-    }
-}
-
-const addModifierToLayer = (layer: string, modifier: string) => (configLocal: ConfigParsed) => {
-    if (!configLocal.keymap[layer]) {
-        throw new Error(`Layer ${layer} is not defined`);
-    }
-    const keys = configLocal.keymap[layer].keys.map(row => row.map(key => {
-        if (key.startsWith('&')) { return key }
-        return `${modifier}(${key.split(',')[0]})`
-    }))
-    return { keys }
-}
-interface Combo { keys: number[], binding: string }
-
-type LayerConfig = LayerConfigFunction | LayerConfigObject
-type LayerConfigFunction = (configLocal: ConfigParsed) => LayerConfigObject
-interface LayerConfigObject {
-    keys: string[][],
-    combos?: Combo[],
-    sensor?: string,
-}
-
-interface Config {
-    header: string,
-    postHeader: string,
-    combos: string[],
-    conditionalLayers: string[],
-    behaviors: string[],
-    macros: string[],
-    keymap: Record<string, LayerConfig>
-}
-
-interface ConfigParsed extends Config {
-    keymap: Record<string, LayerConfigObject>
-};
+import fs from "fs";
+import { m, mehArray, odd } from "./config";
 
 const config: Config = {
     header: `/*
@@ -258,10 +82,9 @@ ZMK_MACRO(disable_rus,
             ],
             sensor: '&yan_encoder',
             combos: [
-                // { keys: [8, 13], binding: '&kp LG(V)' },
-                // { keys: [7, 12], binding: '&kp LG(C)' },
-                // { keys: [6, 11], binding: '&kp LG(X)' },
-                // { keys: [0, 5], binding: '&kp V' },
+                { keys: [8, 13], binding: 'LG(V),LG(LS(V))' },
+                { keys: [7, 12], binding: 'LG(C)' },
+                { keys: [6, 11], binding: 'LG(X)' },
             ],
         },
         'russian': (configLocal) => {
@@ -292,12 +115,11 @@ ZMK_MACRO(disable_rus,
                     const result = [tap || dTap, hold || dHold, tapHold || dTapHold, doubleTap || dDoubleTap].filter((value) => value).join(',')
                     return result;
                 }
-
-
                 return key
             }));
             return {
-                keys
+                keys,
+                combos: configLocal.keymap.default.combos,
             }
         },
         'russian_mirror': reverseLayerFrom('russian'),
@@ -433,7 +255,7 @@ ZMK_MACRO(disable_rus,
             keys: [
                 [odd.historyBack, odd.tabsBack, odd.appWindowBack, m.macAppsWitchBackward, odd.fontBigger],
                 [m.appFinder, m.appTerminal, m.appVsCode, m.appBrowser, `${m.appSublime},${m.appNotes}`],
-                [odd.undo, 'LG(X)', 'LG(C)', 'LG(V)', `${m.appSlack},${m.appInsomnia}`],
+                [odd.undo, m.appSignal, m.appWhatsup, m.appTelegram, `${m.appSlack},${m.appInsomnia}`],
 
 
                 ['&trans', '&trans', '&trans'],
@@ -446,6 +268,11 @@ ZMK_MACRO(disable_rus,
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
             ],
+            // combos: [
+            //     { keys: [0, 3], binding: `&kp ${m.appTelegram}` },
+            //     { keys: [0, 3], binding: `&kp ${m.appWhatsup}` },
+            //     { keys: [0, 3], binding: `&kp ${}` },
+            // ]
         },
         'windows2': {
             keys: [
@@ -487,17 +314,24 @@ ZMK_MACRO(disable_rus,
     }
 };
 
-const configParsed: ConfigParsed = { ...config, keymap: {} };
-// invoke layer config with configLocal
-Object.entries(config.keymap).forEach(([layer, layerConfig]) => {
-    if (typeof layerConfig === 'function') {
-        // console.log(layer, Object.keys(config.keymap), config.keymap.russian);
-        configParsed.keymap[layer] = layerConfig(configParsed);
-    } else {
-        // @ts-ignore
-        configParsed.keymap[layer] = config.keymap[layer];
-    }
-});
+// Conditional layers
+const conditionalLayers = [
+    { layer: 'colemak_control', targets: ['arrows', 'numbers'] },
+    { layer: 'windows2', targets: ['arrows', 'windows'] },
+
+    //Eng
+    { layer: 'symbols_mirror', targets: ['default_mirror', 'symbols'] },
+    { layer: 'arrows_mirror', targets: ['default_mirror', 'arrows'] },
+    { layer: 'colemak_shift_mirror', targets: ['default_mirror', 'colemak_shift'] },
+
+    //Russian
+    { layer: 'symbols_mirror', targets: ['russian_mirror', 'symbols'] },
+    { layer: 'arrows_mirror', targets: ['russian_mirror', 'arrows'] },
+    { layer: 'colemak_shift_mirror', targets: ['russian_mirror', 'colemak_shift'] },
+
+];
+
+const configParsed = configToParsed(config);
 
 
 //Add macros to be used in russian layer
@@ -533,7 +367,7 @@ ZMK_MACRO(arrowsr_rus,
 )
  `)
 
-//Combos
+// Combos
 Object.entries(configParsed.keymap).forEach(([layer, layerConfig]) => {
     if (layerConfig.combos) {
         layerConfig.combos.forEach((combo: Combo, comboIndex: number) => {
@@ -543,7 +377,7 @@ compatible = "zmk,combos";
 combo_${layer}_${comboIndex} {
     timeout-ms = <50>;
     key-positions = <${keys.join(' ')}>;
-    bindings = <${binding}>;
+    bindings = <${keyMapper(configParsed, binding, { layer: `combo_${layer}`, row: 0, index: comboIndex })}>;
     layers = <${layerToLayer(layer)}>;
 };
             `);
@@ -552,23 +386,7 @@ combo_${layer}_${comboIndex} {
 });
 
 
-
-// Conditional layers
-const conditionalLayers = [
-    { layer: 'colemak_control', targets: ['arrows', 'numbers'] },
-    { layer: 'windows2', targets: ['arrows', 'windows'] },
-
-    //Eng
-    { layer: 'symbols_mirror', targets: ['default_mirror', 'symbols'] },
-    { layer: 'arrows_mirror', targets: ['default_mirror', 'arrows'] },
-    { layer: 'colemak_shift_mirror', targets: ['default_mirror', 'colemak_shift'] },
-
-    //Russian
-    { layer: 'symbols_mirror', targets: ['russian_mirror', 'symbols'] },
-    { layer: 'arrows_mirror', targets: ['russian_mirror', 'arrows'] },
-    { layer: 'colemak_shift_mirror', targets: ['russian_mirror', 'colemak_shift'] },
-
-];
+// Conditional layers 2
 const layerOrder = Object.keys(configParsed.keymap);
 conditionalLayers.forEach(({ layer, targets }, index) => {
     if (!configParsed.keymap[layer]) {
@@ -609,130 +427,11 @@ for (let layer in configParsed.keymap) {
 }
 
 
-const defines = Object.keys(configParsed.keymap).map((layer, index) => `#define ${layerToLayer(layer)} ${index}`).join('\n')
-
-let macroCounter = 0
-const unwrapTapDance = (keyText: string, location: KeyLocation) => {
-    const [tap, hold, tapHold, doubleTap] = keyText.split(',');
-    if (doubleTap) {
-        throw new Error(`double tap is not implemented yet at ${keyText} ${JSON.stringify(location)}`);
-    }
-    const macroIndex = macroCounter++;
-
-    configParsed.behaviors.push(`
-td_${macroIndex}: td_${macroIndex} {
-    compatible = "zmk,behavior-tap-dance";
-    label = "td_${macroIndex}";
-    #binding-cells = <0>;
-    tapping-term-ms = <${tapDanceTerm}>;
-    bindings = <&td_${macroIndex}_first 0 ${tap}>, ${tapHold ? `<&td_${macroIndex}_second 0 0>` : `<&td_${macroIndex}_repeat>`};
-};
-td_${macroIndex}_first: td_${macroIndex}_first {
-    compatible = "zmk,behavior-hold-tap";
-    label = "td_${macroIndex}_first";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <${tappingTerm}>;
-    quick-tap-ms = <${quickTap}>;
-    global-quick-tap;
-    bindings = <&td_${macroIndex}_hold_first>, <&kp>;
-};`)
-    if (tapHold) {
-        configParsed.behaviors.push(`
-td_${macroIndex}_second: td_${macroIndex}_second {
-    compatible = "zmk,behavior-hold-tap";
-    label = "td_${macroIndex}_second";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <${tappingTerm2}>;
-    quick-tap-ms = <${quickTap}>;
-    global-quick-tap;
-    bindings = <&td_${macroIndex}_hold_second>, <&td_${macroIndex}_repeat>;
-};`)
-    }
-
-    configParsed.macros.push(`
-ZMK_MACRO(td_${macroIndex}_hold_first,
-    wait-ms = <0>;
-    bindings = <&macro_tap &kp ${hold}>;
-)
-ZMK_MACRO(td_${macroIndex}_hold_second,
-    wait-ms = <0>;
-    bindings = <&macro_tap &kp ${tapHold || 'X'}>;
-)
-ZMK_MACRO(td_${macroIndex}_repeat,
-    wait-ms = <0>;
-    bindings = <&macro_tap &kp ${tap} &kp ${tap}>;
-)
-`)
-    return `&td_${macroIndex}`
-}
-
-interface KeyLocation { layer: string, row: number, index: number };
-
-const keyMapper = (keyText: string, location: KeyLocation) => {
-    //layer switcher &mo L_LAYER
-    if (keyText.startsWith('&mo ')) {
-        const [, layer] = keyText.split(' ')
-        if (!Object.keys(configParsed.keymap).includes(layer)) {
-            throw new Error(`layer ${layer} does not exist at keyText: ${keyText} :${JSON.stringify(location)}`)
-        }
-        return `&mo L_${layer.toUpperCase()}`
-    }
-    if (keyText === '=') {
-        throw new Error(`keyText ${keyText} is not allowed at ${JSON.stringify(location)}`)
-    }
-    if (keyText.startsWith('+')) {
-        return unwrapTapDance(unwrapPlus(keyText), location);
-    }
-    if (keyText.includes(',')) {
-        return unwrapTapDance(keyText, location);
-    }
-    if (!keyText.startsWith('&')) {
-        return `&kp ${keyText}`;
-    }
-    return keyText;
-}
-
 //map every key under configParsed.keymap[layer][row] using keyMapper()
 for (let layer in configParsed.keymap) {
-    configParsed.keymap[layer].keys = configParsed.keymap[layer].keys.map((rows, rowIndex) => rows.map((keyText, index) => keyMapper(keyText, { layer, row: rowIndex, index })))
+    configParsed.keymap[layer].keys = configParsed.keymap[layer].keys.map((rows, rowIndex) => rows.map((keyText, index) => keyMapper(configParsed, keyText, { layer, row: rowIndex, index })))
 }
 
-
-// console.log(configParsed.keymap);
-const tab = (str: string, pad: string) => str.split('\n').map(line => `${pad}${line}`).join('\n')
-
-const output = `${configParsed.header}
-${defines}
-${configParsed.postHeader}
-    conditional_layers {
-${tab(configParsed.conditionalLayers.map(macro => macro.trim()).join('\n'), '        ')}
-    };
-    combos {
-${tab(configParsed.combos.map(combo => combo.trim()).join('\n'), '        ')}
-    };
-    behaviors {
-${tab(configParsed.behaviors.map(macro => macro.trim()).join('\n'), '        ')}
-    };
-    macros {
-${tab(configParsed.macros.map(macro => macro.trim()).join('\n'), '        ')}
-    };
-    keymap {
-        compatible = "zmk,keymap";
-        ${Object.keys(configParsed.keymap).map((layer, index) => `
-        /* ${layer} ${index} */
-        ${layer}_layer {
-            bindings = <
-${configParsed.keymap[layer].keys.map(row => row.join('\t')).join('\n')}
-            >;${configParsed.keymap[layer].sensor ? `\n sensor-bindings = <${configParsed.keymap[layer].sensor}>;` : ''}            
-        };
-    `).join('\n')}
-    };
-};
-`
-
-fs.writeFileSync('./config/flactyl.keymap', output)
-// console.log(output);
+fs.writeFileSync('./config/flactyl.keymap', configToOutput(configParsed));
 
 console.log(mehArray.filter(({ used }) => !used).map(item => item.value));

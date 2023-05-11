@@ -4,7 +4,7 @@
   "description": "",
   "main": "yanConfig.js",
   "scripts": {
-    "precommit": "ts-node yanConfig && git add .",
+    "precommit": "ts-node yanConfig/index.ts && git add .",
     "test": "echo",
     "prepare": "husky install"
   },
