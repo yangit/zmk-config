@@ -258,9 +258,9 @@ ZMK_MACRO(disable_rus,
             ],
             sensor: '&yan_encoder',
             combos: [
-                { keys: [8, 13], binding: '&kp V' },
-                { keys: [7, 12], binding: '&kp V' },
-                { keys: [6, 11], binding: '&kp V' },
+                { keys: [8, 13], binding: '&kp LG(V)' },
+                { keys: [7, 12], binding: '&kp LG(C)' },
+                { keys: [6, 11], binding: '&kp LG(X)' },
                 { keys: [0, 5], binding: '&kp V' },
             ],
         },
@@ -534,7 +534,7 @@ ZMK_MACRO(arrowsr_rus,
  `)
 
 //Combos
-Object.entries(configParsed).forEach(([layer, layerConfig]) => {
+Object.entries(configParsed.keymap).forEach(([layer, layerConfig]) => {
     if (layerConfig.combos) {
         layerConfig.combos.forEach((combo: Combo, comboIndex: number) => {
             const { keys, binding } = combo;
@@ -710,7 +710,7 @@ ${configParsed.postHeader}
 ${tab(configParsed.conditionalLayers.map(macro => macro.trim()).join('\n'), '        ')}
     };
     combos {
-${tab(configParsed.combos.map(macro => macro.trim()).join('\n'), '        ')}
+${tab(configParsed.combos.map(combo => combo.trim()).join('\n'), '        ')}
     };
     behaviors {
 ${tab(configParsed.behaviors.map(macro => macro.trim()).join('\n'), '        ')}
