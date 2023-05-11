@@ -25,14 +25,17 @@ Double tap = ??
 const mehSeed = [
     'KP_N0', 'KP_N1', 'KP_N2', 'KP_N3', 'KP_N4', 'KP_N5', 'KP_N6', 'KP_N7', 'KP_N8', 'KP_N9',
     // below are first class citizens of numpad
-    'KP_PLUS', 'KP_MINUS', 'KP_MULTIPLY', 'KP_DIVIDE', 'KP_EQUAL', 'KP_DOT',
+    'KP_MINUS', 'KP_MULTIPLY', 'KP_EQUAL', 'KP_DOT',
+
+    // do not work with Divy
+    // 'KP_DIVIDE', 'KP_PLUS',
 
     // used by mac for brightness and volume
     // 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12',
 
     'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20',
 
-    //the ones below do not work with Divy mybe work with Alfred
+    //the ones below do not work with Divy maybe work with Alfred
     // 'F21', 'F22', 'F23', 'F24',
 
     // LANG does not work on alfred and divvy
