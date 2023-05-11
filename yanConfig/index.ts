@@ -255,8 +255,7 @@ ZMK_MACRO(disable_rus,
             keys: [
                 [odd.historyBack, odd.tabsBack, odd.appWindowBack, m.macAppsWitchBackward, odd.fontBigger],
                 [m.appFinder, m.appTerminal, m.appVsCode, m.appBrowser, `${m.appSlack},${m.appInsomnia}` ],
-                [odd.undo, m.appSignal, m.appWhatsup, `${m.appSublime},${m.appNotes}`, m.appTelegram ],
-
+                [odd.undo, '&none', `${m.appTelegram},${m.appWhatsup},${m.appSignal}`, `${m.appSublime},${m.appNotes}`,'&none'],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],

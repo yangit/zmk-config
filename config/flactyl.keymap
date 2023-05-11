@@ -2491,7 +2491,7 @@
             label = "td_117";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_117_first 0 LA(LG(LC(LS(KP_N9))))>, <&td_117_repeat>;
+            bindings = <&td_117_first 0 LA(LG(LC(LS(F17))))>, <&td_117_second 0 0>;
         };
         td_117_first: td_117_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2503,12 +2503,22 @@
             global-quick-tap;
             bindings = <&td_117_hold_first>, <&kp>;
         };
+        td_117_second: td_117_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_117_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_117_hold_second>, <&td_117_repeat>;
+        };
         td_118: td_118 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_118";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_118_first 0 LA(LG(LC(LS(KP_N2))))>, <&td_118_repeat>;
+            bindings = <&td_118_first 0 LA(LG(LC(LS(KP_N9))))>, <&td_118_repeat>;
         };
         td_118_first: td_118_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2525,7 +2535,7 @@
             label = "td_119";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_119_first 0 LA(LG(LC(LS(F18))))>, <&td_119_second 0 0>;
+            bindings = <&td_119_first 0 LA(LG(LC(LS(KP_N2))))>, <&td_119_repeat>;
         };
         td_119_first: td_119_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2537,22 +2547,12 @@
             global-quick-tap;
             bindings = <&td_119_hold_first>, <&kp>;
         };
-        td_119_second: td_119_second {
-            compatible = "zmk,behavior-hold-tap";
-            label = "td_119_second";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&td_119_hold_second>, <&td_119_repeat>;
-        };
         td_120: td_120 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_120";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_120_first 0 LA(LG(LC(LS(F20))))>, <&td_120_second 0 0>;
+            bindings = <&td_120_first 0 LA(LG(LC(LS(F18))))>, <&td_120_second 0 0>;
         };
         td_120_first: td_120_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2579,7 +2579,7 @@
             label = "td_121";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_121_first 0 LA(LG(LC(LS(N0))))>, <&td_121_second 0 0>;
+            bindings = <&td_121_first 0 LA(LG(LC(LS(F20))))>, <&td_121_second 0 0>;
         };
         td_121_first: td_121_first {
             compatible = "zmk,behavior-hold-tap";
@@ -2600,6 +2600,33 @@
             quick-tap-ms = <150>;
             global-quick-tap;
             bindings = <&td_121_hold_second>, <&td_121_repeat>;
+        };
+        td_122: td_122 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "td_122";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&td_122_first 0 LA(LG(LC(LS(N0))))>, <&td_122_second 0 0>;
+        };
+        td_122_first: td_122_first {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_122_first";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_122_hold_first>, <&kp>;
+        };
+        td_122_second: td_122_second {
+            compatible = "zmk,behavior-hold-tap";
+            label = "td_122_second";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&td_122_hold_second>, <&td_122_repeat>;
         };
     };
     macros {
@@ -4099,19 +4126,19 @@
         )
         ZMK_MACRO(td_117_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_MINUS))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_MULTIPLY))))>;
         )
         ZMK_MACRO(td_117_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp X>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_EQUAL))))>;
         )
         ZMK_MACRO(td_117_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_N9)))) &kp LA(LG(LC(LS(KP_N9))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(F17)))) &kp LA(LG(LC(LS(F17))))>;
         )
         ZMK_MACRO(td_118_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_N3))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_MINUS))))>;
         )
         ZMK_MACRO(td_118_hold_second,
             wait-ms = <0>;
@@ -4119,41 +4146,53 @@
         )
         ZMK_MACRO(td_118_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_N2)))) &kp LA(LG(LC(LS(KP_N2))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_N9)))) &kp LA(LG(LC(LS(KP_N9))))>;
         )
         ZMK_MACRO(td_119_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(F19))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_N3))))>;
         )
         ZMK_MACRO(td_119_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(F15))))>;
+            bindings = <&macro_tap &kp X>;
         )
         ZMK_MACRO(td_119_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(F18)))) &kp LA(LG(LC(LS(F18))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_N2)))) &kp LA(LG(LC(LS(KP_N2))))>;
         )
         ZMK_MACRO(td_120_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(N2))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(F19))))>;
         )
         ZMK_MACRO(td_120_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(N3))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(F15))))>;
         )
         ZMK_MACRO(td_120_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(F20)))) &kp LA(LG(LC(LS(F20))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(F18)))) &kp LA(LG(LC(LS(F18))))>;
         )
         ZMK_MACRO(td_121_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(F13))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(N2))))>;
         )
         ZMK_MACRO(td_121_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(F14))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(N3))))>;
         )
         ZMK_MACRO(td_121_repeat,
+            wait-ms = <0>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(F20)))) &kp LA(LG(LC(LS(F20))))>;
+        )
+        ZMK_MACRO(td_122_hold_first,
+            wait-ms = <0>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(F13))))>;
+        )
+        ZMK_MACRO(td_122_hold_second,
+            wait-ms = <0>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(F14))))>;
+        )
+        ZMK_MACRO(td_122_repeat,
             wait-ms = <0>;
             bindings = <&macro_tap &kp LA(LG(LC(LS(N0)))) &kp LA(LG(LC(LS(N0))))>;
         )
@@ -4439,7 +4478,7 @@
             bindings = <
 &kp LG(LEFT_BRACKET)	&kp LS(LC(TAB))	&kp LS(LG(GRAVE))	&kp LA(LG(LC(LS(KP_N0))))	&kp LG(EQUAL)
 &kp LA(LG(LC(LS(KP_N4))))	&kp LA(LG(LC(LS(KP_N5))))	&kp LA(LG(LC(LS(KP_N6))))	&kp LA(LG(LC(LS(KP_N7))))	&td_116
-&kp LG(Z)	&kp LA(LG(LC(LS(KP_EQUAL))))	&kp LA(LG(LC(LS(KP_MULTIPLY))))	&td_117	&kp LA(LG(LC(LS(F17))))
+&kp LG(Z)	&none	&td_117	&td_118	&none
 &trans	&trans	&trans
 &trans	&trans	&trans
 &trans	&trans	&trans	&trans	&trans
@@ -4455,7 +4494,7 @@
         windows2_layer {
             bindings = <
 &kp LG(RIGHT_BRACKET)	&kp LC(TAB)	&kp LG(GRAVE)	&kp LA(LG(LC(LS(KP_N1))))	&kp LG(MINUS)
-&td_118	&td_119	&td_120	&td_121	&kp LA(LG(LC(LS(N1))))
+&td_119	&td_120	&td_121	&td_122	&kp LA(LG(LC(LS(N1))))
 &kp LG(LS(Z))	&shellrepeat	&awesome	&kp LG(LS(V))	&kp LG(LS(N4))
 &trans	&trans	&trans
 &trans	&trans	&trans
