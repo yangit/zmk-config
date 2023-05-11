@@ -4166,7 +4166,7 @@
         )
         ZMK_MACRO(td_120_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_PLUS))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(N4))))>;
         )
         ZMK_MACRO(td_120_repeat,
             wait-ms = <0>;
@@ -4178,7 +4178,7 @@
         )
         ZMK_MACRO(td_121_hold_second,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(KP_DIVIDE))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(N5))))>;
         )
         ZMK_MACRO(td_121_repeat,
             wait-ms = <0>;
