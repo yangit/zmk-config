@@ -258,9 +258,10 @@ ZMK_MACRO(disable_rus,
             ],
             sensor: '&yan_encoder',
             combos: [
-                { keys: [8, 13], binding: '&kp LC(V)' },
-                { keys: [7, 12], binding: '&kp LC(C)' },
-                { keys: [6, 11], binding: '&kp LC(X)' },
+                { keys: [8, 13], binding: '&kp V' },
+                { keys: [7, 12], binding: '&kp V' },
+                { keys: [6, 11], binding: '&kp V' },
+                { keys: [0, 5], binding: '&kp V' },
             ],
         },
         'russian': (configLocal) => {
