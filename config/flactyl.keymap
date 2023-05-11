@@ -2572,7 +2572,7 @@
             tapping-term-ms = <350>;
             quick-tap-ms = <150>;
             global-quick-tap;
-            bindings = <&td_120_hold_second>, <&kp}>;
+            bindings = <&td_120_hold_second>, <&kp>;
         };
         td_121: td_121 {
             compatible = "zmk,behavior-tap-dance";
@@ -2599,7 +2599,7 @@
             tapping-term-ms = <350>;
             quick-tap-ms = <150>;
             global-quick-tap;
-            bindings = <&td_121_hold_second>, <&kp}>;
+            bindings = <&td_121_hold_second>, <&kp>;
         };
         td_122: td_122 {
             compatible = "zmk,behavior-tap-dance";

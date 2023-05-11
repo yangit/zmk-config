@@ -41,7 +41,7 @@ td_${macroIndex}_second: td_${macroIndex}_second {
     tapping-term-ms = <${tappingTerm2}>;
     quick-tap-ms = <${quickTap}>;
     global-quick-tap;
-    bindings = <&td_${macroIndex}_hold_second>, <${doubleTap ? `&kp}` : `&td_${macroIndex}_repeat`}>;
+    bindings = <&td_${macroIndex}_hold_second>, <${doubleTap ? `&kp` : `&td_${macroIndex}_repeat`}>;
 };`)
     }
 
