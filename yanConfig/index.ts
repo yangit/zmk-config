@@ -74,7 +74,7 @@ ZMK_MACRO(disable_rus,
                 ['&mo symbols', '&mo default_mirror', '&mo colemak_shift'],
 
                 ['&mo config', '+L', '+U', '+Y', 'N1,N2,N3'],
-                ['+M', '+N', '+E', 'I,LG(I),LG(LA(I))', '+O'],
+                ['+M', 'N,LG(N),LG(LS(N))', '+E', 'I,LG(I),LG(LA(I))', '+O'],
                 ['+J', '+H', '+V', '+K', '&none'],
 
                 ['SPACE', '&mo symbols', '&mo colemak_shift'],
