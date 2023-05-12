@@ -88,6 +88,8 @@ export const m = {
     appSignal: 'LA(LG(LC(LS(KP_EQUAL))))',
     appTelegram: 'LA(LG(LC(LS(F17))))',
     appWhatsup: 'LA(LG(LC(LS(KP_MULTIPLY))))',
+    appRecordStart:'LA(LG(LC(LS(N6))))',
+    appRecordStop:'LA(LG(LC(LS(N7))))',
 
     // windows
     divvy: 'LA(LG(LC(LS(N1))))',
