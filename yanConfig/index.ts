@@ -294,7 +294,7 @@ ZMK_MACRO(disable_rus,
         'config': {
             keys: [
                 ['&bootloader', '&sys_reset', '&bt BT_CLR', '&none', '&none'],
-                ['&none', '&none', '&none', '&none', '&none'],
+                ['&bt BT_SEL 0', '&bt BT_SEL 1', '&bt BT_SEL 2', '&bt BT_SEL 3', '&bt BT_SEL 4'],
                 ['&bt BT_PRV', '&bt BT_NXT', '&out OUT_BLE', '&none', '&out OUT_USB'],
 
                 ['&none', '&none', '&none'],
