@@ -50,7 +50,8 @@ const mehSeed = [
 ]
 
 export const mehArray: { key: string, modifier: string, value: string, used: boolean }[] = [];
-mehSeed.forEach((key) => mehArray.push({ key, modifier: 'super', value: `LA(LG(LC(LS(${key}))))`, used: false }));
+mehSeed.forEach((key) => mehArray.push({ key, modifier: 'hyper', value: `LA(LG(LC(LS(${key}))))`, used: false }));
+mehSeed.forEach((key) => mehArray.push({ key, modifier: 'meh', value: `LA(LG(LC(${key})))`, used: false }));
 
 export const odd = {
     screenshot: 'LG(LS(N4))',
@@ -88,8 +89,8 @@ export const m = {
     appSignal: 'LA(LG(LC(LS(KP_EQUAL))))',
     appTelegram: 'LA(LG(LC(LS(F17))))',
     appWhatsup: 'LA(LG(LC(LS(KP_MULTIPLY))))',
-    appRecordStart:'LA(LG(LC(LS(N6))))',
-    appRecordStop:'LA(LG(LC(LS(N7))))',
+    appRecordStart:'LA(LG(LC(LS(G))))',
+    appRecordStop:'LA(LG(LC(G)))',
 
     // windows
     divvy: 'LA(LG(LC(LS(N1))))',

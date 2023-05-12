@@ -2535,7 +2535,7 @@
             label = "td_119";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&td_119_first 0 LA(LG(LC(LS(N6))))>, <&td_119_repeat>;
+            bindings = <&td_119_first 0 LA(LG(LC(LS(G))))>, <&td_119_repeat>;
         };
         td_119_first: td_119_first {
             compatible = "zmk,behavior-hold-tap";
@@ -4167,7 +4167,7 @@
         )
         ZMK_MACRO(td_119_hold_first,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(N7))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(G)))>;
         )
         ZMK_MACRO(td_119_hold_second,
             wait-ms = <0>;
@@ -4175,7 +4175,7 @@
         )
         ZMK_MACRO(td_119_repeat,
             wait-ms = <0>;
-            bindings = <&macro_tap &kp LA(LG(LC(LS(N6)))) &kp LA(LG(LC(LS(N6))))>;
+            bindings = <&macro_tap &kp LA(LG(LC(LS(G)))) &kp LA(LG(LC(LS(G))))>;
         )
         ZMK_MACRO(td_120_hold_first,
             wait-ms = <0>;
