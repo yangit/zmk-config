@@ -67,7 +67,7 @@ ZMK_MACRO(disable_rus,
         'default': {
             keys: [
                 ['Q,LG(SLASH),LA(LG(Q))', 'W,LG(W),LG(Q)', 'F,LG(F),LA(LG(F))', 'P,LG(P),LS(LG(P))', '&mo config'],
-                ['+A', '+R', '+S', 'T,LG(T),LG(N)', '+G'],
+                ['+A', '+R', '+S', '+T', '+G'],
                 ['Z', 'X', 'C', '+D', 'B,LG(B),LG(LS(B))'],
 
                 ['&mo windows', '&mo arrows', '&mo numbers'],
@@ -82,7 +82,7 @@ ZMK_MACRO(disable_rus,
             ],
             sensor: '&yan_encoder',
             combos: [
-                // { keys: [8, 13], binding: 'LG(V),LG(LS(V))' },
+                { keys: [8, 13], binding: 'LG(V),LG(LS(V))' },
                 { keys: [7, 12], binding: 'LG(C)' },
                 { keys: [6, 11], binding: 'LG(X)' },
             ],
@@ -371,6 +371,12 @@ Object.entries(configParsed.keymap).forEach(([layer, layerConfig]) => {
     if (layerConfig.combos) {
         layerConfig.combos.forEach((combo: Combo, comboIndex: number) => {
             const { keys, binding } = combo;
+            keys.forEach((key)=>{
+                const [_tap, _hold, tapHold]=layerConfig.keys.flatMap(a=>a)[key].split(',')
+                if (tapHold) {
+                    throw new Error(`Combo interferes with tapHold layer:${layer} key:${key} combo: ${JSON.stringify(combo)}`)
+                }
+            })
             configParsed.combos.push(`
 compatible = "zmk,combos";
 combo_${layer}_${comboIndex} {
