@@ -89,7 +89,7 @@ ZMK_MACRO(disable_rus,
         },
         'russian': (configLocal) => {
             const keysSeed = [
-                ['Q', 'W', 'E', 'R', 'T,ASTERISK'],
+                ['Q', 'W', 'E', 'R', 'T,BACKSLASH'],
                 ['A', 'S', 'D', 'F', 'G'],
                 ['Z', 'X', 'C', 'V', 'B'],
 
@@ -255,7 +255,7 @@ ZMK_MACRO(disable_rus,
             keys: [
                 [odd.historyBack, odd.tabsBack, odd.appWindowBack, m.macAppsWitchBackward, odd.fontBigger],
                 [m.appFinder, m.appTerminal, m.appVsCode, m.appBrowser, `${m.appSlack},${m.appInsomnia}` ],
-                [odd.undo, '&none', `${m.appTelegram},${m.appWhatsup},${m.appSignal}`, `${m.appSublime},${m.appNotes}`,`${m.appRecordStart},${m.appRecordStop}`],
+                [odd.undo, '&none', `${m.appTelegram},${m.appWhatsup},${m.appSignal}`, `${m.appSublime},${m.appNotes}`,m.appRecordStart],
 
                 ['&trans', '&trans', '&trans'],
                 ['&trans', '&trans', '&trans'],
@@ -276,7 +276,7 @@ ZMK_MACRO(disable_rus,
         'windows2': {
             keys: [
                 [odd.historyForward, odd.tabsForward, odd.appWindowForward, m.macAppsWitchForward, odd.fontSmaller],
-                [`${m.showApps},${m.showDesktop}`, `${m.winL_M},${m.winL_L},${m.winL_XL},${m.winL_S}`, `${m.winR_M},${m.winR_L},${m.winR_XL},${m.winR_S}`, `${m.winCenter_S},${m.winCenter_M},${m.winCenter_L}`, m.divvy],
+                [`${m.showApps},${m.showDesktop}`, `${m.winL_M},${m.winL_L},${m.winL_XL},${m.winL_S}`, `${m.winR_M},${m.winR_L},${m.winR_XL},${m.winR_S}`, `${m.winCenter_S},${m.winCenter_M},${m.winCenter_L}`, m.appRecordStop],
                 [odd.redo, '&shellrepeat', '&awesome', '&none', odd.screenshot],
 
 
