@@ -107,6 +107,7 @@ export const reverseLayerFrom = (layer: string) => (configLocal: ConfigParsed): 
     ],
   };
 };
+export const or = (a: string | undefined, b: string): string => typeof a === 'string' ? a : b;
 
 export const addModifierToLayer = (layer: string, modifier: string) => (configLocal: ConfigParsed) => {
   if (typeof configLocal.keymap[layer] === 'undefined') {

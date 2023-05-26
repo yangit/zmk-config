@@ -1,5 +1,5 @@
 import { type Combo, type Config } from './types';
-import { addModifierToLayer, configToOutput, configToParsed, keyMapper, layerToLayer, reverseLayerFrom, unwrapPlus } from './util';
+import { addModifierToLayer, configToOutput, configToParsed, keyMapper, layerToLayer, or, reverseLayerFrom, unwrapPlus } from './util';
 
 // Description: Yan's config file for ZMK
 import fs from 'fs';
@@ -101,6 +101,7 @@ ZMK_MACRO(disable_rus,
         ['&trans', '&symbols_rus', '&mo russian_shift'],
         ['&trans', '&numbers_rus', '&trans'],
       ];
+
       // Copy hold and tapHold macros from default layer
       const keys = keysSeed.map((line, lineIndex) => line.map((key, keyIndex) => {
         const [tap, hold, tapHold, doubleTap] = key.split(',');
@@ -110,7 +111,7 @@ ZMK_MACRO(disable_rus,
         }
         if (defaultKey.includes(',') && !key.startsWith('&') && !defaultKey.startsWith('&')) {
           const [dTap, dHold, dTapHold, dDoubleTap] = defaultKey.split(',');
-          const result = [tap || dTap, hold || dHold, tapHold || dTapHold, doubleTap || dDoubleTap].filter((value) => value).join(',');
+          const result = [or(tap, dTap), or(hold, dHold), or(tapHold, dTapHold), or(doubleTap, dDoubleTap)].filter((value) => value).join(',');
           return result;
         }
         return key;
