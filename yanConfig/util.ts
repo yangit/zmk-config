@@ -109,7 +109,7 @@ export const reverseLayerFrom = (layer: string) => (configLocal: ConfigParsed): 
 };
 
 export const addModifierToLayer = (layer: string, modifier: string) => (configLocal: ConfigParsed) => {
-  if (!configLocal.keymap[layer]) {
+  if (typeof configLocal.keymap[layer] === 'undefined') {
     throw new Error(`Layer ${layer} is not defined`);
   }
   const keys = configLocal.keymap[layer].keys.map(row => row.map(key => {

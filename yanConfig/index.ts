@@ -122,8 +122,12 @@ ZMK_MACRO(disable_rus,
     },
     russian_mirror: reverseLayerFrom('russian'),
     russian_shift: (configLocal) => {
-      const layer = addModifierToLayer('russian', 'LS')(configLocal);
-      return layer;
+      const { keys } = addModifierToLayer('russian', 'LS')(configLocal);
+      keys[0][4] = 'LS(T),LS(BACKSLASH)';
+      keys[7][1] = 'LS(M),LS(RIGHT_BRACKET)';
+      keys[7][4] = 'LS(SINGLE_QUOTE),LS(LEFT_BRACKET)';
+
+      return { keys };
     },
     default_mirror: reverseLayerFrom('default'),
     qwerty: {
