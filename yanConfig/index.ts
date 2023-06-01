@@ -168,10 +168,10 @@ ZMK_MACRO(disable_rus,
     colemak_shift: addModifierToLayer('colemak', 'LS'),
     colemak_shift_mirror: reverseLayerFrom('colemak_shift'),
     numbers: () => {
-      const reverseNumbersRow = (row: string[]): string[] => {
-        const [one, two, three, four, five] = row;
-        return [five, two, three, four, one];
-      };
+      // const reverseNumbersRow = (row: string[]): string[] => {
+      //   const [one, two, three, four, five] = row;
+      //   return [five, two, three, four, one];
+      // };
       const keys = [
         ['KP_MULTIPLY,KP_DIVIDE,COLON', 'N7', 'N8', 'N9', '&trans'],
         ['KP_PLUS,KP_MINUS', 'N1', 'N2', 'N3', 'N0'],
@@ -180,18 +180,18 @@ ZMK_MACRO(disable_rus,
         ['&trans', '&trans', '&trans'],
         ['&trans', '&trans', '&trans'],
 
-        ['=', '=', '=', '=', '='],
-        ['=', '=', '=', '=', '='],
-        ['=', '=', '=', '=', '='],
+        ['F1', 'F2', 'F3', 'F4', 'F5'],
+        ['F6', 'F7', 'F8', 'F9', 'F10'],
+        ['F11', 'F12', 'F13', 'F14', 'F15'],
 
         ['&trans', '&trans', '&trans'],
         ['&trans', '&trans', '&trans'],
       ];
 
       // mirror numbers layer
-      keys[5] = reverseNumbersRow(keys[0]);
-      keys[6] = reverseNumbersRow(keys[1]);
-      keys[7] = reverseNumbersRow(keys[2]);
+      // keys[5] = reverseNumbersRow(keys[0]);
+      // keys[6] = reverseNumbersRow(keys[1]);
+      // keys[7] = reverseNumbersRow(keys[2]);
       return { keys };
     },
     arrows: {
