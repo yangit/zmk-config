@@ -91,6 +91,7 @@ ZMK_MACRO(disable_rus,
         { keys: [8, 13], binding: 'LG(V),LG(LS(V))' },
         { keys: [7, 12], binding: 'LG(C)' },
         { keys: [6, 11], binding: 'LG(X)' },
+        { keys: [17, 20], binding: '&globeCaps' },
       ],
     },
     russian: (configLocal) => {
@@ -175,7 +176,7 @@ ZMK_MACRO(disable_rus,
     },
     colemak_shift: (configLocal) => {
       const { keys } = addModifierToLayer('colemak', 'LS')(configLocal);
-      keys[3][2] = '&globeCaps';
+      // keys[3][2] = '&globeCaps';
       return { keys };
     },
     colemak_shift_mirror: reverseLayerFrom('colemak_shift'),
@@ -190,7 +191,7 @@ ZMK_MACRO(disable_rus,
         ['KP_DOT,COMMA', 'N4', 'N5', 'N6', 'KP_EQUAL'],
 
         ['&trans', '&trans', '&trans'],
-        ['&trans', '&trans', '&globeCaps'],
+        ['&trans', '&trans', '&trans'],
 
         ['=', '=', '=', '=', '='],
         ['=', '=', '=', '=', '='],
