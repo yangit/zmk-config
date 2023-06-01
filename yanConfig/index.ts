@@ -38,7 +38,15 @@ yan_encoder: yan_encoder {
 };
 `],
   macros: [
-        `
+    `
+ZMK_MACRO(globeCaps,
+    bindings
+    = <&macro_press &mo ${layerToLayer('numbers_f')} &kp CAPS>
+    , <&macro_pause_for_release>
+    , <&macro_release &mo ${layerToLayer('numbers_f')} &kp CAPS>
+    ;
+)`,
+`
 ZMK_MACRO(awesome,
     wait-ms = <50>;
     bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
@@ -165,7 +173,11 @@ ZMK_MACRO(disable_rus,
         ['&trans', '&trans', '&trans'],
       ],
     },
-    colemak_shift: addModifierToLayer('colemak', 'LS'),
+    colemak_shift: (configLocal) => {
+      const { keys } = addModifierToLayer('colemak', 'LS')(configLocal);
+      keys[3][2] = '&globeCaps';
+      return { keys };
+    },
     colemak_shift_mirror: reverseLayerFrom('colemak_shift'),
     numbers: () => {
       const reverseNumbersRow = (row: string[]): string[] => {
@@ -178,7 +190,7 @@ ZMK_MACRO(disable_rus,
         ['KP_DOT,COMMA', 'N4', 'N5', 'N6', 'KP_EQUAL'],
 
         ['&trans', '&trans', '&trans'],
-        ['&trans', '&trans', '&trans'],
+        ['&trans', '&trans', '&globeCaps'],
 
         ['=', '=', '=', '=', '='],
         ['=', '=', '=', '=', '='],
@@ -196,25 +208,6 @@ ZMK_MACRO(disable_rus,
       keys[6] = reverseNumbersRow(keys[1]);
       keys[7] = reverseNumbersRow(keys[2]);
       return { keys };
-    },
-    numbers_f: () => {
-      return {
-        keys: [
-          ['&none', 'F7', 'F8', 'F9', 'F11'],
-          ['&none', 'F1', 'F2', 'F3', 'F10'],
-          ['&none', 'F4', 'F5', 'F6', 'F12'],
-
-          ['&trans', '&trans', '&trans'],
-          ['&trans', '&trans', '&trans'],
-
-          ['&trans', '&trans', '&trans', '&trans', '&trans'],
-          ['&trans', '&trans', '&trans', '&trans', '&trans'],
-          ['&trans', '&trans', '&trans', '&trans', '&trans'],
-
-          ['&trans', '&trans', '&trans'],
-          ['&trans', '&trans', '&trans'],
-        ],
-      };
     },
     arrows: {
       keys: [
@@ -317,6 +310,25 @@ ZMK_MACRO(disable_rus,
         ['&trans', '&trans', '&trans'],
         ['&trans', '&trans', '&trans'],
       ],
+    },
+    numbers_f: () => {
+      return {
+        keys: [
+          ['&none', 'F7', 'F8', 'F9', 'F11'],
+          ['&none', 'F1', 'F2', 'F3', 'F10'],
+          ['&none', 'F4', 'F5', 'F6', 'F12'],
+
+          ['&none', '&none', '&none'],
+          ['&none', '&none', '&none'],
+
+          ['&none', '&none', '&none', '&none', '&none'],
+          ['&none', '&none', '&none', '&none', '&none'],
+          ['&none', '&none', '&none', '&none', '&none'],
+
+          ['&none', '&none', '&none'],
+          ['&none', '&none', '&none'],
+        ],
+      };
     },
     config: {
       keys: [

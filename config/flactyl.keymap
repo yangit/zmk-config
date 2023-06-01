@@ -19,15 +19,15 @@
 #define L_COLEMAK_SHIFT 7
 #define L_COLEMAK_SHIFT_MIRROR 8
 #define L_NUMBERS 9
-#define L_NUMBERS_F 10
-#define L_ARROWS 11
-#define L_COLEMAK_CONTROL 12
-#define L_ARROWS_MIRROR 13
-#define L_ARROWSR 14
-#define L_SYMBOLS 15
-#define L_SYMBOLS_MIRROR 16
-#define L_WINDOWS 17
-#define L_WINDOWS2 18
+#define L_ARROWS 10
+#define L_COLEMAK_CONTROL 11
+#define L_ARROWS_MIRROR 12
+#define L_ARROWSR 13
+#define L_SYMBOLS 14
+#define L_SYMBOLS_MIRROR 15
+#define L_WINDOWS 16
+#define L_WINDOWS2 17
+#define L_NUMBERS_F 18
 #define L_CONFIG 19
 
 
@@ -2687,6 +2687,13 @@
         };
     };
     macros {
+        ZMK_MACRO(globeCaps,
+            bindings
+            = <&macro_press &mo L_NUMBERS_F &kp CAPS>
+            , <&macro_pause_for_release>
+            , <&macro_release &mo L_NUMBERS_F &kp CAPS>
+            ;
+        )
         ZMK_MACRO(awesome,
             wait-ms = <50>;
             bindings = <&macro_tap &kp M &kp O &kp O &kp N &kp L &kp A &kp N &kp D &kp E &kp R &kp LS(I) &kp S &kp A &kp W &kp E &kp S &kp RETURN>;
@@ -4419,7 +4426,7 @@
 &kp LS(Q)	&kp LS(W)	&kp LS(F)	&kp LS(P)	&none
 &kp LS(A)	&kp LS(R)	&kp LS(S)	&kp LS(T)	&kp LS(G)
 &kp LS(Z)	&kp LS(X)	&kp LS(C)	&kp LS(D)	&kp LS(B)
-&trans	&trans	&trans
+&trans	&trans	&globeCaps
 &trans	&trans	&trans
 &none	&kp LS(L)	&kp LS(U)	&kp LS(Y)	&none
 &kp LS(M)	&kp LS(N)	&kp LS(E)	&kp LS(I)	&kp LS(O)
@@ -4454,7 +4461,7 @@
 &td_106	&kp N1	&kp N2	&kp N3	&kp N0
 &td_107	&kp N4	&kp N5	&kp N6	&kp KP_EQUAL
 &trans	&trans	&trans
-&trans	&trans	&trans
+&trans	&trans	&globeCaps
 &trans	&kp N7	&kp N8	&kp N9	&td_108
 &kp N0	&kp N1	&kp N2	&kp N3	&td_109
 &kp KP_EQUAL	&kp N4	&kp N5	&kp N6	&td_110
@@ -4464,24 +4471,7 @@
         };
     
 
-        /* numbers_f 10 */
-        numbers_f_layer {
-            bindings = <
-&none	&kp F7	&kp F8	&kp F9	&kp F11
-&none	&kp F1	&kp F2	&kp F3	&kp F10
-&none	&kp F4	&kp F5	&kp F6	&kp F12
-&trans	&trans	&trans
-&trans	&trans	&trans
-&trans	&trans	&trans	&trans	&trans
-&trans	&trans	&trans	&trans	&trans
-&trans	&trans	&trans	&trans	&trans
-&trans	&trans	&trans
-&trans	&trans	&trans
-            >;            
-        };
-    
-
-        /* arrows 11 */
+        /* arrows 10 */
         arrows_layer {
             bindings = <
 &none	&kp SPACE	&kp DELETE	&enable_rus	&kp K_VOLUME_UP
@@ -4498,7 +4488,7 @@
         };
     
 
-        /* colemak_control 12 */
+        /* colemak_control 11 */
         colemak_control_layer {
             bindings = <
 &kp LC(Q)	&kp LC(W)	&kp LC(F)	&kp LC(P)	&none
@@ -4515,7 +4505,7 @@
         };
     
 
-        /* arrows_mirror 13 */
+        /* arrows_mirror 12 */
         arrows_mirror_layer {
             bindings = <
 &none	&kp PAGE_UP	&kp UP_ARROW	&kp HOME	&none
@@ -4532,7 +4522,7 @@
         };
     
 
-        /* arrowsr 14 */
+        /* arrowsr 13 */
         arrowsr_layer {
             bindings = <
 &disable_rus	&trans	&trans	&none	&trans
@@ -4549,7 +4539,7 @@
         };
     
 
-        /* symbols 15 */
+        /* symbols 14 */
         symbols_layer {
             bindings = <
 &kp SLASH	&kp LEFT_PARENTHESIS	&kp RIGHT_PARENTHESIS	&kp MINUS	&kp PLUS
@@ -4566,7 +4556,7 @@
         };
     
 
-        /* symbols_mirror 16 */
+        /* symbols_mirror 15 */
         symbols_mirror_layer {
             bindings = <
 &td_117	&kp SEMICOLON	&kp COLON	&kp QUESTION	&kp EXCLAMATION
@@ -4583,7 +4573,7 @@
         };
     
 
-        /* windows 17 */
+        /* windows 16 */
         windows_layer {
             bindings = <
 &kp LG(LEFT_BRACKET)	&kp LS(LC(TAB))	&kp LS(LG(GRAVE))	&kp LA(LG(LC(LS(KP_N0))))	&kp LG(EQUAL)
@@ -4600,7 +4590,7 @@
         };
     
 
-        /* windows2 18 */
+        /* windows2 17 */
         windows2_layer {
             bindings = <
 &kp LG(RIGHT_BRACKET)	&kp LC(TAB)	&kp LG(GRAVE)	&kp LA(LG(LC(LS(KP_N1))))	&kp LG(MINUS)
@@ -4613,6 +4603,23 @@
 &trans	&trans	&trans	&trans	&trans
 &trans	&trans	&trans
 &trans	&trans	&trans
+            >;            
+        };
+    
+
+        /* numbers_f 18 */
+        numbers_f_layer {
+            bindings = <
+&none	&kp F7	&kp F8	&kp F9	&kp F11
+&none	&kp F1	&kp F2	&kp F3	&kp F10
+&none	&kp F4	&kp F5	&kp F6	&kp F12
+&none	&none	&none
+&none	&none	&none
+&none	&none	&none	&none	&none
+&none	&none	&none	&none	&none
+&none	&none	&none	&none	&none
+&none	&none	&none
+&none	&none	&none
             >;            
         };
     
