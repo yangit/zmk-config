@@ -91,7 +91,7 @@ ZMK_MACRO(disable_rus,
         { keys: [8, 13], binding: 'LG(V),LG(LS(V))' },
         { keys: [7, 12], binding: 'LG(C)' },
         { keys: [6, 11], binding: 'LG(X)' },
-        // { keys: [17, 20], binding: '&globeCaps' },
+        { keys: [17, 20], binding: '&globeCaps' },
       ],
     },
     russian: (configLocal) => {
