@@ -84,14 +84,14 @@ ZMK_MACRO(disable_rus,
         ['+J', '+H', '+V', '+K', '&none'],
 
         ['SPACE', '&mo symbols', '&mo colemak_shift'],
-        ['&none', '&mo numbers', '&none'],
+        ['&mo numbers_f', '&mo numbers', '&globeCaps'],
       ],
       sensor: '&yan_encoder',
       combos: [
         { keys: [8, 13], binding: 'LG(V),LG(LS(V))' },
         { keys: [7, 12], binding: 'LG(C)' },
         { keys: [6, 11], binding: 'LG(X)' },
-        { keys: [17, 20], binding: '&globeCaps' },
+        // { keys: [17, 20], binding: '&globeCaps' },
       ],
     },
     russian: (configLocal) => {
@@ -176,7 +176,7 @@ ZMK_MACRO(disable_rus,
     },
     colemak_shift: (configLocal) => {
       const { keys } = addModifierToLayer('colemak', 'LS')(configLocal);
-      // keys[3][2] = '&globeCaps';
+      keys[3][2] = '&globeCaps';
       return { keys };
     },
     colemak_shift_mirror: reverseLayerFrom('colemak_shift'),
@@ -191,7 +191,7 @@ ZMK_MACRO(disable_rus,
         ['KP_DOT,COMMA', 'N4', 'N5', 'N6', 'KP_EQUAL'],
 
         ['&trans', '&trans', '&trans'],
-        ['&trans', '&trans', '&trans'],
+        ['&trans', '&trans', '&globeCaps'],
 
         ['=', '=', '=', '=', '='],
         ['=', '=', '=', '=', '='],
@@ -312,24 +312,22 @@ ZMK_MACRO(disable_rus,
         ['&trans', '&trans', '&trans'],
       ],
     },
-    numbers_f: () => {
-      return {
-        keys: [
-          ['&none', 'F7', 'F8', 'F9', 'F11'],
-          ['&none', 'F1', 'F2', 'F3', 'F10'],
-          ['&none', 'F4', 'F5', 'F6', 'F12'],
+    numbers_f: {
+      keys: [
+        ['&none', 'F7', 'F8', 'F9', 'F11'],
+        ['&none', 'F1', 'F2', 'F3', 'F10'],
+        ['&none', 'F4', 'F5', 'F6', 'F12'],
 
-          ['&none', '&none', '&none'],
-          ['&none', '&none', '&none'],
+        ['&none', '&none', '&none'],
+        ['&none', '&none', '&none'],
 
-          ['&none', '&none', '&none', '&none', '&none'],
-          ['&none', '&none', '&none', '&none', '&none'],
-          ['&none', '&none', '&none', '&none', '&none'],
+        ['&none', '&none', '&none', '&none', '&none'],
+        ['&none', '&none', '&none', '&none', '&none'],
+        ['&none', '&none', '&none', '&none', '&none'],
 
-          ['&none', '&none', '&none'],
-          ['&none', '&none', '&none'],
-        ],
-      };
+        ['&none', '&none', '&none'],
+        ['&none', '&none', '&none'],
+      ],
     },
     config: {
       keys: [

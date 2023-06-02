@@ -108,13 +108,6 @@
             layers = <L_DEFAULT>;
         };
         compatible = "zmk,combos";
-        combo_default_3 {
-            timeout-ms = <100>;
-            key-positions = <17 20>;
-            bindings = <&globeCaps>;
-            layers = <L_DEFAULT>;
-        };
-        compatible = "zmk,combos";
         combo_russian_0 {
             timeout-ms = <100>;
             key-positions = <8 13>;
@@ -133,13 +126,6 @@
             timeout-ms = <100>;
             key-positions = <6 11>;
             bindings = <&kp LG(X)>;
-            layers = <L_RUSSIAN>;
-        };
-        compatible = "zmk,combos";
-        combo_russian_3 {
-            timeout-ms = <100>;
-            key-positions = <17 20>;
-            bindings = <&globeCaps>;
             layers = <L_RUSSIAN>;
         };
         compatible = "zmk,combos";
@@ -4326,7 +4312,7 @@
 &td_17	&td_18	&td_19	&td_20	&td_21
 &td_22	&td_23	&td_24	&td_25	&none
 &kp SPACE	&mo L_SYMBOLS	&mo L_COLEMAK_SHIFT
-&none	&mo L_NUMBERS	&none
+&mo L_NUMBERS_F	&mo L_NUMBERS	&globeCaps
             >;
  sensor-bindings = <&yan_encoder>;            
         };
@@ -4440,7 +4426,7 @@
 &kp LS(Q)	&kp LS(W)	&kp LS(F)	&kp LS(P)	&none
 &kp LS(A)	&kp LS(R)	&kp LS(S)	&kp LS(T)	&kp LS(G)
 &kp LS(Z)	&kp LS(X)	&kp LS(C)	&kp LS(D)	&kp LS(B)
-&trans	&trans	&trans
+&trans	&trans	&globeCaps
 &trans	&trans	&trans
 &none	&kp LS(L)	&kp LS(U)	&kp LS(Y)	&none
 &kp LS(M)	&kp LS(N)	&kp LS(E)	&kp LS(I)	&kp LS(O)
@@ -4475,7 +4461,7 @@
 &td_106	&kp N1	&kp N2	&kp N3	&kp N0
 &td_107	&kp N4	&kp N5	&kp N6	&kp KP_EQUAL
 &trans	&trans	&trans
-&trans	&trans	&trans
+&trans	&trans	&globeCaps
 &trans	&kp N7	&kp N8	&kp N9	&td_108
 &kp N0	&kp N1	&kp N2	&kp N3	&td_109
 &kp KP_EQUAL	&kp N4	&kp N5	&kp N6	&td_110

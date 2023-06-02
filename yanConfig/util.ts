@@ -67,6 +67,8 @@ export const keyMapper = (configParsed: ConfigParsed, keyText: string, location:
   if (keyText.startsWith('&mo ')) {
     const [, layer] = keyText.split(' ');
     if (!Object.keys(configParsed.keymap).includes(layer)) {
+      console.log(configParsed.keymap);
+
       throw new Error(`layer ${layer} does not exist at keyText: ${keyText} :${JSON.stringify(location)}`);
     }
     return `&mo L_${layer.toUpperCase()}`;
