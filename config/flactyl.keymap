@@ -27,7 +27,7 @@
 #define L_SYMBOLS_MIRROR 15
 #define L_WINDOWS 16
 #define L_WINDOWS2 17
-#define L_NUMBERS_F 18
+#define L_NUMBERSF 18
 #define L_CONFIG 19
 
 
@@ -48,11 +48,6 @@
             windows2__arrows__windows {
                 if-layers = <L_ARROWS L_WINDOWS>;
                 then-layer = <L_WINDOWS2>;
-            };
-        compatible = "zmk,conditional-layers";
-            numbers_f__numbers__colemak_shift {
-                if-layers = <L_NUMBERS L_COLEMAK_SHIFT>;
-                then-layer = <L_NUMBERS_F>;
             };
         compatible = "zmk,conditional-layers";
             symbols_mirror__default_mirror__symbols {
@@ -108,13 +103,6 @@
             layers = <L_DEFAULT>;
         };
         compatible = "zmk,combos";
-        combo_default_3 {
-            timeout-ms = <100>;
-            key-positions = <17 20>;
-            bindings = <&globeCaps>;
-            layers = <L_DEFAULT>;
-        };
-        compatible = "zmk,combos";
         combo_russian_0 {
             timeout-ms = <100>;
             key-positions = <8 13>;
@@ -133,13 +121,6 @@
             timeout-ms = <100>;
             key-positions = <6 11>;
             bindings = <&kp LG(X)>;
-            layers = <L_RUSSIAN>;
-        };
-        compatible = "zmk,combos";
-        combo_russian_3 {
-            timeout-ms = <100>;
-            key-positions = <17 20>;
-            bindings = <&globeCaps>;
             layers = <L_RUSSIAN>;
         };
         compatible = "zmk,combos";
@@ -2703,9 +2684,9 @@
     macros {
         ZMK_MACRO(globeCaps,
             bindings
-            = <&macro_press &mo L_NUMBERS_F &kp CAPS>
+            = <&macro_press &mo L_NUMBERSF &kp CAPS>
             , <&macro_pause_for_release>
-            , <&macro_release &mo L_NUMBERS_F &kp CAPS>
+            , <&macro_release &mo L_NUMBERSF &kp CAPS>
             ;
         )
         ZMK_MACRO(awesome,
@@ -4326,7 +4307,7 @@
 &td_17	&td_18	&td_19	&td_20	&td_21
 &td_22	&td_23	&td_24	&td_25	&none
 &kp SPACE	&mo L_SYMBOLS	&mo L_COLEMAK_SHIFT
-&mo L_NUMBERS_F	&mo L_NUMBERS	&globeCaps
+&mo L_NUMBERSF	&mo L_NUMBERS	&globeCaps
             >;
  sensor-bindings = <&yan_encoder>;            
         };
@@ -4621,8 +4602,8 @@
         };
     
 
-        /* numbers_f 18 */
-        numbers_f_layer {
+        /* numbersf 18 */
+        numbersf_layer {
             bindings = <
 &none	&kp F7	&kp F8	&kp F9	&kp F11
 &none	&kp F1	&kp F2	&kp F3	&kp F10

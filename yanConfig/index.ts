@@ -41,9 +41,9 @@ yan_encoder: yan_encoder {
     `
 ZMK_MACRO(globeCaps,
     bindings
-    = <&macro_press &mo ${layerToLayer('numbers_f')} &kp CAPS>
+    = <&macro_press &mo ${layerToLayer('numbersf')} &kp CAPS>
     , <&macro_pause_for_release>
-    , <&macro_release &mo ${layerToLayer('numbers_f')} &kp CAPS>
+    , <&macro_release &mo ${layerToLayer('numbersf')} &kp CAPS>
     ;
 )`,
 `
@@ -84,14 +84,14 @@ ZMK_MACRO(disable_rus,
         ['+J', '+H', '+V', '+K', '&none'],
 
         ['SPACE', '&mo symbols', '&mo colemak_shift'],
-        ['&mo numbers_f', '&mo numbers', '&globeCaps'],
+        ['&mo numbersf', '&mo numbers', '&globeCaps'],
       ],
       sensor: '&yan_encoder',
       combos: [
         { keys: [8, 13], binding: 'LG(V),LG(LS(V))' },
         { keys: [7, 12], binding: 'LG(C)' },
         { keys: [6, 11], binding: 'LG(X)' },
-        { keys: [17, 20], binding: '&globeCaps' },
+        // { keys: [17, 20], binding: '&globeCaps' },
       ],
     },
     russian: (configLocal) => {
@@ -312,7 +312,7 @@ ZMK_MACRO(disable_rus,
         ['&trans', '&trans', '&trans'],
       ],
     },
-    numbers_f: {
+    numbersf: {
       keys: [
         ['&none', 'F7', 'F8', 'F9', 'F11'],
         ['&none', 'F1', 'F2', 'F3', 'F10'],
@@ -355,7 +355,6 @@ ZMK_MACRO(disable_rus,
 const conditionalLayers = [
   { layer: 'colemak_control', targets: ['arrows', 'numbers'] },
   { layer: 'windows2', targets: ['arrows', 'windows'] },
-  { layer: 'numbers_f', targets: ['numbers', 'colemak_shift'] },
 
   // Eng
   { layer: 'symbols_mirror', targets: ['default_mirror', 'symbols'] },
