@@ -8,8 +8,6 @@ exposes: [i2c_oled]
 features:
   - encoder
   - keys
-  - display
-  - underglow
 siblings:
   - flactyl_left
   - flactyl_right
