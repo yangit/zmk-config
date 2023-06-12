@@ -73,14 +73,14 @@ ZMK_MACRO(disable_rus,
     default: {
       keys: [
         ['Q,LG(SLASH),LA(LG(Q))', 'W,LG(W),LG(Q)', 'F,LG(F),LA(LG(F))', 'P,LG(P),LS(LG(P))', '&mo config'],
-        ['+A', '+R', '+S', '+T', '+G'],
+        ['+A', '+R', '+S', '+T', 'G,LG(G),LG(LS(G))'],
         ['Z', 'X', 'C', '+D', 'B,LG(B),LG(LS(B))'],
 
         ['&mo windows', '&mo arrows', '&mo numbers'],
         ['&mo symbols', '&mo default_mirror', '&mo colemak_shift'],
 
         ['&mo config', '+L', '+U', '+Y', 'N1,N2,N3'],
-        ['+M', 'N,LG(N),LG(LS(N))', '+E', 'I,LG(I),LG(LA(I))', '+O'],
+        ['+M', 'N,LG(N),LG(LS(N))', 'E,LG(E),LS(LG(E))', 'I,LG(I),LG(LA(I))', '+O'],
         ['+J', '+H', '+V', '+K', '&none'],
 
         ['SPACE', '&mo symbols', '&mo colemak_shift'],
@@ -326,7 +326,7 @@ ZMK_MACRO(disable_rus,
         ['&none', '&none', '&none', '&none', '&none'],
 
         ['&none', '&none', '&none'],
-        ['&none', '&none', '&none'],
+        ['&none', '&kp CAPS', '&none'],
       ],
     },
     config: {
