@@ -14,8 +14,9 @@ Basic layers, are ok to write by hand, but tap dances are just horrible in both 
 - Combos are defined per layer and are human readable.
 - layers defined using their names, and if I ever need to rearrange layer I would not have to kill myself
 
-I.e. tap-dance for key like `'E,LG(E),LS(LG(E))'` means emit `E` on press `LG(E)` on hold and `LS(LG(E))` on tap-and-hold.  
-`'+L'` means emit `L` on tap and `LG(L)` on hold.
+I.e. tap-dance for key like `'E,LG(E),LS(LG(E))'` means emit `E` on press, `LG(E)` on hold and `LS(LG(E))` on tap-and-hold.  
+The declaration `'+L'` means emit `L` on tap and `LG(L)` on hold.
+Overall it allows to keep full layer worth of keys with tap-dances on a single laptop screen
 
 ## Example
 
