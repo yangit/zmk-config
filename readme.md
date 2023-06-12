@@ -4,7 +4,7 @@ This is my `zmk-config` generator, it is written in TS and is located under `./y
 
 ## Why
 
-Basic layers, are ok to write by hand, but tap dances are just horrible in both ZMK and QMK, my config generator of 128 lines in JavaScript generates `.keymap`  4719 lines long. How am I supposed to maintain it manually?
+Basic layers, are ok to write by hand, but tap dances are just horrible in both ZMK and QMK, my config generator of ~500 lines in JavaScript generates `.keymap`  ~5000 lines long. How am I supposed to maintain it manually?
 
 ## Features
 
