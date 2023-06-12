@@ -2,7 +2,11 @@
 
 This is my `zmk-config` generator, it is written in TS and is located under `./yanConfig/index.ts`
 
-Features:
+## Why
+
+Basic layers, are ok to write by hand, but tap dances are just horrible in both ZMK and QMK, my config generator of 128 lines in JavaScript generates `.keymap`  4719 lines long. How am I supposed to maintain it manually? Features I have in my generator are:
+
+## Features
 
 - Mirror layer
 - Create layer from another, but with modifier
@@ -12,6 +16,8 @@ Features:
 
 I.e. tap-dance for key like `'E,LG(E),LS(LG(E))'` means emit `E` on press `LG(E)` on hold and `LS(LG(E))` on tap-and-hold.  
 `'+L'` means emit `L` on tap and `LG(L)` on hold.
+
+## Example
 
 ```javascript
  var keymap = {
