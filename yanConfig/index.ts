@@ -85,6 +85,7 @@ ZMK_MACRO(disable_rus,
 
         ['SPACE', '&mo symbols', '&mo colemak_shift'],
         ['&mo numbersf', '&mo numbers', '&globeCaps'],
+        ['&kp K_MUTE'],
       ],
       sensor: '&yan_encoder',
       combos: [
@@ -454,7 +455,7 @@ compatible = "zmk,conditional-layers";
 
 // verify all keys of configParsed.keymap contain 10 arrays and 5,5,5,3,3,5,5,5,3,3 elements in each array
 for (const layer in configParsed.keymap) {
-  if (configParsed.keymap[layer].keys.length !== 10) {
+  if (configParsed.keymap[layer].keys.length > 11 || configParsed.keymap[layer].keys.length < 10) {
     throw new Error(`layer ${layer} does not contain 10 arrays it contains ${configParsed.keymap[layer].keys.length}`);
   }
   for (let row = 0; row < 9; row++) {
