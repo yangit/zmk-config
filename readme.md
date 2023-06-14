@@ -18,6 +18,46 @@ I.e. tap-dance for key like `'E,LG(E),LS(LG(E))'` means emit `E` on press, `LG(E
 The declaration `'+L'` means emit `L` on tap and `LG(L)` on hold.
 Overall it allows to keep full layer worth of keys with tap-dances on a single laptop screen
 
+## Tap dance mess
+
+Tap-dances on both ZMK and QMK are a mess. I'm not blaming developers, they did an awesome job, I just state the fact that the API is super convoluted and misleading.
+Especially timings.
+Consider this: You have a button with 4 functions.
+
+- **tap** emits 1
+- **hold** emits 2
+- **tap-n-hold** emits 3
+- **double-tap** emits 4
+
+And you have a timeout set to 100ms to trigger from one state to another
+You'd expect that:
+
+- press and release less than 100ms will emit 1
+- press and hold longer than 100ms will emit 2
+- press wait less than 100ms, release, press again for longer than 100ms will emit 3
+- press wait less than 100ms, release, press wait less than 100ms, release will emit 4
+
+Your expectations are wrong.
+Due to the nested nature of tap-dance and tap-n-hold functions their timeouts overlap and subtract and I encourage you to set timeouts to some ridiculous high number like 5000ms and observe for yourself actual timings with a stopwatch.
+
+This is what I saw:
+
+- press and release less than **200ms** will emit 1
+- press and hold longer than **200ms** will emit 2
+- press wait less than **200ms**, release, press again for longer than 100ms will emit 3
+- press wait less than **200ms**, release, press wait less than **100ms**, release will emit 4
+
+That makes setup counter intuitive and adjusting timings very hard.
+
+## Do not spam HOLD key
+
+One more wired (but sensible for developers) default is that the `hold` key is repeated and not clicked just once.
+That makes tap-dance for hotkeys scary to use. Imagine I have a `tap` to `Q` and `hold` to `CMD+Q` button.
+Hold it a bit too long and it will start firing `CMD+Q`s like crazy, closing all the apps.
+What I actually want is to emit `CMD+Q` only once regardless of how long I keep the key pressed.
+Same for opening new tabs, etc.
+Essentially `hold` keys are usually never need to be repeated, but they are hard to not repeat without explicit fix.
+
 ## Example
 
 ```javascript
