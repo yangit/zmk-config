@@ -333,7 +333,7 @@ ZMK_MACRO(disable_rus,
     config: {
       keys: [
         ['&bootloader', '&sys_reset', '&bt BT_CLR', '&none', '&none'],
-        ['&bt BT_SEL 0', '&bt BT_SEL 1', '&bt BT_SEL 2', '&bt BT_SEL 3', '&bt BT_SEL 4'],
+        ['&bts0', '&bts1', '&bts2', '&bts3', '&bts4'],
         ['&bt BT_PRV', '&bt BT_NXT', '&out OUT_BLE', '&none', '&out OUT_USB'],
 
         ['&none', '&none', '&none'],
@@ -351,6 +351,18 @@ ZMK_MACRO(disable_rus,
 
   },
 };
+
+// macros to switch blootooth devices in one click
+[0, 1, 2, 3, 4].forEach(i => {
+  config.macros.push(`  
+  ZMK_MACRO(bts${i},
+    wait-ms = <0>;
+    bindings
+        = <&macro_tap &out OUT_BLE &bt BT_SEL ${i}>;
+)
+`,
+  );
+});
 
 // Conditional layers
 const conditionalLayers = [

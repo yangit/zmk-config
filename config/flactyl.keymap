@@ -2787,6 +2787,31 @@
             bindings
                 = <&macro_tap &to L_DEFAULT &kp LC(EQUAL)>;
         )
+        ZMK_MACRO(bts0,
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &out OUT_BLE &bt BT_SEL 0>;
+        )
+        ZMK_MACRO(bts1,
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &out OUT_BLE &bt BT_SEL 1>;
+        )
+        ZMK_MACRO(bts2,
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &out OUT_BLE &bt BT_SEL 2>;
+        )
+        ZMK_MACRO(bts3,
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &out OUT_BLE &bt BT_SEL 3>;
+        )
+        ZMK_MACRO(bts4,
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &out OUT_BLE &bt BT_SEL 4>;
+        )
         ZMK_MACRO(symbols_rus,
             wait-ms = <0>;
             bindings
@@ -4704,7 +4729,7 @@
         config_layer {
             bindings = <
 &bootloader	&sys_reset	&bt BT_CLR	&none	&none
-&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4
+&bts0	&bts1	&bts2	&bts3	&bts4
 &bt BT_PRV	&bt BT_NXT	&out OUT_BLE	&none	&out OUT_USB
 &none	&none	&none
 &none	&none	&none
