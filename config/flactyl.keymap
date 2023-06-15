@@ -4577,7 +4577,7 @@
             bindings = <
 &none	&kp SPACE	&kp DELETE	&enable_rus	&kp K_VOLUME_UP
 &kp ESCAPE	&kp TAB	&kp BACKSPACE	&td_111	&kp K_VOLUME_DOWN
-&sk LEFT_ALT	&sk LEFT_CONTROL	&sk LEFT_SHIFT	&sk LEFT_COMMAND	&td_112
+&kp LEFT_ALT	&kp LEFT_CONTROL	&kp LEFT_SHIFT	&kp LEFT_COMMAND	&td_112
 &trans	&trans	&trans
 &trans	&trans	&trans
 &none	&kp HOME	&kp UP_ARROW	&kp PAGE_UP	&none
@@ -4616,7 +4616,7 @@
 &trans	&trans	&trans
 &kp K_VOLUME_UP	&enable_rus	&kp DELETE	&kp SPACE	&none
 &kp K_VOLUME_DOWN	&td_113	&kp BACKSPACE	&kp TAB	&kp ESCAPE
-&td_114	&sk LEFT_COMMAND	&sk LEFT_SHIFT	&sk LEFT_CONTROL	&sk LEFT_ALT
+&td_114	&kp LEFT_COMMAND	&kp LEFT_SHIFT	&kp LEFT_CONTROL	&kp LEFT_ALT
 &trans	&trans	&trans
 &trans	&trans	&trans
             >;            

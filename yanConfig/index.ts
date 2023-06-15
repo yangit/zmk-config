@@ -215,7 +215,7 @@ ZMK_MACRO(disable_rus,
       keys: [
         ['&none', 'SPACE', 'DELETE', '&enable_rus', 'K_VOLUME_UP'],
         ['ESCAPE', 'TAB', 'BACKSPACE', 'RETURN,LS(RETURN),LG(RETURN)', 'K_VOLUME_DOWN'],
-        ['&sk LEFT_ALT', '&sk LEFT_CONTROL', '&sk LEFT_SHIFT', '&sk LEFT_COMMAND', `${odd.alfred},${odd.lockScreen}`],
+        ['LEFT_ALT', 'LEFT_CONTROL', 'LEFT_SHIFT', 'LEFT_COMMAND', `${odd.alfred},${odd.lockScreen}`],
 
         ['&trans', '&trans', '&trans'],
         ['&trans', '&trans', '&trans'],
