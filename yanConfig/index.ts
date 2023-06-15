@@ -250,7 +250,7 @@ ZMK_MACRO(disable_rus,
 
         ['&trans', '&trans', '&trans', '&trans', '&trans'],
         ['&trans', '&trans', '&trans', '&trans', '&trans'],
-        ['&trans', '&trans', '&trans', '&trans', '&trans'],
+        ['&trans', '&sk LEFT_COMMAND', '&sk LEFT_SHIFT', '&sk LEFT_CONTROL', '&sk LEFT_ALT',],
 
         ['&trans', '&trans', '&trans'],
         ['&trans', '&trans', '&trans'],
