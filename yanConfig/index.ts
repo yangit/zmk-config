@@ -84,7 +84,7 @@ ZMK_MACRO(disable_rus,
         ['+J', '+H', '+V', '+K', '&none'],
 
         ['SPACE', '&mo symbols', '&mo colemak_shift'],
-        ['&mo numbersf', '&mo numbers', '&globeCaps'],
+        ['&mo numbersf', '&mo numbers', m.vimium],
         ['&kp K_MUTE'],
       ],
       sensor: '&yan_encoder',

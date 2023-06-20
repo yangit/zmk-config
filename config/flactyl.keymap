@@ -4412,7 +4412,7 @@
 &td_17	&td_18	&td_19	&td_20	&td_21
 &td_22	&td_23	&td_24	&td_25	&none
 &kp SPACE	&mo L_SYMBOLS	&mo L_COLEMAK_SHIFT
-&mo L_NUMBERSF	&mo L_NUMBERS	&globeCaps
+&mo L_NUMBERSF	&mo L_NUMBERS	&kp LA(LG(LC(LS(LEFT_BRACKET))))
 &kp K_MUTE
             >;
  sensor-bindings = <&yan_encoder>;            

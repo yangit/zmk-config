@@ -76,6 +76,7 @@ export const m = {
 
   showApps: 'LA(LG(LC(LS(KP_N2))))',
   showDesktop: 'LA(LG(LC(LS(KP_N3))))',
+  vimium: 'LA(LG(LC(LS(LEFT_BRACKET))))',
 
   // apps
   appFinder: 'LA(LG(LC(LS(KP_N4))))',
