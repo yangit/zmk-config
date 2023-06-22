@@ -27,7 +27,8 @@ layers:
       s: CMD-SFT-N
     - t: M
       h: CMD-M
-    - t: $$mdi:cancel$$
+    - t: $$tabler:mouse$$
+      h: click l
     - t: K
       h: CMD-K
     - t: V

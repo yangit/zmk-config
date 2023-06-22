@@ -5,6 +5,10 @@
  */
 
 #include <behaviors.dtsi>
+
+/* Mouse support from https://github.com/urob/zmk */
+#include <dt-bindings/zmk/mouse.h>
+
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
@@ -4421,10 +4425,10 @@
 &td_6	&td_7	&td_8	&td_9	&td_10
 &kp Z	&kp X	&kp C	&td_11	&td_12
 &mo L_WINDOWS	&mo L_ARROWS	&mo L_NUMBERS
-&mo L_SYMBOLS	&mo L_DEFAULT_MIRROR	&mo L_COLEMAK_SHIFT
+&kp RIGHT_SHIFT	&mkp LCLK	&mkp RCLK
 &mo L_CONFIG	&td_13	&td_14	&td_15	&td_16
 &td_17	&td_18	&td_19	&td_20	&td_21
-&td_22	&td_23	&td_24	&td_25	&none
+&td_22	&td_23	&td_24	&td_25	&mkp LCLK
 &kp SPACE	&mo L_SYMBOLS	&mo L_COLEMAK_SHIFT
 &trans	&trans	&trans
 &kp K_MUTE
@@ -4489,7 +4493,7 @@
             bindings = <
 &td_81	&td_82	&td_83	&td_84	&mo L_CONFIG
 &td_85	&td_86	&td_87	&td_88	&td_89
-&none	&td_90	&td_91	&td_92	&td_93
+&mkp LCLK	&td_90	&td_91	&td_92	&td_93
 &trans	&trans	&trans
 &trans	&trans	&trans
 &mo L_CONFIG	&td_94	&td_95	&td_96	&td_97
@@ -4596,7 +4600,7 @@
 &trans	&trans	&trans
 &none	&kp HOME	&kp UP_ARROW	&kp PAGE_UP	&none
 &none	&kp LEFT_ARROW	&kp DOWN_ARROW	&kp RIGHT_ARROW	&none
-&none	&kp END	&none	&kp PAGE_DOWN	&none
+&none	&kp END	&none	&kp PAGE_DOWN	&trans
 &trans	&trans	&trans
 &trans	&trans	&trans
             >;            
@@ -4625,7 +4629,7 @@
             bindings = <
 &none	&kp PAGE_UP	&kp UP_ARROW	&kp HOME	&none
 &none	&kp LEFT_ARROW	&kp DOWN_ARROW	&kp RIGHT_ARROW	&none
-&none	&kp PAGE_DOWN	&none	&kp END	&none
+&trans	&kp PAGE_DOWN	&none	&kp END	&none
 &trans	&trans	&trans
 &trans	&trans	&trans
 &kp K_VOLUME_UP	&enable_rus	&kp DELETE	&kp SPACE	&none

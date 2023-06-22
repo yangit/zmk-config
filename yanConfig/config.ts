@@ -90,6 +90,7 @@ export const odd = {
   copy: 'LG(C)',
   paste: 'LG(V)',
   pasteMulti: 'LG(LS(V))',
+  mouseScroll: 'RIGHT_SHIFT',
 };
 
 export const m = {

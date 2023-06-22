@@ -17,6 +17,10 @@ const config: Config = {
  */
 
 #include <behaviors.dtsi>
+
+/* Mouse support from https://github.com/urob/zmk */
+#include <dt-bindings/zmk/mouse.h>
+
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
@@ -81,11 +85,11 @@ ZMK_MACRO(disable_rus,
         ['Z', 'X', 'C', '+D', 'B,LG(B),LG(LS(B))'],
 
         ['&mo windows', '&mo arrows', '&mo numbers'],
-        ['&mo symbols', '&mo default_mirror', '&mo colemak_shift'],
+        [odd.mouseScroll, '&mkp LCLK', '&mkp RCLK'],
 
         ['&mo config', '+L', '+U', '+Y', 'N1,N2,N3'],
         ['+M', 'N,LG(N),LG(LS(N))', 'E,LG(E),LS(LG(E))', 'I,LG(I),LG(LA(I))', '+O'],
-        ['+J', '+H', '+V', '+K', '&none'],
+        ['+J', '+H', '+V', '+K', '&mkp LCLK'],
 
         ['SPACE', '&mo symbols', '&mo colemak_shift'],
         ['&trans', '&trans', '&trans'],
@@ -226,7 +230,7 @@ ZMK_MACRO(disable_rus,
 
         ['&none', 'HOME', 'UP_ARROW', 'PAGE_UP', '&none'],
         ['&none', 'LEFT_ARROW', 'DOWN_ARROW', 'RIGHT_ARROW', '&none'],
-        ['&none', 'END', '&none', 'PAGE_DOWN', '&none'],
+        ['&none', 'END', '&none', 'PAGE_DOWN', '&trans'],
 
         ['&trans', '&trans', '&trans'],
         ['&trans', '&trans', '&trans'],

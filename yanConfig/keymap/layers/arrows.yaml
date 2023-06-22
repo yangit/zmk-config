@@ -42,7 +42,7 @@ layers:
     - END
     - t: $$mdi:cancel$$
     - t: PAGE DOWN
-    - t: $$mdi:cancel$$
+    - ''
     - ''
     - ''
     - ''
