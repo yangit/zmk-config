@@ -42,10 +42,12 @@ layers:
       t: $$tabler:box-multiple$$
     - h: numbers
       t: $$tabler:box-multiple$$
-    - h: symbols
-      t: $$tabler:box-multiple$$
-    - t: $$mdi:mirror-rectangle$$
-    - t: $$mdi:apple-keyboard-shift$$
+    - t: $$tabler:hand-move$$
+      h: scroll
+    - t: $$tabler:mouse$$
+      h: click l
+    - t: $$tabler:mouse$$
+      h: click r
     - t: '&none'
       h: '&tog config'
     - t: L
@@ -78,7 +80,8 @@ layers:
       h: CMD-V
     - t: K
       h: CMD-K
-    - t: $$mdi:cancel$$
+    - t: $$tabler:mouse$$
+      h: click l
     - t: $$tabler:space$$
     - h: symbols
       t: $$tabler:box-multiple$$
@@ -120,18 +123,3 @@ combos:
     k:
       h: windows2
       t: $$tabler:box-multiple$$
-  - p:
-      - 19
-      - 18
-    k:
-      t: $$mdi:mirror-rectangle$$
-  - p:
-      - 19
-      - 16
-    k:
-      t: $$mdi:mirror-rectangle$$
-  - p:
-      - 19
-      - 20
-    k:
-      t: $$mdi:mirror-rectangle$$

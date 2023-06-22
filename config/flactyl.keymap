@@ -5,6 +5,10 @@
  */
 
 #include <behaviors.dtsi>
+
+/* Mouse support from https://github.com/urob/zmk */
+#include <dt-bindings/zmk/mouse.h>
+
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
@@ -4641,10 +4645,10 @@
 &td_7	&td_8	&td_9	&td_10	&td_11
 &kp Z	&kp X	&kp C	&td_12	&td_13
 &mo L_WINDOWS	&mo L_ARROWS	&mo L_NUMBERS
-&mo L_SYMBOLS	&mo L_DEFAULT_MIRROR	&mo L_COLEMAK_SHIFT
+&kp RIGHT_SHIFT	&mkp LCLK	&mkp RCLK
 &td_14	&td_15	&td_16	&td_17	&td_18
 &td_19	&td_20	&td_21	&td_22	&td_23
-&td_24	&td_25	&td_26	&td_27	&none
+&td_24	&td_25	&td_26	&td_27	&mkp LCLK
 &kp SPACE	&mo L_SYMBOLS	&mo L_COLEMAK_SHIFT
 &trans	&trans	&trans
 &kp K_MUTE
@@ -4660,7 +4664,7 @@
 &td_33	&td_34	&td_35	&td_36	&td_37
 &kp Z	&kp X	&kp C	&td_38	&td_39
 &windows_rus	&arrowsr_rus	&numbers_rus
-&symbols_rus	&mo L_RUSSIAN_MIRROR	&mo L_RUSSIAN_SHIFT
+&trans	&trans	&trans
 &kp Y	&td_40	&td_41	&td_42	&td_43
 &td_44	&td_45	&td_46	&td_47	&td_48
 &td_49	&td_50	&td_51	&td_52	&td_53
@@ -4694,7 +4698,7 @@
 &kp LS(A)	&kp LS(S)	&kp LS(D)	&kp LS(F)	&kp LS(G)
 &kp LS(Z)	&kp LS(X)	&kp LS(C)	&kp LS(V)	&kp LS(B)
 &windows_rus	&arrowsr_rus	&numbers_rus
-&symbols_rus	&mo L_RUSSIAN_MIRROR	&mo L_RUSSIAN_SHIFT
+&trans	&trans	&trans
 &kp LS(Y)	&kp LS(U)	&kp LS(I)	&kp LS(O)	&kp LS(P)
 &kp LS(H)	&kp LS(J)	&kp LS(K)	&kp LS(L)	&kp LS(SEMICOLON)
 &kp LS(N)	&td_81	&kp LS(COMMA)	&kp LS(PERIOD)	&td_82
@@ -4709,7 +4713,7 @@
             bindings = <
 &td_83	&td_84	&td_85	&td_86	&td_87
 &td_88	&td_89	&td_90	&td_91	&td_92
-&none	&td_93	&td_94	&td_95	&td_96
+&mkp LCLK	&td_93	&td_94	&td_95	&td_96
 &trans	&trans	&trans
 &trans	&trans	&trans
 &td_97	&td_98	&td_99	&td_100	&td_101
@@ -4816,7 +4820,7 @@
 &trans	&trans	&trans
 &none	&kp HOME	&kp UP_ARROW	&kp PAGE_UP	&none
 &none	&kp LEFT_ARROW	&kp DOWN_ARROW	&kp RIGHT_ARROW	&none
-&none	&kp END	&none	&kp PAGE_DOWN	&none
+&none	&kp END	&none	&kp PAGE_DOWN	&trans
 &trans	&trans	&trans
 &trans	&trans	&trans
             >;            
@@ -4845,7 +4849,7 @@
             bindings = <
 &none	&kp PAGE_UP	&kp UP_ARROW	&kp HOME	&none
 &none	&kp LEFT_ARROW	&kp DOWN_ARROW	&kp RIGHT_ARROW	&none
-&none	&kp PAGE_DOWN	&none	&kp END	&none
+&trans	&kp PAGE_DOWN	&none	&kp END	&none
 &trans	&trans	&trans
 &trans	&trans	&trans
 &kp K_VOLUME_UP	&enable_rus	&kp DELETE	&kp SPACE	&none

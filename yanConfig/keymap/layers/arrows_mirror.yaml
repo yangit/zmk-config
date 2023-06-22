@@ -13,7 +13,7 @@ layers:
     - t: $$tabler:arrow-down$$
     - t: $$tabler:arrow-right$$
     - t: $$mdi:cancel$$
-    - t: $$mdi:cancel$$
+    - ''
     - t: PAGE DOWN
     - t: $$mdi:cancel$$
     - END

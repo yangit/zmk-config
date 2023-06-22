@@ -18,6 +18,10 @@ const config: Config = {
  */
 
 #include <behaviors.dtsi>
+
+/* Mouse support from https://github.com/urob/zmk */
+#include <dt-bindings/zmk/mouse.h>
+
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>

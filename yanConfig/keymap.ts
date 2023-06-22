@@ -10,11 +10,11 @@ const keymap: Record<string, LayerConfig> = {
       ['Z', 'X', 'C', '+D', 'B,LG(B),LG(LS(B))'],
 
       ['&mo windows', '&mo arrows', '&mo numbers'],
-      ['&mo symbols', '&mo default_mirror', '&mo colemak_shift'],
+      [odd.mouseScroll, '&mkp LCLK', '&mkp RCLK'],
 
       ['&none,&tog config', '+L', '+U', '+Y', 'N1,N2,N3'],
       ['+M', 'N,LG(N),LG(LS(N))', 'E,LG(E),LS(LG(E))', 'I,LG(I),LG(LA(I))', '+O'],
-      ['+J', '+H', '+V', '+K', '&none'],
+      ['+J', '+H', '+V', '+K', '&mkp LCLK'],
 
       ['SPACE', '&mo symbols', '&mo colemak_shift'],
       ['&trans', '&trans', '&trans'],
@@ -36,7 +36,7 @@ const keymap: Record<string, LayerConfig> = {
       ['Z', 'X', 'C', 'V', 'B'],
 
       ['&windows_rus', '&arrowsr_rus', '&numbers_rus'],
-      ['&symbols_rus', '&mo russian_mirror', '&mo russian_shift'],
+      ['&trans', '&trans', '&trans'],
 
       ['Y', 'U', 'I', 'O', 'P'],
       ['H', 'J', 'K', 'L', 'SEMICOLON'],
@@ -155,7 +155,7 @@ const keymap: Record<string, LayerConfig> = {
 
       ['&none', 'HOME', 'UP_ARROW', 'PAGE_UP', '&none'],
       ['&none', 'LEFT_ARROW', 'DOWN_ARROW', 'RIGHT_ARROW', '&none'],
-      ['&none', 'END', '&none', 'PAGE_DOWN', '&none'],
+      ['&none', 'END', '&none', 'PAGE_DOWN', '&trans'],
 
       ['&trans', '&trans', '&trans'],
       ['&trans', '&trans', '&trans'],

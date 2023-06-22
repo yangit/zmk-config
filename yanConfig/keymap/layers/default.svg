@@ -1,13 +1,97 @@
 <svg width="676.0" height="457.88235294117646" viewBox="0 0 676.0 457.88235294117646" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>/* start glyphs */
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <svg id="mdi:apple-keyboard-shift">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+||||||| parent of 86b088b (mouse keyr)
+<<<<<<< HEAD
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+=======
+||||||| parent of 8130ac8 (build)
+<<<<<<< HEAD
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+||||||| parent of 86b088b (mouse keyr)
+<<<<<<< HEAD
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+=======
+=======
+>>>>>>> 8130ac8 (build)
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
+  <path d="M12 7l0 4" />
+</svg>
+
+
+
+</svg>
+<<<<<<< HEAD
+<svg id="tabler:box-multiple">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+||||||| parent of 0014738 (add mouse support)
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+</svg>
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
 </svg>
 <svg id="tabler:box-multiple">
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+=======
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+</svg>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+<<<<<<< HEAD
+||||||| parent of 86b088b (mouse keyr)
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+||||||| parent of c9f4777 (fix render)
+=======
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<<<<<<< HEAD
+>>>>>>> 0014738 (add mouse support)
+||||||| parent of 4ba6507 (fix render)
+=======
+||||||| parent of 221afa9 (fix render)
+<svg id="tabler:box-multiple">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+=======
+||||||| parent of c9f4777 (fix render)
+=======
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+>>>>>>> 221afa9 (fix render)
+>>>>>>> 4ba6507 (fix render)
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M7 3m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
-  <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2" />
+  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
+  <path d="M12 7l0 4" />
 </svg>
 
 
@@ -25,12 +109,932 @@
 
 
 </svg>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+</svg>
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+||||||| parent of 0014738 (add mouse support)
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+=======
+||||||| parent of 4ba6507 (fix render)
+=======
+<<<<<<< HEAD
+>>>>>>> 4ba6507 (fix render)
+||||||| parent of 31d4eca (build)
+<<<<<<< HEAD
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+<<<<<<< HEAD
+||||||| parent of 86b088b (mouse keyr)
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+||||||| parent of c9f4777 (fix render)
+=======
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+||||||| parent of 221afa9 (fix render)
+<svg id="tabler:box-multiple">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+=======
+||||||| parent of c9f4777 (fix render)
+=======
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+>>>>>>> 221afa9 (fix render)
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
+  <path d="M12 7l0 4" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<<<<<<< HEAD
+=======
+>>>>>>> 31d4eca (build)
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+</svg>
+<<<<<<< HEAD
+
+
+
+</svg>
+>>>>>>> 86b088b (mouse keyr)
+||||||| parent of 4467cd9 (mouse click russian)
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
+  <path d="M12 7l0 4" />
+</svg>
+
+
+
+</svg>
+<<<<<<< HEAD
+<svg id="tabler:box-multiple">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+||||||| parent of 0014738 (add mouse support)
 <svg id="mdi:apple-keyboard-control">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
 </svg>
 <svg id="mdi:mirror-rectangle">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
 </svg>
+<svg id="tabler:box-multiple">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+=======
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+</svg>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+<<<<<<< HEAD
+||||||| parent of 86b088b (mouse keyr)
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+||||||| parent of c9f4777 (fix render)
+=======
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<<<<<<< HEAD
+>>>>>>> 0014738 (add mouse support)
+||||||| parent of 4ba6507 (fix render)
+=======
+||||||| parent of 221afa9 (fix render)
+<svg id="tabler:box-multiple">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+=======
+||||||| parent of c9f4777 (fix render)
+=======
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+>>>>>>> 221afa9 (fix render)
+>>>>>>> 4ba6507 (fix render)
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
+  <path d="M12 7l0 4" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+</svg>
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+</svg>
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+||||||| parent of 0014738 (add mouse support)
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+=======
+||||||| parent of 4ba6507 (fix render)
+=======
+<<<<<<< HEAD
+>>>>>>> 4ba6507 (fix render)
+||||||| parent of 31d4eca (build)
+<<<<<<< HEAD
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+<<<<<<< HEAD
+||||||| parent of 86b088b (mouse keyr)
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+||||||| parent of c9f4777 (fix render)
+=======
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+||||||| parent of 221afa9 (fix render)
+<svg id="tabler:box-multiple">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+=======
+||||||| parent of c9f4777 (fix render)
+=======
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+>>>>>>> 221afa9 (fix render)
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
+  <path d="M12 7l0 4" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<<<<<<< HEAD
+=======
+>>>>>>> 31d4eca (build)
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+</svg>
+=======
+>>>>>>> 4467cd9 (mouse click russian)
+<svg id="tabler:box-multiple">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 3m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
+  <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2" />
+</svg>
+
+
+
+</svg>
+<<<<<<< HEAD
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<<<<<<< HEAD
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+>>>>>>> 0014738 (add mouse support)
+</svg>
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+||||||| parent of 86b088b (mouse keyr)
+<<<<<<< HEAD
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+||||||| parent of c9f4777 (fix render)
+||||||| parent of 4467cd9 (mouse click russian)
+<<<<<<< HEAD
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+>>>>>>> 0014738 (add mouse support)
+</svg>
+||||||| parent of 221afa9 (fix render)
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+</svg>
+=======
+>>>>>>> 221afa9 (fix render)
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+||||||| parent of 86b088b (mouse keyr)
+<<<<<<< HEAD
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+||||||| parent of c9f4777 (fix render)
+=======
+>>>>>>> 4467cd9 (mouse click russian)
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+</svg>
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
+  <path d="M12 7l0 4" />
+</svg>
+
+
+
+</svg>
+<<<<<<< HEAD
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+=======
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+>>>>>>> c9f4777 (fix render)
+=======
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+>>>>>>> 86b088b (mouse keyr)
+</svg>
+||||||| parent of 4467cd9 (mouse click russian)
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+=======
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+>>>>>>> c9f4777 (fix render)
+=======
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+>>>>>>> 86b088b (mouse keyr)
+</svg>
+>>>>>>> c9f4777 (fix render)
+||||||| parent of 8130ac8 (build)
+
+
+
+</svg>
+>>>>>>> 86b088b (mouse keyr)
+=======
+>>>>>>> 8130ac8 (build)
+<svg id="tabler:box-multiple">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 3m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
+  <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<<<<<<< HEAD
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+||||||| parent of c9f4777 (fix render)
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+<<<<<<< HEAD
+
+
+
+</svg>
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
+  <path d="M12 7l0 4" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+=======
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+>>>>>>> c9f4777 (fix render)
+</svg>
+||||||| parent of 31d4eca (build)
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+</svg>
+||||||| parent of 221afa9 (fix render)
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+</svg>
+=======
+>>>>>>> 221afa9 (fix render)
+||||||| parent of 57606a0 (fix render)
+=======
+||||||| parent of 221afa9 (fix render)
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+</svg>
+=======
+>>>>>>> 221afa9 (fix render)
+>>>>>>> 57606a0 (fix render)
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+||||||| parent of 86b088b (mouse keyr)
+<<<<<<< HEAD
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+||||||| parent of c9f4777 (fix render)
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
+  <path d="M12 7l0 4" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+=======
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+>>>>>>> c9f4777 (fix render)
+=======
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+>>>>>>> 86b088b (mouse keyr)
+</svg>
+<<<<<<< HEAD
+>>>>>>> c9f4777 (fix render)
+<svg id="tabler:box-multiple">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 3m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
+  <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2" />
+</svg>
+
+
+
+</svg>
+<<<<<<< HEAD
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+||||||| parent of c9f4777 (fix render)
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
+  <path d="M12 7l0 4" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+=======
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+>>>>>>> c9f4777 (fix render)
+</svg>
+<<<<<<< HEAD
+=======
+>>>>>>> 31d4eca (build)
+=======
+>>>>>>> 4467cd9 (mouse click russian)
+||||||| parent of 57606a0 (fix render)
+=======
+>>>>>>> c9f4777 (fix render)
+<svg id="tabler:box-multiple">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 3m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
+  <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2" />
+</svg>
+
+
+
+</svg>
+<<<<<<< HEAD
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+||||||| parent of c9f4777 (fix render)
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
+  <path d="M12 7l0 4" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+=======
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+>>>>>>> c9f4777 (fix render)
+</svg>
+>>>>>>> 57606a0 (fix render)
+||||||| parent of 8130ac8 (build)
+=======
+||||||| parent of 31d4eca (build)
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+</svg>
+||||||| parent of 221afa9 (fix render)
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+</svg>
+=======
+>>>>>>> 221afa9 (fix render)
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+||||||| parent of 86b088b (mouse keyr)
+<<<<<<< HEAD
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+||||||| parent of c9f4777 (fix render)
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
+  <path d="M12 7l0 4" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+=======
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+>>>>>>> c9f4777 (fix render)
+=======
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+>>>>>>> 86b088b (mouse keyr)
+</svg>
+>>>>>>> c9f4777 (fix render)
+<svg id="tabler:box-multiple">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 3m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
+  <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2" />
+</svg>
+
+
+
+</svg>
+<<<<<<< HEAD
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:cancel">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+||||||| parent of c9f4777 (fix render)
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
+  <path d="M12 7l0 4" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:mirror-rectangle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+=======
+<svg id="tabler:hand-move">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hand-move" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427" />
+  <path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+>>>>>>> c9f4777 (fix render)
+</svg>
+=======
+>>>>>>> 31d4eca (build)
+>>>>>>> 8130ac8 (build)
 </defs>/* end glyphs */
 <style>/* inherit to force styles through use tags*/
 svg path {
@@ -185,12 +1189,14 @@ path.combo {
 <use href="#tabler:box-multiple" xlink:href="#tabler:box-multiple" x="275.0" y="310.88235294117646" height="14" width="14.0" class="tap glyph tabler:box-multiple"/>
 <text x="282.0" y="341.88235294117646" class="hold">numbers</text>
 <rect rx="6.0" ry="6.0" x="144.0" y="347.88235294117646" width="52.0" height="52.0" class="key"/>
-<use href="#tabler:box-multiple" xlink:href="#tabler:box-multiple" x="163.0" y="366.88235294117646" height="14" width="14.0" class="tap glyph tabler:box-multiple"/>
-<text x="170.0" y="397.88235294117646" class="hold">symbols</text>
+<use href="#tabler:hand-move" xlink:href="#tabler:hand-move" x="163.0" y="366.88235294117646" height="14" width="14.0" class="tap glyph tabler:hand-move"/>
+<text x="170.0" y="397.88235294117646" class="hold">scroll</text>
 <rect rx="6.0" ry="6.0" x="200.0" y="347.88235294117646" width="52.0" height="52.0" class="key"/>
-<use href="#mdi:mirror-rectangle" xlink:href="#mdi:mirror-rectangle" x="219.0" y="366.88235294117646" height="14" width="14.0" class="tap glyph mdi:mirror-rectangle"/>
+<use href="#tabler:mouse" xlink:href="#tabler:mouse" x="219.0" y="366.88235294117646" height="14" width="14.0" class="tap glyph tabler:mouse"/>
+<text x="226.0" y="397.88235294117646" class="hold">click l</text>
 <rect rx="6.0" ry="6.0" x="256.0" y="347.88235294117646" width="52.0" height="52.0" class="key"/>
-<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="275.0" y="366.88235294117646" height="14" width="14.0" class="tap glyph mdi:apple-keyboard-shift"/>
+<use href="#tabler:mouse" xlink:href="#tabler:mouse" x="275.0" y="366.88235294117646" height="14" width="14.0" class="tap glyph tabler:mouse"/>
+<text x="282.0" y="397.88235294117646" class="hold">click r</text>
 <rect rx="6.0" ry="6.0" x="368.0" y="87.64705882352942" width="52.0" height="52.0" class="key"/>
 <text x="394.0" y="113.64705882352942" class="tap">&amp;none</text>
 <text x="394.0" y="137.64705882352942" class="hold" style="font-size: 64%">&amp;tog config</text>
@@ -238,7 +1244,8 @@ path.combo {
 <text x="562.0" y="205.8823529411765" class="tap">K</text>
 <text x="562.0" y="229.8823529411765" class="hold">CMD-K</text>
 <rect rx="6.0" ry="6.0" x="592.0" y="235.88235294117646" width="52.0" height="52.0" class="key"/>
-<use href="#mdi:cancel" xlink:href="#mdi:cancel" x="611.0" y="254.88235294117646" height="14" width="14.0" class="tap glyph mdi:cancel"/>
+<use href="#tabler:mouse" xlink:href="#tabler:mouse" x="611.0" y="254.88235294117646" height="14" width="14.0" class="tap glyph tabler:mouse"/>
+<text x="618.0" y="285.88235294117646" class="hold">click l</text>
 <rect rx="6.0" ry="6.0" x="368.0" y="291.88235294117646" width="52.0" height="52.0" class="key"/>
 <use href="#tabler:space" xlink:href="#tabler:space" x="387.0" y="310.88235294117646" height="14" width="14.0" class="tap glyph tabler:space"/>
 <rect rx="6.0" ry="6.0" x="424.0" y="291.88235294117646" width="52.0" height="52.0" class="key"/>
@@ -268,11 +1275,5 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="184.0" y="304.88235294117646" width="28.0" height="26.0" class="combo"/>
 <use href="#tabler:box-multiple" xlink:href="#tabler:box-multiple" x="191.0" y="310.88235294117646" height="14" width="14.0" class="combo tap glyph tabler:box-multiple"/>
 <text x="198.0" y="328.88235294117646" class="combo hold" style="font-size: 88%">windows2</text>
-<rect rx="6.0" ry="6.0" x="184.0" y="360.88235294117646" width="28.0" height="26.0" class="combo"/>
-<use href="#mdi:mirror-rectangle" xlink:href="#mdi:mirror-rectangle" x="191.0" y="366.88235294117646" height="14" width="14.0" class="combo tap glyph mdi:mirror-rectangle"/>
-<rect rx="6.0" ry="6.0" x="212.0" y="332.88235294117646" width="28.0" height="26.0" class="combo"/>
-<use href="#mdi:mirror-rectangle" xlink:href="#mdi:mirror-rectangle" x="219.0" y="338.88235294117646" height="14" width="14.0" class="combo tap glyph mdi:mirror-rectangle"/>
-<rect rx="6.0" ry="6.0" x="240.0" y="360.88235294117646" width="28.0" height="26.0" class="combo"/>
-<use href="#mdi:mirror-rectangle" xlink:href="#mdi:mirror-rectangle" x="247.0" y="366.88235294117646" height="14" width="14.0" class="combo tap glyph mdi:mirror-rectangle"/>
 </g>
 </svg>

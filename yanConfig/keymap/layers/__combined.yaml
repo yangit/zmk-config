@@ -42,10 +42,12 @@ layers:
       t: $$tabler:box-multiple$$
     - h: numbers
       t: $$tabler:box-multiple$$
-    - h: symbols
-      t: $$tabler:box-multiple$$
-    - t: $$mdi:mirror-rectangle$$
-    - t: $$mdi:apple-keyboard-shift$$
+    - t: $$tabler:hand-move$$
+      h: scroll
+    - t: $$tabler:mouse$$
+      h: click l
+    - t: $$tabler:mouse$$
+      h: click r
     - t: '&none'
       h: '&tog config'
     - t: L
@@ -78,7 +80,8 @@ layers:
       h: CMD-V
     - t: K
       h: CMD-K
-    - t: $$mdi:cancel$$
+    - t: $$tabler:mouse$$
+      h: click l
     - t: $$tabler:space$$
     - h: symbols
       t: $$tabler:box-multiple$$
@@ -111,7 +114,8 @@ layers:
       s: CMD-SFT-N
     - t: M
       h: CMD-M
-    - t: $$mdi:cancel$$
+    - t: $$tabler:mouse$$
+      h: click l
     - t: K
       h: CMD-K
     - t: V
@@ -338,7 +342,7 @@ layers:
     - END
     - t: $$mdi:cancel$$
     - t: PAGE DOWN
-    - t: $$mdi:cancel$$
+    - ''
     - ''
     - ''
     - ''
@@ -356,7 +360,7 @@ layers:
     - t: $$tabler:arrow-down$$
     - t: $$tabler:arrow-right$$
     - t: $$mdi:cancel$$
-    - t: $$mdi:cancel$$
+    - ''
     - t: PAGE DOWN
     - t: $$mdi:cancel$$
     - END
