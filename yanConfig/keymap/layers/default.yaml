@@ -1,0 +1,133 @@
+layout:
+  qmk_info_json: ./flactyl_layout.json
+  qmk_layout: default
+layers:
+  default:
+    - t: Q
+      h: CMD-SLASH
+      s: ALT-CMD-Q
+    - t: W
+      h: CMD-W
+      s: CMD-Q
+    - t: F
+      h: CMD-F
+      s: ALT-CMD-F
+    - t: P
+      h: CMD-P
+      s: SFT-CMD-P
+    - h: config
+      t: $$tabler:box-multiple$$
+    - t: A
+      h: CMD-A
+    - t: R
+      h: CMD-R
+    - t: S
+      h: CMD-S
+    - t: T
+      h: CMD-T
+    - t: G
+      h: CMD-G
+      s: CMD-SFT-G
+    - Z
+    - X
+    - C
+    - t: D
+      h: CMD-D
+    - t: B
+      h: CMD-B
+      s: CMD-SFT-B
+    - h: windows
+      t: $$tabler:box-multiple$$
+    - h: arrows
+      t: $$tabler:box-multiple$$
+    - h: numbers
+      t: $$tabler:box-multiple$$
+    - h: symbols
+      t: $$tabler:box-multiple$$
+    - t: $$mdi:mirror-rectangle$$
+    - t: $$mdi:apple-keyboard-shift$$
+    - h: config
+      t: $$tabler:box-multiple$$
+    - t: L
+      h: CMD-L
+    - t: U
+      h: CMD-U
+    - t: 'Y'
+      h: CMD-Y
+    - t: '1'
+      h: '2'
+      s: '3'
+    - t: M
+      h: CMD-M
+    - t: 'N'
+      h: CMD-N
+      s: CMD-SFT-N
+    - t: E
+      h: CMD-E
+      s: SFT-CMD-E
+    - t: I
+      h: CMD-I
+      s: CMD-ALT-I
+    - t: O
+      h: CMD-O
+    - t: J
+      h: CMD-J
+    - t: H
+      h: CMD-H
+    - t: V
+      h: CMD-V
+    - t: K
+      h: CMD-K
+    - t: $$mdi:cancel$$
+    - t: $$tabler:space$$
+    - h: symbols
+      t: $$tabler:box-multiple$$
+    - t: $$mdi:apple-keyboard-shift$$
+    - ''
+    - ''
+    - ''
+combos:
+  - p:
+      - 8
+      - 13
+    k:
+      t: paste
+      h: pasteMulti
+  - p:
+      - 7
+      - 12
+    k: copy
+  - p:
+      - 6
+      - 11
+    k: cut
+  - p:
+      - 38
+      - 37
+    k: deleteWord
+  - p:
+      - 16
+      - 17
+    k:
+      t: $$mdi:apple-keyboard-control$$
+  - p:
+      - 16
+      - 15
+    k:
+      h: windows2
+      t: $$tabler:box-multiple$$
+  - p:
+      - 19
+      - 18
+    k:
+      t: $$mdi:mirror-rectangle$$
+  - p:
+      - 19
+      - 16
+    k:
+      t: $$mdi:mirror-rectangle$$
+  - p:
+      - 19
+      - 20
+    k:
+      t: $$mdi:mirror-rectangle$$

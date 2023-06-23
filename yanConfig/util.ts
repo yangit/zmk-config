@@ -1,6 +1,6 @@
-import { quickTap, tapDanceTerm, tappingTerm, tappingTerm2 } from './config';
+import { quickTap, tapDanceTerm, tappingTerm, tappingTerm2, m, odd, conditionalLayers } from './config';
 import { type Config, type ConfigParsed, type LayerConfigObject } from './types';
-
+import yaml, { loadAll } from 'js-yaml';
 interface KeyLocation { layer: string, row: number, index: number };
 
 let macroCounter = 0;
@@ -169,4 +169,240 @@ ${configParsed.keymap[layer].keys.map(row => row.join('\t')).join('\n')}
     };
 };
 `;
+};
+const findInHotkeys = (key: string): string => {
+  for (const [k, v] of Object.entries(m)) {
+    if (v === key) {
+      return k;
+    }
+  }
+  for (const [k, v] of Object.entries(odd)) {
+    if (v === key) {
+      return k;
+    }
+  }
+
+  return key;
+};
+
+export const configToKeymap = (config: ConfigParsed): string => {
+  const layers: any = {
+
+  };
+
+  type RenderKey = string | { h?: string, t?: string, s?: string };
+  const keymap: Record<string, RenderKey> = {
+    LEFT_SHIFT: { t: '$$mdi:apple-keyboard-shift$$' },
+    LEFT_COMMAND: { t: '$$mdi:apple-keyboard-command$$' },
+    LEFT_CONTROL: { t: '$$mdi:apple-keyboard-control$$' },
+    LEFT_ALT: { t: '$$mdi:apple-keyboard-option$$' },
+    '&trans': '',
+    '&kp CAPS': { t: '$$mdi:web$$' },
+    '&none': { t: '$$mdi:cancel$$' },
+    RETURN: { t: '$$mdi:keyboard-return$$' },
+    ESCAPE: { t: 'ESC' },
+    PAGE_UP: { t: 'PAGE UP' },
+    PAGE_DOWN: { t: 'PAGE DOWN' },
+    K_VOLUME_UP: { t: '$$mdi:volume-high$$' },
+    K_VOLUME_DOWN: { t: '$$mdi:volume-medium$$' },
+    '&mkp LCLK': { t: '$$tabler:mouse$$', h: 'click l' },
+    '&mkp RCLK': { t: '$$tabler:mouse$$', h: 'click r' },
+    UP_ARROW: { t: '$$tabler:arrow-up$$' },
+    DOWN_ARROW: { t: '$$tabler:arrow-down$$' },
+    LEFT_ARROW: { t: '$$tabler:arrow-left$$' },
+    RIGHT_ARROW: { t: '$$tabler:arrow-right$$' },
+    '&sys_reset': { t: 'reset', h: 'keyboard' },
+    '&bootloader': 'bootloader',
+    '&bts0': { t: '$$mdi:bluetooth$$', h: 'BLE 1' },
+    '&bts1': { t: '$$mdi:bluetooth$$', h: 'BLE 2' },
+    '&bts2': { t: '$$mdi:bluetooth$$', h: 'BLE 3' },
+    '&bts3': { t: '$$mdi:bluetooth$$', h: 'BLE 4' },
+    '&bts4': { t: '$$mdi:bluetooth$$', h: 'BLE 5' },
+    '&bt BT_PRV': { t: '$$mdi:bluetooth$$', h: 'BLE prev' },
+    '&bt BT_NXT': { t: '$$mdi:bluetooth$$', h: 'BLE next' },
+    '&bt BT_CLR': { t: '$$mdi:bluetooth$$', h: 'BLE clear' },
+    '&out OUT_USB': { t: '$$mdi:usb$$', h: 'select USB' },
+    '&out OUT_BLE': { t: '$$mdi:bluetooth$$', h: 'select BLE' },
+    '&enable_rus': { t: '$$mdi:web$$', h: 'russian' },
+    N1: '1',
+    N2: '2',
+    N3: '3',
+    N4: '4',
+    N5: '5',
+    N6: '6',
+    N7: '7',
+    N8: '8',
+    N9: '9',
+    N0: '0',
+    KP_MINUS: '-',
+    KP_PLUS: '+',
+    KP_DOT: '.',
+    KP_DIVIDE: '/',
+    KP_MULTIPLY: '*',
+    KP_EQUAL: '=',
+    RIGHT_SHIFT: { t: '$$tabler:hand-move$$', h: 'scroll' },
+    SPACE: { t: '$$tabler:space$$' },
+    BACKSPACE: { t: '$$mdi:backspace-outline$$' },
+    DELETE: { t: '$$mdi:backspace-reverse-outline$$' },
+    EXCLAMATION: '!',
+    EXCL: '!',
+    AT_SIGN: '@',
+    AT: '@',
+    HASH: '#',
+    POUND: '#',
+    DOLLAR: '$',
+    DLLR: '$',
+    PERCENT: '%',
+    PRCNT: '%',
+    CARET: '^',
+    AMPERSAND: '&',
+    AMPS: '&',
+    ASTERISK: '*',
+    ASTRK: '*',
+    STAR: '*',
+    LEFT_PARENTHESIS: '(',
+    LPAR: '(',
+    RIGHT_PARENTHESIS: ')',
+    RPAR: ')',
+    EQUAL: '=',
+    PLUS: '+',
+    MINUS: '-',
+    UNDERSCORE: '_',
+    UNDER: '_',
+    SLASH: '/',
+    FSLH: '/',
+    QUESTION: '?',
+    QMARK: '?',
+    BACKSLASH: '\\',
+    BSLH: '\\',
+    PIPE: '|',
+    NON_US_BACKSLASH: '\\',
+    PIPE2: '|',
+    NON_US_BSLH: '|',
+    SEMICOLON: ';',
+    SEMI: ';',
+    COLON: ':',
+    SINGLE_QUOTE: "'",
+    SQT: "'",
+    APOSTROPHE: '<',
+    APOS: '.',
+    DOUBLE_QUOTES: '"',
+    DQT: '"',
+    COMMA: ',',
+    LESS_THAN: '<',
+    LT: '<',
+    PERIOD: '.',
+    DOT: '.',
+    GREATER_THAN: '>',
+    GT: '>',
+    LEFT_BRACKET: '[',
+    LBKT: '[',
+    LEFT_BRACE: '{',
+    LBRC: '{',
+    RIGHT_BRACKET: ']',
+    RBKT: ']',
+    RIGHT_BRACE: '}',
+    RBRC: '}',
+    GRAVE: '`',
+    TILDE: '~',
+    NON_US_HASH: '#',
+    NUHS: '#',
+    TILDE2: '~',
+  };
+
+  const decodeModifier = (key: string): string => {
+    const localKey = findInHotkeys(key);
+    return localKey.replace(/\)/g, '').split('(').map(modOrKey => {
+      if (modOrKey === 'LS') {
+        return 'SFT';
+      }
+      if (modOrKey === 'LA') {
+        return 'ALT';
+      }
+      if (modOrKey === 'LG') {
+        return 'CMD';
+      }
+      if (modOrKey === 'LC') {
+        return 'CTL';
+      }
+      return modOrKey;
+    })
+      .join('-');
+  };
+  const tryKey = (key: string): string => {
+    if (Object.keys(keymap).includes(key)) {
+      const result = keymap[key];
+      if (typeof result === 'string') {
+        return result;
+      }
+    }
+    return decodeModifier(key);
+  };
+
+  const keyToKeyLabel = (key: string): RenderKey => {
+    if (key.startsWith('&mo ')) {
+      if (key.includes('_mirror')) {
+        return { t: '$$mdi:mirror-rectangle$$' };
+      }
+      if (key.includes('_shift')) {
+        return { t: '$$mdi:apple-keyboard-shift$$' };
+      }
+      if (key.includes('_control')) {
+        return { t: '$$mdi:apple-keyboard-control$$' };
+      }
+
+      return { h: key.slice(4), t: '$$tabler:box-multiple$$' };
+    }
+    if (Object.keys(keymap).includes(key)) {
+      // eslint-disable-next-line
+      if (typeof keymap[key]!=='undefined') { 
+        return keymap[key];
+      }
+    }
+
+    if (key.startsWith('+')) {
+      return { t: tryKey(key.slice(1)), h: `CMD-${tryKey(key.slice(1))}` };
+    }
+    if (key.includes(',')) {
+      const [t, h, s] = key.split(',').map(tryKey);
+
+      return { t, h, s };
+    }
+    return decodeModifier(key);
+  };
+  Object.keys(config.keymap).forEach((layer) => {
+    layers[layer] = config.keymap[layer].keys.slice(0, 10).flatMap(val => val.map(keyToKeyLabel));
+  });
+
+  const findKeyIndex = (key: string): number => {
+    let index = -1;
+    Object.entries(config.keymap).forEach(([layer, layerConfig]) => {
+      const found = layerConfig.keys.flatMap(val => val).findIndex(val => val === key);
+      if (found > -1) {
+        index = found;
+      }
+    });
+    return index;
+  };
+
+  const json: any = {
+    layout: {
+      qmk_info_json: './flactyl_layout.json',
+      qmk_layout: 'default',
+    },
+    layers,
+    combos: []
+    ,
+  };
+
+  if (Object.keys(config.keymap).length === 1 && Boolean(config.keymap.default)) {
+    config.keymap.default.combos?.forEach(combo => json.combos.push({ p: combo.keys, k: keyToKeyLabel(combo.binding) }));
+    conditionalLayers.forEach((layer) => {
+      if (layer.targets.findIndex(target => target.includes('russian')) === -1) {
+        json.combos.push({ p: layer.targets.map(target => findKeyIndex(`&mo ${target}`)), k: keyToKeyLabel(`&mo ${layer.layer}`) });
+      }
+    });
+  }
+
+  return yaml.dump(json, { noRefs: true });
 };

@@ -4426,7 +4426,7 @@
 &td_17	&td_18	&td_19	&td_20	&td_21
 &td_22	&td_23	&td_24	&td_25	&none
 &kp SPACE	&mo L_SYMBOLS	&mo L_COLEMAK_SHIFT
-&mo L_NUMBERSF	&mo L_NUMBERS	&kp LA(LG(LC(LS(LEFT_BRACKET))))
+&trans	&trans	&trans
 &kp K_MUTE
             >;
  sensor-bindings = <&yan_encoder>;            
@@ -4709,7 +4709,7 @@
         windows2_layer {
             bindings = <
 &kp LG(RIGHT_BRACKET)	&kp LC(TAB)	&kp LG(GRAVE)	&kp LA(LG(LC(LS(KP_N1))))	&kp LG(MINUS)
-&td_122	&td_123	&td_124	&td_125	&kp LA(LG(LC(G)))
+&td_122	&td_123	&td_124	&td_125	&none
 &kp LG(LS(Z))	&shellrepeat	&awesome	&none	&kp LG(LS(N4))
 &trans	&trans	&trans
 &trans	&trans	&trans

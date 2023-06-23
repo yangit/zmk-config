@@ -1,0 +1,642 @@
+layout:
+  qmk_info_json: ./flactyl_layout.json
+  qmk_layout: default
+layers:
+  default:
+    - t: Q
+      h: CMD-SLASH
+      s: ALT-CMD-Q
+    - t: W
+      h: CMD-W
+      s: CMD-Q
+    - t: F
+      h: CMD-F
+      s: ALT-CMD-F
+    - t: P
+      h: CMD-P
+      s: SFT-CMD-P
+    - h: config
+      t: $$tabler:box-multiple$$
+    - t: A
+      h: CMD-A
+    - t: R
+      h: CMD-R
+    - t: S
+      h: CMD-S
+    - t: T
+      h: CMD-T
+    - t: G
+      h: CMD-G
+      s: CMD-SFT-G
+    - Z
+    - X
+    - C
+    - t: D
+      h: CMD-D
+    - t: B
+      h: CMD-B
+      s: CMD-SFT-B
+    - h: windows
+      t: $$tabler:box-multiple$$
+    - h: arrows
+      t: $$tabler:box-multiple$$
+    - h: numbers
+      t: $$tabler:box-multiple$$
+    - h: symbols
+      t: $$tabler:box-multiple$$
+    - t: $$mdi:mirror-rectangle$$
+    - t: $$mdi:apple-keyboard-shift$$
+    - h: config
+      t: $$tabler:box-multiple$$
+    - t: L
+      h: CMD-L
+    - t: U
+      h: CMD-U
+    - t: 'Y'
+      h: CMD-Y
+    - t: '1'
+      h: '2'
+      s: '3'
+    - t: M
+      h: CMD-M
+    - t: 'N'
+      h: CMD-N
+      s: CMD-SFT-N
+    - t: E
+      h: CMD-E
+      s: SFT-CMD-E
+    - t: I
+      h: CMD-I
+      s: CMD-ALT-I
+    - t: O
+      h: CMD-O
+    - t: J
+      h: CMD-J
+    - t: H
+      h: CMD-H
+    - t: V
+      h: CMD-V
+    - t: K
+      h: CMD-K
+    - t: $$mdi:cancel$$
+    - t: $$tabler:space$$
+    - h: symbols
+      t: $$tabler:box-multiple$$
+    - t: $$mdi:apple-keyboard-shift$$
+    - ''
+    - ''
+    - ''
+  default_mirror:
+    - t: '1'
+      h: '2'
+      s: '3'
+    - t: 'Y'
+      h: CMD-Y
+    - t: U
+      h: CMD-U
+    - t: L
+      h: CMD-L
+    - h: config
+      t: $$tabler:box-multiple$$
+    - t: O
+      h: CMD-O
+    - t: I
+      h: CMD-I
+      s: CMD-ALT-I
+    - t: E
+      h: CMD-E
+      s: SFT-CMD-E
+    - t: 'N'
+      h: CMD-N
+      s: CMD-SFT-N
+    - t: M
+      h: CMD-M
+    - t: $$mdi:cancel$$
+    - t: K
+      h: CMD-K
+    - t: V
+      h: CMD-V
+    - t: H
+      h: CMD-H
+    - t: J
+      h: CMD-J
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - h: config
+      t: $$tabler:box-multiple$$
+    - t: P
+      h: CMD-P
+      s: SFT-CMD-P
+    - t: F
+      h: CMD-F
+      s: ALT-CMD-F
+    - t: W
+      h: CMD-W
+      s: CMD-Q
+    - t: Q
+      h: CMD-SLASH
+      s: ALT-CMD-Q
+    - t: G
+      h: CMD-G
+      s: CMD-SFT-G
+    - t: T
+      h: CMD-T
+    - t: S
+      h: CMD-S
+    - t: R
+      h: CMD-R
+    - t: A
+      h: CMD-A
+    - t: B
+      h: CMD-B
+      s: CMD-SFT-B
+    - t: D
+      h: CMD-D
+    - C
+    - X
+    - Z
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  qwerty:
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - A
+    - S
+    - D
+    - F
+    - G
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - 'Y'
+    - U
+    - I
+    - O
+    - P
+    - H
+    - J
+    - K
+    - L
+    - ;
+    - 'N'
+    - M
+    - ','
+    - .
+    - /
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  colemak:
+    - Q
+    - W
+    - F
+    - P
+    - t: $$mdi:cancel$$
+    - A
+    - R
+    - S
+    - T
+    - G
+    - Z
+    - X
+    - C
+    - D
+    - B
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - t: $$mdi:cancel$$
+    - L
+    - U
+    - 'Y'
+    - t: $$mdi:cancel$$
+    - M
+    - 'N'
+    - E
+    - I
+    - O
+    - J
+    - H
+    - V
+    - K
+    - t: $$mdi:cancel$$
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  numbers:
+    - t: '*'
+      h: /
+      s: ':'
+    - '7'
+    - '8'
+    - '9'
+    - ''
+    - t: +
+      h: '-'
+    - '1'
+    - '2'
+    - '3'
+    - '0'
+    - t: .
+      h: ','
+    - '4'
+    - '5'
+    - '6'
+    - '='
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - h: numbersf
+      t: $$tabler:box-multiple$$
+    - ''
+    - '7'
+    - '8'
+    - '9'
+    - t: '*'
+      h: /
+      s: ':'
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - t: +
+      h: '-'
+    - '='
+    - '4'
+    - '5'
+    - '6'
+    - t: .
+      h: ','
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  arrows:
+    - t: $$mdi:cancel$$
+    - t: $$tabler:space$$
+    - t: $$mdi:backspace-reverse-outline$$
+    - t: $$mdi:web$$
+      h: russian
+    - t: $$mdi:volume-high$$
+    - t: ESC
+    - TAB
+    - t: $$mdi:backspace-outline$$
+    - t: RETURN
+      h: SFT-RETURN
+      s: CMD-RETURN
+    - t: $$mdi:volume-medium$$
+    - t: $$mdi:apple-keyboard-option$$
+    - t: $$mdi:apple-keyboard-control$$
+    - t: $$mdi:apple-keyboard-shift$$
+    - t: $$mdi:apple-keyboard-command$$
+    - t: alfred
+      h: lockScreen
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - t: $$mdi:cancel$$
+    - HOME
+    - t: $$tabler:arrow-up$$
+    - t: PAGE UP
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$tabler:arrow-left$$
+    - t: $$tabler:arrow-down$$
+    - t: $$tabler:arrow-right$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - END
+    - t: $$mdi:cancel$$
+    - t: PAGE DOWN
+    - t: $$mdi:cancel$$
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  arrows_mirror:
+    - t: $$mdi:cancel$$
+    - t: PAGE UP
+    - t: $$tabler:arrow-up$$
+    - HOME
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$tabler:arrow-left$$
+    - t: $$tabler:arrow-down$$
+    - t: $$tabler:arrow-right$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: PAGE DOWN
+    - t: $$mdi:cancel$$
+    - END
+    - t: $$mdi:cancel$$
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - t: $$mdi:volume-high$$
+    - t: $$mdi:web$$
+      h: russian
+    - t: $$mdi:backspace-reverse-outline$$
+    - t: $$tabler:space$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:volume-medium$$
+    - t: RETURN
+      h: SFT-RETURN
+      s: CMD-RETURN
+    - t: $$mdi:backspace-outline$$
+    - TAB
+    - t: ESC
+    - t: alfred
+      h: lockScreen
+    - t: $$mdi:apple-keyboard-command$$
+    - t: $$mdi:apple-keyboard-shift$$
+    - t: $$mdi:apple-keyboard-control$$
+    - t: $$mdi:apple-keyboard-option$$
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  symbols:
+    - /
+    - (
+    - )
+    - '-'
+    - +
+    - '['
+    - ']'
+    - '{'
+    - '}'
+    - '*'
+    - $
+    - <
+    - '='
+    - '>'
+    - '@'
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - '!'
+    - '?'
+    - ':'
+    - ;
+    - t: \
+      h: '|'
+    - '~'
+    - .
+    - ','
+    - '`'
+    - ''''
+    - t: '%'
+      h: ^
+    - '#'
+    - _
+    - '&'
+    - '"'
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  symbols_mirror:
+    - t: \
+      h: '|'
+    - ;
+    - ':'
+    - '?'
+    - '!'
+    - ''''
+    - '`'
+    - ','
+    - .
+    - '~'
+    - '"'
+    - '&'
+    - _
+    - '#'
+    - t: '%'
+      h: ^
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - +
+    - '-'
+    - )
+    - (
+    - /
+    - '*'
+    - '}'
+    - '{'
+    - ']'
+    - '['
+    - '@'
+    - '>'
+    - '='
+    - <
+    - $
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  windows:
+    - historyBack
+    - tabsBack
+    - appWindowBack
+    - macAppsPrev
+    - fontBigger
+    - finder
+    - terminal
+    - vsCode
+    - browser
+    - t: slack
+      h: insomnia
+    - undo
+    - t: $$mdi:cancel$$
+    - t: telegram
+      h: whatsup
+      s: signal
+    - t: sublime
+      h: notes
+    - chatGpt
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  windows2:
+    - historyForward
+    - tabsForward
+    - appWindowForward
+    - macAppsNext
+    - fontSmaller
+    - t: showApps
+      h: showDesktop
+    - t: winL_M
+      h: winL_L
+      s: winL_XL
+    - t: winR_M
+      h: winR_L
+      s: winR_XL
+    - t: winCenter_S
+      h: winCenter_M
+      s: winCenter_L
+    - t: $$mdi:cancel$$
+    - redo
+    - '&shellrepeat'
+    - '&awesome'
+    - t: $$mdi:cancel$$
+    - screenshot
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  config:
+    - bootloader
+    - t: reset
+      h: keyboard
+    - t: $$mdi:bluetooth$$
+      h: BLE clear
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:bluetooth$$
+      h: BLE 1
+    - t: $$mdi:bluetooth$$
+      h: BLE 2
+    - t: $$mdi:bluetooth$$
+      h: BLE 3
+    - t: $$mdi:bluetooth$$
+      h: BLE 4
+    - t: $$mdi:bluetooth$$
+      h: BLE 5
+    - t: $$mdi:bluetooth$$
+      h: BLE prev
+    - t: $$mdi:bluetooth$$
+      h: BLE next
+    - t: $$mdi:bluetooth$$
+      h: select BLE
+    - t: $$mdi:cancel$$
+    - t: $$mdi:usb$$
+      h: select USB
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: reset
+      h: keyboard
+    - bootloader
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+combos: []

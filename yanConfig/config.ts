@@ -53,6 +53,22 @@ export const mehArray: Array<{ key: string, modifier: string, value: string, use
 mehSeed.forEach((key) => mehArray.push({ key, modifier: 'hyper', value: `LA(LG(LC(LS(${key}))))`, used: false }));
 mehSeed.forEach((key) => mehArray.push({ key, modifier: 'meh', value: `LA(LG(LC(${key})))`, used: false }));
 
+// Conditional layers
+export const conditionalLayers = [
+  { layer: 'colemak_control', targets: ['arrows', 'numbers'] },
+  { layer: 'windows2', targets: ['arrows', 'windows'] },
+
+  // Eng
+  { layer: 'symbols_mirror', targets: ['default_mirror', 'symbols'] },
+  { layer: 'arrows_mirror', targets: ['default_mirror', 'arrows'] },
+  { layer: 'colemak_shift_mirror', targets: ['default_mirror', 'colemak_shift'] },
+
+  // Russian
+  { layer: 'symbols_mirror', targets: ['russian_mirror', 'symbols'] },
+  { layer: 'arrows_mirror', targets: ['russian_mirror', 'arrows'] },
+  { layer: 'colemak_shift_mirror', targets: ['russian_mirror', 'colemak_shift'] },
+
+];
 export const odd = {
   screenshot: 'LG(LS(N4))',
   fontBigger: 'LG(EQUAL)',
@@ -70,30 +86,34 @@ export const odd = {
   redo: 'LG(LS(Z))',
   deleteWord: 'LA(BACKSPACE)',
   vimium: 'LA(LG(LC(LS(LEFT_BRACKET))))',
+  cut: 'LG(X)',
+  copy: 'LG(C)',
+  paste: 'LG(V)',
+  pasteMulti: 'LG(LS(V))',
 };
 
 export const m = {
-  macAppsWitchBackward: 'LA(LG(LC(LS(KP_N0))))',
-  macAppsWitchForward: 'LA(LG(LC(LS(KP_N1))))',
+  macAppsPrev: 'LA(LG(LC(LS(KP_N0))))',
+  macAppsNext: 'LA(LG(LC(LS(KP_N1))))',
 
   showApps: 'LA(LG(LC(LS(KP_N2))))',
   showDesktop: 'LA(LG(LC(LS(KP_N3))))',
   vimium: 'LA(LG(LC(LS(LEFT_BRACKET))))',
 
   // apps
-  appFinder: 'LA(LG(LC(LS(KP_N4))))',
-  appTerminal: 'LA(LG(LC(LS(KP_N5))))',
-  appVsCode: 'LA(LG(LC(LS(KP_N6))))',
-  appBrowser: 'LA(LG(LC(LS(KP_N7))))',
-  appSlack: 'LA(LG(LC(LS(KP_N8))))',
-  appInsomnia: 'LA(LG(LC(LS(F16))))',
-  appSublime: 'LA(LG(LC(LS(KP_N9))))',
-  appNotes: 'LA(LG(LC(LS(KP_MINUS))))',
-  appSignal: 'LA(LG(LC(LS(KP_EQUAL))))',
-  appTelegram: 'LA(LG(LC(LS(F17))))',
-  appWhatsup: 'LA(LG(LC(LS(KP_MULTIPLY))))',
-  appRecordStart: 'LA(LG(LC(LS(G))))',
-  appRecordStop: 'LA(LG(LC(G)))',
+  finder: 'LA(LG(LC(LS(KP_N4))))',
+  terminal: 'LA(LG(LC(LS(KP_N5))))',
+  vsCode: 'LA(LG(LC(LS(KP_N6))))',
+  browser: 'LA(LG(LC(LS(KP_N7))))',
+  slack: 'LA(LG(LC(LS(KP_N8))))',
+  insomnia: 'LA(LG(LC(LS(F16))))',
+  sublime: 'LA(LG(LC(LS(KP_N9))))',
+  notes: 'LA(LG(LC(LS(KP_MINUS))))',
+  signal: 'LA(LG(LC(LS(KP_EQUAL))))',
+  telegram: 'LA(LG(LC(LS(F17))))',
+  whatsup: 'LA(LG(LC(LS(KP_MULTIPLY))))',
+  chatGpt: 'LA(LG(LC(LS(G))))',
+  // appRecordStop: 'LA(LG(LC(G)))',
 
   // windows
   divvy: 'LA(LG(LC(LS(N1))))',

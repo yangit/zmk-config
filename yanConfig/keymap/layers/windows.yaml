@@ -1,0 +1,52 @@
+layout:
+  qmk_info_json: ./flactyl_layout.json
+  qmk_layout: default
+layers:
+  windows:
+    - historyBack
+    - tabsBack
+    - appWindowBack
+    - macAppsPrev
+    - fontBigger
+    - finder
+    - terminal
+    - vsCode
+    - browser
+    - t: slack
+      h: insomnia
+    - undo
+    - t: $$mdi:cancel$$
+    - t: telegram
+      h: whatsup
+      s: signal
+    - t: sublime
+      h: notes
+    - chatGpt
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+combos: []

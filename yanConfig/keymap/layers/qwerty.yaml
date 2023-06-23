@@ -1,0 +1,48 @@
+layout:
+  qmk_info_json: ./flactyl_layout.json
+  qmk_layout: default
+layers:
+  qwerty:
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - A
+    - S
+    - D
+    - F
+    - G
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - 'Y'
+    - U
+    - I
+    - O
+    - P
+    - H
+    - J
+    - K
+    - L
+    - ;
+    - 'N'
+    - M
+    - ','
+    - .
+    - /
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+combos: []

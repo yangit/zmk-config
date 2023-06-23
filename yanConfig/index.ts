@@ -1,9 +1,13 @@
-import { type Combo, type Config } from './types';
-import { addModifierToLayer, configToOutput, configToParsed, keyMapper, layerToLayer, or, reverseLayerFrom, unwrapPlus } from './util';
-
+import { type ConfigParsed, type Combo, type Config } from './types';
+import { addModifierToLayer, configToKeymap, configToOutput, configToParsed, keyMapper, layerToLayer, or, reverseLayerFrom, unwrapPlus } from './util';
+import Path from 'path';
+import _ from 'lodash';
+import { mkdirp } from 'mkdirp';
+import { rimrafSync } from 'rimraf';
 // Description: Yan's config file for ZMK
 import fs from 'fs';
-import { comboTerm, m, mehArray, odd } from './config';
+import { comboTerm, conditionalLayers, m, mehArray, odd } from './config';
+import { execSync } from 'child_process';
 
 const config: Config = {
   header: `/*
@@ -54,7 +58,7 @@ ZMK_MACRO(awesome,
 `, `
 ZMK_MACRO(shellrepeat,
     wait-ms = <400>;
-    bindings = <&macro_tap &kp ${m.appTerminal} &kp UP_ARROW &kp RETURN>;
+    bindings = <&macro_tap &kp ${m.terminal} &kp UP_ARROW &kp RETURN>;
 )
 `, `
 ZMK_MACRO(enable_rus,
@@ -84,14 +88,14 @@ ZMK_MACRO(disable_rus,
         ['+J', '+H', '+V', '+K', '&none'],
 
         ['SPACE', '&mo symbols', '&mo colemak_shift'],
-        ['&mo numbersf', '&mo numbers', m.vimium],
+        ['&trans', '&trans', '&trans'],
         ['&kp K_MUTE'],
       ],
       sensor: '&yan_encoder',
       combos: [
-        { keys: [8, 13], binding: 'LG(V),LG(LS(V))' },
-        { keys: [7, 12], binding: 'LG(C)' },
-        { keys: [6, 11], binding: 'LG(X)' },
+        { keys: [8, 13], binding: `${odd.paste},${odd.pasteMulti}` },
+        { keys: [7, 12], binding: odd.copy },
+        { keys: [6, 11], binding: odd.cut },
         { keys: [38, 37], binding: odd.deleteWord },
       ],
     },
@@ -250,7 +254,7 @@ ZMK_MACRO(disable_rus,
 
         ['&trans', '&trans', '&trans', '&trans', '&trans'],
         ['&trans', '&trans', '&trans', '&trans', '&trans'],
-        ['&trans', '&sk LEFT_COMMAND', '&sk LEFT_SHIFT', '&sk LEFT_CONTROL', '&sk LEFT_ALT',],
+        ['&trans', '&sk LEFT_COMMAND', '&sk LEFT_SHIFT', '&sk LEFT_CONTROL', '&sk LEFT_ALT'],
 
         ['&trans', '&trans', '&trans'],
         ['&trans', '&trans', '&trans'],
@@ -276,9 +280,9 @@ ZMK_MACRO(disable_rus,
     symbols_mirror: reverseLayerFrom('symbols'),
     windows: {
       keys: [
-        [odd.historyBack, odd.tabsBack, odd.appWindowBack, m.macAppsWitchBackward, odd.fontBigger],
-        [m.appFinder, m.appTerminal, m.appVsCode, m.appBrowser, `${m.appSlack},${m.appInsomnia}`],
-        [odd.undo, '&none', `${m.appTelegram},${m.appWhatsup},${m.appSignal}`, `${m.appSublime},${m.appNotes}`, m.appRecordStart],
+        [odd.historyBack, odd.tabsBack, odd.appWindowBack, m.macAppsPrev, odd.fontBigger],
+        [m.finder, m.terminal, m.vsCode, m.browser, `${m.slack},${m.insomnia}`],
+        [odd.undo, '&none', `${m.telegram},${m.whatsup},${m.signal}`, `${m.sublime},${m.notes}`, m.chatGpt],
 
         ['&trans', '&trans', '&trans'],
         ['&trans', '&trans', '&trans'],
@@ -291,15 +295,15 @@ ZMK_MACRO(disable_rus,
         ['&trans', '&trans', '&trans'],
       ],
       // combos: [
-      //     { keys: [0, 3], binding: `&kp ${m.appTelegram}` },
-      //     { keys: [0, 3], binding: `&kp ${m.appWhatsup}` },
+      //     { keys: [0, 3], binding: `&kp ${m.telegram}` },
+      //     { keys: [0, 3], binding: `&kp ${m.whatsup}` },
       //     { keys: [0, 3], binding: `&kp ${}` },
       // ]
     },
     windows2: {
       keys: [
-        [odd.historyForward, odd.tabsForward, odd.appWindowForward, m.macAppsWitchForward, odd.fontSmaller],
-        [`${m.showApps},${m.showDesktop}`, `${m.winL_M},${m.winL_L},${m.winL_XL},${m.winL_S}`, `${m.winR_M},${m.winR_L},${m.winR_XL},${m.winR_S}`, `${m.winCenter_S},${m.winCenter_M},${m.winCenter_L}`, m.appRecordStop],
+        [odd.historyForward, odd.tabsForward, odd.appWindowForward, m.macAppsNext, odd.fontSmaller],
+        [`${m.showApps},${m.showDesktop}`, `${m.winL_M},${m.winL_L},${m.winL_XL},${m.winL_S}`, `${m.winR_M},${m.winR_L},${m.winR_XL},${m.winR_S}`, `${m.winCenter_S},${m.winCenter_M},${m.winCenter_L}`, '&none'],
         [odd.redo, '&shellrepeat', '&awesome', '&none', odd.screenshot],
 
         ['&trans', '&trans', '&trans'],
@@ -363,23 +367,6 @@ ZMK_MACRO(disable_rus,
 `,
   );
 });
-
-// Conditional layers
-const conditionalLayers = [
-  { layer: 'colemak_control', targets: ['arrows', 'numbers'] },
-  { layer: 'windows2', targets: ['arrows', 'windows'] },
-
-  // Eng
-  { layer: 'symbols_mirror', targets: ['default_mirror', 'symbols'] },
-  { layer: 'arrows_mirror', targets: ['default_mirror', 'arrows'] },
-  { layer: 'colemak_shift_mirror', targets: ['default_mirror', 'colemak_shift'] },
-
-  // Russian
-  { layer: 'symbols_mirror', targets: ['russian_mirror', 'symbols'] },
-  { layer: 'arrows_mirror', targets: ['russian_mirror', 'arrows'] },
-  { layer: 'colemak_shift_mirror', targets: ['russian_mirror', 'colemak_shift'] },
-
-];
 
 const configParsed = configToParsed(config);
 
@@ -479,12 +466,28 @@ for (const layer in configParsed.keymap) {
     }
   }
 }
+const generateSvg = (): void => {
+  // install binary from here
+  // https://github.com/caksoylar/keymap-drawer
+  rimrafSync(Path.join(__dirname, '/keymap/layers'));
+  mkdirp.sync(Path.join(__dirname, '/keymap/layers'));
+  const layerBlacklist = ['arrowsr', 'colemak_shift', 'colemak_shift_mirror', 'colemak_control', 'russian', 'russian_shift', 'russian_mirror', 'numbersf'];
+  const configSubset = JSON.parse(JSON.stringify({ ...configParsed, keymap: _.omit(configParsed.keymap, layerBlacklist) }));
+  for (const layer in configSubset.keymap) {
+    fs.writeFileSync(`./yanConfig/keymap/layers/${layer}.yaml`, configToKeymap({ ...configParsed, keymap: { [layer]: configSubset.keymap[layer] } }));
+    execSync(`/bin/bash -c "cd ${Path.join(__dirname, '/keymap')} &&ls && keymap -c config.yaml draw ./layers/${layer}.yaml > ./layers/${layer}.svg"`);
+  }
+  fs.writeFileSync('./yanConfig/keymap/layers/__combined.yaml', configToKeymap(configSubset));
+  execSync(`/bin/bash -c "cd ${Path.join(__dirname, '/keymap')} &&ls && keymap -c config.yaml draw ./layers/__combined.yaml > ./layers/__combined.svg"`);
+};
+generateSvg();
 
 // map every key under configParsed.keymap[layer][row] using keyMapper()
-for (const layer in configParsed.keymap) {
-  configParsed.keymap[layer].keys = configParsed.keymap[layer].keys.map((rows, rowIndex) => rows.map((keyText, index) => keyMapper(configParsed, keyText, { layer, row: rowIndex, index })));
+const configParsedMapped: ConfigParsed = JSON.parse(JSON.stringify(configParsed));
+for (const layer in configParsedMapped.keymap) {
+  configParsedMapped.keymap[layer].keys = configParsedMapped.keymap[layer].keys.map((rows, rowIndex) => rows.map((keyText, index) => keyMapper(configParsedMapped, keyText, { layer, row: rowIndex, index })));
 }
 
-fs.writeFileSync('./config/flactyl.keymap', configToOutput(configParsed));
+fs.writeFileSync('./config/flactyl.keymap', configToOutput(configParsedMapped));
 
 console.log(mehArray.filter(({ used }) => !used).map(item => item.value));

@@ -1,0 +1,52 @@
+layout:
+  qmk_info_json: ./flactyl_layout.json
+  qmk_layout: default
+layers:
+  arrows:
+    - t: $$mdi:cancel$$
+    - t: $$tabler:space$$
+    - t: $$mdi:backspace-reverse-outline$$
+    - t: $$mdi:web$$
+      h: russian
+    - t: $$mdi:volume-high$$
+    - t: ESC
+    - TAB
+    - t: $$mdi:backspace-outline$$
+    - t: RETURN
+      h: SFT-RETURN
+      s: CMD-RETURN
+    - t: $$mdi:volume-medium$$
+    - t: $$mdi:apple-keyboard-option$$
+    - t: $$mdi:apple-keyboard-control$$
+    - t: $$mdi:apple-keyboard-shift$$
+    - t: $$mdi:apple-keyboard-command$$
+    - t: alfred
+      h: lockScreen
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - t: $$mdi:cancel$$
+    - HOME
+    - t: $$tabler:arrow-up$$
+    - t: PAGE UP
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$tabler:arrow-left$$
+    - t: $$tabler:arrow-down$$
+    - t: $$tabler:arrow-right$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - END
+    - t: $$mdi:cancel$$
+    - t: PAGE DOWN
+    - t: $$mdi:cancel$$
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+combos: []

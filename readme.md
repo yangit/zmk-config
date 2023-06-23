@@ -18,6 +18,18 @@ I.e. tap-dance for key like `'E,LG(E),LS(LG(E))'` means emit `E` on press, `LG(E
 The declaration `'+L'` means emit `L` on tap and `LG(L)` on hold.
 Overall it allows to keep full layer worth of keys with tap-dances on a single laptop screen
 
+## Keymap
+
+
+|||
+|-------------|-------------|
+|<img src='./yanConfig/keymap/story.png' width=80px> | Button like this means it fires E on tap, CMD-E on hold, and SFT-CMD-E on tap-and-hold. Allows to easily fire modifiers with one finger.|
+|<img src='./yanConfig/keymap/story2.png' width=80px> | This means that if I tap simultaneously `R` and `X` the `cut` command will fire.|
+
+
+You can see full keymap [here](./yanConfig/keymap/layers/__combined.svg)
+<img src='./yanConfig/keymap/layers/default.svg'>
+
 ## Tap dance mess
 
 Tap-dances on both ZMK and QMK are a mess. I'm not blaming developers, they did an awesome job, I just state the fact that the API is super convoluted and misleading.
