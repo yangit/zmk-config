@@ -68,6 +68,8 @@ export const odd = {
   lockScreen: 'LG(LC(Q))',
   undo: 'LG(Z)',
   redo: 'LG(LS(Z))',
+  deleteWord: 'LA(BACKSPACE)',
+  vimium: 'LA(LG(LC(LS(LEFT_BRACKET))))',
 };
 
 export const m = {

@@ -103,6 +103,13 @@
             layers = <L_DEFAULT>;
         };
         compatible = "zmk,combos";
+        combo_default_3 {
+            timeout-ms = <100>;
+            key-positions = <38 37>;
+            bindings = <&kp LA(BACKSPACE)>;
+            layers = <L_DEFAULT>;
+        };
+        compatible = "zmk,combos";
         combo_russian_0 {
             timeout-ms = <100>;
             key-positions = <8 13>;
@@ -121,6 +128,13 @@
             timeout-ms = <100>;
             key-positions = <6 11>;
             bindings = <&kp LG(X)>;
+            layers = <L_RUSSIAN>;
+        };
+        compatible = "zmk,combos";
+        combo_russian_3 {
+            timeout-ms = <100>;
+            key-positions = <38 37>;
+            bindings = <&kp LA(BACKSPACE)>;
             layers = <L_RUSSIAN>;
         };
         compatible = "zmk,combos";
