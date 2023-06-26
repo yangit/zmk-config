@@ -119,18 +119,3 @@ combos:
     k:
       h: windows2
       t: $$tabler:box-multiple$$
-  - p:
-      - -1
-      - 37
-    k:
-      t: $$mdi:mirror-rectangle$$
-  - p:
-      - -1
-      - 16
-    k:
-      t: $$mdi:mirror-rectangle$$
-  - p:
-      - -1
-      - 38
-    k:
-      t: $$mdi:mirror-rectangle$$

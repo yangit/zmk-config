@@ -1,5 +1,27 @@
 <svg width="676.0" height="457.88235294117646" viewBox="0 0 676.0 457.88235294117646" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>/* start glyphs */
+<svg id="tabler:mouse">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
+  <path d="M12 7l0 4" />
+</svg>
+
+
+
+</svg>
+<svg id="tabler:space">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
+</svg>
+
+
+
+</svg>
+<svg id="mdi:apple-keyboard-shift">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
+</svg>
 <svg id="tabler:box-multiple">
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -24,33 +46,8 @@
 
 
 </svg>
-<svg id="tabler:mouse">
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mouse" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
-  <path d="M12 7l0 4" />
-</svg>
-
-
-
-</svg>
-<svg id="tabler:space">
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-space" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
-</svg>
-
-
-
-</svg>
-<svg id="mdi:mirror-rectangle">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mirror-rectangle" viewBox="0 0 24 24"><path d="M8.29 10.28L11.53 7.03L12.59 8.09L9.35 11.34L8.29 10.28M8.7 14.61L14.36 8.95L15.42 10L9.76 15.67L8.7 14.61M18 3V21H6V3H18M20 1H4V23H20V1Z" /></svg>
-</svg>
 <svg id="mdi:apple-keyboard-control">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
-</svg>
-<svg id="mdi:apple-keyboard-shift">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
 </svg>
 </defs>/* end glyphs */
 <style>/* inherit to force styles through use tags*/
@@ -287,13 +284,5 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="184.0" y="304.88235294117646" width="28.0" height="26.0" class="combo"/>
 <use href="#tabler:box-multiple" xlink:href="#tabler:box-multiple" x="191.0" y="310.88235294117646" height="14" width="14.0" class="combo tap glyph tabler:box-multiple"/>
 <text x="198.0" y="328.88235294117646" class="combo hold" style="font-size: 88%">windows2</text>
-<rect rx="6.0" ry="6.0" x="464.0" y="332.88235294117646" width="28.0" height="26.0" class="combo"/>
-<use href="#mdi:mirror-rectangle" xlink:href="#mdi:mirror-rectangle" x="471.0" y="338.88235294117646" height="14" width="14.0" class="combo tap glyph mdi:mirror-rectangle"/>
-<path d="M366.0,345.88235294117646 l121.69582738710284,24.339165477420565" class="combo"/>
-<path d="M366.0,345.88235294117646 l-121.69582738710284,-24.339165477420565" class="combo"/>
-<rect rx="6.0" ry="6.0" x="352.0" y="332.88235294117646" width="28.0" height="26.0" class="combo"/>
-<use href="#mdi:mirror-rectangle" xlink:href="#mdi:mirror-rectangle" x="359.0" y="338.88235294117646" height="14" width="14.0" class="combo tap glyph mdi:mirror-rectangle"/>
-<rect rx="6.0" ry="6.0" x="492.0" y="332.88235294117646" width="28.0" height="26.0" class="combo"/>
-<use href="#mdi:mirror-rectangle" xlink:href="#mdi:mirror-rectangle" x="499.0" y="338.88235294117646" height="14" width="14.0" class="combo tap glyph mdi:mirror-rectangle"/>
 </g>
 </svg>

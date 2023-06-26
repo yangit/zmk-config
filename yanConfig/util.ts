@@ -399,7 +399,10 @@ export const configToKeymap = (config: ConfigParsed): string => {
     config.keymap.default.combos?.forEach(combo => json.combos.push({ p: combo.keys, k: keyToKeyLabel(combo.binding) }));
     conditionalLayers.forEach((layer) => {
       if (layer.targets.findIndex(target => target.includes('russian')) === -1) {
-        json.combos.push({ p: layer.targets.map(target => findKeyIndex(`&mo ${target}`)), k: keyToKeyLabel(`&mo ${layer.layer}`) });
+        const newCombo = { p: layer.targets.map(target => findKeyIndex(`&mo ${target}`)), k: keyToKeyLabel(`&mo ${layer.layer}`) };
+        if (!newCombo.p.includes(-1)) {
+          json.combos.push(newCombo);
+        }
       }
     });
   }
