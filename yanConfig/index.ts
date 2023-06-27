@@ -43,14 +43,14 @@ yan_encoder: yan_encoder {
 };
 `],
   macros: [
-    `
-ZMK_MACRO(globeCaps,
-    bindings
-    = <&macro_press &mo ${layerToLayer('numbersf')} &kp CAPS>
-    , <&macro_pause_for_release>
-    , <&macro_release &mo ${layerToLayer('numbersf')} &kp CAPS>
-    ;
-)`,
+//     `
+// ZMK_MACRO(globeCaps,
+//     bindings
+//     = <&macro_press &mo ${layerToLayer('numbersf')} &kp CAPS>
+//     , <&macro_pause_for_release>
+//     , <&macro_release &mo ${layerToLayer('numbersf')} &kp CAPS>
+//     ;
+// )`,
 `
 ZMK_MACRO(awesome,
     wait-ms = <50>;
@@ -129,6 +129,7 @@ Object.entries(configParsed.keymap).forEach(([layer, layerConfig]) => {
   if (layerConfig.combos != null) {
     layerConfig.combos.forEach((combo: Combo, comboIndex: number) => {
       const { keys, binding } = combo;
+
       keys.forEach((key) => {
         const [,, tapHold] = layerConfig.keys.flatMap(a => a)[key].split(',');
         if (typeof tapHold === 'string') {

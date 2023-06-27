@@ -1,86 +1,24 @@
 import { quickTap, tapDanceTerm, tappingTerm, tappingTerm2, m, odd, conditionalLayers } from './config';
 import { type Config, type ConfigParsed, type LayerConfigObject } from './types';
-import yaml, { loadAll } from 'js-yaml';
+import yaml from 'js-yaml';
 interface KeyLocation { layer: string, row: number, index: number };
 
 let macroCounter = 0;
-export const layerToLayer = (layer: string) => `L_${layer.toUpperCase()}`;
-export const unwrapPlus = (string: string) => `${string.slice(1)},LG(${string.slice(1)})`;
-export const unwrapTapDance = (configParsed: ConfigParsed, keyText: string, _location: KeyLocation) => {
-  const [tap, hold, tapHold, doubleTap] = keyText.split(',');
-  // if (doubleTap) {
-  //     throw new Error(`double tap is not implemented yet at ${keyText} ${JSON.stringify(location)}`);
-  // }
-  const macroIndex = macroCounter++;
-
-  configParsed.behaviors.push(`
-td_${macroIndex}: td_${macroIndex} {
-    compatible = "zmk,behavior-tap-dance";
-    label = "td_${macroIndex}";
-    #binding-cells = <0>;
-    tapping-term-ms = <${tapDanceTerm}>;
-    bindings = <&td_${macroIndex}_first 0 ${tap}>, ${tapHold ? `<&td_${macroIndex}_second 0 ${doubleTap || 0}>` : `<&td_${macroIndex}_repeat>`};
-};
-td_${macroIndex}_first: td_${macroIndex}_first {
-    compatible = "zmk,behavior-hold-tap";
-    label = "td_${macroIndex}_first";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <${tappingTerm}>;
-    quick-tap-ms = <${quickTap}>;
-    global-quick-tap;
-    bindings = <&td_${macroIndex}_hold_first>, <&kp>;
-};`);
-  if (tapHold) {
-    configParsed.behaviors.push(`
-td_${macroIndex}_second: td_${macroIndex}_second {
-    compatible = "zmk,behavior-hold-tap";
-    label = "td_${macroIndex}_second";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <${tappingTerm2}>;
-    quick-tap-ms = <${quickTap}>;
-    global-quick-tap;
-    bindings = <&td_${macroIndex}_hold_second>, <${doubleTap ? '&kp' : `&td_${macroIndex}_repeat`}>;
-};`);
-  }
-
-  configParsed.macros.push(`
-ZMK_MACRO(td_${macroIndex}_hold_first,
-    wait-ms = <0>;
-    bindings = <&macro_tap &kp ${hold}>;
-)
-ZMK_MACRO(td_${macroIndex}_hold_second,
-    wait-ms = <0>;
-    bindings = <&macro_tap &kp ${tapHold || 'X'}>;
-)
-ZMK_MACRO(td_${macroIndex}_repeat,
-    wait-ms = <0>;
-    bindings = <&macro_tap &kp ${tap} &kp ${tap}>;
-)
-`);
-  return `&td_${macroIndex}`;
-};
-
-export const keyMapper = (configParsed: ConfigParsed, keyText: string, location: KeyLocation) => {
+export const layerToLayer = (layer: string): string => `L_${layer.toUpperCase()}`;
+export const unwrapPlus = (string: string): string => `${string.slice(1)},LG(${string.slice(1)})`;
+export const keyMapperSimple = (configParsed: ConfigParsed, keyText: string, location: KeyLocation): string => {
   // layer switcher &mo L_LAYER
-  if (keyText.startsWith('&mo ')) {
-    const [, layer] = keyText.split(' ');
+  if (typeof keyText !== 'string') {
+    throw new Error(`keyText is not a string at ${JSON.stringify(location)}`);
+  }
+  if (keyText.startsWith('&mo ') || keyText.startsWith('&tog ')) {
+    const [prefix, layer] = keyText.split(' ');
     if (!Object.keys(configParsed.keymap).includes(layer)) {
       console.log(configParsed.keymap);
 
       throw new Error(`layer ${layer} does not exist at keyText: ${keyText} :${JSON.stringify(location)}`);
     }
-    return `&mo L_${layer.toUpperCase()}`;
-  }
-  if (keyText === '=') {
-    throw new Error(`keyText ${keyText} is not allowed at ${JSON.stringify(location)}`);
-  }
-  if (keyText.startsWith('+')) {
-    return unwrapTapDance(configParsed, unwrapPlus(keyText), location);
-  }
-  if (keyText.includes(',')) {
-    return unwrapTapDance(configParsed, keyText, location);
+    return `${prefix} L_${layer.toUpperCase()}`;
   }
   if (!keyText.startsWith('&')) {
     return `&kp ${keyText}`;
@@ -88,12 +26,104 @@ export const keyMapper = (configParsed: ConfigParsed, keyText: string, location:
   return keyText;
 };
 
+export const keyMapper = (configParsed: ConfigParsed, keyTextParam: string, location: KeyLocation): string => {
+  let keyText = keyTextParam;
+  if (keyText === '=') {
+    throw new Error(`keyText ${keyText} is not allowed at ${JSON.stringify(location)}`);
+  }
+  if (keyText.startsWith('+')) {
+    keyText = unwrapPlus(keyText);
+  }
+  // Simple key
+  if (!keyText.includes(',')) {
+    return keyMapperSimple(configParsed, keyText, location);
+  }
+
+  const [tap, hold, tapHold, doubleTap] = keyText.split(',');
+  if (typeof tap !== 'string') {
+    throw new Error(`tap is not a string at ${JSON.stringify(location)}`);
+  }
+
+  const macroIndex = macroCounter++;
+
+  const tdance = (name: string, [first, second]: string[]): string => {
+    configParsed.behaviors.push(`
+  ${name}: ${name} {
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_${macroIndex}";
+      #binding-cells = <0>;
+      tapping-term-ms = <${tapDanceTerm}>;
+      bindings = ${first}, ${second};
+  };`);
+    return `&${name}`;
+  };
+  const htap = ({ name, tap, hold }: { name: string, tap: string, hold: string }): void => {
+    configParsed.behaviors.push(`
+    ${name}: ${name} {
+      compatible = "zmk,behavior-hold-tap";
+      label = "${name}";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <${tappingTerm}>;
+      quick-tap-ms = <${quickTap}>;
+      global-quick-tap;
+      bindings = ${hold}, ${tap};
+  };
+  `);
+  };
+
+  const macro = ({ name, command }: { name: string, command: string }): void => {
+    configParsed.macros.push(`
+  ZMK_MACRO(${name},
+      wait-ms = <0>;
+      bindings = <&macro_tap ${command}>;
+  )`);
+  };
+
+  // Only tap and hold
+  if (typeof tapHold !== 'string') {
+    const entry = tdance(`td_${macroIndex}`, [`<&td_${macroIndex}_first 0 0>`, `<&td_${macroIndex}_repeat_tap>`]);
+    htap({ name: `td_${macroIndex}_first`, tap: `<&td_${macroIndex}_first_tap>`, hold: `<&td_${macroIndex}_first_hold>` });
+    macro({ name: `td_${macroIndex}_first_tap`, command: keyMapperSimple(configParsed, tap, location) });
+    macro({ name: `td_${macroIndex}_first_hold`, command: keyMapperSimple(configParsed, hold, location) });
+    macro({ name: `td_${macroIndex}_repeat_tap`, command: `${keyMapperSimple(configParsed, tap, location)} ${keyMapperSimple(configParsed, tap, location)}` });
+
+    return entry;
+  }
+  // no double tap
+  if (typeof doubleTap !== 'string') {
+    const entry = tdance(`td_${macroIndex}`, [`<&td_${macroIndex}_first 0 0>`, `<&td_${macroIndex}_second 0 0>`]);
+    htap({ name: `td_${macroIndex}_first`, tap: `<&td_${macroIndex}_first_tap>`, hold: `<&td_${macroIndex}_first_hold>` });
+    htap({ name: `td_${macroIndex}_second`, tap: `<&td_${macroIndex}_repeat_tap>`, hold: `<&td_${macroIndex}_second_hold>` });
+    macro({ name: `td_${macroIndex}_first_tap`, command: keyMapperSimple(configParsed, tap, location) });
+    macro({ name: `td_${macroIndex}_first_hold`, command: keyMapperSimple(configParsed, hold, location) });
+    macro({ name: `td_${macroIndex}_second_hold`, command: keyMapperSimple(configParsed, tapHold, location) });
+    macro({ name: `td_${macroIndex}_repeat_tap`, command: `${keyMapperSimple(configParsed, tap, location)} ${keyMapperSimple(configParsed, tap, location)}` });
+
+    return entry;
+  }
+  // all 4 types defined including double tap
+  const entry = tdance(`td_${macroIndex}`, [`<&td_${macroIndex}_first 0 0>`, `<&td_${macroIndex}_second 0 0>`]);
+  htap({ name: `td_${macroIndex}_first`, tap: `<&td_${macroIndex}_first_tap>`, hold: `<&td_${macroIndex}_first_hold>` });
+  htap({ name: `td_${macroIndex}_second`, tap: `<&td_${macroIndex}_second_tap>`, hold: `<&td_${macroIndex}_second_hold>` });
+  macro({ name: `td_${macroIndex}_first_tap`, command: keyMapperSimple(configParsed, tap, location) });
+  macro({ name: `td_${macroIndex}_first_hold`, command: keyMapperSimple(configParsed, hold, location) });
+  macro({ name: `td_${macroIndex}_second_hold`, command: keyMapperSimple(configParsed, tapHold, location) });
+  macro({ name: `td_${macroIndex}_second_tap`, command: keyMapperSimple(configParsed, tap, location) });
+
+  return entry;
+
+  // tdance(htap(tap, hold), macro(repeat));
+  // tdance(htap(tap, hold), htap(doubleTap, macro(repeat)));
+  // tdance(htap(tap, hold), htap(doubleTap, tapHold));
+};
+
 export const reverseLayerFrom = (layer: string) => (configLocal: ConfigParsed): LayerConfigObject => {
-  if (!configLocal.keymap[layer]) {
+  if (typeof configLocal.keymap[layer] !== 'object') {
     throw new Error(`Layer ${layer} is not defined`);
   }
 
-  const [r1, r2, r3, _r4, _r5, r6, r7, r8, _r9, _r10] = configLocal.keymap[layer].keys.map((row) => row.slice().reverse());
+  const [r1, r2, r3,,, r6, r7, r8, ,] = configLocal.keymap[layer].keys.map((row) => row.slice().reverse());
   return {
     keys: [
       r6,
@@ -122,7 +152,7 @@ export const addModifierToLayer = (layer: string, modifier: string) => (configLo
   return { keys };
 };
 
-export const tab = (str: string, pad: string) => str.split('\n').map(line => `${pad}${line}`).join('\n');
+export const tab = (str: string, pad: string): string => str.split('\n').map(line => `${pad}${line}`).join('\n');
 
 export const configToParsed = (config: Config): ConfigParsed => {
   // invoke layer config with configLocal
@@ -132,14 +162,14 @@ export const configToParsed = (config: Config): ConfigParsed => {
       // console.log(layer, Object.keys(config.keymap), config.keymap.russian);
       configParsed.keymap[layer] = layerConfig(configParsed);
     } else {
-      // @ts-expect-error
+      // @ts-expect-error because mutation
       configParsed.keymap[layer] = config.keymap[layer];
     }
   });
   return configParsed;
 };
 
-export const configToOutput = (configParsed: ConfigParsed) => {
+export const configToOutput = (configParsed: ConfigParsed): string => {
   const defines = Object.keys(configParsed.keymap).map((layer, index) => `#define ${layerToLayer(layer)} ${index}`).join('\n');
   return `${configParsed.header}
 ${defines}
@@ -163,7 +193,7 @@ ${tab(configParsed.macros.map(macro => macro.trim()).join('\n'), '        ')}
         ${layer}_layer {
             bindings = <
 ${configParsed.keymap[layer].keys.map(row => row.join('\t')).join('\n')}
-            >;${configParsed.keymap[layer].sensor ? `\n sensor-bindings = <${configParsed.keymap[layer].sensor}>;` : ''}            
+            >;${typeof configParsed.keymap[layer].sensor !== 'undefined' ? `\n sensor-bindings = <${configParsed.keymap[layer].sensor}>;` : ''}            
         };
     `).join('\n')}
     };
