@@ -111,7 +111,7 @@ ZMK_MACRO(${layer}_rus,
 });
 
 // Since arrows layer contain toggles for language, we need to make it special
-// There are two variants, russian one does not allow to enable russian again, and english does not all to enable english again
+// There are two variants, russian one does not allow to enable russian again, and english does not allow to enable english again
 configParsed.macros.push(`
 ZMK_MACRO(arrowsr_rus,
     wait-ms = <0>;
@@ -131,7 +131,7 @@ Object.entries(configParsed.keymap).forEach(([layer, layerConfig]) => {
       const { keys, binding } = combo;
       keys.forEach((key) => {
         const [,, tapHold] = layerConfig.keys.flatMap(a => a)[key].split(',');
-        if (tapHold) {
+        if (typeof tapHold === 'string') {
           throw new Error(`Combo interferes with tapHold layer:${layer} key:${key} combo: ${JSON.stringify(combo)}`);
         }
       });

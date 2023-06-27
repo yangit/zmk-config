@@ -1,16 +1,4 @@
 <svg width="676.0" height="457.88235294117646" viewBox="0 0 676.0 457.88235294117646" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>/* start glyphs */
-<svg id="tabler:box-multiple">
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M7 3m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
-  <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2" />
-</svg>
-
-
-
-</svg>
-</defs>/* end glyphs */
 <style>/* inherit to force styles through use tags*/
 svg path {
     fill: inherit;
@@ -145,41 +133,36 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="144.0" y="347.88235294117646" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="200.0" y="347.88235294117646" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="256.0" y="347.88235294117646" width="52.0" height="52.0" class="key"/>
-<use href="#tabler:box-multiple" xlink:href="#tabler:box-multiple" x="275.0" y="366.88235294117646" height="14" width="14.0" class="tap glyph tabler:box-multiple"/>
-<text x="282.0" y="397.88235294117646" class="hold" style="font-size: 88%">numbersf</text>
 <rect rx="6.0" ry="6.0" x="368.0" y="87.64705882352942" width="52.0" height="52.0" class="key"/>
+<text x="394.0" y="113.64705882352942" class="tap">F1</text>
 <rect rx="6.0" ry="6.0" x="424.0" y="77.76470588235294" width="52.0" height="52.0" class="key"/>
-<text x="450.0" y="103.76470588235294" class="tap">7</text>
+<text x="450.0" y="103.76470588235294" class="tap">F2</text>
 <rect rx="6.0" ry="6.0" x="480.0" y="58.000000000000014" width="52.0" height="52.0" class="key"/>
-<text x="506.0" y="84.00000000000001" class="tap">8</text>
+<text x="506.0" y="84.00000000000001" class="tap">F3</text>
 <rect rx="6.0" ry="6.0" x="536.0" y="67.88235294117648" width="52.0" height="52.0" class="key"/>
-<text x="562.0" y="93.88235294117648" class="tap">9</text>
+<text x="562.0" y="93.88235294117648" class="tap">F4</text>
 <rect rx="6.0" ry="6.0" x="592.0" y="123.88235294117649" width="52.0" height="52.0" class="key"/>
-<text x="618.0" y="149.8823529411765" class="tap">*</text>
-<text x="618.0" y="173.8823529411765" class="hold">/</text>
-<text x="618.0" y="125.88235294117649" class="shifted">:</text>
+<text x="618.0" y="149.8823529411765" class="tap">F5</text>
 <rect rx="6.0" ry="6.0" x="368.0" y="143.6470588235294" width="52.0" height="52.0" class="key"/>
-<text x="394.0" y="169.6470588235294" class="tap">0</text>
+<text x="394.0" y="169.6470588235294" class="tap">F6</text>
 <rect rx="6.0" ry="6.0" x="424.0" y="133.76470588235293" width="52.0" height="52.0" class="key"/>
-<text x="450.0" y="159.76470588235293" class="tap">1</text>
+<text x="450.0" y="159.76470588235293" class="tap">F7</text>
 <rect rx="6.0" ry="6.0" x="480.0" y="114.0" width="52.0" height="52.0" class="key"/>
-<text x="506.0" y="140.0" class="tap">2</text>
+<text x="506.0" y="140.0" class="tap">F8</text>
 <rect rx="6.0" ry="6.0" x="536.0" y="123.88235294117649" width="52.0" height="52.0" class="key"/>
-<text x="562.0" y="149.8823529411765" class="tap">3</text>
+<text x="562.0" y="149.8823529411765" class="tap">F9</text>
 <rect rx="6.0" ry="6.0" x="592.0" y="179.8823529411765" width="52.0" height="52.0" class="key"/>
-<text x="618.0" y="205.8823529411765" class="tap">+</text>
-<text x="618.0" y="229.8823529411765" class="hold">-</text>
+<text x="618.0" y="205.8823529411765" class="tap">F10</text>
 <rect rx="6.0" ry="6.0" x="368.0" y="199.6470588235294" width="52.0" height="52.0" class="key"/>
-<text x="394.0" y="225.6470588235294" class="tap">=</text>
+<text x="394.0" y="225.6470588235294" class="tap">F11</text>
 <rect rx="6.0" ry="6.0" x="424.0" y="189.76470588235296" width="52.0" height="52.0" class="key"/>
-<text x="450.0" y="215.76470588235296" class="tap">4</text>
+<text x="450.0" y="215.76470588235296" class="tap">F12</text>
 <rect rx="6.0" ry="6.0" x="480.0" y="170.0" width="52.0" height="52.0" class="key"/>
-<text x="506.0" y="196.0" class="tap">5</text>
+<text x="506.0" y="196.0" class="tap">F13</text>
 <rect rx="6.0" ry="6.0" x="536.0" y="179.8823529411765" width="52.0" height="52.0" class="key"/>
-<text x="562.0" y="205.8823529411765" class="tap">6</text>
+<text x="562.0" y="205.8823529411765" class="tap">F14</text>
 <rect rx="6.0" ry="6.0" x="592.0" y="235.88235294117646" width="52.0" height="52.0" class="key"/>
-<text x="618.0" y="261.88235294117646" class="tap">.</text>
-<text x="618.0" y="285.88235294117646" class="hold">,</text>
+<text x="618.0" y="261.88235294117646" class="tap">F15</text>
 <rect rx="6.0" ry="6.0" x="368.0" y="291.88235294117646" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="424.0" y="291.88235294117646" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="480.0" y="291.88235294117646" width="52.0" height="52.0" class="key"/>

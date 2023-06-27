@@ -5,14 +5,14 @@ import { addModifierToLayer, or, reverseLayerFrom, unwrapPlus } from './util';
 const keymap: Record<string, LayerConfig> = {
   default: {
     keys: [
-      ['Q,LG(SLASH),LA(LG(Q))', 'W,LG(W),LG(Q)', 'F,LG(F),LA(LG(F))', 'P,LG(P),LS(LG(P))', '&mo config'],
+      ['Q,LG(SLASH),LA(LG(Q))', 'W,LG(W),LG(Q)', 'F,LG(F),LA(LG(F))', 'P,LG(P),LS(LG(P))', '&none,&tog config'],
       ['+A', '+R', '+S', '+T', 'G,LG(G),LG(LS(G))'],
       ['Z', 'X', 'C', '+D', 'B,LG(B),LG(LS(B))'],
 
       ['&mo windows', '&mo arrows', '&mo numbers'],
       ['&mo symbols', '&mo default_mirror', '&mo colemak_shift'],
 
-      ['&mo config', '+L', '+U', '+Y', 'N1,N2,N3'],
+      ['&none,&tog config', '+L', '+U', '+Y', 'N1,N2,N3'],
       ['+M', 'N,LG(N),LG(LS(N))', 'E,LG(E),LS(LG(E))', 'I,LG(I),LG(LA(I))', '+O'],
       ['+J', '+H', '+V', '+K', '&none'],
 
@@ -26,6 +26,7 @@ const keymap: Record<string, LayerConfig> = {
       { keys: [7, 12], binding: odd.copy },
       { keys: [6, 11], binding: odd.cut },
       { keys: [38, 37], binding: odd.deleteWord },
+      { keys: [4, 21], binding: '&tog qwerty' },
     ],
   },
   russian: (configLocal) => {
@@ -80,8 +81,8 @@ const keymap: Record<string, LayerConfig> = {
       ['A', 'S', 'D', 'F', 'G'],
       ['Z', 'X', 'C', 'V', 'B'],
 
-      ['&trans', '&trans', '&trans'],
-      ['&trans', '&trans', '&trans'],
+      ['&none', '&trans', '&trans'],
+      ['&none', '&none', '&none'],
 
       ['Y', 'U', 'I', 'O', 'P'],
       ['H', 'J', 'K', 'L', 'SEMICOLON'],
@@ -89,6 +90,9 @@ const keymap: Record<string, LayerConfig> = {
 
       ['&trans', '&trans', '&trans'],
       ['&trans', '&trans', '&trans'],
+    ],
+    combos: [
+      { keys: [4, 21], binding: '&tog qwerty' },
     ],
   },
   colemak: {
@@ -108,40 +112,36 @@ const keymap: Record<string, LayerConfig> = {
       ['&trans', '&trans', '&trans'],
     ],
   },
-  colemak_shift: (configLocal) => {
-    const { keys } = addModifierToLayer('colemak', 'LS')(configLocal);
-    keys[3][2] = '&mo numbersf';
-    return { keys };
-  },
+  colemak_shift: addModifierToLayer('colemak', 'LS'),
   colemak_shift_mirror: reverseLayerFrom('colemak_shift'),
   numbers: () => {
-    const reverseNumbersRow = (row: string[]): string[] => {
-      const [one, two, three, four, five] = row;
-      return [five, two, three, four, one];
-    };
+    // const reverseNumbersRow = (row: string[]): string[] => {
+    //   const [one, two, three, four, five] = row;
+    //   return [five, two, three, four, one];
+    // };
     const keys = [
       ['KP_MULTIPLY,KP_DIVIDE,COLON', 'N7', 'N8', 'N9', '&trans'],
       ['KP_PLUS,KP_MINUS', 'N1', 'N2', 'N3', 'N0'],
       ['KP_DOT,COMMA', 'N4', 'N5', 'N6', 'KP_EQUAL'],
 
       ['&trans', '&trans', '&trans'],
-      ['&trans', '&trans', '&mo numbersf'],
+      ['&trans', '&trans', '&trans'],
 
-      ['=', '=', '=', '=', '='],
-      ['=', '=', '=', '=', '='],
-      ['=', '=', '=', '=', '='],
-      // ['F1', 'F2', 'F3', 'F4', 'F5'],
-      // ['F6', 'F7', 'F8', 'F9', 'F10'],
-      // ['F11', 'F12', 'F13', 'F14', 'F15'],
+      //   ['=', '=', '=', '=', '='],
+      //   ['=', '=', '=', '=', '='],
+      //   ['=', '=', '=', '=', '='],
+      ['F1', 'F2', 'F3', 'F4', 'F5'],
+      ['F6', 'F7', 'F8', 'F9', 'F10'],
+      ['F11', 'F12', 'F13', 'F14', 'F15'],
 
       ['&trans', '&trans', '&trans'],
       ['&trans', '&trans', '&trans'],
     ];
 
-    // mirror numbers layer
-    keys[5] = reverseNumbersRow(keys[0]);
-    keys[6] = reverseNumbersRow(keys[1]);
-    keys[7] = reverseNumbersRow(keys[2]);
+    // // mirror numbers layer
+    // keys[5] = reverseNumbersRow(keys[0]);
+    // keys[6] = reverseNumbersRow(keys[1]);
+    // keys[7] = reverseNumbersRow(keys[2]);
     return { keys };
   },
   arrows: {
@@ -183,7 +183,7 @@ const keymap: Record<string, LayerConfig> = {
 
       ['&trans', '&trans', '&trans', '&trans', '&trans'],
       ['&trans', '&trans', '&trans', '&trans', '&trans'],
-      ['&trans', '&sk LEFT_COMMAND', '&sk LEFT_SHIFT', '&sk LEFT_CONTROL', '&sk LEFT_ALT'],
+      ['&trans', '&trans', '&trans', '&trans', '&trans'],
 
       ['&trans', '&trans', '&trans'],
       ['&trans', '&trans', '&trans'],
@@ -223,11 +223,6 @@ const keymap: Record<string, LayerConfig> = {
       ['&trans', '&trans', '&trans'],
       ['&trans', '&trans', '&trans'],
     ],
-    // combos: [
-    //     { keys: [0, 3], binding: `&kp ${m.telegram}` },
-    //     { keys: [0, 3], binding: `&kp ${m.whatsup}` },
-    //     { keys: [0, 3], binding: `&kp ${}` },
-    // ]
   },
   windows2: {
     keys: [
@@ -246,33 +241,33 @@ const keymap: Record<string, LayerConfig> = {
       ['&trans', '&trans', '&trans'],
     ],
   },
-  numbersf: {
-    keys: [
-      ['&none', 'F7', 'F8', 'F9', 'F11'],
-      ['&none', 'F1', 'F2', 'F3', 'F10'],
-      ['&none', 'F4', 'F5', 'F6', 'F12'],
+  //   numbersf: {
+  //     keys: [
+  //       ['&none', 'F7', 'F8', 'F9', 'F11'],
+  //       ['&none', 'F1', 'F2', 'F3', 'F10'],
+  //       ['&none', 'F4', 'F5', 'F6', 'F12'],
 
-      ['&none', '&none', '&none'],
-      ['&none', '&none', '&none'],
+  //       ['&none', '&none', '&none'],
+  //       ['&none', '&none', '&none'],
 
-      ['&none', '&none', '&none', '&none', '&none'],
-      ['&none', '&none', '&none', '&none', '&none'],
-      ['&none', '&none', '&none', '&none', '&none'],
+  //       ['&none', '&none', '&none', '&none', '&none'],
+  //       ['&none', '&none', '&none', '&none', '&none'],
+  //       ['&none', '&none', '&none', '&none', '&none'],
 
-      ['&none', '&none', '&none'],
-      ['&none', '&kp CAPS', '&none'],
-    ],
-  },
+  //       ['&none', '&none', '&none'],
+  //       ['&none', '&kp CAPS', '&none'],
+  //     ],
+  //   },
   config: {
     keys: [
-      ['&bootloader', '&sys_reset', '&bt BT_CLR', '&none', '&none'],
+      ['&bootloader', '&sys_reset', '&bt BT_CLR', '&none', '&tog config'],
       ['&bts0', '&bts1', '&bts2', '&bts3', '&bts4'],
       ['&bt BT_PRV', '&bt BT_NXT', '&out OUT_BLE', '&none', '&out OUT_USB'],
 
       ['&none', '&none', '&none'],
       ['&none', '&none', '&none'],
 
-      ['&none', '&none', '&none', '&sys_reset', '&bootloader'],
+      ['&tog config', '&none', '&none', '&sys_reset', '&bootloader'],
       ['&none', '&none', '&none', '&none', '&none'],
       ['&none', '&none', '&none', '&none', '&none'],
 

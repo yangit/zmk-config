@@ -15,8 +15,8 @@ layers:
     - t: P
       h: CMD-P
       s: SFT-CMD-P
-    - h: config
-      t: $$tabler:box-multiple$$
+    - t: '&none'
+      h: '&tog config'
     - t: A
       h: CMD-A
     - t: R
@@ -46,8 +46,8 @@ layers:
       t: $$tabler:box-multiple$$
     - t: $$mdi:mirror-rectangle$$
     - t: $$mdi:apple-keyboard-shift$$
-    - h: config
-      t: $$tabler:box-multiple$$
+    - t: '&none'
+      h: '&tog config'
     - t: L
       h: CMD-L
     - t: U
@@ -96,8 +96,8 @@ layers:
       h: CMD-U
     - t: L
       h: CMD-L
-    - h: config
-      t: $$tabler:box-multiple$$
+    - t: '&none'
+      h: '&tog config'
     - t: O
       h: CMD-O
     - t: I
@@ -126,8 +126,8 @@ layers:
     - ''
     - ''
     - ''
-    - h: config
-      t: $$tabler:box-multiple$$
+    - t: '&none'
+      h: '&tog config'
     - t: P
       h: CMD-P
       s: SFT-CMD-P
@@ -181,12 +181,12 @@ layers:
     - C
     - V
     - B
+    - t: $$mdi:cancel$$
     - ''
     - ''
-    - ''
-    - ''
-    - ''
-    - ''
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
     - 'Y'
     - U
     - I
@@ -276,27 +276,22 @@ layers:
     - ''
     - ''
     - ''
-    - h: numbersf
-      t: $$tabler:box-multiple$$
     - ''
-    - '7'
-    - '8'
-    - '9'
-    - t: '*'
-      h: /
-      s: ':'
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - t: +
-      h: '-'
-    - '='
-    - '4'
-    - '5'
-    - '6'
-    - t: .
-      h: ','
+    - F1
+    - F2
+    - F3
+    - F4
+    - F5
+    - F6
+    - F7
+    - F8
+    - F9
+    - F10
+    - F11
+    - F12
+    - F13
+    - F14
+    - F15
     - ''
     - ''
     - ''
@@ -591,7 +586,7 @@ layers:
     - t: $$mdi:bluetooth$$
       h: BLE clear
     - t: $$mdi:cancel$$
-    - t: $$mdi:cancel$$
+    - '&tog config'
     - t: $$mdi:bluetooth$$
       h: BLE 1
     - t: $$mdi:bluetooth$$
@@ -617,7 +612,7 @@ layers:
     - t: $$mdi:cancel$$
     - t: $$mdi:cancel$$
     - t: $$mdi:cancel$$
-    - t: $$mdi:cancel$$
+    - '&tog config'
     - t: $$mdi:cancel$$
     - t: $$mdi:cancel$$
     - t: reset

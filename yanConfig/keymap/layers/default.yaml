@@ -15,8 +15,8 @@ layers:
     - t: P
       h: CMD-P
       s: SFT-CMD-P
-    - h: config
-      t: $$tabler:box-multiple$$
+    - t: '&none'
+      h: '&tog config'
     - t: A
       h: CMD-A
     - t: R
@@ -46,8 +46,8 @@ layers:
       t: $$tabler:box-multiple$$
     - t: $$mdi:mirror-rectangle$$
     - t: $$mdi:apple-keyboard-shift$$
-    - h: config
-      t: $$tabler:box-multiple$$
+    - t: '&none'
+      h: '&tog config'
     - t: L
       h: CMD-L
     - t: U
@@ -105,6 +105,10 @@ combos:
       - 38
       - 37
     k: deleteWord
+  - p:
+      - 4
+      - 21
+    k: '&tog qwerty'
   - p:
       - 16
       - 17

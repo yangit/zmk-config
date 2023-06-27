@@ -18,12 +18,12 @@ layers:
     - C
     - V
     - B
+    - t: $$mdi:cancel$$
     - ''
     - ''
-    - ''
-    - ''
-    - ''
-    - ''
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
+    - t: $$mdi:cancel$$
     - 'Y'
     - U
     - I

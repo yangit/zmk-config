@@ -9,7 +9,7 @@ layers:
     - t: $$mdi:bluetooth$$
       h: BLE clear
     - t: $$mdi:cancel$$
-    - t: $$mdi:cancel$$
+    - '&tog config'
     - t: $$mdi:bluetooth$$
       h: BLE 1
     - t: $$mdi:bluetooth$$
@@ -35,7 +35,7 @@ layers:
     - t: $$mdi:cancel$$
     - t: $$mdi:cancel$$
     - t: $$mdi:cancel$$
-    - t: $$mdi:cancel$$
+    - '&tog config'
     - t: $$mdi:cancel$$
     - t: $$mdi:cancel$$
     - t: reset

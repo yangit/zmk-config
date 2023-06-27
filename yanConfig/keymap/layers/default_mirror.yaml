@@ -12,8 +12,8 @@ layers:
       h: CMD-U
     - t: L
       h: CMD-L
-    - h: config
-      t: $$tabler:box-multiple$$
+    - t: '&none'
+      h: '&tog config'
     - t: O
       h: CMD-O
     - t: I
@@ -42,8 +42,8 @@ layers:
     - ''
     - ''
     - ''
-    - h: config
-      t: $$tabler:box-multiple$$
+    - t: '&none'
+      h: '&tog config'
     - t: P
       h: CMD-P
       s: SFT-CMD-P
