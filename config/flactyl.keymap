@@ -4912,7 +4912,7 @@
         windows_layer {
             bindings = <
 &kp LG(LEFT_BRACKET)	&kp LS(LC(TAB))	&kp LS(LG(GRAVE))	&kp LA(LG(LC(LS(KP_N0))))	&kp LG(EQUAL)
-&kp LA(LG(LC(LS(KP_N4))))	&kp LA(LG(LC(LS(KP_N5))))	&kp LA(LG(LC(LS(KP_N6))))	&kp LA(LG(LC(LS(KP_N7))))	&td_120
+&kp LA(LG(LC(LS(KP_N4))))	&kp LA(LG(LC(LS(KP_N6))))	&kp LA(LG(LC(LS(KP_N5))))	&kp LA(LG(LC(LS(KP_N7))))	&td_120
 &kp LG(Z)	&none	&td_121	&td_122	&kp LA(LG(LC(LS(G))))
 &trans	&trans	&trans
 &trans	&trans	&trans

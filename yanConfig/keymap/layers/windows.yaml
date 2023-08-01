@@ -9,8 +9,8 @@ layers:
     - macAppsPrev
     - fontBigger
     - finder
-    - terminal
     - vsCode
+    - terminal
     - browser
     - t: slack
       h: insomnia
