@@ -210,7 +210,7 @@ const keymap: Record<string, LayerConfig> = {
   windows: {
     keys: [
       [odd.historyBack, odd.tabsBack, odd.appWindowBack, m.macAppsPrev, odd.fontBigger],
-      [m.finder, m.terminal, m.vsCode, m.browser, `${m.slack},${m.insomnia}`],
+      [m.finder, m.vsCode, m.terminal, m.browser, `${m.slack},${m.insomnia}`],
       [odd.undo, '&none', `${m.telegram},${m.whatsup},${m.signal}`, `${m.sublime},${m.notes}`, m.chatGpt],
 
       ['&trans', '&trans', '&trans'],
