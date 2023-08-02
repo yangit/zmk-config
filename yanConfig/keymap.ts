@@ -260,16 +260,16 @@ const keymap: Record<string, LayerConfig> = {
   //   },
   config: {
     keys: [
-      ['&bootloader', '&sys_reset', '&bt BT_CLR', '&none', '&tog config'],
+      ['&bootloader', '&sys_reset', '&bt BT_CLR', 'N1', '&tog config'],
       ['&bts0', '&bts1', '&bts2', '&bts3', '&bts4'],
-      ['&bt BT_PRV', '&bt BT_NXT', '&out OUT_BLE', '&none', '&out OUT_USB'],
+      ['&bt BT_PRV', '&bt BT_NXT', '&out OUT_BLE', 'N1', '&out OUT_USB'],
 
       ['&none', '&none', '&none'],
       ['&none', '&none', '&none'],
 
-      ['&tog config', '&none', '&none', '&sys_reset', '&bootloader'],
+      ['&tog config', 'N1', '&none', '&sys_reset', '&bootloader'],
       ['&none', '&none', '&none', '&none', '&none'],
-      ['&none', '&none', '&none', '&none', '&none'],
+      ['&none', 'N1', '&none', '&none', '&none'],
 
       ['&none', '&none', '&none'],
       ['&none', '&none', '&none'],

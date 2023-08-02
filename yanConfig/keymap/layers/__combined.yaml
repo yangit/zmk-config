@@ -585,7 +585,7 @@ layers:
       h: keyboard
     - t: $$mdi:bluetooth$$
       h: BLE clear
-    - t: $$mdi:cancel$$
+    - '1'
     - '&tog config'
     - t: $$mdi:bluetooth$$
       h: BLE 1
@@ -603,7 +603,7 @@ layers:
       h: BLE next
     - t: $$mdi:bluetooth$$
       h: select BLE
-    - t: $$mdi:cancel$$
+    - '1'
     - t: $$mdi:usb$$
       h: select USB
     - t: $$mdi:cancel$$
@@ -613,7 +613,7 @@ layers:
     - t: $$mdi:cancel$$
     - t: $$mdi:cancel$$
     - '&tog config'
-    - t: $$mdi:cancel$$
+    - '1'
     - t: $$mdi:cancel$$
     - t: reset
       h: keyboard
@@ -624,7 +624,7 @@ layers:
     - t: $$mdi:cancel$$
     - t: $$mdi:cancel$$
     - t: $$mdi:cancel$$
-    - t: $$mdi:cancel$$
+    - '1'
     - t: $$mdi:cancel$$
     - t: $$mdi:cancel$$
     - t: $$mdi:cancel$$

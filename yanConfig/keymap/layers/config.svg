@@ -1,13 +1,13 @@
 <svg width="676.0" height="457.88235294117646" viewBox="0 0 676.0 457.88235294117646" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>/* start glyphs */
-<svg id="mdi:usb">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-usb" viewBox="0 0 24 24"><path d="M15,7V11H16V13H13V5H15L12,1L9,5H11V13H8V10.93C8.7,10.56 9.2,9.85 9.2,9C9.2,7.78 8.21,6.8 7,6.8C5.78,6.8 4.8,7.78 4.8,9C4.8,9.85 5.3,10.56 6,10.93V13A2,2 0 0,0 8,15H11V18.05C10.29,18.41 9.8,19.15 9.8,20A2.2,2.2 0 0,0 12,22.2A2.2,2.2 0 0,0 14.2,20C14.2,19.15 13.71,18.41 13,18.05V15H16A2,2 0 0,0 18,13V11H19V7H15Z" /></svg>
-</svg>
 <svg id="mdi:bluetooth">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-bluetooth" viewBox="0 0 24 24"><path d="M14.88,16.29L13,18.17V14.41M13,5.83L14.88,7.71L13,9.58M17.71,7.71L12,2H11V9.58L6.41,5L5,6.41L10.59,12L5,17.58L6.41,19L11,14.41V22H12L17.71,16.29L13.41,12L17.71,7.71Z" /></svg>
 </svg>
 <svg id="mdi:cancel">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-cancel" viewBox="0 0 24 24"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z" /></svg>
+</svg>
+<svg id="mdi:usb">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-usb" viewBox="0 0 24 24"><path d="M15,7V11H16V13H13V5H15L12,1L9,5H11V13H8V10.93C8.7,10.56 9.2,9.85 9.2,9C9.2,7.78 8.21,6.8 7,6.8C5.78,6.8 4.8,7.78 4.8,9C4.8,9.85 5.3,10.56 6,10.93V13A2,2 0 0,0 8,15H11V18.05C10.29,18.41 9.8,19.15 9.8,20A2.2,2.2 0 0,0 12,22.2A2.2,2.2 0 0,0 14.2,20C14.2,19.15 13.71,18.41 13,18.05V15H16A2,2 0 0,0 18,13V11H19V7H15Z" /></svg>
 </svg>
 </defs>/* end glyphs */
 <style>/* inherit to force styles through use tags*/
@@ -114,7 +114,7 @@ path.combo {
 <use href="#mdi:bluetooth" xlink:href="#mdi:bluetooth" x="163.0" y="77.0" height="14" width="14.0" class="tap glyph mdi:bluetooth"/>
 <text x="170.0" y="108.0" class="hold" style="font-size: 78%">BLE clear</text>
 <rect rx="6.0" ry="6.0" x="200.0" y="77.76470588235294" width="52.0" height="52.0" class="key"/>
-<use href="#mdi:cancel" xlink:href="#mdi:cancel" x="219.0" y="96.76470588235294" height="14" width="14.0" class="tap glyph mdi:cancel"/>
+<text x="226.0" y="103.76470588235294" class="tap">1</text>
 <rect rx="6.0" ry="6.0" x="256.0" y="87.64705882352942" width="52.0" height="52.0" class="key"/>
 <text x="282.0" y="113.64705882352942" class="tap">
 <tspan x="282.0" dy="-0.6em">&amp;tog</tspan><tspan x="282.0" dy="1.2em">config</tspan></text>
@@ -143,7 +143,7 @@ path.combo {
 <use href="#mdi:bluetooth" xlink:href="#mdi:bluetooth" x="163.0" y="189.0" height="14" width="14.0" class="tap glyph mdi:bluetooth"/>
 <text x="170.0" y="220.0" class="hold" style="font-size: 70%">select BLE</text>
 <rect rx="6.0" ry="6.0" x="200.0" y="189.76470588235296" width="52.0" height="52.0" class="key"/>
-<use href="#mdi:cancel" xlink:href="#mdi:cancel" x="219.0" y="208.76470588235296" height="14" width="14.0" class="tap glyph mdi:cancel"/>
+<text x="226.0" y="215.76470588235296" class="tap">1</text>
 <rect rx="6.0" ry="6.0" x="256.0" y="199.6470588235294" width="52.0" height="52.0" class="key"/>
 <use href="#mdi:usb" xlink:href="#mdi:usb" x="275.0" y="218.6470588235294" height="14" width="14.0" class="tap glyph mdi:usb"/>
 <text x="282.0" y="249.6470588235294" class="hold" style="font-size: 70%">select USB</text>
@@ -163,7 +163,7 @@ path.combo {
 <text x="394.0" y="113.64705882352942" class="tap">
 <tspan x="394.0" dy="-0.6em">&amp;tog</tspan><tspan x="394.0" dy="1.2em">config</tspan></text>
 <rect rx="6.0" ry="6.0" x="424.0" y="77.76470588235294" width="52.0" height="52.0" class="key"/>
-<use href="#mdi:cancel" xlink:href="#mdi:cancel" x="443.0" y="96.76470588235294" height="14" width="14.0" class="tap glyph mdi:cancel"/>
+<text x="450.0" y="103.76470588235294" class="tap">1</text>
 <rect rx="6.0" ry="6.0" x="480.0" y="58.000000000000014" width="52.0" height="52.0" class="key"/>
 <use href="#mdi:cancel" xlink:href="#mdi:cancel" x="499.0" y="77.00000000000001" height="14" width="14.0" class="tap glyph mdi:cancel"/>
 <rect rx="6.0" ry="6.0" x="536.0" y="67.88235294117648" width="52.0" height="52.0" class="key"/>
@@ -184,7 +184,7 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="368.0" y="199.6470588235294" width="52.0" height="52.0" class="key"/>
 <use href="#mdi:cancel" xlink:href="#mdi:cancel" x="387.0" y="218.6470588235294" height="14" width="14.0" class="tap glyph mdi:cancel"/>
 <rect rx="6.0" ry="6.0" x="424.0" y="189.76470588235296" width="52.0" height="52.0" class="key"/>
-<use href="#mdi:cancel" xlink:href="#mdi:cancel" x="443.0" y="208.76470588235296" height="14" width="14.0" class="tap glyph mdi:cancel"/>
+<text x="450.0" y="215.76470588235296" class="tap">1</text>
 <rect rx="6.0" ry="6.0" x="480.0" y="170.0" width="52.0" height="52.0" class="key"/>
 <use href="#mdi:cancel" xlink:href="#mdi:cancel" x="499.0" y="189.0" height="14" width="14.0" class="tap glyph mdi:cancel"/>
 <rect rx="6.0" ry="6.0" x="536.0" y="179.8823529411765" width="52.0" height="52.0" class="key"/>
