@@ -203,7 +203,7 @@ const generateSvg = (): void => {
   fs.writeFileSync('./yanConfig/keymap/layers/__combined.yaml', configToKeymap(configSubset));
   execSync(`/bin/bash -c "cd ${Path.join(__dirname, '/keymap')} &&ls && keymap -c config.yaml draw ./layers/__combined.yaml > ./layers/__combined.svg"`);
 };
-generateSvg();
+// generateSvg();
 
 // map every key under configParsed.keymap[layer][row] using keyMapper()
 const configParsedMapped: ConfigParsed = JSON.parse(JSON.stringify(configParsed));

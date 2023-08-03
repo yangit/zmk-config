@@ -85,7 +85,7 @@ export const odd = {
   undo: 'LG(Z)',
   redo: 'LG(LS(Z))',
   deleteWord: 'LA(BACKSPACE)',
-  vimium: 'LA(LG(LC(LS(LEFT_BRACKET))))',
+  // vimium: 'LA(LG(LC(LS(LEFT_BRACKET))))',
   cut: 'LG(X)',
   copy: 'LG(C)',
   paste: 'LG(V)',
@@ -98,13 +98,14 @@ export const m = {
 
   showApps: 'LA(LG(LC(LS(KP_N2))))',
   showDesktop: 'LA(LG(LC(LS(KP_N3))))',
-  vimium: 'LA(LG(LC(LS(LEFT_BRACKET))))',
+  // vimium: 'LA(LG(LC(LS(LEFT_BRACKET))))',
 
   // apps
   finder: 'LA(LG(LC(LS(KP_N4))))',
   terminal: 'LA(LG(LC(LS(KP_N5))))',
   vsCode: 'LA(LG(LC(LS(KP_N6))))',
   browser: 'LA(LG(LC(LS(KP_N7))))',
+  browser2: 'LA(LG(LC(LS(LEFT_BRACKET))))',
   slack: 'LA(LG(LC(LS(KP_N8))))',
   insomnia: 'LA(LG(LC(LS(F16))))',
   sublime: 'LA(LG(LC(LS(KP_N9))))',
