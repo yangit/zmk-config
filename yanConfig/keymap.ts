@@ -17,7 +17,7 @@ const keymap: Record<string, LayerConfig> = {
       ['+J', '+H', '+V', '+K', '&none'],
 
       ['SPACE', '&mo symbols', '&mo colemak_shift'],
-      ['&trans', '&trans', '&trans'],
+      ['&trans', '&trans', '&mo config'],
       ['&kp K_MUTE'],
     ],
     sensor: '&yan_encoder',
